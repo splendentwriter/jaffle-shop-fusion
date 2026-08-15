@@ -2,13 +2,16 @@
 
     {% set default_schema = target.schema %}
 
-    {# seeds and staging models are raw/lightly-cleaned data: ingestion layer #}
-    {% if node.resource_type == 'seed' or custom_schema_name == 'ingestion' %}
-        jaffle_shop_ingestion
+    {# fixed layer datasets: raw seeds, lightly-cleaned staging, business-ready analytics, elementary tracking #}
+    {% set layer_datasets = {
+        "raw": "jaffle_shop_raw",
+        "ingestion": "jaffle_shop_ingestion",
+        "analytics": "jaffle_shop_analytics",
+        "elementary": "jaffle_shop_elementary",
+    } %}
 
-    {# marts are business-ready data: analytics layer #}
-    {% elif custom_schema_name == 'analytics' %}
-        jaffle_shop_analytics
+    {% if custom_schema_name in layer_datasets %}
+        {{ layer_datasets[custom_schema_name] }}
 
     {# non-specified schemas go to the default target schema #}
     {% elif custom_schema_name is none %}
