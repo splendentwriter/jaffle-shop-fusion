@@ -1,0 +1,6 @@
+.git
+dbt-env
+target
+dbt_packages
+logs
+.dbt
