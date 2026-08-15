@@ -1,0 +1,62 @@
+name: Build dev and promote to main
+
+on:
+  push:
+    branches:
+      - dev
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dbt Fusion
+        run: python3 -m pip install --pre dbt
+
+      - name: Write BigQuery service account key
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: echo "$GCP_SA_KEY" > "$RUNNER_TEMP/gcp-sa.json"
+
+      - name: Write dbt profile
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml <<EOF
+          jaffle_shop:
+            target: ci
+            outputs:
+              ci:
+                type: bigquery
+                method: service-account
+                project: jaffle-shop-505616
+                dataset: jaffle_shop
+                threads: 4
+                keyfile: ${RUNNER_TEMP}/gcp-sa.json
+                timeout_seconds: 300
+                location: US
+          EOF
+
+      - name: Install package dependencies
+        run: dbt deps
+
+      - name: Build
+        run: dbt build
+
+      - name: Push dev to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git push origin HEAD:main
