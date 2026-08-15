@@ -2,9 +2,13 @@
 
     {% set default_schema = target.schema %}
 
-    {# seeds go in a global `raw` schema #}
-    {% if node.resource_type == 'seed' %}
-        {{ custom_schema_name | trim }}
+    {# seeds and staging models are raw/lightly-cleaned data: ingestion layer #}
+    {% if node.resource_type == 'seed' or custom_schema_name == 'ingestion' %}
+        jaffle_shop_ingestion
+
+    {# marts are business-ready data: analytics layer #}
+    {% elif custom_schema_name == 'analytics' %}
+        jaffle_shop_analytics
 
     {# non-specified schemas go to the default target schema #}
     {% elif custom_schema_name is none %}

@@ -23,7 +23,7 @@ clean-targets:
 
 seeds:
   jaffle_shop:
-    +schema: raw
+    +schema: ingestion
     jaffle-data:
       +enabled: "{{ var('load_source_data', false) }}"
 
@@ -31,8 +31,10 @@ models:
   jaffle_shop:
     staging:
       +materialized: view
+      +schema: ingestion
     marts:
       +materialized: table
+      +schema: analytics
 
   elementary:
     +schema: elementary
