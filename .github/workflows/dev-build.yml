@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write # required to request the OIDC JWT for Workload Identity Federation
 
 jobs:
   build:
@@ -18,6 +19,12 @@ jobs:
           ref: dev
           fetch-depth: 0
 
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: "projects/747321349045/locations/global/workloadIdentityPools/github-pool/providers/github-provider"
+          service_account: "jaffle-sa@jaffle-shop-505616.iam.gserviceaccount.com"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -25,11 +32,6 @@ jobs:
 
       - name: Install dbt Fusion
         run: python3 -m pip install --pre dbt
-
-      - name: Write BigQuery service account key
-        env:
-          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-        run: echo "$GCP_SA_KEY" > "$RUNNER_TEMP/gcp-sa.json"
 
       - name: Write dbt profile
         run: |
@@ -40,11 +42,10 @@ jobs:
             outputs:
               ci:
                 type: bigquery
-                method: service-account
+                method: oauth
                 project: jaffle-shop-505616
                 dataset: jaffle_shop
                 threads: 4
-                keyfile: ${RUNNER_TEMP}/gcp-sa.json
                 timeout_seconds: 300
                 location: US
           EOF
