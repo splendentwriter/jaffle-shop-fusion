@@ -11,6 +11,7 @@ models:
       - dbt_utils.expression_is_true:
           arguments:
             expression: "order_total = subtotal + tax_paid"
+      - elementary.schema_changes
     columns:
       - name: order_id
         description: The unique key of the orders mart.

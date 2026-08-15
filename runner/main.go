@@ -10,23 +10,18 @@ import (
 	"time"
 )
 
-const maxAttempts = 3
+const (
+	maxAttempts = 3
+	pipelineScript = "pipeline.sh"
+)
 
-var steps = []struct {
-	name string
-	args []string
-}{
-	{"deps", []string{"deps"}},
-	{"seed", []string{"seed", "--vars", "{load_source_data: true}"}},
-	{"snapshot", []string{"snapshot"}},
-	{"build", []string{"build"}},
-}
+var steps = []string{"deps", "seed", "snapshot", "build", "test"}
 
-func runStep(name string, args []string) error {
+func runStep(name string) error {
 	var lastErr error
 	for attempt := 1; attempt <= maxAttempts; attempt++ {
-		fmt.Printf("==> %s (attempt %d/%d): dbt %v\n", name, attempt, maxAttempts, args)
-		cmd := exec.Command("dbt", args...)
+		fmt.Printf("==> %s (attempt %d/%d): %s %s\n", name, attempt, maxAttempts, pipelineScript, name)
+		cmd := exec.Command("sh", pipelineScript, name)
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 		lastErr = cmd.Run()
@@ -45,7 +40,7 @@ func runStep(name string, args []string) error {
 
 func main() {
 	for _, s := range steps {
-		if err := runStep(s.name, s.args); err != nil {
+		if err := runStep(s); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}

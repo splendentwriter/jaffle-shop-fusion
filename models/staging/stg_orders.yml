@@ -5,6 +5,7 @@ models:
       - dbt_utils.expression_is_true:
           arguments:
             expression: "order_total - tax_paid = subtotal"
+      - elementary.schema_changes
     columns:
       - name: order_id
         description: The unique key for each order.
