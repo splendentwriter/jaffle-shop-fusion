@@ -5,9 +5,9 @@ version: "3.0.0"
 require-dbt-version: ">=1.12.0"
 
 dbt-cloud:
-  project-id: 275557 # Put your project id here
+  project-id: jaffle-shop-505616 # Put your project id here
 
-profile: default # Put your profile here
+profile: jaffle_shop # Put your profile here
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -33,6 +33,9 @@ models:
       +materialized: view
     marts:
       +materialized: table
+
+  elementary:
+    +schema: elementary
 
 flags:
   require_generic_test_arguments_property: true

@@ -3,3 +3,7 @@ packages:
     version: 1.4.1
   - git: "https://github.com/dbt-labs/dbt-audit-helper.git"
     revision: main
+  - package: elementary-data/elementary
+    version: 0.25.1
+
+
