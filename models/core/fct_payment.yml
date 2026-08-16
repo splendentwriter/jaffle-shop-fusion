@@ -4,7 +4,9 @@ models:
       One row per payment attempt, with captured/refunded amounts and
       dispute status rolled up. net_amount_cents = captured - refunded.
       This is the primary entry point for payment-domain analysis; use
-      fct_payment_transaction for the underlying event-level ledger.
+      fct_payment_transaction for the underlying event-level ledger. One
+      known row's checkout_id doesn't resolve — an orphaned streaming-insert
+      artifact from operations-data-generator testing, see stg_payment_attempts.
     data_tests:
       - elementary.schema_changes
       - dbt_utils.expression_is_true:
@@ -19,6 +21,8 @@ models:
         data_tests:
           - not_null
           - relationships:
+              config:
+                severity: warn
               arguments:
                 to: ref('stg_checkouts')
                 field: checkout_id

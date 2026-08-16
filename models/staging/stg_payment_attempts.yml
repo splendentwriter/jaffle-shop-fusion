@@ -4,6 +4,10 @@ models:
       One row per payment attempt against a checkout. A small number of
       rows reference a payment_method_id that's since been removed from the
       customer's wallet — see the warn-severity relationship test below.
+      One known row references a checkout_id that never landed (an orphaned
+      streaming-insert artifact from operations-data-generator testing,
+      pending cleanup once it ages out of BigQuery's streaming buffer) — the
+      checkout_id relationship is warn-severity for the same reason.
     data_tests:
       - elementary.schema_changes
     columns:
@@ -15,6 +19,8 @@ models:
         data_tests:
           - not_null
           - relationships:
+              config:
+                severity: warn
               arguments:
                 to: ref('stg_checkouts')
                 field: checkout_id
