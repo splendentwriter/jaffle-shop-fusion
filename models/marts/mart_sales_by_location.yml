@@ -1,0 +1,9 @@
+models:
+  - name: mart_sales_by_location
+    description: One row per store location, with revenue rolled up. Closest real geographic dimension this dataset has (no country/region on the order itself).
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: location_id
+        data_tests:
+          - unique

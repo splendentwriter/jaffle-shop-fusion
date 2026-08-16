@@ -16,3 +16,27 @@ def get_sales_trend():
     return run_query(
         f"select * from `{PROJECT_ID}.{ANALYTICS_DATASET}.mart_sales_performance` order by month"
     )
+
+
+def get_sales_by_location():
+    return run_query(f"select * from `{PROJECT_ID}.{ANALYTICS_DATASET}.mart_sales_by_location`")
+
+
+def get_sales_by_category():
+    return run_query(f"select * from `{PROJECT_ID}.{ANALYTICS_DATASET}.mart_sales_by_category`")
+
+
+def get_session_funnel():
+    return run_query(f"select * from `{PROJECT_ID}.{ANALYTICS_DATASET}.mart_session_funnel`")
+
+
+def get_orders(limit=500):
+    return run_query(
+        f"""
+        select order_id, customer_id, location_id, ordered_at, order_total,
+               count_order_items, is_food_order, is_drink_order, customer_order_number
+        from `{PROJECT_ID}.{ANALYTICS_DATASET}.orders`
+        order by ordered_at desc
+        limit {limit}
+        """
+    )

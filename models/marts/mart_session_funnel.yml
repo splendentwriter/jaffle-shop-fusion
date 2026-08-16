@@ -1,0 +1,16 @@
+models:
+  - name: mart_session_funnel
+    description: >
+      One row per session, with each funnel stage as a boolean flag
+      (product view, search, add-to-cart, cart created, checkout started,
+      paid) plus referrer_source and device_type. This is the fact table
+      for the Sales Funnel page — the page aggregates it (overall, by
+      channel, by device) in the presentation layer since these are simple
+      groupbys of an already-defined fact, not new business logic.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: session_id
+        data_tests:
+          - not_null
+          - unique
