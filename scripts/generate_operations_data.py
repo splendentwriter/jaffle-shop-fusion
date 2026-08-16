@@ -25,8 +25,10 @@ Usage:
 """
 
 import argparse
+import json
 import os
 import random
+import urllib.request
 import uuid
 from datetime import datetime, timedelta, timezone
 
@@ -61,6 +63,23 @@ def insert(client, table, rows):
         print(f"[error] insert into {table} failed: {errors}")
 
 
+def notify_slack(text):
+    webhook_url = os.environ.get("SLACK_WEBHOOK_URL")
+    if not webhook_url:
+        print("SLACK_WEBHOOK_URL not set, skipping Slack notification")
+        return
+    payload = json.dumps({"text": text}).encode("utf-8")
+    request = urllib.request.Request(
+        webhook_url, data=payload, headers={"Content-Type": "application/json"}
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=10) as response:
+            if response.status != 200:
+                print(f"[error] Slack notification returned status {response.status}")
+    except Exception as e:
+        print(f"[error] failed to send Slack notification: {e}")
+
+
 class Batch:
     """Accumulates rows per table for one run, inserted all at once at the end."""
 
@@ -74,6 +93,11 @@ class Batch:
         for table, rows in self.tables.items():
             insert(client, table, rows)
             print(f"  +{len(rows)} {table}")
+
+    def summary_text(self):
+        if not self.tables:
+            return "no rows generated"
+        return ", ".join(f"+{len(rows)} {table}" for table, rows in sorted(self.tables.items()))
 
 
 def generate_session(batch, customers, devices_by_customer):
@@ -446,12 +470,23 @@ def run(n_sessions):
     batch.flush(client)
     print("Done.")
 
+    return (
+        f":chart_with_upwards_trend: jaffle-shop-fusion operations-data-generator: "
+        f"{n_sessions} sessions -> {n_carts} carts -> {n_converted} checkouts -> {n_completed_checkouts} paid. "
+        f"({batch.summary_text()})"
+    )
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--sessions", type=int, default=int(os.environ.get("SESSIONS_PER_RUN", 120)))
     args = parser.parse_args()
-    run(args.sessions)
+    try:
+        summary = run(args.sessions)
+        notify_slack(summary)
+    except Exception as e:
+        notify_slack(f":x: jaffle-shop-fusion operations-data-generator failed: {e}")
+        raise
 
 
 if __name__ == "__main__":
