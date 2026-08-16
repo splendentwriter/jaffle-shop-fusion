@@ -1,0 +1,22 @@
+models:
+  - name: stg_support_messages
+    description: One row per message in a ticket's conversation thread.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: support_message_id
+        data_tests:
+          - not_null
+          - unique
+      - name: ticket_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_support_tickets')
+                field: ticket_id
+      - name: sender_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['customer', 'agent']

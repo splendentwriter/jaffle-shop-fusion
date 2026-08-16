@@ -1,0 +1,24 @@
+models:
+  - name: stg_ticket_events
+    description: >
+      Append-only ticket lifecycle event log. detail carries the assigned
+      agent_id for 'assigned' events, null otherwise.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: ticket_event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: ticket_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_support_tickets')
+                field: ticket_id
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['created', 'assigned', 'resolved', 'reopened']

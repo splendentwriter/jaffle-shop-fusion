@@ -1,0 +1,50 @@
+models:
+  - name: stg_support_tickets
+    description: >
+      One row per support ticket. agent_id is null for unassigned tickets.
+      related_return_id links a subset of return_refund tickets to a real
+      return.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "status not in ('resolved', 'closed') or resolved_at is not null"
+    columns:
+      - name: ticket_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: agent_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_support_agents')
+                field: agent_id
+      - name: related_return_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_returns')
+                field: return_id
+      - name: category
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['billing', 'shipping', 'product_question', 'return_refund', 'technical', 'other']
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['open', 'in_progress', 'waiting_on_customer', 'resolved', 'closed']
+      - name: priority
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['low', 'medium', 'high', 'urgent']

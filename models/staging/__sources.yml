@@ -194,3 +194,13 @@ sources:
           raw_web_events.
       - name: raw_customer_acquisition
         description: One record per customer's first-touch acquisition channel. campaign_id is set only for paid/campaign-driven acquisition.
+      - name: raw_support_agents
+        description: One record per support agent.
+      - name: raw_support_tickets
+        description: >
+          One record per support ticket. related_return_id links a subset of return_refund category
+          tickets back to a real Phase 14 return.
+      - name: raw_support_messages
+        description: One record per message in a ticket's conversation thread.
+      - name: raw_ticket_events
+        description: Append-only ticket lifecycle event log (created, assigned, resolved, reopened).

@@ -1,0 +1,15 @@
+models:
+  - name: stg_support_agents
+    description: One row per support agent.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: agent_id
+        data_tests:
+          - not_null
+          - unique
+      - name: team
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['billing', 'shipping', 'product', 'general']
