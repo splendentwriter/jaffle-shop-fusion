@@ -1,0 +1,35 @@
+models:
+  - name: stg_fulfillment_orders
+    description: >
+      One row per fulfillment order raised against a completed checkout.
+      status: pending, picking, packed, shipped, or cancelled.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "status != 'shipped' or completed_at is not null"
+    columns:
+      - name: fulfillment_order_id
+        data_tests:
+          - not_null
+          - unique
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id
+      - name: warehouse_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_warehouses')
+                field: warehouse_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['pending', 'picking', 'packed', 'shipped', 'cancelled']

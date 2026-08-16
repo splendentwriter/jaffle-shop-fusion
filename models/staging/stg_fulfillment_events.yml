@@ -1,0 +1,31 @@
+models:
+  - name: stg_fulfillment_events
+    description: >
+      Append-only fulfillment lifecycle event log. Picking and packing are
+      event_type values here, not separate tables.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: fulfillment_event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: fulfillment_order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_fulfillment_orders')
+                field: fulfillment_order_id
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - created
+                  - picking_started
+                  - picking_completed
+                  - packing_started
+                  - packing_completed
+                  - shipped
+                  - cancelled

@@ -1,0 +1,31 @@
+models:
+  - name: stg_fulfillment_items
+    description: >
+      One row per line item on a fulfillment order. Inherits the known
+      delisted-sku rows from stg_checkout_items (fulfillment items are
+      built directly from checkout items) — see the warn-severity
+      relationship test below, same severity as the equivalent check on
+      stg_checkout_items and stg_cart_items.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: fulfillment_item_id
+        data_tests:
+          - not_null
+          - unique
+      - name: fulfillment_order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_fulfillment_orders')
+                field: fulfillment_order_id
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_products')
+                field: product_id

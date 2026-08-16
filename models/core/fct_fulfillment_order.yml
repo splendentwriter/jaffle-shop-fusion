@@ -1,0 +1,27 @@
+models:
+  - name: fct_fulfillment_order
+    description: >
+      One row per fulfillment order, with picking/packing funnel timestamps
+      pivoted from stg_fulfillment_events and item counts rolled up.
+      hours_to_ship and shipped_at are null for orders that haven't shipped
+      yet (in-progress or cancelled).
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: fulfillment_order_id
+        data_tests:
+          - not_null
+          - unique
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['pending', 'picking', 'packed', 'shipped', 'cancelled']

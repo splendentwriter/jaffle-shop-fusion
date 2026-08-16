@@ -139,3 +139,14 @@ sources:
         description: >
           One record per goods-receipt event against a purchase order item. quantity_received can be
           less than quantity_ordered for a partial or short-shipped receipt.
+      - name: raw_fulfillment_orders
+        description: One record per fulfillment order raised against a completed checkout.
+        config:
+          loaded_at_field: created_at
+      - name: raw_fulfillment_items
+        description: One record per line item on a fulfillment order.
+      - name: raw_fulfillment_events
+        description: >
+          Append-only fulfillment lifecycle event log. "Picking" and "packing" from the build-out plan
+          are event_type values here (picking_started/picking_completed/packing_started/packing_completed),
+          not separate tables.
