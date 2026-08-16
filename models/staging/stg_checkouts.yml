@@ -1,0 +1,37 @@
+models:
+  - name: stg_checkouts
+    description: >
+      One row per checkout attempt. status: completed, failed, or abandoned.
+      customer_id is null for guest checkouts. Shipping address columns are
+      a point-in-time snapshot, not a live reference to the customer's
+      address book.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - unique
+      - name: cart_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_carts')
+                field: cart_id
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['completed', 'failed', 'abandoned']
+      - name: shipping_method
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['standard', 'express', 'pickup']

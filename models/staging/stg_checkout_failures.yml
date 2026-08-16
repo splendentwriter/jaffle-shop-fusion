@@ -1,0 +1,22 @@
+models:
+  - name: stg_checkout_failures
+    description: One row per failed payment attempt during checkout.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: checkout_failure_id
+        data_tests:
+          - not_null
+          - unique
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id
+      - name: failure_reason
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['card_declined', 'insufficient_funds', 'fraud_flag', 'gateway_timeout', 'address_invalid']

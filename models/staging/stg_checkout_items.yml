@@ -1,0 +1,26 @@
+models:
+  - name: stg_checkout_items
+    description: One row per checkout line item, snapshotted from the cart at checkout time.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: checkout_item_id
+        data_tests:
+          - not_null
+          - unique
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_products')
+                field: product_id

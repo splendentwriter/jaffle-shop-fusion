@@ -68,3 +68,16 @@ sources:
           non-positive quantity (upstream data-entry bug) or reference a delisted sku.
       - name: raw_cart_events
         description: Append-only cart lifecycle event log (created, item_added, item_removed, abandoned, converted).
+      - name: raw_checkouts
+        description: >
+          One record per checkout attempt. Shipping address is captured as a snapshot on the row
+          (not a live link to the customer's address book) since a checkout address shouldn't change
+          retroactively if the customer edits their saved addresses later.
+        config:
+          loaded_at_field: started_at
+      - name: raw_checkout_items
+        description: Snapshot of a checkout's line items at the moment checkout started, independent of later cart edits.
+      - name: raw_checkout_events
+        description: Append-only checkout funnel event log (started, address_entered, shipping_selected, completed, abandoned, payment_failed).
+      - name: raw_checkout_failures
+        description: One record per failed payment attempt during checkout, with a failure reason.

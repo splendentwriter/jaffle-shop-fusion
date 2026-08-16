@@ -1,0 +1,32 @@
+models:
+  - name: fct_checkout
+    description: >
+      One row per checkout attempt, with line items and funnel event
+      timestamps (address_entered_at, shipping_selected_at) rolled up.
+      time_to_complete_seconds and completed_at are null for checkouts that
+      didn't complete.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "status != 'completed' or completed_at is not null"
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "order_total_cents = items_subtotal_cents + shipping_cost_cents"
+    columns:
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - unique
+      - name: cart_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_carts')
+                field: cart_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['completed', 'failed', 'abandoned']
