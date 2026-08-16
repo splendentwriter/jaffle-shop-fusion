@@ -1,0 +1,21 @@
+models:
+  - name: mart_sales_performance
+    description: >
+      One row per month, from the platform's original (large, continuously
+      streamed) order history. Powers the Executive Overview's revenue
+      trend and feeds mart_ecommerce_kpis' period-over-period deltas.
+      gross_margin_pct uses order_cost (supply cost) as COGS — the closest
+      real cost signal this dataset has.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: month
+        data_tests:
+          - not_null
+          - unique
+      - name: order_count
+        data_tests:
+          - not_null
+      - name: revenue
+        data_tests:
+          - not_null

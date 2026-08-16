@@ -1,0 +1,26 @@
+models:
+  - name: mart_ecommerce_kpis
+    description: >
+      Single-row executive snapshot: latest complete month vs. prior month
+      (revenue, orders, customers, AOV, margin) plus funnel-wide health
+      rates (checkout conversion, refund rate, on-time delivery, low-stock
+      SKU count). This is the direct source for the Streamlit Executive
+      Overview page's KPI cards — no business logic is recomputed in
+      Streamlit, only formatting/display.
+
+      Note: there's a real ~1-year gap in the underlying orders data
+      (historical seed ends Aug 2025; the live streaming service's activity
+      starts fresh at "now", currently Aug 2026 — nothing in between).
+      current_month/prior_month are therefore the two most recent months
+      that actually have data, not necessarily real-time-current or
+      calendar-adjacent. The page should label the period explicitly
+      (e.g. "As of Aug 2025") rather than implying live freshness.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "checkout_conversion_rate between 0 and 1"
+    columns:
+      - name: current_month
+        data_tests:
+          - not_null
