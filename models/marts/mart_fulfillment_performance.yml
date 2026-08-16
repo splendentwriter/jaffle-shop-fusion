@@ -1,0 +1,12 @@
+models:
+  - name: mart_fulfillment_performance
+    description: >
+      One row per fulfillment order with warehouse attached and pick/pack/
+      ship timings broken out for funnel analysis.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: fulfillment_order_id
+        data_tests:
+          - not_null
+          - unique
