@@ -1,0 +1,19 @@
+models:
+  - name: int_product_attributes
+    description: >
+      One row per product, with the EAV attribute rows from
+      stg_product_attributes pivoted into columns. Where a product had
+      conflicting duplicate values for the same attribute (see
+      stg_product_attributes), max() picked one arbitrarily but
+      deterministically.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: product_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id

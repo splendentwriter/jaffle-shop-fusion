@@ -1,0 +1,10 @@
+models:
+  - name: stg_brands
+    description: One row per brand.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: brand_id
+        data_tests:
+          - not_null
+          - unique

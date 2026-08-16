@@ -32,3 +32,17 @@ sources:
         description: One record per SKU for items sold in stores
       - name: raw_supplies
         description: One record per supply per SKU of items sold in stores
+      - name: raw_brands
+        description: One record per brand/supplier.
+      - name: raw_product_categories
+        description: Product category hierarchy. Self-referencing via parent_category_id; top-level categories have no parent.
+      - name: raw_product_category_map
+        description: Many-to-many mapping of product SKU to category. A SKU can belong to more than one category.
+      - name: raw_product_brands
+        description: One record per SKU's brand assignment. Not every SKU has a brand assigned yet.
+      - name: raw_product_attributes
+        description: EAV-style product attributes (spice level, calories, allergens, etc). A SKU may have more than one row for the same attribute_name if it was re-entered upstream.
+      - name: raw_product_images
+        description: One record per product image.
+      - name: raw_product_tags
+        description: One record per (sku, tag) pairing. A SKU may have zero or many tags.

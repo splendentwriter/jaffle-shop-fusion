@@ -1,0 +1,24 @@
+models:
+  - name: stg_product_brands
+    description: >
+      One row per product's brand assignment. brand_id is nullable — not
+      every SKU has been assigned a brand yet.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: product_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+      - name: brand_id
+        data_tests:
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_brands')
+                field: brand_id

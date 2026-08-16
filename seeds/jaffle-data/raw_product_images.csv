@@ -1,0 +1,15 @@
+id,sku,image_url,is_primary,sort_order
+7dcf8b28-3cff-4d6d-880e-018cbbd321d7,JAF-001,https://cdn.jaffleshop.example/products/jaf-001/0.jpg,True,0
+5753f175-9863-4071-a3d3-4979c71989d0,JAF-002,https://cdn.jaffleshop.example/products/jaf-002/0.jpg,True,0
+3275abaa-ef10-4afe-8c39-61b0e0832fa4,JAF-003,https://cdn.jaffleshop.example/products/jaf-003/0.jpg,True,0
+6c425eeb-ac76-468c-b31c-a6bddf716649,JAF-004,https://cdn.jaffleshop.example/products/jaf-004/0.jpg,True,0
+d1981486-b7ca-41d2-b47c-64f63323b03a,JAF-004,https://cdn.jaffleshop.example/products/jaf-004/1.jpg,False,1
+1abeb4c5-2bed-41a8-b1ea-0965d6df56d3,JAF-005,https://cdn.jaffleshop.example/products/jaf-005/0.jpg,True,0
+98f6ca86-6fd0-487c-a73f-7a30579eafca,BEV-001,https://cdn.jaffleshop.example/products/bev-001/0.jpg,True,0
+f9dd7a36-2032-4a51-be53-7a0bacc08e3c,BEV-001,https://cdn.jaffleshop.example/products/bev-001/1.jpg,False,1
+a1691e8f-6d8d-4122-876f-29554d620dd0,BEV-002,https://cdn.jaffleshop.example/products/bev-002/0.jpg,True,0
+0ce47e9f-cded-40fb-b5df-f5f2c5159c47,BEV-003,https://cdn.jaffleshop.example/products/bev-003/0.jpg,True,0
+58f8cf21-af5b-48f6-819b-7ba3b5886777,BEV-003,https://cdn.jaffleshop.example/products/bev-003/1.jpg,False,1
+bcc3244d-af68-48a3-b2a6-6e516a56698f,BEV-004,https://cdn.jaffleshop.example/products/bev-004/0.jpg,True,0
+4a3c89eb-a478-4f22-96e2-3b06fec7fa83,BEV-004,https://cdn.jaffleshop.example/products/bev-004/1.jpg,False,1
+536aa6e7-9d63-4d5a-a8d4-0caa3b1e7208,BEV-005,https://cdn.jaffleshop.example/products/bev-005/0.jpg,True,0

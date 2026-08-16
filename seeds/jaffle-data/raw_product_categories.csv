@@ -1,0 +1,8 @@
+id,category_name,parent_category_id
+CAT-100,Jaffles,
+CAT-200,Beverages,
+CAT-110,Savory Jaffles,CAT-100
+CAT-120,Sweet Jaffles,CAT-100
+CAT-210,Hot Beverages,CAT-200
+CAT-220,Cold Beverages,CAT-200
+CAT-902,Seasonal (retired),CAT-999

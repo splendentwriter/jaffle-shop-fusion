@@ -1,0 +1,27 @@
+models:
+  - name: stg_product_category_map
+    description: >
+      Many-to-many bridge of product to category. One row per
+      (product_id, category_id) pairing; a product can appear more than once.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - product_id
+              - category_id
+    columns:
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+      - name: category_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_product_categories')
+                field: category_id

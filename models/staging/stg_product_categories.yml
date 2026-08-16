@@ -1,0 +1,23 @@
+models:
+  - name: stg_product_categories
+    description: >
+      Product category hierarchy, one row per category. Top-level categories
+      have a null parent_category_id. parent_category_id is not guaranteed to
+      resolve to a real category (see the warn-severity relationship test
+      below) — upstream category cleanups have left at least one dangling
+      reference.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: category_id
+        data_tests:
+          - not_null
+          - unique
+      - name: parent_category_id
+        data_tests:
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_product_categories')
+                field: category_id

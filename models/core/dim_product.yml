@@ -1,0 +1,32 @@
+models:
+  - name: dim_product
+    description: >
+      SCD Type 2 product dimension. One row per product per distinct period
+      of continuous state — any change to name, type, price, or description
+      (via products_snapshot's check_cols='all' strategy) closes out the
+      prior row and opens a new one. is_current = true identifies the
+      present-day row. Covers both "product" and "product price" from the
+      build-out plan as a single dimension rather than two, since in this
+      catalogue price is just another product attribute that changes over
+      time.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - product_id
+              - valid_from
+    columns:
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+      - name: valid_from
+        data_tests:
+          - not_null
+      - name: product_price
+        data_tests:
+          - not_null

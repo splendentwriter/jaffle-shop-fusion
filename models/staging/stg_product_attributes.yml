@@ -1,0 +1,21 @@
+models:
+  - name: stg_product_attributes
+    description: >
+      EAV-style product attributes, one row per (product, attribute_name)
+      entry. Not guaranteed unique on (product_id, attribute_name) — a small
+      number of SKUs have been re-entered with a conflicting value upstream.
+      int_product_attributes resolves this to one row per product.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: attribute_id
+        data_tests:
+          - not_null
+          - unique
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
