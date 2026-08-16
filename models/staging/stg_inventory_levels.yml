@@ -1,0 +1,35 @@
+models:
+  - name: stg_inventory_levels
+    description: Current-state snapshot of on-hand quantity, one row per (warehouse, product).
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - warehouse_id
+              - product_id
+    columns:
+      - name: inventory_level_id
+        data_tests:
+          - not_null
+          - unique
+      - name: warehouse_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_warehouses')
+                field: warehouse_id
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+      - name: quantity_on_hand
+        data_tests:
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 0
+                inclusive: true

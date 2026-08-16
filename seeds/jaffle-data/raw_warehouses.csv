@@ -1,0 +1,3 @@
+id,name,region,is_active
+WH-EAST,East Coast Distribution Center,US-EAST,True
+WH-WEST,West Coast Distribution Center,US-WEST,True

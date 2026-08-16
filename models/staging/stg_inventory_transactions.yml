@@ -1,0 +1,39 @@
+models:
+  - name: stg_inventory_transactions
+    description: >
+      Append-only inventory ledger. "Stock movements" and "inventory
+      adjustments" from the build-out plan are transaction_type values here
+      (transfer_in/transfer_out, adjustment) rather than separate tables —
+      each is a transaction, not a different kind of thing. A small number
+      of rows reference a delisted sku — see the warn-severity check below.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "transaction_type != 'adjustment' or adjustment_reason is not null"
+    columns:
+      - name: inventory_transaction_id
+        data_tests:
+          - not_null
+          - unique
+      - name: warehouse_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_warehouses')
+                field: warehouse_id
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+      - name: transaction_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['receipt', 'sale', 'transfer_in', 'transfer_out', 'adjustment']

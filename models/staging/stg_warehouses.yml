@@ -1,0 +1,10 @@
+models:
+  - name: stg_warehouses
+    description: One row per distribution warehouse.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: warehouse_id
+        data_tests:
+          - not_null
+          - unique

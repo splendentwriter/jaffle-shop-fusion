@@ -1,0 +1,32 @@
+models:
+  - name: stg_stock_reservations
+    description: >
+      One row per stock hold placed against a checkout line item.
+      committed reservations backed a completed checkout; released/expired
+      ones freed the stock back up.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: reservation_id
+        data_tests:
+          - not_null
+          - unique
+      - name: warehouse_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_warehouses')
+                field: warehouse_id
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['held', 'committed', 'released', 'expired']

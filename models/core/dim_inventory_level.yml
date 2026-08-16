@@ -1,0 +1,24 @@
+models:
+  - name: dim_inventory_level
+    description: >
+      SCD Type 2 inventory-level dimension, one row per (warehouse, product)
+      per distinct period of continuous on-hand/reorder-point state. This is
+      the plan's explicit "dim_inventory_location" SCD2 candidate.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - warehouse_id
+              - product_id
+              - valid_from
+    columns:
+      - name: warehouse_id
+        data_tests:
+          - not_null
+      - name: product_id
+        data_tests:
+          - not_null
+      - name: valid_from
+        data_tests:
+          - not_null

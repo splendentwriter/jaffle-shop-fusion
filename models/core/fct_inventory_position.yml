@@ -1,0 +1,26 @@
+models:
+  - name: fct_inventory_position
+    description: >
+      One row per (warehouse, product), giving current on-hand quantity,
+      quantity held by in-flight reservations, and the resulting available-
+      to-sell quantity. is_below_reorder_point flags rows needing
+      replenishment.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: warehouse_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_warehouses')
+                field: warehouse_id
+      - name: product_id
+        data_tests:
+          - not_null
+      - name: available_quantity
+        data_tests:
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 0
+                inclusive: true

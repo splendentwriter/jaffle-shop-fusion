@@ -115,3 +115,15 @@ sources:
         description: >
           One record per coupon redemption against a checkout. A small number of rows are duplicate
           redemptions of the same coupon on the same checkout (a known upstream retry-button bug).
+      - name: raw_warehouses
+        description: One record per distribution warehouse. Distinct from the retail stores in raw_stores.
+      - name: raw_inventory_levels
+        description: Current-state snapshot of on-hand quantity, one record per (warehouse, sku).
+        config:
+          loaded_at_field: updated_at
+      - name: raw_inventory_transactions
+        description: >
+          Append-only inventory ledger (receipt, sale, transfer_in, transfer_out, adjustment). A small
+          number of rows reference a delisted sku.
+      - name: raw_stock_reservations
+        description: One record per stock hold placed against a checkout. status covers held/committed/released/expired.
