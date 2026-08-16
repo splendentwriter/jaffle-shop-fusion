@@ -1,0 +1,24 @@
+models:
+  - name: stg_purchase_order_items
+    description: One row per line item on a purchase order.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: purchase_order_item_id
+        data_tests:
+          - not_null
+          - unique
+      - name: purchase_order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_purchase_orders')
+                field: purchase_order_id
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id

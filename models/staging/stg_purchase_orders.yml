@@ -1,0 +1,29 @@
+models:
+  - name: stg_purchase_orders
+    description: One row per purchase order placed with a supplier to replenish a warehouse.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: purchase_order_id
+        data_tests:
+          - not_null
+          - unique
+      - name: supplier_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_suppliers')
+                field: supplier_id
+      - name: warehouse_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_warehouses')
+                field: warehouse_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['received', 'partially_received', 'confirmed', 'cancelled']

@@ -1,0 +1,25 @@
+models:
+  - name: stg_goods_receipts
+    description: >
+      One row per goods-receipt event against a purchase order line item.
+      quantity_received can be less than the order's quantity_ordered for
+      a partial or short-shipped receipt.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: goods_receipt_id
+        data_tests:
+          - not_null
+          - unique
+      - name: purchase_order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_purchase_orders')
+                field: purchase_order_id
+      - name: condition
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['good', 'damaged', 'short_shipped']

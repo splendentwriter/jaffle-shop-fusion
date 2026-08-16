@@ -127,3 +127,15 @@ sources:
           number of rows reference a delisted sku.
       - name: raw_stock_reservations
         description: One record per stock hold placed against a checkout. status covers held/committed/released/expired.
+      - name: raw_suppliers
+        description: One record per supplier/vendor of finished products.
+      - name: raw_supplier_products
+        description: One record per (supplier, sku) they can supply, with the supplier's own cost and lead time.
+      - name: raw_purchase_orders
+        description: One record per purchase order placed with a supplier to replenish a warehouse.
+      - name: raw_purchase_order_items
+        description: One record per line item on a purchase order.
+      - name: raw_goods_receipts
+        description: >
+          One record per goods-receipt event against a purchase order item. quantity_received can be
+          less than quantity_ordered for a partial or short-shipped receipt.
