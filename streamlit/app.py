@@ -62,12 +62,12 @@ st.subheader("Revenue trend")
 fig = px.line(trend, x="month", y="revenue", markers=True)
 fig.update_layout(yaxis_title="Revenue ($)", xaxis_title=None, height=400)
 fig.update_yaxes(tickprefix="$", separatethousands=True)
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 with st.expander("Monthly detail"):
     st.dataframe(
         trend[["month", "order_count", "customer_count", "revenue", "avg_order_value", "gross_margin_pct"]],
-        use_container_width=True,
+        width='stretch',
         hide_index=True,
     )
 

@@ -19,13 +19,24 @@ python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 ```
 
-Auth: same read-only `evidence-reporting` service account used previously
-(`bigquery.dataViewer` + `bigquery.jobUser`, no write access). `.env`
-(gitignored) already points at its key:
+## Auth
 
-```
-GOOGLE_APPLICATION_CREDENTIALS=/home/chibesa/.dbt/evidence-sa.json
-```
+Same read-only `evidence-reporting` service account used previously
+(`bigquery.dataViewer` + `bigquery.jobUser`, no write access), but via
+**Streamlit Secrets** rather than a `GOOGLE_APPLICATION_CREDENTIALS` file
+path — this is Streamlit's official pattern for BigQuery
+(`st.secrets["gcp_service_account"]` +
+`service_account.Credentials.from_service_account_info()`), and it's what
+lets the exact same code run locally and on Streamlit Community Cloud.
+
+**Local**: `.streamlit/secrets.toml` (gitignored, never committed) —
+already set up, contains a `[gcp_service_account]` table with the service
+account key's fields (`type`, `project_id`, `private_key`, `client_email`,
+etc. — the same fields as the raw JSON key, just as TOML).
+
+**Streamlit Community Cloud**: paste the same TOML content into
+**App → Settings → Secrets**, not into GitHub. The repo stays the source
+of truth for the app/dbt/generator code; the credentials never enter it.
 
 ## Run
 
