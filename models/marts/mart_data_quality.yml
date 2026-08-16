@@ -1,0 +1,13 @@
+models:
+  - name: mart_data_quality
+    description: >
+      One row per data test in the jaffle_shop dbt package (excludes
+      Elementary's own internal tests), keeping only each test's most
+      recent result — the current data quality state, not a run history.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: test_unique_id
+        data_tests:
+          - not_null
+          - unique

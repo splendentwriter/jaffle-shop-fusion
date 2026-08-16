@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: elementary
+    schema: jaffle_shop_elementary
+    description: Elementary's own metadata/observability tables (dbt artifacts, test results, run results).
+    tables:
+      - name: elementary_test_results
+        description: One row per test execution result, across every invocation Elementary has observed.
+      - name: dbt_run_results
+        description: One row per node execution (model/seed/snapshot/test/unit_test) within a dbt invocation.
+      - name: dbt_invocations
+        description: One row per dbt invocation (run), with command, target, and timing metadata.
+      - name: dbt_models
+        description: One row per model as of the most recent parse, with package_name and materialization.
