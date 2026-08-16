@@ -63,12 +63,15 @@ def insert(client, table, rows):
         print(f"[error] insert into {table} failed: {errors}")
 
 
-def notify_slack(text):
+def notify_slack(text, blocks=None):
     webhook_url = os.environ.get("SLACK_WEBHOOK_URL")
     if not webhook_url:
         print("SLACK_WEBHOOK_URL not set, skipping Slack notification")
         return
-    payload = json.dumps({"text": text}).encode("utf-8")
+    body = {"text": text}
+    if blocks:
+        body["blocks"] = blocks
+    payload = json.dumps(body).encode("utf-8")
     request = urllib.request.Request(
         webhook_url, data=payload, headers={"Content-Type": "application/json"}
     )
@@ -78,6 +81,64 @@ def notify_slack(text):
                 print(f"[error] Slack notification returned status {response.status}")
     except Exception as e:
         print(f"[error] failed to send Slack notification: {e}")
+
+
+# (table name, display label) in funnel order, not alphabetical, so the
+# Slack summary reads top-to-bottom the same way the funnel runs
+TABLE_DISPLAY_ORDER = [
+    ("raw_sessions", "Sessions"),
+    ("raw_web_events", "Web events"),
+    ("raw_carts", "Carts"),
+    ("raw_cart_items", "Cart items"),
+    ("raw_cart_events", "Cart events"),
+    ("raw_checkouts", "Checkouts"),
+    ("raw_checkout_items", "Checkout items"),
+    ("raw_checkout_events", "Checkout events"),
+    ("raw_payment_attempts", "Payment attempts"),
+    ("raw_authorizations", "Authorizations"),
+    ("raw_captures", "Captures"),
+    ("raw_fulfillment_orders", "Fulfillment orders"),
+    ("raw_fulfillment_items", "Fulfillment items"),
+    ("raw_fulfillment_events", "Fulfillment events"),
+    ("raw_shipments", "Shipments"),
+    ("raw_shipment_items", "Shipment items"),
+    ("raw_tracking_events", "Tracking events"),
+]
+
+
+def build_success_blocks(n_sessions, n_carts, n_converted, n_completed_checkouts, table_counts):
+    conversion_line = ""
+    if n_converted:
+        rate = 100 * n_completed_checkouts / n_converted
+        conversion_line = (
+            f"*Result:* {n_completed_checkouts} successful payments generated from {n_converted} "
+            f"checkouts (*{rate:.1f}%* checkout-to-payment conversion)."
+        )
+    else:
+        conversion_line = "*Result:* no checkouts were generated this run."
+
+    raw_data_lines = "\n".join(
+        f"• {label}: *{table_counts[table]}*" for table, label in TABLE_DISPLAY_ORDER if table_counts.get(table)
+    )
+
+    return [
+        {"type": "header", "text": {"type": "plain_text", "text": "Jaffle Shop — Operations Data Generated"}},
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": (
+                    "*E-commerce flow*\n"
+                    f":globe_with_meridians: *{n_sessions}* sessions\n"
+                    f":shopping_trolley: *{n_carts}* carts\n"
+                    f":credit_card: *{n_converted}* checkouts\n"
+                    f":white_check_mark: *{n_completed_checkouts}* paid orders"
+                ),
+            },
+        },
+        {"type": "section", "text": {"type": "mrkdwn", "text": f"*Raw data generated*\n{raw_data_lines}"}},
+        {"type": "section", "text": {"type": "mrkdwn", "text": conversion_line}},
+    ]
 
 
 class Batch:
@@ -94,10 +155,8 @@ class Batch:
             insert(client, table, rows)
             print(f"  +{len(rows)} {table}")
 
-    def summary_text(self):
-        if not self.tables:
-            return "no rows generated"
-        return ", ".join(f"+{len(rows)} {table}" for table, rows in sorted(self.tables.items()))
+    def counts(self):
+        return {table: len(rows) for table, rows in self.tables.items()}
 
 
 def generate_session(batch, customers, devices_by_customer):
@@ -470,11 +529,12 @@ def run(n_sessions):
     batch.flush(client)
     print("Done.")
 
-    return (
-        f":chart_with_upwards_trend: jaffle-shop-fusion operations-data-generator: "
-        f"{n_sessions} sessions -> {n_carts} carts -> {n_converted} checkouts -> {n_completed_checkouts} paid. "
-        f"({batch.summary_text()})"
+    fallback_text = (
+        f"Jaffle Shop operations data generated: {n_sessions} sessions, {n_carts} carts, "
+        f"{n_converted} checkouts, {n_completed_checkouts} paid orders."
     )
+    blocks = build_success_blocks(n_sessions, n_carts, n_converted, n_completed_checkouts, batch.counts())
+    return fallback_text, blocks
 
 
 def main():
@@ -482,8 +542,8 @@ def main():
     parser.add_argument("--sessions", type=int, default=int(os.environ.get("SESSIONS_PER_RUN", 120)))
     args = parser.parse_args()
     try:
-        summary = run(args.sessions)
-        notify_slack(summary)
+        fallback_text, blocks = run(args.sessions)
+        notify_slack(fallback_text, blocks=blocks)
     except Exception as e:
         notify_slack(f":x: jaffle-shop-fusion operations-data-generator failed: {e}")
         raise
