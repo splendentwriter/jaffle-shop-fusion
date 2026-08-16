@@ -1,0 +1,27 @@
+models:
+  - name: stg_campaign_channels
+    description: Bridge of campaign to channel. A campaign can run on more than one channel.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - campaign_id
+              - channel
+    columns:
+      - name: campaign_channel_id
+        data_tests:
+          - not_null
+          - unique
+      - name: campaign_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_campaigns')
+                field: campaign_id
+      - name: channel
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['email', 'sms', 'push', 'social', 'search', 'display']

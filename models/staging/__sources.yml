@@ -183,3 +183,14 @@ sources:
         description: One record per moderation decision made on a review. Only present for reviews that were actually moderated (not pending).
       - name: raw_review_responses
         description: One record per merchant/support response to a review.
+      - name: raw_campaigns
+        description: One record per marketing campaign.
+      - name: raw_campaign_channels
+        description: Bridge of campaign to channel. A campaign can run on more than one channel.
+      - name: raw_marketing_events
+        description: >
+          Unified marketing event stream (email/sms/push/social/search/display), one row per event.
+          Consolidates the plan's campaign/email/SMS/push events into one typed stream, same pattern as
+          raw_web_events.
+      - name: raw_customer_acquisition
+        description: One record per customer's first-touch acquisition channel. campaign_id is set only for paid/campaign-driven acquisition.

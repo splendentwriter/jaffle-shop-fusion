@@ -1,0 +1,32 @@
+models:
+  - name: stg_marketing_events
+    description: >
+      Unified marketing event stream. Consolidates campaign/email/SMS/push
+      events into one typed stream distinguished by channel + event_type,
+      same pattern as stg_web_events.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: marketing_event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: campaign_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_campaigns')
+                field: campaign_id
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: channel
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['email', 'sms', 'push', 'social', 'search', 'display']

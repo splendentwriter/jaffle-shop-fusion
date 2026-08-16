@@ -1,0 +1,9 @@
+id,name,campaign_type,starts_at,ends_at,budget_cents,is_active
+09573707-88d5-49d3-9883-cad210dfc293,Welcome Series,lifecycle,2026-07-27T16:33:31,2026-09-06T16:33:31,368662,True
+f2b87082-9015-4dc5-813c-99cf680d5633,Summer Sale Blast,promotional,2026-02-22T16:33:31,2026-04-05T16:33:31,53978,False
+5c2098f9-789d-4c19-bc39-9bc2b10b615d,Retargeting Q2,retargeting,2025-10-31T16:33:31,2025-11-28T16:33:31,447939,False
+81e4a121-070a-4f50-a023-2630fc13727c,New Customer Push,acquisition,2026-03-07T16:33:31,2026-04-05T16:33:31,355285,False
+af40537c-3f5a-41f0-b7e8-3506667f1847,Loyalty SMS Alerts,lifecycle,2026-05-12T16:33:31,2026-06-26T16:33:31,483197,False
+1fb2363e-3da8-46b9-aa20-08dd5aae305f,App Engagement,engagement,2026-03-11T16:33:31,2026-04-01T16:33:31,345763,False
+0ec1e216-3977-486d-a0ba-83d65c1dfcc5,BlackFriday Blitz,promotional,2026-02-25T16:33:31,2026-04-04T16:33:31,123686,False
+8c37538c-2f8a-40e9-ba0a-e71d00f5f353,Winback Campaign,retention,2026-02-16T16:33:31,2026-03-27T16:33:31,56821,False

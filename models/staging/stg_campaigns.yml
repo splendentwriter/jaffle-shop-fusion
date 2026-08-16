@@ -1,0 +1,15 @@
+models:
+  - name: stg_campaigns
+    description: One row per marketing campaign.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: campaign_id
+        data_tests:
+          - not_null
+          - unique
+      - name: campaign_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['lifecycle', 'promotional', 'retargeting', 'acquisition', 'engagement', 'retention']

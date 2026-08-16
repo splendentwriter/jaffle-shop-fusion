@@ -1,0 +1,27 @@
+models:
+  - name: stg_customer_acquisition
+    description: >
+      One row per customer's first-touch acquisition channel. campaign_id
+      is null for organic/direct/referral acquisition.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: campaign_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_campaigns')
+                field: campaign_id
+      - name: acquisition_channel
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['organic', 'paid_search', 'paid_social', 'email', 'referral', 'direct']
