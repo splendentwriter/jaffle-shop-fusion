@@ -1,0 +1,32 @@
+models:
+  - name: fct_payout_reconciliation
+    description: >
+      One row per payout batch, comparing the payout amount against an
+      independent recompute of net captured amount (captures minus
+      processing fees) for that period. is_reconciled = false is the
+      signal a finance team would investigate — this is the plan's
+      "reconciliation" deliverable. A handful of payouts genuinely don't
+      reconcile to the cent: the payout batch total was computed in Python
+      (round-half-to-even) while this recompute uses BigQuery's ROUND
+      (round-half-away-from-zero) — across a batch of a dozen-plus captures,
+      a few land exactly on a rounding tie and diverge by a cent each,
+      compounding to the 2-3 cent gaps observed. That's a real fintech
+      reconciliation scenario (two systems, two rounding rules), not a bug
+      to paper over by forcing one side to match the other — hence the
+      warn-severity check below rather than a silent fix.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          config:
+            severity: warn
+          arguments:
+            expression: is_reconciled
+    columns:
+      - name: payout_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_payouts')
+                field: payout_id

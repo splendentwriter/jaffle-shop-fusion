@@ -1,0 +1,22 @@
+models:
+  - name: fct_transaction_fee
+    description: >
+      One row per capture, with the processing fee (percentage + fixed,
+      from stg_processing_fee_config) computed and netted off.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: capture_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_captures')
+                field: capture_id
+      - name: fee_cents
+        data_tests:
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 0
+                inclusive: true

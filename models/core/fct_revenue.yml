@@ -1,0 +1,23 @@
+models:
+  - name: fct_revenue
+    description: >
+      One row per completed checkout — the capstone fact tying together
+      Checkout (Phase 6: items/shipping), Payments (Phase 8: refunds and
+      processing fees), Promotions (Phase 9: coupon discounts), and
+      Finance (Phase 20: tax and fee calculation). gross_revenue_cents
+      excludes sales tax (never the business's revenue to begin with);
+      net_revenue_cents further nets off payment processing fees.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "net_revenue_cents <= gross_revenue_cents"
+    columns:
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id

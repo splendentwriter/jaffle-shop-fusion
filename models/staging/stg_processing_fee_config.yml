@@ -1,0 +1,10 @@
+models:
+  - name: stg_processing_fee_config
+    description: Payment processor fee schedule.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: fee_config_id
+        data_tests:
+          - not_null
+          - unique
