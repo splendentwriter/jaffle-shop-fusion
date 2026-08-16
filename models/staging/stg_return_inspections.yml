@@ -1,0 +1,23 @@
+models:
+  - name: stg_return_inspections
+    description: One row per inspection performed on a returned line item.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: return_inspection_id
+        data_tests:
+          - not_null
+          - unique
+      - name: return_item_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_return_items')
+                field: return_item_id
+      - name: inspection_result
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['resellable', 'damaged', 'missing_parts', 'not_as_described']

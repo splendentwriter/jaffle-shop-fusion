@@ -1,0 +1,22 @@
+models:
+  - name: stg_return_events
+    description: Append-only return lifecycle event log. One row per event.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: return_event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: return_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_returns')
+                field: return_id
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['requested', 'approved', 'rejected', 'item_received', 'inspection_completed', 'refund_issued']

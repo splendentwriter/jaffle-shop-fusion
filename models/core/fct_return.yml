@@ -1,0 +1,28 @@
+models:
+  - name: fct_return
+    description: >
+      One row per return, with item counts and inspection results rolled
+      up. resellable_count of inspected items informs whether returned
+      stock can go back into sellable inventory (Phase 10).
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "not is_refunded or refund_amount_cents > 0"
+    columns:
+      - name: return_id
+        data_tests:
+          - not_null
+          - unique
+      - name: shipment_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_shipments')
+                field: shipment_id
+      - name: reason
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['defective', 'wrong_item', 'no_longer_needed', 'damaged_in_transit', 'not_as_described']

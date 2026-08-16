@@ -162,3 +162,14 @@ sources:
         description: Append-only carrier tracking event log (label_created, picked_up, in_transit, out_for_delivery, delivered, exception).
       - name: raw_delivery_attempts
         description: One record per delivery attempt against a shipment. A shipment can have more than one attempt.
+      - name: raw_returns
+        description: >
+          One record per return request against a delivered shipment. Carries its own refund outcome
+          (refund_status/refund_amount_cents/refunded_at) rather than linking to Phase 8's raw_refunds -
+          see scripts/generate_returns_domain_seeds.py for why.
+      - name: raw_return_items
+        description: One record per line item on a return.
+      - name: raw_return_events
+        description: Append-only return lifecycle event log (requested, approved, rejected, item_received, inspection_completed, refund_issued).
+      - name: raw_return_inspections
+        description: One record per inspection performed on a returned line item.
