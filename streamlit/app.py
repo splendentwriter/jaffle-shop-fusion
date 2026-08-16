@@ -13,6 +13,46 @@ from utils.config import APP_ICON, APP_TITLE
 
 st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
 
+# Center the top-position nav pills within the header toolbar. The toolbar
+# row is [empty spacer, nav pills, status/Deploy/menu actions] all packed
+# left by default with no room for justify-content alone to matter, so this
+# uses the classic flex trick: grow the spacer and the actions block by
+# equal amounts, which centers the nav pills between them while keeping the
+# Deploy/menu controls flush right. Selectors are built from stable
+# data-testid attributes plus structural pseudo-classes (:has, :empty,
+# :last-child), not Streamlit's emotion-hash classnames, which change
+# across builds.
+st.markdown(
+    """
+    <style>
+    [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) {
+        flex: 1 1 auto;
+        display: flex;
+        width: 100%;
+    }
+    [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) > div:empty:first-child {
+        flex: 1 1 0;
+    }
+    [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) > *:last-child {
+        flex: 1 1 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    /* The nav pill row (rc-overflow, an ant-design-family component) ships
+       its own width: 100% rule that greedily fills all space handed to it,
+       which is what makes it responsively collapse extra sections into a
+       "more" dropdown. That greediness defeats the symmetric-spacer trick
+       above, so pin it to its actual content width (!important needed to
+       beat that rule's classname-based specificity). */
+    [data-testid="stToolbar"] .rc-overflow {
+        width: fit-content !important;
+        flex: 0 1 auto !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 executive_command_center = st.Page(
     "pages/executive/command_center.py",
     title="Command Center",
