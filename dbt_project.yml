@@ -31,6 +31,14 @@ seeds:
         # type inference guess INT64 and silently truncate leading zeros
         +column_types:
           postal_code: string
+      raw_loyalty_transactions:
+        # reward_id is empty for every row in this generated sample (thin
+        # overlap between loyalty-enrolled customers and completed
+        # checkouts meant no account crossed the redemption threshold), so
+        # agate has no non-blank value to infer a type from and defaults to
+        # INT64 instead of STRING
+        +column_types:
+          reward_id: string
 
 snapshots:
   jaffle_shop:

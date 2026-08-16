@@ -1,0 +1,10 @@
+models:
+  - name: stg_loyalty_tiers
+    description: One row per loyalty tier.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: tier_id
+        data_tests:
+          - not_null
+          - unique

@@ -1,0 +1,41 @@
+models:
+  - name: stg_loyalty_transactions
+    description: >
+      Unified points ledger. points is positive for earn, negative for
+      redeem/expire. reward_id is only set for redeem transactions;
+      related_checkout_id is only set for earn transactions tied to a
+      purchase.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "transaction_type != 'redeem' or reward_id is not null"
+    columns:
+      - name: loyalty_transaction_id
+        data_tests:
+          - not_null
+          - unique
+      - name: loyalty_account_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_loyalty_accounts')
+                field: loyalty_account_id
+      - name: reward_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_rewards')
+                field: reward_id
+      - name: related_checkout_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id
+      - name: transaction_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['earn', 'redeem', 'expire']

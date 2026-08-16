@@ -1,0 +1,5 @@
+id,name,min_points_threshold,perk_description
+TIER-BRONZE,bronze,0,Standard earning rate
+TIER-SILVER,silver,500,1.25x points earning
+TIER-GOLD,gold,2000,"1.5x points earning, free shipping"
+TIER-PLATINUM,platinum,5000,"2x points earning, priority support"

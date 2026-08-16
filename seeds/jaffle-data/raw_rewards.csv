@@ -1,0 +1,5 @@
+id,name,points_cost,reward_type
+RWD-001,$5 off coupon,500,discount_coupon
+RWD-002,$10 off coupon,900,discount_coupon
+RWD-003,Free shipping,300,free_shipping
+RWD-004,Free beverage,400,free_item

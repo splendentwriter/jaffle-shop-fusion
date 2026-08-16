@@ -204,3 +204,14 @@ sources:
         description: One record per message in a ticket's conversation thread.
       - name: raw_ticket_events
         description: Append-only ticket lifecycle event log (created, assigned, resolved, reopened).
+      - name: raw_loyalty_tiers
+        description: One record per loyalty tier.
+      - name: raw_rewards
+        description: One record per redeemable reward.
+      - name: raw_loyalty_accounts
+        description: One record per customer's loyalty account. Not every customer is enrolled.
+      - name: raw_loyalty_transactions
+        description: >
+          Unified points ledger (earn, redeem, expire, adjustment), one row per event. "Reward
+          redemptions" from the build-out plan are transaction_type='redeem' rows with reward_id set,
+          not a separate table.

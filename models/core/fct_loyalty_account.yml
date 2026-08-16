@@ -1,0 +1,23 @@
+models:
+  - name: fct_loyalty_account
+    description: >
+      One row per loyalty account, with lifetime earned/redeemed/expired
+      points rolled up from the transaction ledger.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "points_balance = lifetime_points_earned - lifetime_points_redeemed - lifetime_points_expired"
+    columns:
+      - name: loyalty_account_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id

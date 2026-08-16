@@ -1,0 +1,30 @@
+models:
+  - name: stg_loyalty_accounts
+    description: One row per customer's loyalty account. Not every customer is enrolled.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: loyalty_account_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: tier_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_loyalty_tiers')
+                field: tier_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'inactive', 'suspended']

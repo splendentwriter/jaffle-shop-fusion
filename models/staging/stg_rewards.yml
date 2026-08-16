@@ -1,0 +1,15 @@
+models:
+  - name: stg_rewards
+    description: One row per redeemable reward.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: reward_id
+        data_tests:
+          - not_null
+          - unique
+      - name: reward_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['discount_coupon', 'free_shipping', 'free_item']
