@@ -1,0 +1,35 @@
+models:
+  - name: stg_cart_items
+    description: >
+      One row per line item added to a cart. A small number of rows have a
+      non-positive quantity (upstream data-entry bug, see the warn-severity
+      check below) or reference a sku that's since been delisted from the
+      product catalogue (also warn-severity).
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          config:
+            severity: warn
+          arguments:
+            expression: "quantity > 0"
+    columns:
+      - name: cart_item_id
+        data_tests:
+          - not_null
+          - unique
+      - name: cart_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_carts')
+                field: cart_id
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_products')
+                field: product_id

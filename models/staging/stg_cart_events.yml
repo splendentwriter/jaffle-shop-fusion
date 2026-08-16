@@ -1,0 +1,22 @@
+models:
+  - name: stg_cart_events
+    description: Append-only cart lifecycle event log. One row per event.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: cart_event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: cart_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_carts')
+                field: cart_id
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['created', 'item_added', 'item_removed', 'abandoned', 'converted']

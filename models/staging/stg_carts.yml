@@ -1,0 +1,31 @@
+models:
+  - name: stg_carts
+    description: >
+      One row per cart. customer_id is null for guest (unauthenticated)
+      carts. status captures the lifecycle: active, abandoned, converted,
+      or merged (into another cart).
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: cart_id
+        data_tests:
+          - not_null
+          - unique
+      - name: session_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_sessions')
+                field: session_id
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'abandoned', 'converted', 'merged']

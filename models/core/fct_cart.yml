@@ -1,0 +1,24 @@
+models:
+  - name: fct_cart
+    description: >
+      One row per cart, with line item counts and subtotal rolled up from
+      fct_cart_item. active_quantity/cart_subtotal_cents exclude removed and
+      saved-for-later items.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: cart_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'abandoned', 'converted', 'merged']

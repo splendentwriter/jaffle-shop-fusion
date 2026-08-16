@@ -1,0 +1,22 @@
+models:
+  - name: fct_cart_item
+    description: >
+      One row per cart line item, enriched with the product's current price
+      (from dim_product's is_current row) to compute price_drift against
+      the price captured at add-to-cart time. is_still_in_catalogue is
+      false for the known delisted-sku rows (see stg_cart_items) since the
+      left join to dim_product won't match them.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: cart_item_id
+        data_tests:
+          - not_null
+          - unique
+      - name: cart_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_carts')
+                field: cart_id
