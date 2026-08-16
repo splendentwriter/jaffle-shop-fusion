@@ -1,0 +1,23 @@
+models:
+  - name: stg_authorizations
+    description: One row per payment authorization.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: authorization_id
+        data_tests:
+          - not_null
+          - unique
+      - name: payment_attempt_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_payment_attempts')
+                field: payment_attempt_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['approved']

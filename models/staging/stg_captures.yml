@@ -1,0 +1,21 @@
+models:
+  - name: stg_captures
+    description: >
+      One row per capture against an authorization. amount can be less than
+      the authorization's amount for a partial capture (~3% of rows, by
+      design).
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: capture_id
+        data_tests:
+          - not_null
+          - unique
+      - name: authorization_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_authorizations')
+                field: authorization_id

@@ -1,0 +1,30 @@
+models:
+  - name: stg_disputes
+    description: >
+      One row per payment dispute. status covers the full outcome range,
+      including 'chargeback' — a chargeback is modeled as a dispute
+      outcome rather than a separate raw table.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: dispute_id
+        data_tests:
+          - not_null
+          - unique
+      - name: payment_attempt_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_payment_attempts')
+                field: payment_attempt_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['open', 'resolved_merchant_favor', 'resolved_customer_favor', 'chargeback']
+      - name: reason
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['fraudulent', 'product_not_received', 'product_unacceptable', 'duplicate']

@@ -1,0 +1,22 @@
+models:
+  - name: stg_payment_methods
+    description: One row per payment method saved to a customer's wallet.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: payment_method_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: method_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['credit_card', 'debit_card', 'paypal', 'apple_pay', 'gift_card']

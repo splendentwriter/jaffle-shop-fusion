@@ -1,0 +1,33 @@
+models:
+  - name: stg_payment_attempts
+    description: >
+      One row per payment attempt against a checkout. A small number of
+      rows reference a payment_method_id that's since been removed from the
+      customer's wallet — see the warn-severity relationship test below.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: payment_attempt_id
+        data_tests:
+          - not_null
+          - unique
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id
+      - name: payment_method_id
+        data_tests:
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_payment_methods')
+                field: payment_method_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['captured', 'declined', 'error']

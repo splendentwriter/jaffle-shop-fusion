@@ -1,0 +1,4 @@
+id,payment_attempt_id,opened_at,reason,amount_cents,status
+56ebbfec-1cec-4a3a-8644-42513b4b7d7a,d5078caf-96e1-4917-bd75-c1b87c0730c6,2026-04-19T03:59:20,product_unacceptable,2400,open
+60646f2f-946b-48ea-8bed-fa134d1ea53a,9a89056f-2e51-45dc-a145-331a864aaebd,2026-07-18T09:09:43,duplicate,600,resolved_merchant_favor
+db8712ca-1535-42be-821b-adbd32657181,6ee966fb-0b09-4df5-876a-e21f6463253f,2026-03-20T03:53:16,product_unacceptable,3600,resolved_customer_favor

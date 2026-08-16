@@ -1,0 +1,27 @@
+models:
+  - name: stg_refunds
+    description: >
+      One row per refund request against a capture. refunded_at is null
+      unless status is 'completed'.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "status != 'completed' or refunded_at is not null"
+    columns:
+      - name: refund_id
+        data_tests:
+          - not_null
+          - unique
+      - name: capture_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_captures')
+                field: capture_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['completed', 'pending', 'rejected']

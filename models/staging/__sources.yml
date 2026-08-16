@@ -91,3 +91,19 @@ sources:
           sample of existing orders. A small number of rows reference an order_id that no longer exists.
       - name: raw_order_adjustments
         description: One record per post-order adjustment (discount, goodwill credit, price/tax correction) applied to an order.
+      - name: raw_payment_methods
+        description: One record per payment method saved to a customer's wallet.
+      - name: raw_payment_attempts
+        description: >
+          One record per payment attempt against a checkout. status is captured/declined/error.
+          decline_reason is only populated for non-captured attempts.
+      - name: raw_authorizations
+        description: One record per payment authorization.
+      - name: raw_captures
+        description: One record per capture against an authorization. amount_cents can be less than the authorization for a partial capture.
+      - name: raw_refunds
+        description: One record per refund request against a capture. Not all refunds have completed (see status).
+      - name: raw_disputes
+        description: >
+          One record per payment dispute. status covers the full outcome range including chargeback -
+          a chargeback is modeled as a dispute outcome, not a separate entity.

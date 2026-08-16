@@ -1,0 +1,29 @@
+models:
+  - name: fct_payment
+    description: >
+      One row per payment attempt, with captured/refunded amounts and
+      dispute status rolled up. net_amount_cents = captured - refunded.
+      This is the primary entry point for payment-domain analysis; use
+      fct_payment_transaction for the underlying event-level ledger.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "refunded_amount_cents <= captured_amount_cents"
+    columns:
+      - name: payment_attempt_id
+        data_tests:
+          - not_null
+          - unique
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id
+      - name: attempt_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['captured', 'declined', 'error']

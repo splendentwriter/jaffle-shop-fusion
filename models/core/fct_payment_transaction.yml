@@ -1,0 +1,29 @@
+models:
+  - name: fct_payment_transaction
+    description: >
+      Unified payment ledger: one row per authorization, capture, or
+      completed refund (pending/rejected refunds are excluded — they never
+      moved real money). Refund amounts are negative. This is "payment
+      transactions" from the build-out plan, modeled as a derived union
+      rather than its own raw source, since a raw table here would just
+      duplicate rows already captured at the authorization/capture/refund
+      stage.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: payment_transaction_id
+        data_tests:
+          - not_null
+          - unique
+      - name: payment_attempt_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_payment_attempts')
+                field: payment_attempt_id
+      - name: transaction_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['authorization', 'capture', 'refund']
