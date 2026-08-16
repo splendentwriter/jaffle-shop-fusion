@@ -7,6 +7,18 @@ sources:
     tables:
       - name: raw_customers
         description: One record per person who has purchased one or more items
+      - name: raw_customer_accounts
+        description: One record per customer account (login/email/status). A customer may have zero, one, or (due to duplicate signups) more than one account.
+        config:
+          loaded_at_field: updated_at
+      - name: raw_customer_addresses
+        description: One record per address a customer has on file. A customer may have zero or many; rows are not guaranteed unique.
+      - name: raw_customer_preferences
+        description: One record per customer's communication preferences. Not every customer has filled these in.
+      - name: raw_customer_consent
+        description: Append-only log of consent grants/revocations per customer and consent type.
+      - name: raw_customer_devices
+        description: One record per device seen for a customer.
       - name: raw_orders
         description: One record per order (consisting of one or more order items)
         config:

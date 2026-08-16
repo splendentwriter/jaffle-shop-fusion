@@ -1,0 +1,34 @@
+models:
+  - name: stg_customer_accounts
+    description: >
+      One row per customer account. Not guaranteed 1:1 with customer_id —
+      duplicate signups produce a second account for the same customer, and
+      a small number of accounts arrive with no matching customer_id
+      (orphaned by a broken signup flow). See the `customer_id` relationship
+      test below, which is deliberately warn-severity to surface this
+      without failing the build.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: account_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: account_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'inactive', 'suspended', 'closed']
+      - name: account_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['standard', 'vip']

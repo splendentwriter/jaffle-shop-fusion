@@ -1,0 +1,37 @@
+models:
+  - name: dim_customer
+    description: >
+      SCD Type 2 customer account dimension. One row per account per
+      distinct period of continuous account state (email/status/type),
+      tracked via customer_accounts_snapshot. is_current = true identifies
+      the present-day row. Note: because a customer can have more than one
+      account (see stg_customer_accounts), a single customer_id can have
+      more than one concurrently-current row — this dimension's grain is
+      per account, not per customer. Orphaned accounts (no matching
+      customer_id) are excluded by the inner join to stg_customers.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - account_id
+              - valid_from
+    columns:
+      - name: account_id
+        data_tests:
+          - not_null
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: valid_from
+        data_tests:
+          - not_null
+      - name: account_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'inactive', 'suspended', 'closed']

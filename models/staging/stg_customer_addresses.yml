@@ -1,0 +1,26 @@
+models:
+  - name: stg_customer_addresses
+    description: >
+      One row per address record on file. Raw pass-through — exact-duplicate
+      address rows (same customer, type, and line1) are known to exist from
+      upstream double-inserts and are resolved in int_customer_addresses,
+      not here.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: address_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: address_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['shipping', 'billing']

@@ -1,0 +1,23 @@
+models:
+  - name: int_customer_addresses
+    description: >
+      One row per distinct (customer_id, address_type, address_line1).
+      Resolves the exact-duplicate address rows known to exist in
+      stg_customer_addresses by keeping the lowest address_id per business
+      key.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - customer_id
+              - address_type
+              - address_line1
+    columns:
+      - name: address_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null

@@ -1,0 +1,29 @@
+models:
+  - name: stg_customer_consent
+    description: >
+      Append-only log of consent grants and revocations. One row per
+      grant/revoke event, not one row per customer — a customer can have
+      multiple consent_type rows, and the same consent_type can appear more
+      than once if it was revoked and later re-granted.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: consent_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: consent_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['marketing_email', 'data_processing', 'sms', 'analytics_cookies']
+      - name: granted_at
+        data_tests:
+          - not_null

@@ -1,0 +1,1204 @@
+id,customer_id,address_type,line1,city,region,postal_code,country_code,is_default
+d8266c75-629a-446d-a80a-8412a6967b36,cd709ef0-753a-4968-b981-ab264708b37a,shipping,9143 Joel Expressway Suite 539,West Angela,ME,35468,US,False
+151269c5-d408-4af0-bcc6-569d5804c8eb,a57c96be-0b7a-41c6-bd9a-9330e20c497a,shipping,911 Henderson Keys Apt. 559,Port Kevinstad,RI,58462,US,True
+c2f7b312-de79-458d-b0dc-b98739600944,4acffd44-9d77-4c09-afdb-e7f93ee5518b,shipping,994 Kelly Shores Suite 784,Port Shawn,DE,33359,US,False
+bcf3da37-9118-4773-a9b1-976f254441a2,da9de603-2c96-4356-820d-7c1e9ac4dde7,shipping,62987 Little Neck,Port Lee,MD,97068,US,True
+d397938b-d158-40cf-929d-c56b76409bd4,a3c5ffdb-8383-4846-a0c1-c9bf88ba6832,shipping,632 James Valleys Suite 800,Nicoleton,DE,06792,US,True
+fee5e3f0-5297-4f42-bf5d-894a2f42e7a3,723f776c-3ad0-4fa2-8177-a80f2cab59d9,shipping,274 Lopez Points Apt. 552,Shaneburgh,ND,40027,US,False
+c61d7719-c142-45ee-9a25-17d121e4ec55,84a120aa-c994-404e-9e74-8277a6f9eb4e,shipping,776 Tina Port,Port Kimberlytown,MO,69180,US,True
+0c724e95-9dd3-49f0-8e2f-fbd1cc35fce8,1740f65f-2823-4d8a-9ff9-2bf6dfcddfb6,shipping,258 Lewis Inlet Suite 170,Carterfurt,GA,46989,US,True
+0f23f144-6d61-4e76-a582-6c50b9e6e8cb,4c710db6-7317-4d70-8dcb-6af9a4068e8d,shipping,73379 Laura Courts,North Christopher,AR,16128,US,True
+03c5a482-1a25-44ec-b071-1fcea734e63e,63b6d2f8-4e38-4b4c-bf67-6651399b4453,shipping,2689 Mooney Fords,North Frankton,KS,95821,US,True
+79e68cf7-b61b-4a22-b46f-9661b0242cb9,b3f95dcd-caf0-4d0c-8890-a7b8e231c6b7,shipping,13062 Kathryn Valley Apt. 369,Samuelberg,NV,78751,US,True
+ca0c7152-6cd8-485a-a22d-798b791644a0,b9915f58-4f74-4518-bb97-0b1e58c541a5,shipping,5691 David Cliffs Apt. 291,Flemingland,NJ,39630,US,True
+4ebe90f7-ae5b-434a-8c09-d75d0043cf67,6deb3adf-b348-4736-a975-af07bea72c06,shipping,2785 Drew Route Apt. 642,Jodychester,AS,39803,US,True
+d4124b66-3818-49f5-b7a4-f855284aaeca,2068f48f-4c39-4084-81d1-95af149d8547,shipping,916 John Ways,West Nicole,ND,38759,US,True
+846be0c7-477f-48ed-a869-74ceb800dd1d,f0496969-2829-4c93-834d-07ef9042cd86,billing,4596 Flowers Isle,Lake Brandonchester,MH,88115,US,False
+0171987e-394b-4b36-91e3-15fa0f1f28cb,ce5ac3ba-cbec-4482-816e-1ee6def437e2,shipping,0764 Blair Cove,Mayfort,MD,34638,US,True
+7c5c4552-b8fa-437c-95da-1160124e1846,5d59a09d-7696-4e1b-a171-abe3b79fff2d,shipping,979 Mills Route,Reginafort,ND,30271,US,True
+71ad31cb-a2be-4fc2-958d-af0b40068e8f,212484cd-56e9-4934-ab9b-69d43228ee16,shipping,5056 Garcia Passage,Lewisborough,RI,84057,US,False
+99ef3f1e-8bd1-4d74-987c-ae71aeccef64,447fed8a-4bae-41c5-b5cd-cbf6a09c4782,shipping,6329 Gutierrez Grove,South Samantha,NJ,42300,US,True
+3a63a7e0-6e8f-4fc8-84a2-c023e5ee8d8d,543b48b5-22b5-41e4-8e3c-704fc8f03e8d,shipping,11178 Davis Spur,East Markport,VT,58852,US,True
+d05984eb-7f92-41ad-8a8f-7ef1a21390d5,f03fb49f-283d-405e-bf8d-52046ca6e77d,shipping,497 Logan Pines,Fowlerland,ID,,US,True
+730dc345-ae81-4f28-b9b5-00210cf1d54f,7528c8de-b892-4894-8892-94a29730aa9c,shipping,76789 Hall Circle Apt. 695,West Patriciachester,FM,62542,US,True
+9e1300f9-7983-4f37-aabc-456776b3236c,10d7cb3c-5a86-4eae-9da6-611ddf67fdd8,shipping,36715 Mcdonald Place Suite 112,South Kaylaborough,MO,43587,US,False
+42f39c39-634d-4aff-95d7-c4bcbec303ea,b60e68c2-1b3c-4a8b-a056-a39fb4e6a320,shipping,0733 Mark Views,Hoffmanview,MD,64031,US,True
+3ca536b4-80fd-4531-8c27-d58a6294764c,d10408ec-2013-471e-b6a9-e3bcf0e25322,shipping,0344 Silva Inlet,Claudiafurt,KS,74047,US,False
+44f94709-2b21-44f2-8593-4b233316f1a9,257291a7-c562-45b7-9229-49a527229518,shipping,26650 Elizabeth Neck Suite 167,Marshberg,MD,98947,US,True
+2a4dc247-0f0d-4d52-a0b4-da162cc9e197,72492cee-bfcb-4501-9a63-5afe45f5215a,shipping,070 Kim Mall Apt. 856,Christopherville,ND,22541,US,False
+178f5d80-6b03-46f6-bb70-de3e3eafd1b8,d1c356c7-a230-4e49-abb6-3eb1f58155cd,shipping,1207 Kevin Road,Reginaview,RI,42584,US,False
+484ad294-aa76-4a79-9148-d30a03d5a3bf,7767d63a-0293-4866-ae0a-724670463aa1,shipping,92134 Jose Cove,Port Alexa,SD,50694,US,True
+b1d3db20-7dfd-4931-ae7e-0015f0cd63b9,7c2a3f62-d757-4322-a213-921d7c370838,billing,3347 Jonathan Inlet,Lesterport,ND,38324,US,False
+85349794-e23d-4c7d-9dcc-e2fb64f9bc1b,7c66bbce-e687-4e15-be85-d960c3de159b,shipping,860 Hanna Crest,East Raymondmouth,AZ,52498,US,True
+9f0a6a65-fd95-4a03-bf8f-b3ed4216b00c,148d63de-77f4-461d-b3ca-5369e9a98e7b,shipping,527 Jackson Hollow Apt. 132,Lake Jeremy,DC,28005,US,True
+c8cb7730-c039-4b16-b070-141484cec780,333d41f0-5f4d-48cb-b3bd-042814f9b7f8,shipping,9957 Norman Oval,South Johnnyland,CO,32664,US,True
+2c3007dd-b8d5-4a13-8ee7-b6657738906e,f419edd5-8bb5-4809-8cfc-599ab209f6da,shipping,8172 James Flat,Deanstad,VT,20708,US,True
+26d0aae9-4d0c-40a7-b4b3-637687e43d0d,d63f06df-5e5d-4adc-b0a5-43b4bac6bf5c,billing,493 Samuel Islands,Angelaport,UT,03365,US,False
+eb1eb92a-97aa-446f-b458-3f762c6319e5,cfefbf12-9a5a-4d61-a708-d92f785af097,shipping,61675 Ramos Camp,East Angelaport,FM,93045,US,True
+01709906-2c77-4a30-b025-6cc64afc9254,95381466-0836-4fd0-b05c-e8ca6147a51f,shipping,661 Darryl Track Suite 831,Lake Jamesmouth,GU,03841,US,True
+4a7f0108-5852-4411-b67c-9769fd400758,848485f0-198f-4efa-8335-707db71a7434,shipping,84895 Richmond Harbor,New Sylvia,NH,53448,US,True
+5ddff2dc-4871-4818-9883-4712d631fad2,8f06b288-f9eb-454f-adef-47f12b7572d7,shipping,6821 Wilson Ridges,Michaelmouth,NE,08093,US,True
+90d3b04f-8edf-473c-9cd3-1f8ca99bcd36,436ca6dd-1cc3-4ff0-986c-eabb97606b9b,shipping,867 Ramirez Wall Apt. 275,Tonyaview,ND,83361,US,True
+e1fed02a-9769-4fc6-9de7-7980aa688b5f,a1a72036-c041-4a92-a719-9bbf0e21d53b,shipping,911 Huffman Mission Apt. 699,Barbarahaven,CT,85919,US,True
+97963a2a-7892-463e-9373-92d011a088fc,24ea0325-a7d6-4388-b86c-7b51e5805b26,shipping,904 Jay Rest Suite 723,Burkeshire,GU,24340,US,True
+81c1f4fc-4652-4917-920e-f2081f1ca6e9,c11308cb-8153-4e7b-9149-9b6b5c0aa137,shipping,85174 Russell Burg Suite 521,New Carrie,PR,13624,US,True
+31366c8b-a506-4658-b417-b14f8234aeef,36654075-c818-484d-aa9f-b6e8834b1bd5,shipping,891 Soto Groves Suite 983,Saramouth,PW,31881,US,True
+16845e4b-fc50-432d-a233-8030d0326987,c1d42cf2-74d9-44b1-a0a2-c85935c413be,shipping,5485 Justin Station,Woodfort,AS,77257,US,True
+cbc0f6af-e6a2-4561-b1d5-0a4ccf317406,a5066e8e-de65-4798-9ed5-f6cae5f86031,shipping,1603 Clark Island,South Theresa,SD,16985,US,True
+48676654-db84-490e-b27c-fb563749f5b7,5b2179c5-dd1c-45b4-b99c-10f1c7c201f4,shipping,949 Brown Mountains,New Brett,LA,97150,US,True
+c050535a-ad4a-40a4-b0d7-d5204296a503,fad2c57b-c35e-4270-8d10-2f067a5ee2b7,shipping,9743 Wiley Greens Apt. 882,East Brandon,MA,66103,US,True
+37487180-fd0b-4041-ba7e-4dfd56c5d2dc,a4512e27-9e9c-4aa8-bc00-11e9e1f1fd9f,shipping,78105 Banks Shoals Apt. 002,Gatesburgh,VA,17281,US,True
+3916ab86-fdd0-4323-95e7-ece4ca5a0ce6,31d39d83-97c5-4a86-8d98-c9ea5e4d6505,billing,36337 Patricia Forges,Danielbury,TN,40935,US,False
+f41e3fa3-0267-4ed9-91d6-26794c8aa2d3,34b17474-7fef-4a04-8009-f83028f66521,shipping,28389 Nunez Ford,Port Timothy,MH,98409,US,True
+05401fb1-876e-490f-a1df-88f998daf5c9,fd9f1577-416e-472f-aad7-7bd5c56293f5,shipping,59660 Angela Stravenue,Micheleside,NH,56053,US,True
+bd774a0f-04ba-476d-b208-ccc45a599b97,d4d6c47d-5048-4008-b088-4f13691fbefd,shipping,335 Jeremy Harbor Apt. 619,East Scott,TX,36607,US,True
+99a0bbe7-860b-4bb2-a7a2-7a38d2fd4289,5a589b0f-69ac-4256-aea8-df379845f417,shipping,861 Craig Squares,Andradeburgh,WY,24145,US,True
+edf59dbc-1383-45ef-81d2-3393334777e0,2f0fa97b-f713-40a9-8e11-3e18580cd97b,shipping,07843 Rodriguez Heights,West Joshua,NE,02305,US,True
+47a12b16-2cb8-4cdd-a078-f656d3a76b89,d4d6e685-70a2-49ea-b511-383a54d18cfa,shipping,988 Wolf Curve Suite 652,Lake Rebeccafurt,SC,06794,US,True
+5f57ddbc-1b61-489b-96c0-96a48eadd2b8,5da6ee93-0365-4464-849c-cba666614c05,shipping,08562 Lewis Pass Suite 852,North Pamelaside,OR,34408,US,True
+3c84de28-8464-460e-9aa1-d448938e48e5,f7989645-3a12-42f6-a926-2a7388aeb297,billing,86326 Hardin Mount,Sherrymouth,FL,01804,US,False
+217c5821-42bd-45e2-b032-32664313d65e,afdabd06-a2b4-497a-93b8-7bcf582b5d3b,billing,29462 Mary Ramp Apt. 556,Port Judytown,AS,28631,US,False
+066742d5-4a08-4519-9fd3-3fdec685f948,14dec3ce-7570-4c3f-af8c-e9c0d74cfcd2,shipping,0066 Nixon Courts,Michaelport,MP,09060,US,False
+af1bae90-275d-4de8-affb-e03603de7c75,27e89b40-f32c-4604-8a79-6d1613bde382,shipping,3726 John Drive Apt. 450,Stevenfurt,FM,86147,US,False
+b5c233a9-62a3-43e0-98c0-ac3cb8c9ce15,899ea741-e615-4f9e-ad30-286f6f306f00,shipping,75877 Rodriguez Stravenue Apt. 151,Port Justin,MP,22559,US,True
+ac533a82-7934-46d3-a61c-fae251703937,1d94038e-346e-4263-a10f-7fa4e5d1179e,shipping,8458 Garcia Hills,New Emily,MD,20999,US,True
+78c10ada-cc65-4cd8-b9c0-fe1d72c532d8,baa48fe5-b7a4-4ea7-8eaf-5387ded157f7,shipping,57287 Jacob Center Apt. 207,Frankmouth,NE,15708,US,True
+59392f12-ef34-457a-89ae-400128047178,a2053515-1d0d-41cb-a47d-485aed398e8b,billing,1847 Kelly Walks,Ramirezburgh,IN,54170,US,False
+3835272d-77af-4ee1-82c3-252d620488ac,2aee3fe5-2eb0-4391-bb79-d4d4ffdd9931,shipping,836 Wells Drive Suite 047,Gregoryhaven,TX,05877,US,True
+2f475bfa-aa0a-45c2-a515-9102133b667b,93c6c6a9-16fb-43ad-bd64-1ee5eccdd750,shipping,753 Murray Orchard Apt. 161,Martineztown,GA,68650,US,True
+d05ecffb-8cd2-4589-a37f-07ab2648494b,5bc5dd9e-3670-4c84-be25-41eace68a711,shipping,595 Miller Squares,Jenniferchester,MH,80649,US,True
+15ac3f96-1cfc-4e57-9e3a-989da3c6f841,7eaca096-c253-48ee-936a-8ea930759d59,shipping,172 Rachel Neck Suite 545,Timothyfurt,FL,75371,US,True
+7932b31a-c2f0-475f-a985-d7258f559514,33ab4667-4cdd-435a-875e-305ea36ebc4d,shipping,10217 Curtis Fields,Aprilchester,GA,75542,US,True
+d7fb0738-c63e-44a4-99ae-1356c5788fae,b69dd468-7a0d-45e5-951c-ead1fcda2225,shipping,24386 Carroll Plaza Apt. 081,Gutierrezmouth,TN,94913,US,True
+538dc1ec-3f53-4a36-a5df-e6a1acd04f76,d45ce04e-1258-4744-ab7d-af982c28565d,shipping,32440 Hanson Flats Apt. 102,New Collinborough,CT,62595,US,True
+7b9712ba-e09d-403b-8bc4-6a19c8e1add8,387603c1-d2a6-475e-ab4c-9ba7aa78bb27,shipping,200 Nelson Glen Suite 539,Brandonside,OK,09667,US,False
+4ea5f942-4e83-4485-84d8-a8b23d495189,5fccc95a-c30f-4525-a4a6-43861baae99a,shipping,23094 Stephen Walk,Stephenstown,PA,65180,US,True
+814196fc-aa66-4e8c-9200-78b0989eaf13,89b94667-2d12-4e7a-bfdd-f37056d10195,shipping,7345 Norris Isle,Lyonsshire,KY,78413,US,True
+0265ef58-8088-4ce6-bab3-11c2a5af932d,f55982fc-a2f7-407d-b845-3b32df0463f7,billing,6708 Mcdonald Cape,North Ebonybury,MS,45766,US,False
+81d11a76-5f3c-4f2b-944e-eaa3d0e400f1,438005c2-dd1d-48aa-8bfd-7fb06851b5f8,shipping,9958 Barnes Rest,West Raymond,MA,39058,US,True
+507d2188-45b0-4ee9-966e-ee38b3f353ab,a5f46489-06cf-45af-9efd-dbd27067716c,shipping,96790 Martin Springs,Millerland,VT,30853,US,False
+8ad747b7-ba99-4a56-b04b-fdc80ede2a7f,44df0dc9-35a6-4159-8141-4a8bf47c0e2b,shipping,76836 Mary Knoll,South Robert,MT,60870,US,True
+695bdd99-eb6b-446d-bf90-5e81ce602a26,a46b9550-42ae-47e4-9a08-0f32481d5191,shipping,37106 Jackson Unions,Taylorside,MT,52851,US,True
+2c2ccfd7-c29f-4682-9c3b-458b54e9b0bd,c64e9b29-2c3f-4a02-bf80-175c5a980c92,shipping,989 Allen Harbor Apt. 961,East Crystalville,AZ,77382,US,True
+e4f26e65-bf24-40fb-bdc2-f2eb305cc781,14dec3ce-7570-4c3f-af8c-e9c0d74cfcd2,shipping,31795 Perry Fords,Port Williamfort,KS,67181,US,True
+b99cbc6b-cf83-4be2-916f-5c4210c08c04,76acc7d2-0fca-4530-89dd-39889b4f3bb3,shipping,542 Andrews Extension Apt. 495,Williamstown,NJ,89039,US,True
+2e0d3b51-b61e-461f-a595-2f4cdde7aeb4,8f40d15b-7ab5-4fdb-b9a0-767514af456f,billing,7766 Ballard Island Suite 602,Hallland,MI,11303,US,False
+6376ed11-6d0c-4312-9bf4-10a552ad01e9,8cef9627-37e9-4bad-a5d7-69f87f291c90,shipping,209 Misty Harbors Apt. 579,Robertsonborough,AL,84134,US,True
+e9147108-e105-4728-834f-318ea4ddd83b,f3c5c37f-bd98-40b6-8f8b-eeb75218bbed,shipping,7368 Michelle Bridge,Kathyfurt,ND,19326,US,True
+2497bd55-010f-4b2f-9979-f56b02eca643,b51ad0d8-7b4d-4859-8de9-fd9feb62c888,shipping,2392 Brooke Plains Suite 510,Fullerport,VA,04112,US,False
+dca7b134-9417-43bd-b87c-723d26007b56,c0a8be37-975c-4b34-8989-1eb846c63871,shipping,085 Linda Heights,North Jennifer,NV,33956,US,False
+8e21c0bf-34de-40c8-ab4c-6c1b0b2ac3e6,466ab61a-8180-4d06-90cc-2a380a0e6f0f,shipping,1644 Gilbert Landing,East Kelly,TX,27300,US,True
+7ee7a025-c40c-418f-a9a4-a7f033ae9ca5,b6552330-9932-4624-8855-b5b7aa13d3f4,shipping,36625 Perez Spur,Mcdanielville,NM,22725,US,True
+b5a39923-4f46-4433-b421-39c5fc8b1e89,a5781cf5-d32e-4370-b0f8-4f229bc0efa4,shipping,794 Levy Well Apt. 321,Monicaville,NE,70542,US,True
+e6f06d44-96f8-417f-b1a8-e5c8b4cb3528,1c4373e3-238c-46b7-83f5-6cf757228aba,shipping,572 Mcgee Station Suite 592,Port Kristaview,MT,12719,US,True
+250fc376-0a0e-405b-9d28-7bcc3824add0,50a2d1c4-d788-4498-a6f7-dd75d4db588f,shipping,0808 Roberson Orchard,Lake Beth,VA,17328,US,True
+52642f1d-b947-470a-b77b-50adf12984de,7ea9b687-48e0-4f47-9245-7a3e02c88fec,shipping,34266 Ricky Squares,New Thomasfurt,SC,15930,US,True
+4ad8aa56-69d4-4a1f-b323-70147398df99,a2effce6-3ad2-4811-940b-bbb5a4ad9b67,shipping,3970 Floyd Radial,Powellville,NH,63195,US,True
+8588ff5d-62b0-4224-a194-56e7c7471282,50e6ae18-ad0a-4f68-bb3d-e1a8b80eb58f,shipping,19165 Lopez Passage Suite 231,North Eric,OR,09578,US,True
+0830bd83-c943-46ad-8e8c-822c4622ea79,531465bc-638f-4adb-9b47-cf0c1dc55550,shipping,594 Fischer Loop Suite 258,Kingport,OK,45636,US,True
+8bacb78e-204f-4d1e-bbed-a10d901d3313,e7e3f8e8-5e9a-4cea-90ea-8ba71ec98685,shipping,762 James Overpass,Sheltonbury,ID,97776,US,True
+b81363f9-3590-408e-9a6a-4edf576f1301,18b69140-479d-44b6-8369-04a49414f975,shipping,356 Black Branch,Johnland,MO,88803,US,True
+ad223fd4-ca37-44a8-b462-2ba46fdf3aa2,21c61b96-d053-45f3-9730-c3483fe288d2,shipping,0938 Proctor Rapid,Williamport,SD,17538,US,True
+53f71e68-9d4b-4fae-a968-df0b9b9a6f83,51e5a1ad-d8d2-4387-82fe-860a54c87f4b,shipping,58807 Kayla Skyway Suite 326,Lake Julieville,OK,32106,US,False
+678409f1-104a-4f66-b54e-4ae2429d7f45,c502b1f4-b287-444d-b643-953150ebee0d,shipping,45964 Sara Prairie Suite 125,Port Breanna,PR,54672,US,True
+11742e3b-a918-42bd-975d-556b11df930c,17e24a9b-119c-4ea7-a53a-bb757c70ad0a,billing,21192 Noah Forges,Younghaven,TN,42149,US,False
+5f8ce51c-a43b-4d02-b6a2-c0be7d1b314f,2e0d6ce4-794d-4494-bd1d-f44dbca8683f,shipping,28946 Morgan Mission,Jessicaburgh,ID,26851,US,True
+062e80b4-c56a-492f-965a-b89f6acb7a1f,bcff2252-fa4f-4a03-88eb-6ff7b0e010a0,shipping,8517 Bryant Squares Apt. 274,Guzmanland,CT,71517,US,True
+f4c73383-3bb4-4a44-ab5e-dda99dcdab99,71ed3bfb-d094-47b4-bd02-9589f31e4c1d,shipping,64421 Chad Lodge,West Morganmouth,VI,55514,US,True
+fd07aa08-7a6c-4615-b668-74f115e028d9,57476af2-aff3-4f50-9313-77926b1859bc,shipping,32285 Hughes Roads,Smithport,NM,03582,US,False
+3153ff41-06fa-445d-b984-97f0539249c0,c50959f1-d990-44ff-837f-4062c769ae54,shipping,664 Walters Squares,North Lindaville,CO,85648,US,True
+7abaef44-29a5-4c41-a8b1-240910f0bb16,7745384f-ccaa-4363-a18b-5e9ff0a824c0,shipping,38569 Rios Turnpike,Toddhaven,MP,72389,US,True
+ef652e7f-0c0f-4b1a-91ff-f23e75685dee,5dbe3a93-bfd1-48f7-8040-dacc81b641f3,shipping,198 Kristi Harbor,Loganside,SD,18622,US,True
+292ecbf4-b195-4567-bc8c-8f65f2352103,f5e8b3ff-659d-4bc9-bdc6-6b7fe343bcab,shipping,76365 Dickerson Harbors Suite 292,Port Cory,KY,31408,US,True
+82ce2e2d-3b6e-4094-9979-e11ede433a8a,b2664ec9-be42-46bd-9f6d-073a50105636,billing,2902 Murray Square,West Frank,KY,47839,US,False
+a926bc42-0d22-46a8-9bdf-0fee259f90ba,1bc088f8-fdf1-442f-9491-1287abc066d3,shipping,6741 Victoria Street,West Lindabury,VA,10246,US,False
+b64192cf-246e-4d62-a110-103a2be32c1c,b169789c-d0e8-4853-819c-555646263d18,shipping,589 Anna Pines,Port Amandaside,IN,91424,US,True
+b7dfac34-92ec-47f2-bef1-78e99476d599,f78c30cb-fcda-4209-9aea-0ae7ce4f7b81,shipping,83402 Ho Groves,Lake Tinaborough,ND,15729,US,True
+25b346a2-8486-4f7c-9391-36fb40812bba,c9d0d7ff-0b5c-4b60-ac5e-0389909cf62a,shipping,63355 Hill Stravenue Suite 369,Yushire,IA,85104,US,True
+0178e300-f7f4-4a10-a9c5-3de1792bb1a3,2f76575f-2d85-40ca-8f3b-82b14debc678,shipping,2696 Adams Ridges Apt. 649,Smithville,MO,77930,US,True
+656375b4-207f-4e1b-99c7-b120285b9d7a,058a019d-da8d-434a-8e8b-621c3b214928,shipping,86716 David Ford,Ryanfort,GA,79630,US,True
+5cec6157-0454-400a-9ee1-fd62d7130ecb,c958448f-45d7-416d-a358-45098ec2a9da,shipping,31261 Perez Via,West Jennifer,VT,73245,US,True
+e4e52e1d-3dc3-4450-9209-f72d8b8bd668,be999c23-fb5b-4060-b4aa-bd50fe8ab5f6,shipping,65993 Emily Street,East Barryborough,AR,36807,US,True
+09ad58eb-549b-415e-a459-7b06aee2ca38,058a019d-da8d-434a-8e8b-621c3b214928,shipping,387 Harris Divide Suite 169,New Mark,OK,64851,US,False
+0241f90c-13eb-46ad-a66f-8556822fa535,4ed3232e-6117-4b38-9d59-265a217c91cf,shipping,5430 Knight Forges,Pereztown,AK,70514,US,True
+e661de98-7484-48d8-b676-c449f21f39dd,3f3af4f6-a87b-4f03-8669-2e1a8e3c6d8b,billing,86376 Chapman Streets Apt. 624,Cannonland,LA,78920,US,False
+4cb57465-888e-4df8-b960-82a0235ba71a,d9464bcd-0a19-4058-8fc1-bea843e6c339,shipping,294 Ortiz Islands Apt. 181,Port Sharonburgh,VI,04600,US,True
+07b2f5f9-97fc-4376-b2ff-73c864a804d9,a5066e8e-de65-4798-9ed5-f6cae5f86031,billing,945 Greene Light,Smithtown,PA,86492,US,False
+da298b6c-1c0b-484a-829b-62cc67897bb0,fe1ef2c8-17e9-4560-bca8-d42ce43d899f,shipping,9096 Sharon Lake,Irwinborough,AR,,US,True
+17519129-0c0a-422d-9e79-cb982224cb89,7e52ce3f-191d-4d27-a0a8-76706fd6173c,shipping,580 Julia Flats Suite 359,Port Jenny,ID,,US,True
+25208e2d-cf24-42d2-b2d5-5ef53ee27363,bbe9e834-7071-42d6-8970-aa7301b72ec2,shipping,365 Timothy Neck,Clarkburgh,SD,54358,US,True
+32e788aa-08ef-47d7-947d-07040d04e23a,96aa3e1c-ce39-4f76-b813-c9b4d59c0cdc,shipping,46358 Madison Spur,Rodgershaven,PR,23869,US,True
+e37e3197-8593-41df-bb20-5160a60bbd30,922d63c5-873c-4693-9775-df99ba006ccd,shipping,97150 Arnold Way,Port Robin,NH,48874,US,True
+2b750dd5-864f-4774-9d07-950c0e9df3b1,12c154ff-46ac-45a7-921c-2404994ecc21,shipping,1124 Jennifer Lakes Suite 523,Clarkville,MA,84653,US,True
+89a64ec3-b984-4dbb-a70c-760dc2261e5c,4a0fcf58-3784-4070-96a6-0925fc23e36f,billing,9972 Mccarty Spurs Apt. 677,Dawnberg,WA,01335,US,False
+716b244f-0ba4-4e49-8ec0-8ff93d49f981,7aa35447-7686-43f7-bb98-14b1bc5fe250,shipping,03346 Alexander Street,Lake Rachelmouth,MN,01904,US,True
+6b7084b7-e19c-4667-ad11-4c9f9fd33035,71f1cea1-588b-47f5-93c3-4e649541a9e4,shipping,157 Eddie Burgs,West Janetmouth,CO,26123,US,False
+807d339a-8237-4b5a-90b7-c57d646bbb8d,125d87d5-a36a-4f4e-865c-3122386e88ca,shipping,61284 Clark Parkways Suite 547,Johnmouth,MA,28107,US,True
+beac0174-b3e1-413d-ae7a-522fe743fb4f,400ec64f-461d-45c5-b45e-b5c8dc21b4e1,shipping,63459 Daniel Gateway,Port Brooke,MT,42365,US,True
+47078921-e4e2-48d2-8ce2-1149ac05314e,73d9c423-e9d4-428f-bfaa-b073b2c1f454,billing,4485 Estrada Glen,Christopherville,VT,64142,US,False
+547ea12a-56df-4195-bf3f-a2f2a3eeac66,19a91b0b-51dc-434f-978a-177588409f99,shipping,5759 Morris Port,North George,WA,78304,US,True
+f26d8cbe-76c5-4e8b-ace8-5dd3c4f50596,cd8175bc-ff34-4742-8b86-61ec290e632f,shipping,82379 Christopher Lodge,Millsshire,WV,30966,US,True
+9400ac59-42ec-44fc-9786-55f2fbaf6077,2f771a5a-3d76-48e3-985b-b7e91e092c46,shipping,7509 Mitchell Lights,Katherineberg,AZ,96789,US,True
+46cf4ac2-77ca-4b58-ad77-e8bd077ed27c,b08f3b44-9c9f-407f-a89d-961068f5f58c,shipping,3136 Tammy Wells Suite 824,Pamelafurt,OR,55196,US,True
+0344beb7-86a8-4a35-ac71-9d4bc167aa8e,430e5411-6ed3-439b-93c3-e885b2a37d0f,shipping,5064 Gonzalez Springs,West Jenniferbury,MP,58168,US,True
+c165fd78-d753-48c6-9dda-ed58a56c1355,4675a031-3216-463d-8c4d-42ea1283bd56,billing,920 Vang Gateway,Smallton,MI,15363,US,False
+07bd9521-1d21-4f8b-b0a8-ecb00ba8cfaa,23fd6560-8719-45ae-a5f0-6d81f0484750,shipping,2318 Aaron Cliff Suite 893,North Robert,KS,80897,US,True
+bf727c59-313a-4152-8290-ccaf00922df4,05d8d4ba-5569-4f0e-985d-5f63fbfee659,shipping,67347 Clark Street Apt. 649,West Kellytown,WY,79790,US,True
+28a7baec-3257-4f34-ac37-74308e5ae599,861181e6-5d97-48a8-bbe4-226caa976140,shipping,28801 Ellen Trail,Port Gina,MP,14122,US,True
+ba604c6e-87d1-4850-9ac9-02e87548cd0f,19d5ac88-a8cd-46b8-9f3d-d5ef3a0adfe2,shipping,193 Sonia Village Suite 268,Henryview,TX,16261,US,True
+c2a2d7ad-58f0-4632-8bf6-fbe38b792190,7863e37d-24c8-4e18-8730-ea7e2a65606d,shipping,963 Aguilar Road Suite 086,New Chelsealand,KS,93013,US,True
+6842be3e-8be9-4a45-b309-f05bdd6b396e,7bb37398-522c-4b94-95aa-882d79ae2041,shipping,5506 Ryan Coves,Simsfort,NE,74081,US,True
+251c752f-4182-4556-ab46-008a143fec5f,4ba45839-9bf9-4071-b1ca-52719a49c9fa,shipping,47323 Walsh Squares,Jessicaville,HI,66461,US,True
+e9d3d29a-15fe-4069-bc56-4fb7bd694128,cc1816db-c3dd-4c16-8ea7-18fe313472b9,shipping,612 Stephen Isle,North Charlesburgh,WY,33519,US,True
+d609e962-bfca-4e51-bc31-3b705975eb78,54c7fff7-8475-4ccd-a380-7e8187501723,shipping,8449 Rodriguez Crest Suite 318,Gonzalezhaven,AZ,61968,US,True
+4ec0d865-c619-4757-b536-1b86d989b2be,f9f4d7f7-6884-4f0c-88d9-0d3432a666ca,shipping,0299 Scott Stravenue Apt. 669,South Jeremyberg,VI,37384,US,True
+9e5d6e10-2448-41c6-83b4-6a095e48f3d0,5f22d013-c3f9-44a7-aeba-0975da12ffcc,shipping,621 Thomas Avenue Apt. 508,Lake Megan,MT,14725,US,True
+e0221593-f29e-4183-a20b-bff873ca05c6,8fd99d74-d73b-4014-a8fa-a37b39befe36,shipping,71366 Schultz Mission Apt. 240,Lake Ashley,PA,04623,US,True
+c0d6a8f2-7404-49bd-ac55-ae3d7944b869,8d5d45b6-2bf0-4380-85a0-b73fcbc86e94,shipping,50573 Ross Ridge Apt. 567,Lake Paulborough,VT,19265,US,True
+35745a8f-a794-4206-88b5-de139fbb29ff,6afcdfd4-7162-4241-9932-0cf1f3a2b6e7,shipping,839 May Road,North Jessica,IN,84059,US,True
+00d05361-02d4-4552-9638-a13cac6f3f4b,ef7f92e8-2f80-4e44-9e56-9ee276819791,shipping,128 Davis Square Suite 399,Lake Matthewfurt,SD,84662,US,False
+1dfc7a0e-a972-4683-b66a-8c3f3e708fc4,f8b1caa2-10e7-4302-963a-252a15b4a714,shipping,080 Davis Alley,North Markport,AK,74960,US,True
+d1b70e02-6dda-4d6b-8be3-50a7323bde88,c3f68ead-12e5-4a95-9f20-2c9529a5f08b,shipping,6241 Lopez Trace,Jenniferfort,HI,45504,US,True
+73d80333-2203-4263-b332-2d3710c75da4,1bc088f8-fdf1-442f-9491-1287abc066d3,shipping,70534 Dennis Pike,Port Shawn,PW,14868,US,True
+c8a72c01-5512-4b79-a074-cc1050d02c11,993cbf30-efef-49e5-b5ad-7aaf3db149a3,shipping,50702 Williams Lane,East Craig,MI,29690,US,True
+ebd23972-2588-4c2a-8f43-3dd39eb26991,bbe9e834-7071-42d6-8970-aa7301b72ec2,shipping,02992 Crystal Canyon,North Gabriel,HI,68218,US,False
+dd47e86f-10e4-4c33-962b-71ff47c5fe21,120d57b9-de14-4717-aefe-ab126645435d,billing,8803 David Forge,Millerland,UT,26851,US,False
+0daeb5d4-055d-4d49-8a2c-2c7340a2b2ea,72ad36e6-90e5-4d1f-8978-44a18ed7d4e0,shipping,29271 Brian Gateway Suite 871,South Jean,GU,43345,US,True
+2b743164-3ea4-43f0-b8e2-badc893f407f,122af8ba-58aa-4655-b297-e90d616f0bf6,shipping,35415 Smith Ramp,Freystad,PR,33624,US,True
+1ca11a47-a75b-40e1-94e6-bb0e42c69c5d,1095b08b-dad8-473d-9ec9-bafeb20e71c9,billing,280 Baker Ramp Suite 954,Bryanshire,AZ,17304,US,False
+dfdc4ab1-40c4-4a64-a6c4-c084b23e56df,71972ade-a5de-461b-aac8-49774ccb1a4a,shipping,403 Cooper Ford Apt. 339,Boydburgh,NV,83047,US,True
+3986a92b-3c5b-4260-88c6-71c6537288b5,1922f6f3-ba06-4233-8d88-c1a9303a6a2a,shipping,5245 Calderon Island Suite 469,Farmertown,WV,53464,US,True
+a559e753-3b87-4487-8980-519a072dbc9a,43217606-3354-4bb8-b967-c358331d8375,shipping,36502 Richards Locks,North Tanya,OR,91039,US,True
+a92a8cd8-5665-46f4-a761-58b3c45aaefa,5a056723-8fb6-4708-ba04-edc4e2854e74,shipping,53641 Carter Coves,Mariaborough,CT,28890,US,True
+5167881d-02a6-4180-bc12-44e5c78fd53e,f639b5da-4c4d-46ef-8ffe-75cca075bc23,shipping,749 Walters Street Apt. 918,New Erichaven,PR,11999,US,True
+ce6d5dbf-dc47-4cbc-95f1-106bca3f9079,3455f0ff-3219-4cd9-acd8-091f34518293,shipping,48079 Brown Avenue Suite 545,North Michaelburgh,MO,46970,US,False
+6092296a-1a1b-4b60-b17b-1d15606f0b0e,43df30db-068d-40fc-8576-7e2f6e62f2f6,shipping,125 Katie Turnpike,East Danamouth,CO,95433,US,False
+41048cd8-f387-43b9-b7db-373189d64474,2347081e-7ae5-4085-a0d6-d1f551721f69,shipping,833 Williams Bridge,West Michele,KS,23507,US,True
+92c93a03-ed12-48c8-a5cd-1bd81c254533,50e6ae18-ad0a-4f68-bb3d-e1a8b80eb58f,shipping,57644 Marsh Haven Suite 000,South Tammy,NH,52358,US,False
+5f3916ae-228c-49ca-a8cc-d959816e9109,3d2423f0-cecf-4060-b105-96b04f2ea442,shipping,40915 Small Cove,Andrewport,SC,28005,US,True
+a62d0c86-9abe-44d7-b6af-57d27a40c84a,5d24b6bc-2eea-4766-a11d-b0aed43f038a,shipping,335 Mendoza Pass Suite 041,Michaelstad,VT,55298,US,True
+99a3da50-89a0-491d-9251-b758ff59b5fb,19fee9df-73a9-41e9-9777-18d2a79ab8b4,shipping,8935 Garcia Station,Pooleland,CO,08652,US,False
+e90e60ff-c24d-4d5b-8ef5-c8a302f674b6,7bd64d99-cfe2-4e61-aed9-8b6f3d410468,shipping,7491 Dyer Crossing Suite 923,Kruegerstad,NY,93447,US,True
+37c71cd7-1e2f-4de6-bd97-9eea8d6f7785,ac4632eb-3a22-4956-896e-0a3899a647f1,billing,077 Theresa Tunnel,Port Annahaven,CT,22396,US,False
+231fc971-2ae5-432d-aa09-562605fe1435,98c7adf1-31bc-45c1-85fb-dbf53b4a53e2,shipping,8332 Becker Walks,Alyssahaven,OR,80777,US,True
+8d757668-280d-42c1-b3fd-5f7a87c93c97,d85d8387-2b7e-46a9-9f28-dad061a5fc01,shipping,58695 Timothy Ferry,Lake Kirkchester,KS,91730,US,True
+31db0d9d-d787-42f6-ae58-af5b8cbdfb96,e648e7c1-b5f5-4d67-b78c-7d41956f4eaf,shipping,2918 Reyes Shoals,Lake Curtis,AR,72508,US,True
+c74f3ae0-e699-4989-b721-9f4a531458b2,d0c20886-5575-4356-8218-337197faa2fb,shipping,38297 Taylor Way,Michaelbury,VA,56415,US,True
+f3e25505-e645-4fe8-abe8-11d2329b43ef,d78e6e3f-3ff1-49b6-9dcb-129816aa0ecb,billing,0849 Travis Freeway,South Jasonfurt,ID,69678,US,False
+99d67047-7f40-46b9-88d4-73e18ef1742a,7532eee7-0f38-4249-9459-e40b83d75db2,shipping,14519 Wilson Corner,New Edwardchester,NC,44389,US,True
+bf88fe27-d61a-418f-84d3-4e6a5bada878,7e06ea60-a336-46ee-a77d-ca114267af0d,shipping,869 Gross Terrace Apt. 195,West Kaitlyn,WA,52663,US,True
+a38bc647-683f-41e7-889e-2fda8d681d8a,31d39d83-97c5-4a86-8d98-c9ea5e4d6505,shipping,532 Angela Island Apt. 263,East Christopherview,AS,64235,US,True
+360837cf-cc1d-4049-a75f-efc2e9319611,1435b563-f156-4cd8-9f3d-6224260e26a4,shipping,3227 Gregory Parks Apt. 885,Evansside,PR,74928,US,True
+8360cb54-74a2-47b3-a91b-c2e173002f44,239409e0-b3ad-4bf6-ba7c-08628ee3cbee,shipping,131 Tucker Parkway,West Richardstad,MP,55247,US,True
+6f94b2a6-751c-4c79-919f-a996d6fd16b0,cd709ef0-753a-4968-b981-ab264708b37a,shipping,920 White Drives,Lake Robert,GA,13714,US,True
+61bd2dae-d1dc-41d5-bb45-2e9b4989289a,1a1397df-b2b4-4791-93d9-87ac9062f545,billing,0205 Cannon Spur Suite 195,Port Evelyn,NM,34236,US,False
+18b45fc4-85e7-470f-b7a9-3323ff4d69ab,28c1b6d1-da1f-4187-98af-4e43f096b00d,shipping,21288 Strong Knoll Apt. 683,Davidmouth,OR,80292,US,False
+fedfcebb-d4a8-4752-a08e-f33e4cd09a3c,84f816bd-12e2-4633-a419-fc80705977e6,shipping,56216 Robert Ports,South Tara,PW,79847,US,True
+64a9b765-f594-43c2-8b1a-f1b43e8da52f,6b9cd81e-126c-4c53-b6b5-575d78951256,shipping,3807 Charles Square,Jamesfurt,PR,25981,US,True
+1f0a5892-b56e-430e-a5cc-ccdd94cecaa4,fa5ae382-e7ab-4d94-bdfc-7d689bc335ab,shipping,61337 Kline Junctions,East Bradley,KS,42603,US,True
+c113f493-c9c2-4cdf-8ce0-5197b61b524b,45514547-8413-41d4-ba88-c1240763e5e8,shipping,73226 Ryan Village Apt. 142,Javierchester,TN,18516,US,True
+5def44b1-7636-4401-8462-604e2a1a77b6,239409e0-b3ad-4bf6-ba7c-08628ee3cbee,billing,6634 Jennifer Port,Cooperport,SD,79736,US,False
+e8fc94d0-26d4-43b3-a4e3-f7935aebe8d2,07837268-1f07-43d7-a271-fa0ab4370eee,shipping,0777 Myers Centers Suite 266,New Derrick,AK,73306,US,True
+c1d87bf5-3a31-4f17-8deb-cd9bc1762bb6,f24f29fa-33e9-41e2-8965-ac4e39be3919,shipping,2776 Wolf Viaduct Suite 066,Port Rebeccaport,PA,70912,US,True
+424e470f-a154-4ea0-a5b1-1ef0dd5d3a9a,58e0c4db-27d0-4c06-9252-c40364b1ae74,shipping,2250 James Inlet Suite 882,Montgomeryland,ID,12738,US,True
+a8bae73b-70ff-48af-8403-fb37992fe8e8,547f74d3-e5b0-4e69-a707-74acc44f122c,shipping,21743 Kim Pine Apt. 526,South Michelleside,NE,05602,US,True
+7c102882-e1dc-40d8-8431-33170cfee12b,4a0fcf58-3784-4070-96a6-0925fc23e36f,shipping,30557 Aimee Roads Suite 821,Kevinhaven,NC,81360,US,False
+6fa484d1-23ab-4119-a99f-2e139e666cf1,e2141773-bfb8-4698-a4da-2be4540c14a5,shipping,056 Morris Courts Suite 135,Shawmouth,GA,81087,US,True
+eb7fd85a-2c56-486c-b8f3-71dd31f4c7d6,b169789c-d0e8-4853-819c-555646263d18,shipping,2129 Megan Terrace,New Sheri,RI,56077,US,False
+47dc8974-0a59-4695-aab6-4cd1092ed310,b60e68c2-1b3c-4a8b-a056-a39fb4e6a320,billing,833 Kenneth Circle Apt. 884,Port Nicholas,UT,01931,US,False
+c3e04466-1c08-49b2-855e-bad8265158e3,adaf0597-4b7f-4b6a-8881-40f3787bc862,shipping,8676 Armstrong Ramp Suite 416,South Pamela,NE,91022,US,True
+b7a6d916-2520-4783-8834-803f6e7a7871,5f2b73d5-f495-401c-82ee-47cf4886bfa2,shipping,26610 Wilson Vista,South Kathryntown,HI,42595,US,True
+220ebbb3-9b49-4515-91af-82bb2792e3a1,0c7084bc-19a5-4ad6-bb26-a25f9c09b324,shipping,374 Miller Mission Apt. 581,Port Davidville,IA,10254,US,False
+2efabd47-5190-47c2-ad37-c7861d5ac29d,ed46daf6-4c46-4af8-a80d-c0cf0b307966,shipping,47165 Smith Ranch,Matthewstad,IL,40318,US,True
+f75decc3-8c1d-4d9b-9ae9-0df761466a36,c0ec2b5c-22e2-4010-a8f9-94431d5860c7,shipping,9396 Jackson Vista Apt. 835,South Mariaberg,LA,44150,US,True
+651048fc-da8d-4231-8b20-66cd36bf398a,d63f06df-5e5d-4adc-b0a5-43b4bac6bf5c,shipping,55732 Mcdonald Mount,Masonview,KS,79618,US,False
+fd52cd23-27cd-497b-88fc-6be61248212e,6a7675ef-2c9d-4e2d-80c0-b5f38fffb6ea,shipping,018 Richards Branch,Nicoleberg,MD,32440,US,True
+357685be-2bbf-468b-ac25-1ae98a46acff,94e0e084-e14c-4061-80da-7e6030bf14d5,shipping,161 Hawkins Cliffs,Amandafurt,OR,54691,US,True
+306f5702-0992-4394-aeae-5ce51735088b,96e4788e-210c-4cc9-97f7-b6b855134e0b,shipping,775 Wilcox Expressway,Port Nathanchester,ID,35879,US,True
+34865720-24a2-40f2-aa17-55e95e8881f4,fa2a460e-af12-4197-b38d-d2822d96e879,shipping,5799 Eric Streets,Saraborough,PA,04374,US,True
+6e3d1907-66f5-437d-86bf-508d74f6d53a,447fed8a-4bae-41c5-b5cd-cbf6a09c4782,shipping,59206 Norma Keys,East Lisaberg,AK,86237,US,False
+8ecc6e46-54d3-4e34-9a0d-c95f88179bb4,20ae953d-06b1-4034-a24c-a173911af24e,shipping,2614 Whitney Greens,East Laura,GA,54955,US,True
+b04f2701-25fe-49eb-859e-2a85f12a2407,a31129ac-6e82-4a23-86f3-3d708e019069,shipping,9927 Tara Skyway Suite 515,East Dennisport,TX,52093,US,True
+27941a43-bf34-4fdc-9175-9e2f7d51f430,7aa35447-7686-43f7-bb98-14b1bc5fe250,shipping,03346 Alexander Street,Lake Rachelmouth,MN,01904,US,True
+4489b2cd-3778-4722-9249-a5685c89b3f2,4126c950-a88a-4305-895c-96d7e076897e,shipping,236 Pace Views,Richardchester,AZ,42507,US,True
+15e8f1e7-8cd5-4647-b051-1736042fe0e8,b4413ac0-2fc9-4c91-b188-71c109d9be8f,billing,9472 Danielle Junction,Welchshire,MO,09852,US,False
+1396345c-f2f8-4fa7-a9e7-495226e2fd90,4cd79f83-9fc7-43e4-a4c1-89402b7124e1,shipping,788 Turner Forges,Jeanetteside,DE,22928,US,False
+cf7706fd-d8c4-4efa-b60a-2c5c5d1d59e4,c664111b-b80e-45ab-b2de-ee220ea29fbe,shipping,96080 Brown Fords Apt. 699,Montgomerytown,WI,82342,US,True
+b2a3f36d-bc97-4521-8e40-9d1e3f40e7ec,47334d60-a9ec-4cf6-8af3-a2d030a6062f,shipping,931 Gonzalez Squares,North Richard,NE,79195,US,True
+1ac4f4aa-ce1b-4c83-b10d-773b82abe8ad,84ee8f13-e5a2-4988-8f65-daa65801c5d1,shipping,1413 Lynn Knolls,Lake Diana,CT,37874,US,True
+dc85d8a2-8b81-4e13-8eb1-959afcec40f0,3ad60b3b-8b4b-4504-9d49-adfd74fe548c,shipping,6658 Lauren River,Gatesville,CA,32369,US,True
+1fb3b470-757d-497a-810b-2359970563e3,ff29ece6-95da-4800-acd2-b14950a339dd,shipping,0892 John Viaduct Apt. 653,Lake Rebekah,WY,09466,US,True
+b1cb68bc-3044-4e29-b48f-16cff48e0fbe,355d89d9-bf5a-41df-9382-a5e57cbbbec4,shipping,49782 Patton Village Suite 128,Bensonhaven,TX,93902,US,True
+8021e7c2-4ce3-4eba-b38c-c14eb30aca45,f772193d-0b52-429c-ac06-5e9986fefa68,shipping,094 Hawkins Pass,Mooreborough,WV,80142,US,True
+e16e18c8-5674-4ba1-86bf-092f39df9880,aeea9d66-6c0a-4d7b-95ee-d3d25c66a5ac,shipping,5143 Koch Overpass,Chapmanfurt,NE,31317,US,True
+d246156e-8443-4732-8005-167a9bc578c7,265cf9a7-b023-492e-9e62-3896325f1c48,shipping,819 Samuel Views Apt. 460,Reginaldhaven,SC,85649,US,False
+81bde4bd-94d3-4bb9-b04f-ffef9ac9c3d0,2a6409ee-29ac-483f-a2a7-9074fcb50191,shipping,8423 Ashley Heights,Biancastad,VI,29995,US,False
+e817c8df-0c1e-4cb4-9e97-0115d24fa8eb,1ed31084-8b68-49ca-91d6-7162d8521c02,billing,436 Summers Street Apt. 804,Karenland,AR,08730,US,False
+20e7a21d-5245-477e-b6a5-f0d04c01b385,cd709ef0-753a-4968-b981-ab264708b37a,billing,77732 Roberts Brooks Suite 449,Carrville,HI,59067,US,False
+ed44a819-44bb-417c-b508-64197c122404,19296d35-a0df-426f-88ed-d3f5323adb8a,shipping,10672 Rogers Brooks,Myersport,MP,72502,US,False
+9606aae0-b56f-4059-8f17-5632f70f12cc,0d2974c5-d4de-4163-bf27-73d86a77b048,shipping,510 Dillon Run Suite 368,West Toddside,CO,24935,US,True
+be715d07-9626-46b2-85d5-a4b733c4ed9f,3f1fc492-e8ed-4840-97a0-a56592fdc1d9,billing,36452 Humphrey Mountain Suite 547,East Debbieland,MP,37281,US,False
+3d3ce30e-8364-45ce-9975-e4fd9b2bd5f7,7bfeca78-8e06-4644-9d0b-1470c32aa9e7,shipping,50939 Kimberly Trafficway Suite 301,Rhodesland,NY,52198,US,True
+9c527ab3-384e-466f-ad57-44e794ea3a71,bbce772f-b9b7-49f2-b79e-fa5d953ced6b,shipping,6845 Smith Harbors Apt. 673,Terryfurt,WI,26360,US,True
+c81ed682-aced-4f62-9841-6dfe5cbe0a40,2444fa55-4e76-4e0e-8880-6ccb037e3479,shipping,085 Raymond Ferry Apt. 504,Lake Patriciastad,WV,51639,US,True
+310cf76c-800f-42e0-a0d3-76a6a7383d16,2977486c-8467-4a72-a290-db87a9022320,shipping,083 Horton Villages,South Hannahmouth,AR,78908,US,True
+6411a91f-67fb-4d78-95d3-c7952aaf685c,b4eb2e6a-e0ab-46b4-8a7a-cb2e92d8e009,shipping,179 Jacob Circle,Port Katherine,KS,54082,US,True
+1e90e844-52b0-4ee9-a25f-da7b4dae673a,b0da7a9b-77d7-407d-8506-51705503fa05,billing,8114 Christopher Loaf,Jeromeport,NV,82615,US,False
+5092bc43-cfbe-4955-a66b-6a1515b41b36,167ce993-af12-4071-a5cb-fb3f09045741,shipping,912 Kelly Lane Apt. 415,New Jimmyfort,TX,13714,US,True
+88881ae7-a4be-40c1-a66f-edc63901f7ad,176aa5a0-a79f-4429-84fb-73d501c7e219,shipping,44714 White Spurs,North David,KY,65126,US,True
+db9e8cb9-46ba-4bc6-8644-ea4e20bfa344,bd72d373-2261-4193-bee7-41d3bfd08ef1,shipping,8067 Kennedy Course,Port Jacob,OK,11658,US,True
+aa9a9190-3b6a-403e-a795-d7814db4e7c5,d82c6a2f-7e02-40de-81c3-c42ef14d8460,shipping,5661 Julie Vista,Lake Kimberlyfurt,AR,40449,US,True
+5ce54f28-d660-4fdc-85d2-ff2b2a885b74,631f0e93-e48f-414d-b220-0c466b7fc584,shipping,339 Whitaker Spring,New Lisa,MN,61289,US,True
+f77a4e1c-329e-4afa-9cda-168ff19aae27,c6abaffa-11df-4987-9806-71dced92f534,shipping,5973 Wilson Motorway,New Ericfort,FL,84415,US,True
+6745cc1a-7ea1-491c-96ea-82b070739697,4a0fcf58-3784-4070-96a6-0925fc23e36f,shipping,0200 Eric Inlet Suite 393,East Davidville,AS,43227,US,True
+39e8f196-b240-44ae-bcea-e53029bcf5a0,07ef23e6-1d65-4721-a3ce-889f1c58f021,shipping,79907 Ingram Well Suite 257,Port Courtneyfurt,MH,91039,US,True
+6a93cba8-8217-4795-aa08-d0efa56e2b43,4559b465-3dfc-40aa-84fe-31c153b4c0d8,shipping,029 David Turnpike Apt. 438,Carlfurt,MO,21761,US,True
+cdef122e-a466-40da-94d8-21383ff619d6,314d5517-f29b-49b2-a076-3abe12756120,shipping,4613 Hoffman Orchard Suite 883,Smithfort,VA,52096,US,False
+15580154-04c1-42ff-b9e9-275e8afc2b55,4d6ee3e3-9ec6-4c2e-9552-a75af6d19f14,shipping,6255 Freeman Circles Suite 157,Singletonport,WI,46194,US,False
+1bf4c980-ca0e-442c-9249-cf8c1e56737e,0c7084bc-19a5-4ad6-bb26-a25f9c09b324,shipping,0471 Arnold Curve Apt. 904,Gonzalezfort,MS,51408,US,True
+1cc75a2f-c651-4630-8807-bc3cccdfa2ae,a692df88-38f3-4725-84a6-73ec7e6c7ab5,shipping,025 Rodriguez Pines Apt. 763,Evansland,PR,41659,US,False
+cdc8a56c-4961-4f6e-90d0-466b6e6bb9dc,e9647282-4e31-40a7-a07e-5d10cd7e447a,shipping,6371 Karl Causeway Suite 963,Lake Meganville,OR,44651,US,True
+36c4f90b-544d-4029-9d3d-939c7d92e7cf,c37c5233-7b26-4427-8ed9-ce36cc9ceb00,shipping,9710 Wood Gateway,West Haley,PW,41465,US,True
+8fd3f275-4b88-41ad-9955-f924d951e95c,43317971-4c76-44db-9b97-011579286ea5,shipping,71487 Peggy Crescent,Batesbury,IA,28241,US,True
+cd1efe53-fc54-4a75-bb52-8beb1bea7ff0,416cd82a-8e13-48b3-a6e1-dadbf5a29d2d,shipping,71130 Lopez Burgs,Stanleymouth,MI,35310,US,True
+a5c53055-e994-4ab9-81f9-b23e0108ca51,89c8f0cc-3bd3-4bf1-9560-ae8aad1315ce,shipping,07044 Evans Corner Apt. 496,Smithfurt,MS,58699,US,True
+42289db9-a93f-4caa-905f-28814435e464,0a42e609-2a53-4824-bf02-0088bdb9b149,shipping,939 Alicia Ports Apt. 613,Rhodesmouth,AK,37762,US,True
+ef1890f0-6e90-4b71-83db-a956fd80bb73,80968676-93cd-4bf5-a9f9-595055ff800a,shipping,432 Maldonado Expressway Apt. 572,Lake Thomasmouth,AK,23768,US,True
+fcd27cca-3830-4b9f-a850-8149792e1845,5bf14829-99bd-4d3c-b504-edd1e45593a0,shipping,9064 Snyder Row Apt. 591,East Brandontown,DC,14281,US,True
+8b38effa-fe5a-41b1-9ea8-0993b3fd2cf9,a792d50a-1570-450f-901a-c26bc3b4a9dd,shipping,192 Donna Land,West Kimberly,IA,64060,US,True
+10db39a7-bdbc-45d5-baba-0801e0cc51be,5f31277a-2dcf-4273-81e3-312413596a23,shipping,61107 Williams Coves,Port Donnashire,AR,61984,US,True
+45d167d7-1663-4a3b-99ce-5db8813d2567,249c5605-e2c1-49de-825b-aeef4ba19a9e,shipping,223 Murphy Estate,South Erikastad,AL,,US,True
+82ad6fc3-82dc-459b-ac50-90beaffea4bc,cbda2de6-06db-4a9f-91af-cc36e8ba0bad,shipping,8077 Berry Isle,Gomezport,LA,22456,US,True
+0687ddb8-6179-4a52-8975-e34117573ba2,d5e5a6a6-cb8d-4d62-8551-298dee7f1f9f,billing,302 Luna Hills,North Amy,MA,55870,US,False
+80d36007-8a60-4410-a3e6-d4344cd12b69,6cb96ee5-043d-47e6-a79a-67e7b0fa034e,shipping,1220 Christina Bypass Suite 258,Randolphborough,RI,98382,US,True
+36b36a9b-4538-42ff-9ca6-68528ba83b16,bf03895d-6d44-49a2-8183-81c4e89eac75,shipping,1314 Montes Islands Apt. 612,Huberville,MI,91854,US,False
+eda20b14-be3c-4840-84db-3269a36418ea,b0da7a9b-77d7-407d-8506-51705503fa05,shipping,2202 Ebony Summit Apt. 326,North Calebfort,OH,07556,US,True
+4449389e-eabb-4cd0-984b-f99863336fe4,e52a8700-3ab9-4c47-8a16-e799e997a931,shipping,015 Lozano Roads,Yangchester,LA,99809,US,True
+d61de82d-361f-4b46-8cec-5ac2b29d5e14,9400a9f1-7dfe-440e-9992-ce7a2dd5b296,shipping,2989 Stephanie Manors Apt. 974,Jorgeborough,VA,03126,US,True
+be7f09fd-f644-469a-9be1-0fb1238539c5,943fb486-16d5-4258-99e7-8340b1862e76,shipping,3240 Mccarthy Fall,Donaldmouth,MT,,US,True
+4aea0656-8fee-4ac5-902c-224e25f61e27,33326773-e843-48d9-9641-9990733d705a,shipping,9520 Hughes Bypass,South Tamarashire,OK,02211,US,True
+8ad4aea8-737d-4c63-9d9b-b40667012a56,89a5d615-2bb0-4843-8177-90bf7f452bfe,shipping,867 Frey Crossroad Apt. 129,Scotttown,AS,36309,US,False
+f6019140-005c-4119-9933-a142d27a04a5,a4c57aeb-c65a-4a1c-954e-acc7a7ba7c74,shipping,37009 Hansen Squares Suite 304,Christopherstad,NH,62429,US,True
+40106fcb-7929-4d5f-b6f1-6f4c51040021,827eed18-8ab1-4e5d-ab00-5d8ac9bb168b,shipping,526 Wells Estates Apt. 306,West Stephaniebury,WA,88494,US,False
+27d640ce-60d5-4cf2-a405-f543765d9522,c404f9e5-cfcd-428e-8459-c1e1fd0d586b,shipping,89062 Melody Land,Laurenfurt,WY,17646,US,True
+292772c7-ed79-48ec-b32c-17a13208d1bb,47ac22ab-9718-46c4-ac3b-e6473f31a413,shipping,732 Adam Wall,Travischester,MO,97781,US,True
+c3372ab2-9b1e-4195-b54c-3e2bcebd7757,bacd6bed-844e-4650-8181-7f73dd1352e2,shipping,962 Michelle Terrace,Janetmouth,VT,04646,US,False
+a1ed8b84-be85-4a38-8f1f-606697a022d1,07365e1d-9d4c-4185-859e-d5757178280c,billing,4934 James Prairie,North Joshuaberg,AZ,28617,US,False
+77debbc9-c9fb-4451-aba6-cfb134891071,64e25b29-1b93-4db3-a929-7fb7183288be,shipping,965 Cobb Ville Suite 282,Susanville,CO,91357,US,True
+c3668798-6ab1-43c1-ac99-f156d412ce45,7fcd9f31-c0cb-4414-9981-9d014f593081,billing,60846 Ashley Stravenue Suite 561,Jessicafort,AZ,47887,US,False
+88454bfa-3820-45ae-b375-534c5ae0e9b3,a7cebb21-0f26-4834-8a09-e3269b21a77b,billing,784 Lopez Ferry Suite 574,North Amanda,NV,,US,False
+a8544c68-c041-44b9-b71f-3bc4987f8646,ae6e644d-c310-4f23-84dc-5063fc2e2953,billing,0930 Park Summit,Johnhaven,TX,80349,US,False
+e345ebef-d249-4b21-8079-9ff103161908,efc6a229-f984-41c8-b741-83d9a46c5fd1,billing,179 Gary Loaf,Victormouth,HI,42683,US,False
+fb719ea5-7b9c-4fcf-9273-8a137a58d7d1,07365e1d-9d4c-4185-859e-d5757178280c,shipping,89411 Sims Court Apt. 599,New Michael,WV,98810,US,False
+60e5d1ea-d9d7-4d54-9cb8-75738ce9dfec,cf5dd5d1-b2dc-47d4-9be1-b6c0e5b07a12,shipping,666 Miller Burg Suite 158,Lynchport,NM,38144,US,False
+9d93d413-bfa9-4dfc-a3ea-0077c9dd2513,35bb651c-499f-433f-b5af-b793b285e727,shipping,926 Kimberly Way Suite 475,North Darrylville,NM,84571,US,True
+334edc56-6435-4bd4-8bb2-e687d8d663b1,5350fafc-45eb-4871-a195-d1cc090f9d9c,shipping,0305 Rosario Creek,West Michaelberg,LA,60845,US,True
+d20eab22-10a9-4c49-9019-24d74f72c7fd,40c4aa0f-6d19-4084-820c-5764f87d9184,shipping,67318 Robert Oval,East Kaylaview,IN,62196,US,True
+10c35518-2a60-4869-80f4-95b28b5481fc,c5ee9489-e7ea-4da3-9a86-b34c76f6d340,shipping,24412 Michaela Mews,Lake Johnside,PR,49555,US,True
+94772b55-654b-4e42-b9ed-9b3955c4061c,40353a67-5df0-44ca-9c10-b42fab44c6f3,shipping,41502 Savage Village Suite 564,Chloeview,NC,41527,US,True
+f8e8fa9d-7a25-4e09-a732-d98f089d9fc4,7d4b9dcb-d4ff-42fa-9c58-5657c61f4954,shipping,029 Williams Way Suite 480,South Joshuaton,IA,59711,US,True
+8c546fa5-7dde-4dec-b8f3-afe662943224,0e4dbbf0-e4a8-4015-9595-c0b9bec0f9e5,shipping,293 Derek Dale,Richardville,IL,27293,US,True
+2623194a-1bd0-489e-abe0-92c79370aae8,71f1cea1-588b-47f5-93c3-4e649541a9e4,shipping,30683 Shannon Harbor,South Evanhaven,AZ,71853,US,False
+04830ff1-6ed1-47bb-94c1-b6b5e87274a0,167ce993-af12-4071-a5cb-fb3f09045741,shipping,40901 Alexa Avenue,Morrisonview,NM,62528,US,False
+3a3d5254-4d58-40d1-a841-764baef2f55b,cc6e430a-d0ba-4c08-8809-84cbb2347a9f,shipping,59959 Jones Burgs Apt. 311,Villafort,MD,30848,US,True
+a006337b-1feb-458c-8eda-3c4185151681,438d7ce2-8d55-49cd-ab64-d781e25abb9e,shipping,6641 Simpson Path,Lake Jeffreyview,PW,55559,US,True
+4851aabd-63f2-4966-b679-28302e02b675,f11283f0-4183-4d8d-a117-4b2a2c070ec2,shipping,27643 Angela Falls,North Michael,LA,20116,US,True
+5376fa13-b363-45fa-bf76-0e45ff8bf239,7bb8fda6-2726-4199-a7aa-ed27cdfff312,shipping,71695 Adam Orchard,Rebeccaland,FM,66584,US,True
+ca849358-ed30-46d6-a555-f75a3ddfc6cf,ce5679e9-296a-4566-ba46-98a3e0a94136,shipping,854 Craig Passage Apt. 879,Lake Cindychester,FL,84317,US,True
+77d9b695-5b37-4ade-8f6d-7a866842287d,2fac4408-7728-454c-94d8-16b7262380b0,billing,468 Smith Islands Suite 443,East Kristopherville,FM,89030,US,False
+49a48c8e-545a-4eec-8ad1-f66cafe11b74,f14bcc19-681e-43a6-94e0-9748a8455850,shipping,433 Kathleen Mews Apt. 389,Brandiville,RI,58968,US,True
+3f359e15-eb53-49fd-bc79-619059922fb1,284f711a-5e5a-4929-bb5d-5ddba9a4a773,shipping,519 Brian Dam Apt. 121,North Ryanbury,IL,07054,US,False
+d5d27777-2f0f-4fc5-8173-2737662e5ae5,49c4bc11-2495-438d-9b87-3c395574433f,shipping,44913 Thomas Ford,North Carmen,AZ,71257,US,True
+b4130781-7e2b-4bed-a191-ca394a5b5c86,9bac4be0-d703-4f1d-a088-1bdb362d3246,shipping,562 Bray Square,Stewarttown,AL,88857,US,True
+b8798751-e7a9-4d97-9234-b1d35558168d,5e3636fd-a0a7-44c0-96e8-3d906cdbb119,shipping,42620 Cindy Run,Davisland,FL,40803,US,True
+12965e8d-6e63-41ad-aa71-03a38299aac5,7863e37d-24c8-4e18-8730-ea7e2a65606d,billing,434 Sanders Forges Apt. 138,Brandonborough,LA,24561,US,False
+e6321d37-7e0a-409b-a528-cf9c18ba6177,43086963-8392-432e-84e0-ef1902202b4c,shipping,898 Escobar Shoals,Craigfurt,WV,05840,US,True
+f365f471-c531-4e5e-a19f-a247c40d8b27,49a962c3-f4f1-4c85-accc-a1e3a243a202,shipping,179 Karen Trace,West Michael,KY,66504,US,True
+64228af2-47c5-43fa-9b48-b4a127f56224,3f1fc492-e8ed-4840-97a0-a56592fdc1d9,shipping,57759 Steele Drives,Lindseychester,GA,01134,US,True
+c80683b6-8b40-400c-a3f3-ba65647ad61a,7e2a9b35-5e70-4df4-889c-34732fd2ee32,shipping,1731 Carmen Hills,New Russellville,VA,58518,US,True
+d7821e09-8977-4bb6-b3e7-0db9074f3535,c1d42cf2-74d9-44b1-a0a2-c85935c413be,billing,03004 Knight Vista,Patrickland,FL,95336,US,False
+e5818632-a3e3-4443-8dc6-57a7d6f3beeb,5bbca380-854e-47a4-ae5c-fd631650a115,billing,68222 Christina Glen Apt. 129,Port Karenside,NH,84999,US,False
+d95d8afc-4a26-4d83-ad57-0e7429d05b3c,359c05d0-e19d-463d-b3b4-43a0b4a3810f,shipping,34272 James Village Suite 217,Jenniferside,AR,09318,US,False
+b9bd8c5d-a73e-4dcf-bd77-167a092789bb,710200a9-2c6c-4f21-b3f1-3ed6aa684fa2,shipping,088 Jon Route,Jameston,VI,87886,US,True
+00a51641-920e-4b5f-8b7f-1fd4a540f0d1,1fcec697-8153-4717-a361-5a4257e0c9b7,shipping,2571 Smith Prairie,Reyesbury,NY,77501,US,False
+08c5803f-7bdc-4ca8-aef6-7edb74650b09,d33f758e-ba0e-463c-ba18-0cd99108c547,shipping,2446 Johnson Manor,East Raymond,NC,14451,US,True
+35aa5ad7-4016-4259-8ea7-ab805181e172,7902cccb-bb75-45ac-92b3-688e65d231bb,shipping,8319 Crystal Skyway,East Arthurberg,MH,01187,US,True
+6119e974-92fc-4023-abdd-c5cd6a5f871e,53dda453-796e-4167-b482-7449bd52694f,shipping,9337 Aguirre Lane,South Jack,AL,48056,US,True
+42237672-eae6-4a84-a5fe-5adc9385336d,2480125c-2d37-405c-96b9-ca32b2c75b33,shipping,81826 Davis Forges,Lake Martin,MN,38980,US,True
+253791cb-3ec5-4b33-9375-97b1ad2602b0,a296a891-b126-44e1-a271-9228cc28b3bc,shipping,7456 Cardenas Landing,West Shelby,MS,19082,US,True
+60ab229b-c1df-4300-9c54-f98f1d1479b1,51e5a1ad-d8d2-4387-82fe-860a54c87f4b,billing,7905 Hernandez Wall,Middletonshire,IL,29469,US,False
+059be547-b5b7-4d14-9020-7e2a6f5c6fe2,adaf0597-4b7f-4b6a-8881-40f3787bc862,billing,5006 Michael Square,South James,OR,97378,US,False
+8c2ab6da-37ec-4940-a877-f77ce54b5fa5,5960ff74-c2aa-4a55-9cee-c8f0532e2256,shipping,2517 Hale Mountains,Guerrabury,WV,13060,US,True
+1a92e8d3-fdc5-4a0c-8872-5dc7ea7c8655,18e7baeb-a66e-4a7d-882d-355810698bc3,shipping,0125 Gibbs Knolls Apt. 135,Dustinmouth,DE,01763,US,True
+090eab27-72a9-4824-a119-15950726f848,c0a8be37-975c-4b34-8989-1eb846c63871,shipping,54378 Rick Forest Apt. 591,North Elizabethmouth,UT,91460,US,True
+df164d12-f100-4852-ac91-2cbe15d311f3,6e4bc86a-7c8c-457f-bc7a-61c6187a18f4,shipping,652 Gates Isle Suite 983,Mariaville,PW,95127,US,True
+362985b0-39ab-4051-a8a0-3141490422cc,b81636bb-71f3-4ace-8eb7-628abe1eac07,shipping,76619 David Path,Craigfort,IN,,US,True
+83c933d3-e3e8-4598-a99a-dcd5f15624eb,dccd3e5d-2076-4fc6-aa79-87579e134ce1,shipping,6634 Clark Mountain Apt. 201,New Nancyberg,CT,59341,US,True
+6c8600c4-cc71-4d0f-adc7-d939af17a1cd,f7d61334-5d22-49f8-a022-903921239047,shipping,05052 Sanchez Pines,New Jennifer,MI,73003,US,True
+bccc0e08-ff09-4e65-8a3f-2dea62f31386,63af441d-70c7-4c4e-b495-80b967849285,shipping,9141 Li Lock,North Jacobview,NM,60107,US,True
+16f8fe94-733b-4ece-b4ed-71692d21f214,d2d5925b-c91a-440d-a613-0c76f88845cc,shipping,93899 Aaron Lakes Suite 353,East Rodney,CO,66990,US,True
+8385c930-8ea0-49ae-9351-3898ab8661f4,d51ebab3-97b1-482d-9ccd-7368f01000f7,shipping,3796 Harrington Plains,North Andreamouth,VT,,US,True
+d08cd4b4-11b1-44d9-8fdc-1e5d6eff4794,625c6012-3c16-4c27-ab0c-a8512e488ad7,shipping,40964 Reyes Gateway Suite 960,Shawnport,FL,08989,US,True
+f7a94069-fad5-4b62-8512-5205e76a7a1d,314d5517-f29b-49b2-a076-3abe12756120,shipping,96394 Coleman Summit,West Joshuaborough,CT,35139,US,True
+aed948be-f9de-4b80-b15e-0bb1cc119f0f,890861ac-5e77-4568-aaff-807b37e6f872,shipping,52478 Oconnor Courts,Lake Michael,GU,18559,US,True
+b7dac57e-81bf-4c83-a6a7-da80e862cebf,d224c314-09b4-49c7-9490-53d3247615d2,shipping,3380 Michael Green Suite 228,Port Brycechester,DE,81446,US,True
+fbc78497-8e8d-4659-92fa-ba1ba5b92631,73d9c423-e9d4-428f-bfaa-b073b2c1f454,shipping,995 Molly Shores,Copelandchester,MT,07926,US,False
+03283029-998d-41ce-987b-e9a6b7b58a6e,a970776b-59ce-47ec-9e77-946229a8be45,shipping,47644 Jackson Hill,Lake Zacharyberg,NH,85186,US,True
+42c24e13-33d4-4f4f-bcd8-eceb1a2b0657,89c10b53-36ee-4f1c-8430-7090dbf04a44,shipping,640 Miller Divide,Lake Traciville,DE,60679,US,False
+bf15c03d-55a9-4d89-a0f8-6f7c2453a7b7,8386c889-4e1d-49ce-9d61-12c967dad0f9,shipping,02601 Rodriguez Forest Apt. 594,Schultzmouth,AZ,57918,US,True
+041569b1-a554-4533-a2db-0255ada96016,529867fe-75f6-4cd9-b913-543b3d6e583c,billing,79799 Simon Mountains,West Jennifer,PA,44787,US,False
+b71a0f4d-2cb4-487a-a080-cb1248d4e2be,01450c81-3eae-4663-a704-f91c175e17f0,shipping,4072 Margaret Harbors Suite 282,Paigeview,AL,08157,US,True
+93b83fed-4238-49ce-a4d7-5d94ed89d635,8d5fa184-5966-49ce-b3e7-4acfaba98bfd,shipping,9367 John Meadow,Yorkton,AK,81866,US,True
+f87e7cd7-ddad-4783-9fad-52b1d2b92da8,5960ff74-c2aa-4a55-9cee-c8f0532e2256,billing,52654 Carlson Place Apt. 579,East Nicoleburgh,WI,31323,US,False
+6ee092df-80a6-4745-9f81-ec64cf442752,bf32ccad-096c-457c-9147-6f220d46e227,shipping,36852 Alexis Meadow Apt. 537,North Davidview,GA,86675,US,True
+bc8f82f4-2d60-42e9-8682-ac5301f3874d,cc1fc998-ac73-4d63-9bb0-03e1756e8d0d,shipping,0000 Michelle Stream Apt. 152,North Haileyfort,AS,13380,US,True
+235f5521-ac79-4e18-827d-4709b3fef488,afdabd06-a2b4-497a-93b8-7bcf582b5d3b,shipping,42114 Kristine Springs,Garrettberg,MA,01646,US,True
+07c17d14-afde-412e-808f-db3a691ed020,6f1db361-6600-4690-8cd8-5520d4257b7f,billing,904 George Estate,Lake Brandon,HI,26172,US,False
+dd9c4a30-21fd-4e4e-bad0-91a851838237,90249383-3427-4005-a185-d20f5542dae5,shipping,8170 Stone Extension,Michelechester,MO,21083,US,True
+1236043c-1a78-4340-8e82-c38743038aed,3d0d96e7-a6da-4e11-a509-76b813d466f5,shipping,569 Rogers Grove,West Destinyfurt,NH,89012,US,True
+f65d12fe-74f5-4641-bb06-28a603a1afc4,5948da4d-8a3d-4122-9885-6f62f017c7b2,shipping,8822 Love Garden,East Victorialand,MS,71574,US,True
+55f4db58-b563-4ca4-bd30-966b9adaeb56,65dbcba7-fbb7-4837-ace0-5cd3cc5dd4a4,billing,320 Sanchez Brooks Suite 768,South Jacob,NC,76640,US,False
+74721b6d-52e7-42b6-9894-35ec83a02a91,46d34d7f-a3a4-4386-89ba-fa5ac15e5a69,shipping,2610 Perez Viaduct,Brownshire,DC,26664,US,True
+d34abc90-8232-4f35-a55c-337adbc197c5,3dc87d1c-7942-471e-b947-26b7ec78cedb,shipping,271 Derek Light,Grayburgh,WI,03116,US,True
+f5dd1abe-c241-4af9-904b-c36c9ba3bf4c,bbfdba43-2871-4e95-84d9-e2ff45960e7d,shipping,24999 Tammy Summit Suite 014,Miguelfurt,GU,09370,US,True
+510eade4-7b61-488d-bd44-cf39d748bfda,6bb3949d-b446-4beb-bcc9-01846e7ef85f,shipping,637 Farrell Burgs Suite 292,Sherrytown,NM,86857,US,False
+cbefe99e-a9d1-44c7-aad5-e64992285035,866ec748-2021-45f8-9170-6c393fca1e65,billing,26189 Moore Plaza,Gravesview,UT,33189,US,False
+d52be598-bda5-4bae-9d2f-b97022a29b11,61004774-fb70-403c-ae81-a1e9cd187146,shipping,0917 Miller Summit Suite 445,Craigtown,FL,82403,US,True
+01753ff8-1fc4-4b53-862f-f5d51a76d7db,cc6587b9-1ad1-4f99-bb8b-dc23f1621ea6,shipping,8867 Teresa Row Apt. 985,Nicholasfort,SD,22668,US,True
+de2df2dd-f61a-4339-bb37-2051602c5638,017413ff-58e5-4097-93e6-84f98038b20b,shipping,99717 Christopher Circle,South Lawrenceland,WY,17217,US,True
+317a43ba-9e93-4dd1-a255-3d6a95a55663,ce73a9b8-27f8-4c9f-941c-4b99a646fb32,shipping,34485 Lambert Groves Apt. 241,New Anitaville,IL,71611,US,True
+7ed102ac-e6f6-4a9a-8118-90e5d808bb5e,103fcba9-e7d7-4b76-b162-0fc8a31cfa6b,shipping,1169 Ballard Light,Taylormouth,HI,13065,US,True
+7a991230-55bc-492a-9ceb-d2687c2726e8,63b6d2f8-4e38-4b4c-bf67-6651399b4453,shipping,582 Drake Tunnel Apt. 306,Nelsonhaven,ME,65889,US,False
+ef376eca-52b4-499e-a2fd-fe8d4b364cc1,46d24c86-1a31-430e-b1c4-1f4d8632c5ee,shipping,64236 Andrew Fords Apt. 664,North Kenneth,AS,57171,US,True
+cb9e2171-f30e-4318-971d-78547e050a8b,e6173937-b216-46db-b863-ec7526285150,shipping,6766 Gaines Grove Suite 350,Sethbury,OK,22329,US,True
+88f6349b-d569-41c9-962a-1c5aaf7d2784,120d57b9-de14-4717-aefe-ab126645435d,shipping,47841 Wilson Prairie Suite 973,Keithborough,AZ,44196,US,True
+b76dd775-6ba0-4f85-bb90-6c95392458b0,30380af9-7c90-4e56-9717-61064c5ca79c,billing,093 Chelsea Parkway,New Ashleychester,AK,43102,US,False
+fa050ee3-c0d9-472b-916f-4f806abb57c9,4955904c-175f-43ec-b76a-bc70d836d508,shipping,164 John Glen,Lake Donna,MA,93622,US,True
+05c032fd-f693-4c4d-989c-bdb653ec677c,d5e5a6a6-cb8d-4d62-8551-298dee7f1f9f,shipping,09548 Joshua Vista Suite 374,Brownmouth,FL,94448,US,True
+643b0f41-6496-4cc6-8547-719e825dbccc,f962820d-d110-4903-9fbd-86a2ba5a9687,shipping,88158 Jordan Isle,Port Gregory,NE,64792,US,True
+9922001a-a0e4-4072-be50-113b9032282f,303bc5db-08d0-4431-b6df-29c80d0321da,shipping,833 Beck Locks,West Williamview,OH,70592,US,True
+83fe564f-46ab-469e-bbf2-133404ce0bb0,388a03fa-6bff-4153-afbb-2349b43c876e,shipping,103 Jason Prairie Suite 051,Williamburgh,MO,28390,US,True
+3cd45cf5-f9f5-4345-9a90-87614e202678,34ec60c6-4248-4ad1-8dd9-759b309578a4,shipping,6083 David Pines Apt. 958,South Kaylee,TN,27778,US,True
+68dfed3e-296c-42d0-b17c-e28e141e5528,5b4df518-7c6e-4957-8906-e33505acee31,billing,42175 Vincent Village,Dixonfort,TN,81027,US,False
+6e2d89a0-b122-4eb6-885b-f97362b0e245,34b17474-7fef-4a04-8009-f83028f66521,billing,518 Thompson Motorway,East Ryanport,WI,14743,US,False
+5c5c8253-4e01-4296-bddb-de3ba30d86ea,74b13d9f-159f-4adb-8b2c-a623d67b529e,shipping,504 Moreno Club Apt. 219,New Marcus,MD,90281,US,True
+a4935644-ba6e-42cb-b71b-fd2709a609b3,661d2fc6-9fa2-4c79-9d19-44c73cb68448,shipping,0418 Kathleen Ports,Sarahland,WY,60923,US,True
+f4a2e2ec-42b7-498d-9234-c8470d21664b,0abcb3b4-7e1c-4638-a21c-af1df3702f27,shipping,14559 Jennifer Mews,Martinezside,VA,77528,US,True
+c23b05fb-9982-475c-862a-d707a5b29525,dcddb844-390f-4861-a4ee-0a32b75bb218,shipping,79649 Cole Summit,Lake Tracy,KS,45740,US,False
+07391856-f5e4-497c-8e09-78b13c28a73c,65dbcba7-fbb7-4837-ace0-5cd3cc5dd4a4,shipping,915 Scott Canyon Apt. 824,South Jeffreybury,IA,30101,US,True
+1c10a325-5786-4aa8-bc30-53f34d92022f,9a689679-4c75-46ba-92d3-6b5b0c51a34a,billing,23009 Matthew Mall,New Davidhaven,AL,32533,US,False
+4077eb29-3325-4989-924d-098bc2a82f84,97bbee89-2209-4d9a-9f20-d3327baf7efe,billing,05943 Graham Mountain,Billfort,NH,48618,US,False
+6525ea76-47a3-4eed-bddf-1adac6b34205,117583ee-3cd8-4690-89c9-d804aedc86a8,shipping,206 Frazier Wells,Spencerview,PW,75482,US,True
+d385b56c-a809-44e7-9923-5cd7be29d27c,670a79a3-05fc-4a33-8b9d-1b6df80347f4,shipping,384 Brady Canyon,East Kevinside,AL,69682,US,True
+92e14582-a8a2-4d96-9760-d5d38fba5181,7ea9b687-48e0-4f47-9245-7a3e02c88fec,shipping,0723 Hoffman Stream Apt. 893,Elizabethstad,SD,32477,US,False
+6f2704d5-d334-4b83-b001-d3d7c54223de,8f9052f4-d761-416e-8b74-a71f640df0d7,billing,18385 Cox Terrace Suite 006,Kevinstad,LA,85987,US,False
+e7377705-bc99-4490-b090-ad839d7590ac,b43d4e7f-d2c2-4f0e-a706-cfd02d61a398,billing,8108 Michael Flat Apt. 863,Lauriestad,MA,54685,US,False
+f3f7bef4-c33f-4e8e-8250-eea1f4485a46,8416975a-1321-43a3-b3e1-577aee3b59ae,shipping,67042 Mccoy Spur Suite 919,New Julian,VA,49437,US,True
+de433b75-3de4-45a8-81a3-20040f8f6024,f714d574-6aed-4017-952f-ff5bc4155939,shipping,31829 Jones Stravenue,Lake Kathleenmouth,GA,89805,US,True
+7ca5c28f-668c-4b45-8ef0-981fefa66997,72492cee-bfcb-4501-9a63-5afe45f5215a,shipping,820 Buchanan Gardens,Millerside,PA,42500,US,True
+16bb7140-503c-4a22-809b-142d0d563076,529867fe-75f6-4cd9-b913-543b3d6e583c,shipping,1502 Alvarez Junction,East Robinport,GA,61690,US,True
+c4a49da4-a149-4eec-ab1e-de838996e31f,c8544096-3228-4db0-b3de-4f0da1974b40,shipping,0908 Lindsay Inlet,Danielburgh,OR,68460,US,True
+bb574d2e-b2d0-4166-9c55-10f2abf6b5c1,e5873f83-602d-4424-9c5e-184c56c9d4ba,billing,72959 Young Brooks,Andrewshire,AL,61026,US,False
+c771af93-982c-4916-81d0-817660e79d50,ff4e2ef5-4f72-41f4-90ea-4f40665b9f5b,shipping,1520 Johnson Shoals,Bradleychester,KY,03175,US,True
+85f9ec3b-1493-43f9-8e79-8fb7aee992cb,e8da2040-0489-4880-a881-ef127727f204,shipping,2791 Jeffery Field,Hortonburgh,PA,49988,US,True
+f844ad4a-aad3-452f-996e-727af25a43b3,bb35efe0-ac42-4801-bc72-7bea481716da,shipping,185 Hawkins Centers,Parkerport,WV,18007,US,True
+5dd31e6e-8def-438c-b358-068bc9865d6d,da9de603-2c96-4356-820d-7c1e9ac4dde7,billing,646 Hampton Crest Suite 234,North Cheryl,VT,57663,US,False
+181db794-3acd-4435-b56b-5d42b4231eed,5bbca380-854e-47a4-ae5c-fd631650a115,shipping,245 Angela Point Apt. 100,Medinaland,ME,28033,US,True
+23c02068-156e-4d75-be73-10ea7a324f6e,fd12529b-56bd-40cf-a742-a90ad36add5e,shipping,429 Lisa Prairie,Lake Johnton,IN,33268,US,True
+231eb4e5-1246-4b15-8a21-b410319fbe6a,e8014144-a99b-4ca2-8418-56404aee2f08,shipping,839 Roach Mountain Apt. 598,Ruthview,MA,13461,US,True
+35c675fa-845d-4816-ba5c-153ef2b942d9,05f69a50-2703-4591-a792-14e2e5994b43,shipping,09001 Davila Stravenue Suite 463,East Christine,OK,99031,US,True
+bb376179-7d9c-4a2e-904c-2c55f8fe9378,1a1397df-b2b4-4791-93d9-87ac9062f545,shipping,44470 Shaw Path,Romeroshire,MA,02040,US,True
+974f56ee-e7c4-4511-9714-f32cd9f300d2,e69b7e32-9292-400a-b228-b3ecc6727760,shipping,994 Clark Alley Apt. 319,East Fred,VI,00533,US,True
+626a4743-a662-43b6-ab1e-044a3463d33c,fe21b6ad-ebab-42b3-b5ed-ad3529036009,shipping,1537 Dylan Rue,Port Miguelchester,MS,86945,US,True
+853d4c09-9ea3-45b7-a87c-100bb19dbf52,5a62f2b9-646a-4b84-b570-661ca33a139f,shipping,83483 Nathan Via,North Tiffany,UT,58209,US,True
+2eb67eb0-49b5-4288-8043-a999c89dc417,03410ea3-1e8a-40ef-9322-bc532f78f7ff,shipping,251 Benson Fall,Jillville,NM,13873,US,True
+b9458904-3ca8-430c-b5b2-2db7241738b9,c401aa52-5d86-4872-a6fc-75f431023457,shipping,58295 Melissa Ports,Port Laura,GU,91362,US,True
+a51d5fd8-31f0-46a7-95c7-e9e7fcbbff8e,96f16837-3562-4765-b8dc-ddd863a970f2,shipping,12495 Martin Parkway Apt. 891,Port Belindatown,NC,28943,US,True
+994c99df-6145-4c1f-8140-f8cdeba1e71d,bd72d373-2261-4193-bee7-41d3bfd08ef1,shipping,611 William Parks Suite 296,South Jessica,MO,76338,US,False
+6e7977ea-3a65-4cdc-a897-10710e8104ec,bd72d373-2261-4193-bee7-41d3bfd08ef1,shipping,8067 Kennedy Course,Port Jacob,OK,11658,US,True
+ef909f0a-8c7e-43b1-b95d-5d119d08bc9b,0e7b96a0-3300-42a0-b46a-0376d91610eb,shipping,04125 Washington Cliff Apt. 837,South Lori,MP,21651,US,True
+eacba16c-e191-4070-9744-29c17ba340d9,aece6b12-b296-4a1b-991c-ab89ac207fed,shipping,3531 Perez Freeway Suite 363,South Brendaton,FM,57630,US,True
+ed470747-217d-40e4-873a-d3f8c4cd5fc7,1c8233dc-8ccb-4d27-84e7-e00d33ff6674,shipping,229 Wilson Islands Suite 302,Leslieshire,MO,30987,US,True
+6a686089-88f2-469a-bce1-bc369282b660,117c9a65-4a4c-494f-8a54-64305d57c551,shipping,051 Caitlin View,Port Tyler,MT,50723,US,True
+1116bfc0-fdd5-4ccb-90aa-e840b0004416,41c59ae8-bcd0-4d00-b8e9-bfaa0ce5913b,shipping,9806 Caldwell Burg Apt. 920,Coreychester,AS,04220,US,True
+f5244c39-ebd3-4fde-9bcc-aaa748158be8,298ca377-a08e-4e0d-91d6-b0b5aff14c1b,shipping,979 Erin Bypass Suite 550,Jackiefurt,WV,71151,US,True
+06dba482-6731-4a0b-a62e-899b4571fea5,0313557a-f7d4-4834-be26-3977f30a5235,shipping,360 Gonzales Flat Apt. 691,East Williamshire,VA,68199,US,True
+54721d7a-c931-4dc9-940a-c764031f63f0,78e4ffca-cfe4-42f3-9ef0-98ca1bb8cfa0,shipping,0920 Wilson Unions Suite 238,East Jaimeburgh,CT,85309,US,True
+e32fd733-b3d1-4ae9-9395-83fbc03546b6,94638355-4830-4837-8708-12531dc89dbf,shipping,9434 Vaughn Mall Suite 643,Kingtown,SC,91271,US,False
+587d6a2a-bc64-4423-a1c1-3b492bb2659a,1826e2e6-ccef-4719-8707-4c18ec953356,shipping,9576 Evan Stream,South Maurice,IN,67037,US,True
+15502f46-10f8-42c0-ae67-7ddaa2768a1a,72fd6924-b954-4c8f-9c0b-2545d0efe53b,shipping,6258 Woods Crossroad,Alberthaven,VT,,US,True
+a78661fa-30e4-4478-9594-7b1037ed3c2c,cbd53684-acf0-447d-b61b-35f8bcde6edf,shipping,0330 Brady Via Suite 624,North Charleschester,AK,02433,US,False
+f9d9932c-22a0-4bc6-a4fe-b7eaf853dd8b,e8da2040-0489-4880-a881-ef127727f204,shipping,766 Bell Plains Suite 851,South Ross,HI,,US,False
+7b725188-7a5b-47bc-9546-51f49816710c,314d5517-f29b-49b2-a076-3abe12756120,billing,173 Ray Fort Suite 579,Lake Lanceberg,AS,83065,US,False
+fdd31b15-10df-47a8-aa61-087930abbed9,a2053515-1d0d-41cb-a47d-485aed398e8b,shipping,3454 Moore Forges Apt. 065,Port Jeremyburgh,CO,81169,US,True
+c1ed717f-9b3d-4ff1-a59f-8bc4013c1ad5,4041ba09-7a39-4b37-9e0e-f39a765d9c82,shipping,09297 Maurice Stravenue Suite 953,East Gary,SC,91363,US,True
+e74369c8-dcdc-4750-96b5-f0b552e86890,4cd79f83-9fc7-43e4-a4c1-89402b7124e1,shipping,78686 Lawson Ford,North Ernest,IL,78110,US,False
+7f033720-195b-4924-8007-898ceae1c3bc,a3d91be1-b5d9-4d3c-bdd8-ab49cd378f30,shipping,92529 Watkins Walk Apt. 111,East Amberfort,MH,12600,US,True
+501dfcf6-57a4-4cb1-99e1-d29e555fbad0,efc6a229-f984-41c8-b741-83d9a46c5fd1,shipping,9630 Melissa Hill Apt. 530,Moniquehaven,OR,64593,US,True
+98d81c17-f4aa-45c4-8f53-96247c51c734,b2310c7d-702b-4e62-b938-3b19262bd9e9,shipping,974 Scott Knoll,Richardland,NY,25868,US,False
+076b3b0b-f1d3-41a3-b3d6-99867c5241d6,4acffd44-9d77-4c09-afdb-e7f93ee5518b,shipping,215 Matthew Ranch,Martinezchester,VA,65920,US,True
+dbfd3d1f-3eb7-4ecf-a66a-c2637e58504f,c664111b-b80e-45ab-b2de-ee220ea29fbe,shipping,10401 King Pines,New Rosetown,KS,82496,US,False
+adc472aa-766d-4daa-bebb-e696a4df3eb8,3f5140d0-d9ef-4655-a6ab-69e5e6921143,shipping,51554 Misty Fork Suite 016,South Stephanie,WY,16688,US,True
+991dbc3a-6867-4754-86bb-0ee57498958a,6a7675ef-2c9d-4e2d-80c0-b5f38fffb6ea,billing,37773 Gerald Plaza Apt. 228,Port Kathleen,NJ,67791,US,False
+d0066c19-3af8-4672-ad57-75a7b6aaeb4a,7b971d80-7566-4bfa-93b7-b87270c4b732,shipping,60875 Lisa Hill,South Erin,FL,79336,US,True
+20146229-a79c-4965-ad46-430d61c83baf,e100dd4b-6c96-4036-88a6-8813aa5a718f,shipping,5809 Melendez Rue Apt. 273,East Kevinland,MA,50841,US,True
+d7f59f96-b793-4bbc-90fd-28cb9ffc5d2d,834105ff-e792-4a6f-be6d-fb89b4d75d4a,shipping,51618 Burns Ridges Apt. 710,Sabrinahaven,PR,83958,US,True
+ec8fe21d-9f5d-4022-9799-2c06bac11bad,2f0fa97b-f713-40a9-8e11-3e18580cd97b,billing,197 Turner Fork Suite 347,Nelsonfort,IN,57927,US,False
+8f31ace4-28d6-4262-adb6-d03f64a357f5,7755a749-3460-4f0c-a33c-428dccd20885,shipping,754 Cruz Union,South Robertchester,FL,04167,US,True
+deab2672-5f6b-44e2-a8d7-69e27656eb74,0815e683-4b1e-4ea3-b9e8-9d06bbfaedb5,shipping,32823 Jennifer Drives,Lake Amberhaven,VA,29835,US,True
+ac293f7e-4a23-4550-9d95-29633659a503,296a6b8f-b21e-4485-ad7f-18c1262a0764,shipping,227 Aaron Fall,New Kelly,DC,82456,US,True
+f811b45e-e1fa-4694-942f-15ba7abda05a,dcddb844-390f-4861-a4ee-0a32b75bb218,shipping,30609 Lisa Trafficway,Port Jeffreyton,OK,72011,US,False
+eb001e4e-8695-4603-aa4d-cd3a488958db,ac4632eb-3a22-4956-896e-0a3899a647f1,shipping,83745 Hammond Trail,Paulahaven,PA,88251,US,True
+e89fe433-0d11-46bb-a915-c5f9bdde2fc3,0d78df79-b2dc-4cea-b7a0-712c91c0433d,shipping,6539 Johnson Inlet,Robinsonchester,CT,01850,US,True
+d68e469e-a018-48b3-9c97-d7e7509cc5a2,795d2b23-6186-4d66-beb4-690083c579a2,shipping,621 Laura Crossroad Apt. 580,North Erika,MA,56818,US,True
+ee97b364-538b-4079-b550-cdb477edfee2,46d24c86-1a31-430e-b1c4-1f4d8632c5ee,billing,925 Marilyn Passage Apt. 776,Adamschester,CO,99655,US,False
+7aca2732-2158-4683-b698-ea5bb06fc772,b1554012-ee9c-477f-a055-e067482499a6,shipping,6183 Patrick Spurs Suite 198,Mathewport,MO,07735,US,True
+3462da8f-6597-4ac7-8d78-d1826f71c952,59292cdf-6314-4444-aee9-45a78c76dcbe,shipping,246 Torres Haven,Hartfort,CA,44178,US,True
+9efe3be5-668b-492b-b429-bb2a8292240e,b5261e71-886e-4d78-8d1d-310ed9754704,shipping,93696 Patel Rue,Sullivanshire,NC,62703,US,True
+9931aff4-7b6c-4ec4-b3d7-a2b582dff183,e6e0c2ef-00b6-4d38-a129-32d4aa4e795d,shipping,11845 Rodney Shoals Apt. 340,Donnamouth,DC,76138,US,False
+56fe054f-289e-4b35-ae9b-b45803ac96f8,8e6a03da-15e7-44e8-bec1-426b65edb389,shipping,4304 Mckenzie Centers,East Amanda,WY,48553,US,True
+2b06df25-4113-4c9c-93f3-cd922845d78a,1076f00e-5dd1-41d1-b2a5-0c59e18a5310,billing,579 Henry Track Suite 639,North Alicia,NE,63195,US,False
+bbbd5dc2-bb29-4069-9bf4-3477f61bfda3,8252af4b-fdbe-4139-b9a2-de4ceb670886,shipping,8522 Christopher Stream,Davisside,KY,42225,US,True
+426a3bb9-c98f-43ac-96bd-7807c9f6e779,89a5d615-2bb0-4843-8177-90bf7f452bfe,billing,64261 Jessica Expressway Apt. 384,Lake Kathleen,NJ,45347,US,False
+b8922dad-d479-4229-b12a-f8529c1dc28e,189edb91-3f25-4f32-bfb4-64bd4052cb1c,shipping,723 Brown Greens,North Garyfurt,NJ,40001,US,True
+7ae81de1-6ef5-4f8e-83ec-87d694b14238,7e26cac1-f9ea-443d-a6d7-b0d624d82143,shipping,9299 Brian Locks,Martinmouth,WV,57667,US,True
+9be08677-0224-4fbb-8834-2fa5a3ca8f7e,2609004e-90a8-450e-98f3-5ebc16841cd5,shipping,031 Alexis Forge Suite 647,Steventon,MA,11016,US,False
+99938efd-3c3f-4b0c-91b0-5574b926ff85,6058494e-8390-41a7-9c1b-182902dda8db,shipping,6618 Campbell Fields Suite 125,Port Sarahport,NH,86305,US,True
+23cca767-f238-44c6-a6d0-e335b802f41e,2e2960d6-f2e9-4048-b234-fb21f0f72405,billing,3523 Lopez Lodge,West Brianfort,AS,86963,US,False
+20250b42-cb02-429b-9637-522bf0a50f85,90b6264d-1278-47c8-a418-6498aac365ba,shipping,2681 Wesley Junctions,Port Williamview,FM,71005,US,True
+92bb4ff0-35ea-4c25-a896-536c64ff6886,92bac428-565b-4fba-a911-e9f3dc3c5ad8,shipping,34414 Hunter Islands,North Ginamouth,MO,95449,US,True
+b0b74cb9-1aa9-4fa5-8be8-6822076cbc08,62b38185-a937-473c-b04e-833be36219e6,shipping,9187 Rachel Hill,North Kelly,MA,56433,US,True
+0bec9602-a4c3-4d3b-998f-c278616702da,bbc4757e-2351-486e-9ca8-f73b9dac716f,shipping,0633 Hamilton Forges Apt. 906,North Vickiehaven,AZ,56298,US,False
+441db348-1389-4957-8fc5-1a31d42d129f,d45ce04e-1258-4744-ab7d-af982c28565d,billing,760 Kevin Orchard,Port Jimmy,PR,72160,US,False
+3bfa0ca0-5fea-436b-99f2-48829badcd89,dccd3e5d-2076-4fc6-aa79-87579e134ce1,shipping,6634 Clark Mountain Apt. 201,New Nancyberg,CT,59341,US,True
+a37928d1-5da1-48c8-a97a-53f99c12ed36,1b221ed8-52ce-4d81-a181-c5317da12a7c,shipping,4687 Nancy Crescent,North Jerry,UT,70433,US,True
+9149d7a8-f382-4f5e-93f2-b57abfbb525a,6aff094b-52ed-46fe-8904-5752ec7e76ec,shipping,162 Joshua Creek,Lake Jasonville,MP,91756,US,True
+5f6336b3-2df0-429a-97a0-4f7e745b9148,f285aab8-56d5-40ad-92f1-61b0a4498890,shipping,87923 Marisa Highway Suite 049,Troymouth,IN,04018,US,True
+c71e19c5-edbe-4b9f-b5df-8742598efba6,6d622f69-5cf8-4eda-b7ff-4f57f0e66237,shipping,82695 Ryan Grove Apt. 869,Cooperland,MP,28895,US,True
+0d155a24-97c6-438e-a65b-cdff45992715,07365e1d-9d4c-4185-859e-d5757178280c,shipping,71732 Larson Causeway Suite 950,Lake Karen,CA,06811,US,True
+a3218f9c-a5fa-490c-989a-529758f63b73,270b35bf-74ca-4601-91d8-16fe5196ca5a,billing,815 Jacobs Mission Suite 392,Port Regina,TX,77146,US,False
+38383a2b-69ae-4e80-82b3-86e55fa58239,2a6409ee-29ac-483f-a2a7-9074fcb50191,billing,67762 Murphy Forge,Lake Michael,AL,10053,US,False
+c99536e0-8c8d-45f4-ba7e-860065ef2389,1740f65f-2823-4d8a-9ff9-2bf6dfcddfb6,shipping,0263 Morgan Springs Apt. 430,South Nicholaschester,WY,37173,US,False
+30e9c8ad-d591-46ff-8be6-258580c99bdc,26ce484a-a527-4fe1-903f-2809a03fd21a,shipping,5882 Moss Key,Thompsonfurt,MN,61775,US,True
+5a2e210f-6510-4220-bb56-5f0910164ee8,43df30db-068d-40fc-8576-7e2f6e62f2f6,shipping,4851 Owens Villages,New Sarahland,DE,12371,US,True
+c9741493-e835-4bc8-8673-d27edf2b0561,359c05d0-e19d-463d-b3b4-43a0b4a3810f,shipping,2311 Sheryl Drives Suite 489,Flemingland,NV,57961,US,True
+48a71c93-b3bb-4789-a8f2-bc40b78503f1,71f1cea1-588b-47f5-93c3-4e649541a9e4,shipping,4623 Mendoza Coves Apt. 476,North Bradleyton,WI,16034,US,True
+3eb1446c-315e-4b45-bc77-c7baa4cbe947,ba2bf5e1-4b63-4bb3-b83a-f10438f84258,shipping,229 Edwin Avenue Suite 765,Thompsonshire,KY,13201,US,True
+f6df9db2-2f50-49c2-9dc4-93e905e6f702,9db0e79f-fdea-4290-ba7b-114141f33d1f,shipping,12797 Delacruz Gateway,Sullivanton,PA,96882,US,True
+f1ea24f4-9e35-4388-841b-332a54e426e2,9368e74c-0581-4d77-9358-94e415a80423,billing,3416 Zachary Union Suite 484,Lopezland,HI,18408,US,False
+027b51cc-0296-4842-977f-cd2aac78ff14,03710ca1-feb1-4206-bd26-3bb8e6a1dac2,shipping,96713 Davis Crescent,South Brandon,FL,96413,US,True
+89379793-f68a-4127-abe1-a2282729e155,d31efffd-fdc4-4168-ac26-83b67a6c5c47,shipping,40369 Garrett Station Suite 666,Lake Glenn,DC,25172,US,True
+36cd2162-22e9-444a-9ded-107d2387a4fc,cf5dd5d1-b2dc-47d4-9be1-b6c0e5b07a12,shipping,158 Sherman Row,West Luke,NV,26458,US,True
+38cb6fab-59d2-4a3d-b445-5a11fa608855,04edb858-b8d9-455a-a1f2-f236df11a91f,shipping,0229 Williams Inlet Suite 327,North Amyland,VI,06357,US,False
+44138106-e496-41a9-870b-ca260f905987,28447ab4-5e16-465e-acd1-7fcacd2d97e2,shipping,96931 Mcguire Extensions Suite 919,Benjaminshire,MS,10787,US,True
+c27da7ad-1ac5-4c6f-aa04-06b0feef7106,099dd9b8-0a76-482f-92e1-f754d25d5aee,shipping,56639 Carroll Knolls,Kristyville,CT,50286,US,True
+89198d7f-a830-47a7-a227-b2d52d450114,bde10f4a-86e5-45d2-b176-3ec1222265c1,shipping,502 Chelsea Avenue Apt. 268,Farmerside,CO,85579,US,True
+87d67cc1-9fca-4ebc-83d3-f4af90c2fc04,d7af9974-5b4c-4c70-85c5-1f7ff782da88,shipping,60013 Watson Spurs Apt. 034,Kevinview,DC,79334,US,True
+0ef0e1a1-94d9-4baa-ba3f-7efeb8cc4b51,21e6a119-3caa-43ab-9905-08bda65f8493,shipping,977 Amanda Tunnel,West Kristyland,ID,63192,US,True
+d183128d-5280-481c-be23-095983e8dc70,816f5acb-1a37-44ba-8ce8-25c40cec4d06,shipping,653 Lester Harbors Suite 515,Perezfurt,NM,99699,US,True
+b7f941ae-3859-4531-913d-ce5440721bb6,254a6b6d-5dcb-4d20-88ce-e2e448935a93,shipping,58482 Gray Crossing Apt. 624,West Mike,AR,48500,US,True
+87edd630-2390-4783-97c4-a8fdc45ba986,b0382b3d-f5c4-4ecd-9e82-9ec911feb36a,billing,046 Thomas Manor,Rojastown,LA,25281,US,False
+b40d0a25-4b51-47f7-a264-dfb03d1f23a7,ddd9ed38-6351-4568-b08c-8f6c92cb84a8,shipping,4564 Kevin Alley,West Justin,ND,01591,US,True
+67606fd1-70fe-47b8-a062-dabfb174d525,446153de-73e0-4d85-a593-2c3ae8664564,shipping,3585 Joel Place Suite 003,West Tiffanybury,MS,85095,US,True
+35ed917f-7e59-4ae1-bedb-7d416c106566,c50959f1-d990-44ff-837f-4062c769ae54,billing,613 Sampson Keys Suite 660,Kimberlyhaven,LA,35577,US,False
+3cfcd8fa-4f51-4eaf-b53b-b6838315eab2,04b679f3-0691-47bc-975a-fdac41f52db4,billing,71597 Davis Cove Apt. 097,East Jamesfurt,LA,27487,US,False
+591e474f-3c79-4332-90c1-05381df46c37,d2d5925b-c91a-440d-a613-0c76f88845cc,shipping,76108 Williams Ferry Suite 971,Port Melissa,MS,05557,US,False
+0d39d949-9d14-4b3c-9ddd-ca806c51c7c5,a59ab98c-fe50-412b-aa83-a693a561092f,billing,444 Matthew Springs Suite 712,Smithhaven,NJ,65484,US,False
+9d1d99ce-1054-483e-a891-db9b54261476,3934f6b2-65db-491f-93be-76ec718440d9,shipping,7161 Tiffany Flats Suite 813,North Jonathanton,FL,46611,US,False
+90c5dce4-ef14-44da-a5f3-698c957ade97,b51ad0d8-7b4d-4859-8de9-fd9feb62c888,shipping,2805 Brown Via Suite 406,Shanemouth,MI,10994,US,True
+1540c2aa-ae5a-4f26-a1ce-4e9028983fe3,8699b9d8-d299-411d-82bc-9ee94abdf576,shipping,4381 Andrew Burgs,Davidburgh,GU,89693,US,True
+deea5fe6-27aa-4a55-bb06-3c86d2699faf,a9976a20-42e5-4c26-a2d0-6ab72973887f,shipping,2203 Kyle Highway,West Richard,SD,14628,US,True
+f3f598e7-9865-429a-9de6-c138c8c05a67,9094466a-3714-44da-802d-85c2317b80e5,shipping,571 Moss Dam,East Anthonyshire,IA,64625,US,True
+c462f27d-7e1e-41f0-b761-acf84a526963,2bdeb3b7-a894-4fcf-8218-e41167bc557e,shipping,5543 Cain Road,Natashatown,OH,37226,US,True
+630c5646-1f7d-43c0-a1c7-8496184f61d7,a30edde1-4a46-4acb-905c-013e285a8101,shipping,5516 Potter Park,Gardnerhaven,MT,84625,US,True
+282a0ce6-48b1-4e07-9a5b-e71fd0d936a8,aa006c1b-6b97-4f02-99a9-57923d13eb8f,shipping,598 Deborah Haven Suite 788,Riverston,UT,86331,US,True
+970cedcd-2f0c-420a-ae52-433f1ed60fe3,6f1db361-6600-4690-8cd8-5520d4257b7f,shipping,65118 Sandy Harbors Apt. 655,Hawkinsburgh,AK,97350,US,True
+131db8a2-60a6-4b7f-8d5f-3dc4a29a3ca8,91c5349a-5fb8-43b5-8af3-1b0018617bc3,shipping,560 Atkins Corner Apt. 198,New Derekfort,OH,72800,US,True
+491635cd-63a0-4949-99de-2ae4e0c77cd3,a43342bc-a956-480b-8ef3-7b28e61c9b9b,shipping,78931 Franklin Drives Suite 284,Suzanneport,VI,07502,US,True
+e192b58d-f78c-4b7d-bca9-9bc073f63b4f,ffd40778-a37e-453c-81d1-9a769cac4692,shipping,3123 John Views,Stevenside,NE,55815,US,True
+b54abac6-484c-4865-b9ee-6e2069e910bf,47e4f30d-f965-45df-8474-93d5aeaf7cb2,shipping,528 Mahoney Island Suite 566,Charleneshire,ND,28540,US,True
+868beba3-1aa8-4776-a70e-d02a7006734b,05e61dfb-4365-41c3-8f86-f9b259998765,shipping,724 Dalton Parks,Lake Michael,NJ,40270,US,True
+71061268-e5a3-4f1b-b8c2-5d0c2f5a91ca,847d46dd-9721-4351-8bef-5c2292b57d6f,shipping,37170 Grant Mall,Lauraton,GU,81363,US,True
+f1fd71e8-3cd7-4350-bb3a-487db2c471e3,090fb913-1317-4169-b150-64e304451d38,shipping,2637 Ryan Spring Suite 539,Thomasside,TX,77423,US,True
+4bceff82-c458-4286-a9e8-0f3694ebdbe8,7c45f68c-bbba-4b82-9457-03de08fe8287,shipping,20414 Freeman Harbors,Lake David,WA,69300,US,True
+56cab09c-5bd1-4b1d-8409-8f31bd36c818,45ed3c5a-3c94-463b-91d2-73d3333fe5fc,shipping,40559 Whitney Curve Suite 711,West Shawnaborough,NM,92940,US,True
+24d3ef28-3ca3-4143-9023-61c6b657f6d9,300faed1-594b-427c-894e-c46855f06f22,billing,4576 Porter Underpass,Moralesview,VA,83827,US,False
+89c716fa-4620-4da4-b858-e710680cdd18,61004774-fb70-403c-ae81-a1e9cd187146,shipping,596 Forbes Brooks,Angelafort,IA,49690,US,False
+2c4e8395-9554-4df7-a45d-d3418ddf2e75,2a082be2-fc91-4d5a-accd-200e91693b07,shipping,057 Estrada Plains,New Brooke,NJ,34830,US,True
+e28d64bc-b5c5-4e5f-aa9a-fa90994ff3c6,1f2b91fc-75c1-4628-aec0-5cbebc88f0bf,shipping,95275 Peter Stravenue,Sarahmouth,ND,45248,US,False
+031b29c5-983b-436e-b7cf-80cc9b5503e7,8e5c2f29-44ce-4f60-b818-8b728f60b79b,shipping,36268 Donna Bypass,Sharonmouth,MP,34911,US,True
+38a5efad-6f7c-46ab-b483-f5eaf91fe572,7fcd9f31-c0cb-4414-9981-9d014f593081,billing,75384 Denise Islands,North Pamela,CA,29304,US,False
+3890e851-3464-4aec-a37a-7759b399cd82,d6ca14b1-9b55-47f7-be97-787002ca26e5,shipping,409 Smith Fork Suite 624,New Emily,MD,70279,US,True
+7a280742-4d12-41d1-b03e-9590fdfc48e8,35292459-521c-4d3a-a786-3b68116663fc,billing,17942 Tyler Fork Suite 065,Lake Thomas,NV,47523,US,False
+2334af1c-8fdb-47fd-a65f-5b434bd1c15b,94a6d963-227a-4d07-92a6-0bb60ebd66e6,shipping,9497 Harrington Mountains Apt. 287,Contrerasberg,VI,95903,US,True
+d91c51bf-c25c-4dfb-b622-a6289dba4e5c,32927010-1d7d-4cd9-a500-593804ff0e77,shipping,688 Christina Mews Apt. 467,Port Alison,PA,75965,US,True
+688d1e7d-66da-423e-8586-cfd7adb41ca2,6a9699dc-eba5-4045-9b96-91504f0cfe77,shipping,213 Tucker Avenue,Parsonsburgh,WI,49878,US,True
+0005ec6d-9e82-4dfd-834e-c5f8cd2147e5,1c8233dc-8ccb-4d27-84e7-e00d33ff6674,billing,33138 Bradley Ports Apt. 211,Port Edwin,MP,23162,US,False
+e3d9b5d9-5b1c-4714-82a3-b317cc2deaf0,5d5ea9b6-fefd-4e25-850a-9c2d365e7e27,shipping,382 Reyes Junctions,Port Heather,NE,57563,US,True
+c522491e-3f78-4764-85db-b2b9d1da5074,3b0faafa-80d0-490d-bdd0-fe1f13d22058,shipping,14577 Fritz Glens,Kingmouth,AL,46720,US,True
+a69d8bc5-824d-4ba7-91b0-68e6dcb90c0c,9aaa8391-995f-4006-8413-c590098fc46a,shipping,35577 Debbie Orchard,Lake Steven,VI,70882,US,True
+4d21f30e-2cbc-4ca9-aab3-c9704121553a,16e8d4f8-2451-446f-a254-3bc68e40621b,shipping,97767 Carolyn Avenue,New Joshua,SC,73580,US,True
+1d84ed91-16eb-4463-b163-d4e3c07f77da,4126c950-a88a-4305-895c-96d7e076897e,billing,35679 Kaitlyn Crossroad Suite 986,East Carol,LA,65661,US,False
+308517cd-18a4-4cb0-828e-e3cff33fad40,72874237-a564-45ff-95cf-5fb3ab18e7c8,shipping,0665 Jonathan Via,Gregoryland,NM,26803,US,True
+f705d223-d424-4c8d-bd66-73fa22316001,66983396-cb40-4613-8d6d-306b8f9ca5c4,shipping,4622 Miller Ports,New Raymondland,MO,66275,US,True
+a149116d-54a6-4664-a0b8-00eac2771a61,b91c4cbb-67d6-4515-b897-dd13e44c1101,shipping,70304 Lee Via Suite 337,Benjaminfort,MH,92781,US,True
+52add602-7ec7-4f41-a90d-d38854e91489,1bcdbd0d-0e2f-4fdf-a8d5-214d3b49c7e2,billing,7951 Jeffrey Station Suite 319,Jessicamouth,OR,55651,US,False
+99ffd918-1bb4-4542-ac15-f29c7a85ccdf,2949aa7a-85ad-46d1-8409-bf608167f72a,shipping,318 Brian Wells,Hendersontown,WA,90703,US,True
+2aa0084a-6f54-4726-b899-956339799739,9c98b2d4-f4f3-440f-b28d-0e1ca7a152a5,shipping,2475 Torres Court,Lake Andreaberg,MA,47761,US,True
+3e79a8f2-6bfa-4c64-9583-84274ec9860a,5daa5d95-314b-4f5e-8926-8d61c9d4daa1,shipping,341 Anderson Flats,New Travis,WY,55024,US,False
+c6773d81-071a-4123-a84d-4d823d7c5231,be6fcaa5-9911-4bb6-b97c-47eb53c88b32,shipping,56638 Rick Trace,Davidville,NC,18315,US,True
+5faff551-39ad-4965-8578-796d776742ce,76d2b7be-1fa1-441b-9de1-97c64d06c646,shipping,4149 Randall Rapids,Port Catherine,MP,92996,US,False
+dacf1935-6ef8-4352-aad1-039f201e20f7,239409e0-b3ad-4bf6-ba7c-08628ee3cbee,shipping,0636 Christopher Passage Suite 550,Biancaview,ME,86487,US,False
+6bddaab5-be0e-47ae-b880-bd6e27c85d11,70a0c69e-1bf5-4805-bf9c-4714e193f75d,shipping,4110 Hendricks Hills Apt. 134,Port Sergiomouth,CT,52775,US,True
+0a485215-916b-43a3-96e8-a46efa4b8afb,71c65b56-3757-459a-ac5b-b50c76fb6a5e,shipping,5189 Morrow Bridge Apt. 845,Jenkinsburgh,CT,29058,US,True
+b8661f52-3327-42b8-a233-68e3860e0c92,bd463573-d217-4411-9ac0-8b72bd7609cd,shipping,2566 Tamara Gateway,West Davidville,TX,72376,US,True
+ca0c2cf6-7d3e-43a5-bdd3-88859e05eb0e,8f054a96-7920-42dc-b286-f6980ea8dbeb,shipping,085 Melissa Stravenue,North Justinton,FM,18278,US,True
+86f626b1-153f-40e7-85cb-63f7d9836742,c9276a13-5b0f-4ce9-8802-3e0ead192508,shipping,846 Johnson Camp,Bushville,OR,63616,US,True
+00c205d4-ee8a-4ad4-bd09-e7279a3a3ca9,254292b3-d9f3-4b20-be39-1db058d17bb9,shipping,54268 Green Vista,Williamsfort,ID,84756,US,True
+f9f391c7-27a0-4847-be8a-875b034531c3,07571aa5-5581-4cf0-9a68-006051f37c8c,shipping,5420 Jacqueline Way,Antonioton,DE,,US,True
+9c659933-3128-442d-b7ff-0be3a33b8480,10687c1c-9437-400c-a604-0e19882c65e1,shipping,92950 Kevin Neck,Desireehaven,ID,07931,US,True
+1d37058d-de0e-489a-b02a-d2be0f361767,41b09fe3-c0bf-4484-bc20-f48aedb5e7d5,shipping,45110 Ashley Row,Combston,MI,32519,US,True
+900a2200-27d3-4489-9e38-eb37870f9c74,b6b6f9ac-f08b-4ef6-8e52-a2c0bb49b17d,shipping,708 Michael Points Apt. 668,West Angela,MS,70532,US,True
+c9b12b91-11f6-4f08-ba9b-3bf7a584ea03,33ab4667-4cdd-435a-875e-305ea36ebc4d,shipping,797 Katherine Way Apt. 831,New Erin,MD,54034,US,False
+2c0d34b3-3f57-454b-b9e2-ba51d1cab114,0edeaba5-35f3-4e68-98ca-f412d9cd14b5,shipping,99240 Ward Plains Apt. 872,Fullermouth,NY,08901,US,True
+6b65d033-c5da-4157-b23d-0d67c5d17307,99908d5f-92b2-4e74-812d-8fbf41ddc894,billing,4204 Henderson Lakes Suite 758,New Shannonport,WI,42304,US,False
+1c6dc1e2-f064-49d5-b307-978c15f5e8b4,b43ea9dd-823e-4930-9110-31ea0eaa05f3,shipping,41202 Conrad Manors,West Christinafort,IN,73577,US,True
+415101f4-2551-423e-b314-7503e8dd2b2d,139f4019-998c-4c6f-8c4f-a97a756af68c,shipping,209 Moore Port Apt. 654,West Holly,NY,72801,US,True
+faae98d9-e783-4d74-9a0c-72b7e52fe230,efb0203d-c970-47ec-8644-2090a658224b,shipping,6799 Sandra Village,South Joseph,MH,85967,US,True
+44c4becb-8fde-4479-9533-19cadf658238,abf52e51-d999-45fd-a6b0-6a9cd018fb47,shipping,6450 Hannah Creek Apt. 898,Timothyshire,AK,70138,US,True
+883fed7f-993f-43be-b17f-e4c9dae37a23,a6e1b4c7-24c0-48ca-96ee-6d0a46348a82,shipping,71302 David Extensions,East William,NE,95526,US,True
+5186bfe1-a2ab-4a5e-92be-49c3138269c1,902c8ddc-8ba2-42a6-b380-4afc64f50ffc,shipping,5401 Chen Rapids,Jeremyton,AL,91568,US,True
+9c281011-afc6-4b61-a06d-cbf9de7c820e,c2457423-d813-4e9b-8cac-e77de71eef5d,shipping,6755 Ortega Dale Apt. 333,Port Jessica,WY,81618,US,True
+4d274eb5-567b-4daa-9a77-bd754cfe3ca3,04edb858-b8d9-455a-a1f2-f236df11a91f,shipping,611 Armstrong Canyon,North Nathan,MN,40249,US,True
+f945e511-04d4-428f-9f2a-c3dae2b2a094,66dda3b2-66cf-4b2b-90b2-91abe28f6aa4,shipping,513 Timothy Port,Ochoaport,MA,63272,US,True
+be9bde1f-29dc-436e-a8b5-cf9f3d7264a9,40cff0ad-5c91-46bc-b72b-737347aafb25,shipping,60166 Janet Ramp,Jensenport,MA,26472,US,True
+88b52d92-9066-4806-ac40-bbcd0876bad7,270b35bf-74ca-4601-91d8-16fe5196ca5a,shipping,3943 Sanchez Trafficway Suite 375,Lake Johnchester,MN,10946,US,True
+e1d1ba14-7243-4844-b682-bf03f2143807,352810e9-e0fe-4062-a808-83f47ad5f4d4,shipping,519 Cheryl Pass Suite 240,Rachelton,AL,92691,US,True
+2cf60a04-0893-4954-b261-19b7967d9245,b169789c-d0e8-4853-819c-555646263d18,shipping,2129 Megan Terrace,New Sheri,RI,56077,US,False
+299aa098-1ce9-4eaf-b636-caddec3eb95a,0a42e609-2a53-4824-bf02-0088bdb9b149,shipping,5915 Anthony Mount,Gibsonview,PA,86747,US,False
+8a7bc438-658b-4f62-8286-eec21aa8b015,f4835f98-d82c-487c-8788-26a05c249db0,shipping,843 Brian Loop Apt. 272,South Kristie,SD,55421,US,False
+18dd23c6-cf93-4646-a284-e93158020719,1439dc05-4ab9-4995-90c7-d9437ae94f50,shipping,137 Hughes Row Suite 300,Lopezshire,MI,02745,US,True
+3327e05b-eb86-425c-ac70-0e700155921c,5b070f80-9227-43fd-951b-4c758d20070e,shipping,032 Wiggins Forges,West Theodore,NM,25025,US,True
+0b7a0d9c-f7db-4953-b786-7eea8552b5d8,265cf9a7-b023-492e-9e62-3896325f1c48,shipping,195 John Stravenue Apt. 006,Atkinsland,WY,55169,US,True
+8cb31a12-34e3-4a9e-9cc4-9efd07c51af3,8a77ab59-ae1e-4b71-ab66-66bda4615cfd,shipping,27284 Jenkins Junction Suite 041,North Nicole,AZ,79691,US,False
+06406553-6fc7-48dd-ab3e-d16956f1ad45,4671e25f-30dd-4e69-bd9f-8b7f48135732,shipping,4924 Kristina Forks Suite 540,West Justin,GA,81586,US,True
+c5d0ed04-9861-4c0b-9e4b-7df27441f055,9ede5407-362e-465c-a234-482e1f2411c1,shipping,931 Charles Gardens Suite 618,Lake Karen,AL,79575,US,True
+0271e95a-013c-4e03-8efb-8f51b2c18d23,fe2e9f59-c77b-4756-ad2e-fe864a560344,shipping,6242 Alexander Rue Apt. 276,North Derrick,AS,55008,US,True
+cdc07e97-1759-4769-8181-709dd1f2053a,b01b46fd-8f75-4db5-806d-c5c5980008c4,shipping,639 Poole Unions,Andersonfurt,VA,23270,US,False
+e37cb5fe-9897-4734-a579-a75a6b087bf1,fdd86eaf-7a5b-4598-9a08-6f4f207743bb,shipping,1203 Woods Roads,South Julieview,MN,47727,US,True
+44ba0439-f373-4048-978b-97ba1e63d879,66dda3b2-66cf-4b2b-90b2-91abe28f6aa4,billing,08481 Mallory Cove,Curtischester,FL,00659,US,False
+e34ef5b5-1570-4bc7-bd9a-039a5120c733,359ce707-dfea-41f8-be3e-8689b460486f,shipping,2801 Samantha Vista,Richardsonshire,HI,58128,US,True
+3848d6f1-e6f9-4b9d-ad37-ad0136d3f2dc,bd72d373-2261-4193-bee7-41d3bfd08ef1,shipping,611 William Parks Suite 296,South Jessica,MO,76338,US,False
+0efffa29-baa0-4db8-b551-ea1d31688c78,8e312b31-712d-4fc0-84dd-27ff2b1dd09b,shipping,640 Kathryn Parkways Apt. 664,Watkinsburgh,NY,22309,US,True
+a21a94e7-9cf9-48a7-87dc-9f283f9b04d3,485b6c22-4f0b-4e0f-bfba-0c9d38a0122d,shipping,79833 Robles Falls,East Hannah,NH,23757,US,True
+6ff0574a-9956-4fde-bae4-ed91df237e1a,1f2b91fc-75c1-4628-aec0-5cbebc88f0bf,shipping,435 Harris Mountain,North Jenny,FM,38703,US,True
+d57b7e14-3ae6-4f42-9cdb-0662a087cf12,1bcdbd0d-0e2f-4fdf-a8d5-214d3b49c7e2,billing,64248 Cassandra Falls Suite 406,North Kimberly,TN,17509,US,False
+a56c7712-332c-4357-a41e-41354e0662d4,b0382b3d-f5c4-4ecd-9e82-9ec911feb36a,billing,71162 Mullen Club,East Joshuaberg,NM,20227,US,False
+49913d83-44fb-4a2f-a73b-4d530edfc639,5a95b7ee-17bf-44cc-9775-835c337d4cb4,shipping,13204 Brandon Estates,Amandaville,LA,96542,US,True
+7cb8e033-62b0-4934-8afd-ef1deaa169d7,1fcec697-8153-4717-a361-5a4257e0c9b7,shipping,13649 Bird Cove Apt. 419,Tinafurt,TX,91428,US,True
+463da223-6fee-4b88-a863-640476f0aec7,bf03895d-6d44-49a2-8183-81c4e89eac75,shipping,935 Moreno Falls Suite 347,Roblesfurt,PA,47310,US,True
+bec566de-6e65-43e5-8dba-aca450619c52,300faed1-594b-427c-894e-c46855f06f22,billing,53659 Ritter Groves Suite 698,Riversland,NE,27845,US,False
+52c7cfdd-ac55-41d1-bf35-0ad0f112e30c,254292b3-d9f3-4b20-be39-1db058d17bb9,shipping,086 Hutchinson View,East Rebecca,NH,59872,US,False
+019c12b0-b78b-4c3c-919d-1f07e2a9e816,0b4a904c-b6d7-4355-b1ff-3744b3831112,shipping,518 Davenport Greens,South Desiree,MN,77529,US,False
+e8e18909-aafe-4978-bc92-adc1a0218751,17e24a9b-119c-4ea7-a53a-bb757c70ad0a,shipping,33373 Sharon Island Suite 235,Rodriguezside,CO,61351,US,True
+546c62d9-2be2-455d-8f33-fa988656452d,c630fcf6-11c8-465f-9498-0839aee67e55,shipping,431 Liu Brook Suite 502,East Anne,DC,68477,US,True
+e8c56245-05d6-44de-a258-018719df9957,3e5dc535-3e67-47d0-8eed-547c7f51e8c9,shipping,484 Julia Street,East Alexandraton,IL,30331,US,True
+817758f5-ed97-499f-94a2-8c291428d862,b2310c7d-702b-4e62-b938-3b19262bd9e9,shipping,7349 Matthew Fork,Emilytown,WV,58741,US,True
+27bc1e30-9820-4e23-af77-de8aef882d29,b4cc95b0-6dbf-4264-a3ef-43fbbadf652a,shipping,49605 Curtis Vista,Pettyfort,WA,76347,US,True
+7290c607-8256-4bb3-806f-17b4772b0294,10d7cb3c-5a86-4eae-9da6-611ddf67fdd8,shipping,1687 Rich Springs Apt. 903,East Melissaport,MS,21237,US,True
+887124a4-d3d4-42f7-9bec-aa52740a1b69,3a1577eb-7860-498f-936a-da13e16cbd8c,shipping,23972 Theresa Court Apt. 959,South Jasmine,FM,23765,US,True
+434cdf45-bd2c-4be6-8e46-751db5ec5adc,627b564c-f368-4634-b7f8-d7e1c5ee980a,shipping,813 Susan Pike,Port Thomas,MH,02947,US,False
+ee46ad7e-de4f-4b0d-821c-930923c3dfe8,bb0bc182-b8f7-4f26-b794-dca522dd4cec,billing,6103 Karen Radial Apt. 788,Averyview,AR,42225,US,False
+c404ac69-8afd-4342-8ff6-3b5956696575,f4835f98-d82c-487c-8788-26a05c249db0,shipping,0646 English Mountain,Derekport,AL,10314,US,True
+1f3a8e1d-c6ef-4846-ad3c-342603c8e7df,28c1b6d1-da1f-4187-98af-4e43f096b00d,shipping,70216 Cannon Station,Newtonberg,VI,04967,US,True
+489a9dd6-4e5c-422f-a154-40cefd62f2f9,f1c35457-d11b-4726-ae58-b98a09167675,shipping,97359 Miller Mountains Apt. 563,Ericksonview,CA,12989,US,False
+89371afa-2b8f-4b88-9ed7-92fcde2ef04d,22a4c19e-c3ff-455d-8a3b-d4a9bd6b8334,shipping,3637 Jacqueline Parkway,East Victoria,OR,82933,US,True
+4de0e154-a654-4037-a3ca-6db7a31a02d8,0000bd8e-496c-42aa-9430-fea7f9bd6a96,shipping,2122 Nicholas Meadow Suite 842,New Meghan,AL,,US,True
+097e8844-5fac-4915-9dd7-088eabf82449,7532eee7-0f38-4249-9459-e40b83d75db2,shipping,624 Bailey Cove,Sabrinastad,KS,93733,US,False
+a2ca79f4-3dd0-4ce0-9e34-12758365943b,a98f640e-492a-445a-8a0d-7d444e98f1a9,shipping,49551 Harold Trail,Scottfort,KS,58440,US,True
+c1f41d21-06ed-4353-a947-90a191e572e7,4b14013f-d7e7-44b8-a287-329bf6e298c3,shipping,107 Smith Knoll Apt. 042,Natashahaven,TN,73999,US,True
+aca2fa7d-519a-4dbe-a287-64787e68fd18,35bb651c-499f-433f-b5af-b793b285e727,shipping,99974 Laura Falls,Washingtonchester,ME,75398,US,False
+d7681b46-0167-48b5-8ca1-d56d6db330a6,a0a83e46-f548-4a18-a79a-5ecdd85b6c8e,shipping,2647 Jack Locks Apt. 351,Shannonville,NC,34287,US,True
+9c6acf4c-fa5b-4530-8fcf-f682a9e1f345,53352c2c-02b9-41af-b276-94d6d22379fe,shipping,894 Karina Lock,South Elizabeth,NH,68397,US,True
+b30b1cda-7776-4d42-8b67-c00efc311f7f,1069ad16-5cc8-4f60-83a5-08e7e0beeb5c,shipping,75207 Randy Pike,North Douglasfurt,UT,77906,US,True
+fe4b41f5-c49c-413a-a0c5-3d059c281b59,3785fc7c-35aa-4e40-b620-f54b10e8a832,shipping,14105 Stephen Ridges Apt. 987,New Jessicaberg,WV,63155,US,True
+a904efe0-ba8c-4ee4-9a3c-dfa843278fe6,ed5f2f3e-8bef-4da7-b30c-90c3fa5f40ea,shipping,717 Bryan Spur,East Scott,VT,95961,US,True
+1b3664bd-7276-44f2-b5cd-8050b56c6ea0,fa7960f6-2060-4fc8-a154-148e0c543e8a,shipping,04530 Lynch Turnpike Apt. 588,West Claudia,IN,43888,US,True
+72ec97ca-0dee-456d-85d1-86ba39b532c4,e4adb740-2faa-44fc-bc18-4aa698032414,shipping,14281 Tran Land,East Amanda,HI,32698,US,True
+1e463595-8b5a-4dfe-bbd0-acf92f627147,5b4df518-7c6e-4957-8906-e33505acee31,shipping,462 Harris Estates Suite 144,North Tonyaville,PR,00937,US,True
+57edd513-316c-4289-9802-89271c5dc9c3,8e5821f5-d035-421b-a56a-6ed02c100432,shipping,9061 Janet Trail,Port Darlene,MN,36858,US,True
+256e534c-ffbb-42ef-9353-c46391312d6f,6da78127-2929-4106-a298-2b58afca0a92,shipping,3066 Stacey Parkways Apt. 323,Dianemouth,AK,,US,True
+9a6dd811-9396-4387-b9ec-5bd1b19937e6,a1a72036-c041-4a92-a719-9bbf0e21d53b,shipping,911 Huffman Mission Apt. 699,Barbarahaven,CT,85919,US,True
+1d2e8da5-19e2-4d34-98e6-970263108437,8f9052f4-d761-416e-8b74-a71f640df0d7,shipping,5968 Steven Keys,West Tonya,NY,23416,US,True
+182761c6-1e7a-483a-b432-a60849684151,922d63c5-873c-4693-9775-df99ba006ccd,billing,73524 Patricia Ford,Stevensmouth,IA,23684,US,False
+6cec1d00-7744-4c25-99be-762d85a92eb9,8f4f1f50-62c9-4870-bf5b-bdcd357f8ad7,shipping,901 Brent Radial Suite 714,North Kaitlynview,OR,31427,US,True
+ace680e4-ac4e-4329-9dd6-0d154ba93a98,e5873f83-602d-4424-9c5e-184c56c9d4ba,billing,60880 Newman Cliff Suite 164,Loganstad,MO,10956,US,False
+2a63112f-4ddd-4d17-89a8-d07d0db00769,132425e2-d22d-43aa-a372-e3d9bfd77f8c,shipping,111 Walters Corner,Acostahaven,RI,21459,US,True
+536087bb-d818-4720-beb0-76f91ee630e7,e215d555-cc18-4890-8969-89abf72d28ae,shipping,772 Brady Rue Apt. 050,Lake Jill,VI,17756,US,False
+32b7883a-affe-498f-a2fe-1c7790bcaa47,9813cce1-ec92-4b06-b6e3-ed8a73e34436,shipping,67320 Marsh Harbor Apt. 384,Ashleyton,RI,36450,US,True
+3a1a118d-ca9a-42c9-8367-5344fb7973b7,6fb41f2c-72b6-4e3e-b896-89be93d85e5a,shipping,416 Ferguson Divide,Figueroafort,TN,67792,US,True
+f403b5e8-128d-4d10-8895-f005b5eea5f9,4ecae9d3-e8de-48eb-baf6-e76c81c58c66,shipping,39912 Davis Bridge Apt. 481,Davismouth,GA,39246,US,True
+237505eb-1c09-4dfc-b7d6-0586a875d06a,b06bdac7-cb60-4550-a13d-62da39a1c53e,shipping,3983 Macdonald Plains Apt. 842,Laurenfurt,PW,83157,US,True
+1a6464ec-bbc2-4c53-9ff5-42fff8b4eeee,2e2960d6-f2e9-4048-b234-fb21f0f72405,shipping,73929 Pace Shoals,Bowersville,TN,73175,US,True
+49fefe14-f945-43a4-bd58-1a3b64cf2d66,a768163c-0781-430b-8703-ce1ce473c762,shipping,9118 Rodriguez Highway,East Randy,NJ,45452,US,True
+597afe62-6270-4b0b-872e-3b01e1db410d,2a0095cd-099e-45f3-a8ed-241dbe5cde18,shipping,22050 Melissa Shores,Markland,AR,14773,US,True
+599df723-9ac2-445e-9b58-797ef55b792c,7ea9b687-48e0-4f47-9245-7a3e02c88fec,billing,804 Phyllis Lodge,East Rachelshire,RI,57405,US,False
+160418e3-ffc0-478b-bdd3-bea6814194d6,fd788ea1-7f9f-477b-b5fa-9a64962eb7f0,shipping,81298 Phillip Islands Suite 027,South Christopher,MD,91165,US,True
+d1c44797-7dfc-4468-b219-a4dc538b05bd,77475cfc-c7a4-44fd-aa82-b68053aa7540,shipping,3236 Lopez Shores Apt. 774,Williamstown,NE,61263,US,True
+94c638bb-7e3c-445c-85a8-4fe7adb4a816,fa08fd03-3569-400d-9d63-e8ae15712195,shipping,392 Kelly Orchard,Lopezberg,AS,06277,US,True
+234ebd0c-9a39-4806-8e8b-5f53dce1e5bf,58ebbf6d-7eee-4180-aa0d-151621abffcf,shipping,2568 Cristina Rue Suite 625,Lake Justinshire,WV,75019,US,True
+fde06bc9-8a12-4ff5-a2c3-24655ae293c8,52ecad80-29ad-4b94-8e45-82007ac63dba,shipping,49685 Silva Plains,East Terrance,PA,45445,US,True
+1beef82b-111c-4e37-833e-e3c770e05676,c64e9b29-2c3f-4a02-bf80-175c5a980c92,shipping,8485 West Stravenue,South Carloschester,NC,66544,US,False
+9db8aced-3bef-48f4-b67e-03183e6355e6,4a81b4c3-9e04-4757-a7c6-3191447eadc3,shipping,823 Wilson Forge,West Dillonland,VA,91150,US,True
+c6ec6f8a-cafd-4683-b45b-1b154b374753,22dc524c-5b2b-4982-a2a7-2a5f5a5b9ca5,shipping,90591 Christina Pines Suite 233,Port Howard,SD,65378,US,True
+7b175146-8d35-489b-ac2a-56f0cc52db5a,f0496969-2829-4c93-834d-07ef9042cd86,shipping,4695 Austin Flat,South Maryfurt,PW,24405,US,True
+ddba9981-4d3b-4931-8f79-51bcafd02afd,a59ab98c-fe50-412b-aa83-a693a561092f,shipping,970 Webster Rapid,Travisburgh,MA,66992,US,True
+3af957e9-1f59-4715-8803-e14e94c4037c,139f4019-998c-4c6f-8c4f-a97a756af68c,billing,83437 Johnson Crescent Apt. 727,Nathanfurt,TN,77622,US,False
+f6b40a82-ecb5-40c8-a12a-895b9adf987e,3cc240f8-bb78-4677-a387-18bb7667c3ea,shipping,751 Mccullough Dam,West Angelbury,NV,,US,True
+472566d5-cc98-4a90-af1c-ba6abe53fc38,8f34cf8e-4ab5-436b-b34d-d43e654c8d6b,shipping,15391 Linda Turnpike Apt. 074,Lake Katherine,VA,01334,US,True
+ecc1199b-9977-4ee5-9769-7cf788779271,a3f993fd-aeaa-43c7-9e5c-9ad7b7c0f8d9,shipping,2473 Samantha Summit,South Gregville,CO,95503,US,False
+aedd071d-ed72-467f-99f9-5c17ad36d593,e58c63e7-69a9-49cb-947e-5841010ca567,shipping,3240 Denise Track Suite 157,South Connie,OH,21076,US,True
+2959ee94-59d6-40f6-866d-0bce0b1f7e23,51e5a1ad-d8d2-4387-82fe-860a54c87f4b,shipping,58807 Kayla Skyway Suite 326,Lake Julieville,OK,32106,US,False
+72742af4-98a5-43c6-8a76-9e24d78acf29,73b79064-9e0d-4b3f-87d0-6ab33593b492,shipping,4653 Daniel Orchard,North Williamville,MI,56187,US,True
+c2c50ad0-76cb-4aef-8d3b-812a85c4c904,2b4b540f-9423-4186-8164-4566e5e908f2,shipping,035 Aguirre Summit Apt. 170,Carterton,AS,82981,US,True
+3667a563-69e1-44ad-8488-b29d547b6733,3785fc7c-35aa-4e40-b620-f54b10e8a832,shipping,5238 Morales Dam,Angelachester,MT,08151,US,False
+6af11191-b1b9-4ecf-9bd0-1898403494d4,c50959f1-d990-44ff-837f-4062c769ae54,billing,617 Cynthia Parkway,Lake Kellychester,IL,29714,US,False
+77cd1517-8597-4614-a348-8746baf306f6,42748981-2a95-4e95-91cf-9844c8aa9c69,shipping,8900 Joseph Village Suite 581,North Angela,ND,75622,US,True
+4681f9dd-c0bb-40e6-8f2b-66fb2d66d553,e60ba363-7c8f-4fba-8c98-2d4952e8fbc5,shipping,4907 Crawford Mews,East Andrewmouth,OH,85734,US,False
+018729cb-baef-497b-b405-e3cdcfe03ecb,e6e0c2ef-00b6-4d38-a129-32d4aa4e795d,shipping,51826 Phillip Viaduct,Brownshire,ND,94053,US,True
+165890ec-f1da-4d46-8baf-7d5ca9728021,a5f46489-06cf-45af-9efd-dbd27067716c,shipping,228 West Curve,Kellychester,AZ,93924,US,False
+294313df-489d-4d71-9cfc-7aa9bac7d836,8834bd0d-66fc-44cf-83bc-c787f024b078,shipping,369 Davis Mountains Apt. 350,Michaelbury,ND,44204,US,True
+2f1e6e26-17f4-4ecd-8d5c-a890d2846d10,425be648-8195-4636-880e-d86e4cd8e38f,shipping,10094 Cameron Courts,Jeremyfurt,MO,51997,US,True
+a8ee4f29-8f06-428e-92bf-749e113e4337,65dbcba7-fbb7-4837-ace0-5cd3cc5dd4a4,billing,964 Lara Greens Suite 553,Amberland,UT,18129,US,False
+d42768fc-5c09-457f-b7e1-3520a018e0ad,0c7084bc-19a5-4ad6-bb26-a25f9c09b324,shipping,465 Pratt Walk,Russellmouth,DC,45883,US,False
+4b0df0cb-e996-4459-be6f-44bb9c9bb4c1,c6fb82d9-b6e6-445a-a3d3-0158405a9d16,shipping,965 Newman Circle,East Lisashire,MH,99458,US,True
+c7a2e8dd-90e8-4e26-b1d5-5e579c5f9659,86fb0f27-e52e-40a4-8499-5f1610574213,shipping,6947 James Points Apt. 533,Mooremouth,KS,57841,US,True
+8772e67b-8c92-4520-95dd-68ff6368e15c,598904ac-fa48-43af-8fe9-41388451ae53,shipping,9014 Reed Ville Suite 692,Wrightchester,NH,50919,US,True
+18ad16de-b791-4f6c-be4f-3de804a6fd2b,c0ec2b5c-22e2-4010-a8f9-94431d5860c7,billing,64883 Peters Station Suite 852,New Elizabeth,GA,89796,US,False
+3069f440-1237-4f67-b793-406e7ead3a0d,6faa20a4-1e8f-43a8-9a45-33ae5f675190,shipping,147 Foster Shore Apt. 728,East Julie,WY,72030,US,True
+31d84079-f700-42b9-8ffe-350a717b656b,f55982fc-a2f7-407d-b845-3b32df0463f7,shipping,509 Jennifer Knoll Suite 618,Karenview,GA,11647,US,True
+025c705e-9a23-41f8-a2d2-b5bb818e1aa7,40c4aa0f-6d19-4084-820c-5764f87d9184,billing,4562 Rodriguez Mill Suite 225,Smithborough,DE,25347,US,False
+65ea9441-d5f4-4e44-81f8-4aaad0c7825f,d50199e3-7c9b-4921-9920-d234b5fc561a,shipping,5837 Jeanette Park,South Keith,TX,78070,US,True
+24835032-9753-4c58-be4e-1817c74f5001,adc6b3eb-08c6-47a0-a6ce-19384284547a,shipping,957 Anthony Crossing Apt. 482,Melissaview,KS,24428,US,True
+6ddf7d5f-01e1-48bc-a7ea-9798b0357552,5f31277a-2dcf-4273-81e3-312413596a23,shipping,0140 Kimberly Rapids,New Rachel,HI,88397,US,False
+6ce1a811-58b7-4c5d-868e-663c8eb062df,3810f8e6-9278-4c26-9be0-d6d6c35fe477,shipping,2324 Jenkins Wall Apt. 364,Debbieview,TX,79305,US,True
+ba0f2657-b935-41d5-849f-fafa42a70d37,64fec69e-52e2-471f-9fbc-7a8e33f991bd,shipping,9126 Shelton Extension,North Michaelfort,HI,07378,US,True
+a81b373c-7cd1-453a-802c-863517a71cc9,77b903b9-c97e-44ae-8274-9dea7b101277,billing,376 Renee Lock,Kevinbury,ME,28076,US,False
+71992535-06b0-4e02-8e71-ddf3c4a09fdc,b5b5a474-4e05-47bf-b9a2-872e5dc9a328,shipping,0200 Donna Islands,West Thomas,PW,79999,US,True
+ad13201c-a657-4c8b-af48-4ef0a08d3e19,e8014144-a99b-4ca2-8418-56404aee2f08,shipping,839 Roach Mountain Apt. 598,Ruthview,MA,13461,US,True
+ee237df8-17a2-4e99-b886-aa4cdfb016fc,534f7dee-6c8b-474d-b7be-41fa1dbbe93a,shipping,046 Wolfe Ridge Apt. 195,New Sierrastad,FM,07259,US,True
+38d0d0ac-dd4d-4ba9-87c3-19e4e808fd80,6d883826-0157-47c4-a6cc-cb8134bcc6db,shipping,5295 Shelia Lodge,Monroeton,CA,25790,US,True
+61cd7b93-0c8c-42b6-90e5-a4b0c5df5143,0a34659d-f0b2-4bdb-bf92-759aea838e90,shipping,7782 Gomez Square Suite 089,North Jennifer,OR,81308,US,True
+738c7977-8724-4482-9a92-ce5dd2bcbbe9,fa7960f6-2060-4fc8-a154-148e0c543e8a,shipping,0018 Jennifer Locks,Wellsport,NY,09277,US,False
+1fdef722-00c0-43c0-8ff7-3666185083d9,875e080f-6237-421c-b26b-433b3b0c6584,shipping,48156 Chavez Burgs,Lake Darlenemouth,WY,84531,US,True
+4be27ce6-62b8-4458-a799-4c509941c1c2,d47a83f3-a765-4a20-b40c-e0993cf00e4f,shipping,213 Logan Estates Apt. 386,Laurenton,GA,51501,US,True
+ffe5b29d-b3fa-42c3-adaf-5b6d71f26809,cc9cb0b1-f5d5-4fbb-ae89-025a80fb57c1,shipping,7895 Martinez Forge,Jonesside,LA,40752,US,True
+63d95415-72c1-4fc1-83a1-672df51d14b4,19296d35-a0df-426f-88ed-d3f5323adb8a,shipping,26602 James Ways Apt. 650,Moodyburgh,FL,78218,US,True
+96e588b8-24fd-4394-aa5e-19746e451f55,af3dbfea-4df6-42c8-9826-57806904f81c,shipping,739 Wade Cove,Castroshire,MS,80012,US,True
+0ff2bf57-bc99-46aa-943e-9c97558bd4b5,2661b9e7-3b2c-40ea-b349-251363d10a4e,billing,601 John Haven Suite 389,Lake Tyler,NC,00942,US,False
+a61d4666-dce4-456d-96a9-76eff39ca19a,c712217e-16e5-4f51-a9f4-055b5176e747,shipping,18481 Hall Mill Suite 189,Hernandezmouth,FM,36166,US,True
+6f33cc93-f4a4-4c38-850b-4e136d32fedf,e6ef189a-76de-4ef5-ace2-676d69273e22,shipping,27846 Gonzalez Springs,Kevinport,PW,,US,True
+3e960e7f-daf0-43ad-bdd9-77055f4245dd,a2388294-855e-4447-a3d5-b3649380d30e,shipping,1539 Hodges Inlet,Rioshaven,CT,17548,US,False
+e1ec3989-686d-403e-b0ca-127318fbf7c0,f8486fce-bc07-4a4f-a6e9-ed6a06ba996c,shipping,851 Hart Prairie,Craigside,LA,55864,US,True
+e1f333e5-d12b-4961-b52d-dcc47ef7e07d,3eb1c53f-4af3-42d8-8608-40548ce4843d,shipping,277 Mcdaniel Burgs Suite 483,Brownmouth,KS,88973,US,True
+fe7a42a8-25d5-4db6-a161-6404366c3dc0,2661b9e7-3b2c-40ea-b349-251363d10a4e,shipping,37638 Daniel Stravenue,Alexaville,KY,86784,US,True
+07985ecb-808d-40e5-9cd0-5403bbfb400e,7863e37d-24c8-4e18-8730-ea7e2a65606d,billing,434 Sanders Forges Apt. 138,Brandonborough,LA,24561,US,False
+7263accd-9b3a-4b1e-8bfd-9e1b2aee1c22,27133460-80a8-449a-b422-65bfe97af456,shipping,60204 Melissa Plains,East Mikeshire,NY,78550,US,True
+e163b665-7ad0-4345-9456-1dc6673c74f0,9eac28b8-2264-4e48-9c2c-b3f7384bc20a,shipping,1735 Gallegos Hollow Apt. 842,West Kristenborough,PW,12638,US,True
+69dd8bc6-d297-4ad2-90f9-db61b518b57d,d50199e3-7c9b-4921-9920-d234b5fc561a,billing,2801 Terri Greens,New Barbara,ID,92247,US,False
+fd622b19-7600-48f6-8b50-d3636f86e059,4232e434-92ef-4ff9-a069-d1e5312ebda2,shipping,32290 Danny Camp Apt. 879,Bobbybury,AR,94158,US,True
+5512d917-91f0-48a2-9dfe-be6ce29e419d,84f7f075-d17e-4662-a11c-bc80e28b12f5,shipping,6484 Mendoza Islands,Molinaberg,FL,28002,US,True
+2d9b8803-09a8-4742-8ee6-48fce99bccec,80968676-93cd-4bf5-a9f9-595055ff800a,shipping,20957 Tracy Gateway Suite 100,Maryhaven,NY,22429,US,False
+17bcaff7-0899-492d-aebb-3b265cc15eec,d1a4b7a2-e152-4377-ad2c-08cb61ad6688,shipping,931 Jill Overpass,South Rebeccaton,IA,92421,US,True
+60f7b295-bb61-40dd-a6ac-fc9424ce25e8,1bf35f99-4627-4c80-a5f8-0797538eaf54,shipping,346 Hayes Lodge,Stewartfurt,TX,16007,US,True
+d33217bc-2b56-42f4-9fd9-e42e44991190,3b5801eb-5e85-44e1-abb0-6e1879e5e0ac,shipping,422 Christopher Lights Suite 630,West Alexanderberg,ID,55338,US,True
+fbdab8aa-bfa5-4789-b4a4-a62667277c05,acb70464-ce97-4c94-a4bf-b165bd1b2fed,shipping,031 Mcclain Summit,Lake Lee,AR,70531,US,True
+311e7f25-1c8b-43d4-a394-62aa738758ea,b8ccafb8-eae9-4e35-beb2-afbc3cb9690c,shipping,2336 Catherine Hollow Suite 973,Michellefort,CO,47632,US,True
+bd07e169-bf47-409d-b59c-3f95efcaf2de,612533b6-7eaf-45a2-b9d4-06192ce5620e,shipping,71286 Christina Coves Suite 410,North Ashleyview,WI,58943,US,True
+8319fb6a-c6da-46f5-863e-53e4f77f273d,d1c356c7-a230-4e49-abb6-3eb1f58155cd,shipping,70093 Watson Mall,South Gerald,NC,20342,US,True
+bb739190-b94b-42c5-840d-380e13aef143,30380af9-7c90-4e56-9717-61064c5ca79c,shipping,7226 Smith Village Suite 721,Carpenterchester,MT,54279,US,True
+b2468844-a9fd-46c1-8492-ffaa5247a47e,26ebc43f-cfbf-4fa1-9c7f-9134871f7b65,shipping,892 Mayer Passage,Hunterburgh,AS,73484,US,True
+2e154c8a-6969-49cc-878f-6522063963e0,47e4f30d-f965-45df-8474-93d5aeaf7cb2,shipping,457 Moyer Alley Apt. 490,West Adam,IN,28658,US,False
+0501ee5a-2bf4-4e75-9ce2-cefbb4902cfc,bbffd265-99c5-491d-a03e-fee1fec9e123,shipping,394 William Inlet,East Mariamouth,IL,65983,US,True
+d604beea-b6dd-4b73-9f6c-6beebf1ea627,848bb1e9-3367-4758-8f73-e886fadfadab,billing,83972 John Turnpike,East Theresaside,NM,04444,US,False
+2948820f-8ace-4c90-a0c3-db1ca14101de,43086963-8392-432e-84e0-ef1902202b4c,shipping,1540 Casey Radial Apt. 170,Pachecofurt,ND,14511,US,False
+203bc4ca-2244-4a34-b8a3-b23e12789700,69731d27-9caa-46cf-8933-d01e29b20043,shipping,878 Danny Key,Allenbury,AZ,89964,US,True
+4e3866b4-7f1e-4c83-843e-f1a6cfc450c3,628b0262-278b-4522-aa31-ed61da01b78a,shipping,58189 Sharp Spur,Arianachester,CT,15189,US,True
+5a28905a-1a75-416b-ae65-86738e119db1,1bcdbd0d-0e2f-4fdf-a8d5-214d3b49c7e2,shipping,1394 Gilbert Plains,Lake Lauren,MN,75649,US,True
+c0af4b18-177b-47aa-ba15-51fc7ccc7304,284f711a-5e5a-4929-bb5d-5ddba9a4a773,shipping,1293 Michelle Branch,Lake Lindsayland,FL,76883,US,True
+7cfa4252-1974-4c74-9dd5-6fc38612ba94,1fcfe435-1e78-4646-a517-19906c49735a,shipping,585 Hailey Shore Apt. 303,West Melissa,IL,18091,US,True
+955f571c-01b3-4659-8e83-7c5777f3737a,9adbebb4-c5dd-473e-b0ca-c36f10577392,shipping,4731 Erickson Run,Stuartfort,NE,67695,US,True
+350682f5-78a1-4781-bd78-42b8c6d0fa04,e7297926-0c3c-47f0-a303-8e1ddfc0eb77,shipping,563 Edward Mission,Roseton,AL,28400,US,True
+3a1d87d0-3e98-41ef-857c-962bcb0429a2,e94d8a6e-9b23-411a-baf2-75f02c42d8cb,shipping,8254 Stephanie Cliff,Port Lisa,VT,,US,True
+0b99b38e-5887-429b-87fb-8bf1280ec86d,859fee02-f1ae-4067-a05f-d5db7dbbb2d4,shipping,480 Flores Expressway,Lake Johnport,KS,59343,US,True
+a8b58ecb-88fa-429b-8175-b845f73adc91,d10408ec-2013-471e-b6a9-e3bcf0e25322,shipping,3318 Rivera Circle,Wheelerland,MI,83907,US,True
+4fdbd7e8-728b-4e62-9e82-301af444b7f6,0f708081-5838-40db-84a9-ca8b6845336f,shipping,1960 Johnson Run Suite 052,Khanmouth,KY,01696,US,True
+a3e2a5c3-5a12-4db9-894d-478cfac67fc8,7902cccb-bb75-45ac-92b3-688e65d231bb,billing,9815 Faith Stream Suite 339,Masonstad,RI,73730,US,False
+56862a99-bbb2-4185-8cd6-17adebd801e2,2fac4408-7728-454c-94d8-16b7262380b0,billing,79720 Adrienne Squares,Brandiview,WY,,US,False
+9a031c33-d37d-4ac6-8891-049a4d67866b,6bb94756-3d64-40f4-9ecb-bc26ede41625,shipping,0798 Ryan Throughway,Williamsmouth,AK,53891,US,True
+f91612de-760b-4f6f-a888-588ff3e9de13,4acffd44-9d77-4c09-afdb-e7f93ee5518b,shipping,3201 Maria Parks Apt. 269,Ericville,WV,,US,False
+d7d43640-d04a-40e1-87e7-edb0809b814e,bbc4757e-2351-486e-9ca8-f73b9dac716f,billing,1773 Angela Bridge Suite 325,Johnland,AK,63387,US,False
+f0814eac-d222-41d9-8342-781750217865,69f9f173-1ee1-4ba2-a1be-005dc5f305fd,shipping,665 Ferguson Track,New Molly,OK,12848,US,True
+ab426af3-0533-4a38-b8f8-f387e8e249e2,d0299f60-146d-4716-bc55-eb830a04779e,shipping,5089 Nicole Trace Suite 680,East Sarahfurt,MA,87089,US,True
+510602f0-f532-44dd-ba42-604cd9b69478,b01b46fd-8f75-4db5-806d-c5c5980008c4,shipping,6306 Alexis Drives Suite 895,Georgeshire,NE,,US,True
+00e50f7a-0ea7-43a1-afee-23af8b4065eb,0bb6fcf3-0741-4179-af46-d26c45b77171,shipping,8232 Michelle Inlet Apt. 629,West Carlos,ND,94799,US,True
+314cb08c-f1f5-4f96-9cd8-d583c98652fe,d7290d30-60da-438f-a6f7-99a66828a1ba,shipping,7548 Calhoun Walk Suite 876,South Matthew,UT,64683,US,True
+87db45dd-8211-4684-b0f9-2280c4379464,8976b896-e0e8-4696-b268-5587e42efaa0,shipping,65426 Justin Mount Suite 290,Lake Stacey,UT,20089,US,True
+183fc220-ddaa-4279-8bd4-81ffa56ab057,d6cf7caa-9dd8-48c6-b4ee-5a02f62bb280,shipping,82772 Heather Motorway,Johnsonburgh,OH,48910,US,True
+c653a106-e839-4ec6-b3d8-f1d7a883d546,07571aa5-5581-4cf0-9a68-006051f37c8c,billing,567 Richardson Turnpike,Cindystad,NV,77849,US,False
+b8cc6bc9-769f-49a9-bf5f-1fd41978ff2f,77b903b9-c97e-44ae-8274-9dea7b101277,shipping,9078 Lyons Creek Suite 867,West Natasha,FL,48079,US,True
+eb78ff4e-aa74-45a0-b954-18ea0d16153f,cbd53684-acf0-447d-b61b-35f8bcde6edf,shipping,300 Kari Pine,New Raymondfort,AZ,21072,US,True
+cc39aa0e-faf7-4b91-b00d-f614400f6585,3e28e5b6-fe21-474e-b5bc-95ac85c187ad,shipping,420 Patty Meadow,Tabithaport,GA,26532,US,True
+9f806df4-0885-4697-a7b9-502160766960,82205f5f-43a1-4172-aab8-523ed6a89f26,shipping,67286 Christopher Stream Apt. 038,Karenside,DE,11237,US,True
+283bbceb-96fe-46f3-9deb-eac2f2577473,cd67e795-f5fa-470f-9a4f-4060d5951279,shipping,9876 Melody Ports Suite 872,West Zachary,ID,,US,True
+6a836b30-2c31-426d-8313-4d47630ce8bf,2dc965e2-d3fc-4bc8-a118-d1636dbfe8c5,shipping,4392 Smith Hills Suite 566,South Destinyberg,VI,52602,US,True
+d54ef21f-3c93-49d2-a2cc-9cf483146757,d82c6a2f-7e02-40de-81c3-c42ef14d8460,shipping,8925 Eric Spring,Maddoxshire,NY,12308,US,False
+22707fe6-ef59-41c7-b4a1-42153c4bfe55,bea5ef1d-43b9-4df5-b3d1-436f675ec066,shipping,362 Dudley Pike Suite 236,East Philipside,PA,,US,True
+56df5093-6104-4e00-965a-047585f69f86,ead66f31-3437-42c5-9145-8281898ce326,shipping,071 Stanton Lane,Paultown,DE,61147,US,True
+5161034d-606d-4fae-b1a6-19394df246d0,a7cebb21-0f26-4834-8a09-e3269b21a77b,billing,73585 Quinn Brooks,Howardberg,KS,05676,US,False
+d651ce2c-a038-4fa5-a8c9-4519120e2878,961b1333-d41e-443a-9880-0b1c8c59e141,shipping,391 Christopher Rapids,South Diana,MH,85423,US,True
+0e0792c9-d911-4825-9b3f-42dba195ce83,4d481210-54e4-4e94-80f3-81ba408de5a5,shipping,33510 Smith Radial,Martinezview,SD,77653,US,True
+43a962c5-730b-402b-8e6f-c82d7d4b4a0f,723f776c-3ad0-4fa2-8177-a80f2cab59d9,billing,67275 Adam Streets,Deborahport,NJ,38489,US,False
+57433010-df2d-4f15-8f88-9fa78263b1b9,73d9c423-e9d4-428f-bfaa-b073b2c1f454,shipping,4176 Nancy Square,Blakebury,NC,14007,US,True
+53bcebf1-f828-4088-b89c-5a723050ea0b,3bfe5d2b-8ab3-473f-b56c-cdd86fff8877,shipping,55626 Phillip Camp,New Brian,SC,94003,US,True
+d6a8f317-48a4-44f2-9a5a-e51763429c6f,387603c1-d2a6-475e-ab4c-9ba7aa78bb27,shipping,1832 Fernandez Extension Apt. 868,Williamsmouth,MP,81861,US,True
+6492a362-5f80-4fe9-bb43-26afadee7751,2a6409ee-29ac-483f-a2a7-9074fcb50191,shipping,9680 Amy Stravenue,Woodston,WI,91655,US,True
+dc0cf3cf-1601-4c40-b690-ef3db77a5188,866ec748-2021-45f8-9170-6c393fca1e65,shipping,41595 Alvarez Squares,West Kevin,AS,74148,US,True
+1ae3b753-8ba6-4061-98f1-be90fe8d8ddf,3483e39a-260f-4974-9366-50c2d833307f,shipping,84887 Michael Fork,Dennishaven,NY,12370,US,False
+202cecb6-a258-49c9-b357-54e64f7feef7,848bb1e9-3367-4758-8f73-e886fadfadab,shipping,93288 Jennifer Point Apt. 221,Port Darylburgh,IN,23534,US,False
+8f525821-957b-40b2-b217-a7d537ba5b2c,2dbed2c3-1c68-4b90-a343-39b51de57b45,shipping,53554 Jacobs Locks,Pamstad,WA,77429,US,True
+a3b65d33-3e9a-489a-abc7-9a5937e1a42e,a2ae6f2d-02bc-447f-9852-0d197780e7d4,shipping,967 Jesse Vista Apt. 677,Lake Pamela,PR,,US,True
+ced88ce9-2fd4-4656-a3a1-1be920b49eb1,50fb8eb8-955f-41ca-ab6a-faaff8141652,shipping,1976 Heather Freeway Apt. 012,Ibarrastad,NH,83215,US,True
+ee448f34-9bab-40bb-930f-b186981fcc66,53ed5bac-fa7d-4b1d-a73c-6c2b9845c1d1,shipping,8263 Jennifer Crossroad Apt. 964,West James,CO,03861,US,True
+0ddece4b-c1af-4d49-a90b-4da6f07e4cd8,72fd6924-b954-4c8f-9c0b-2545d0efe53b,shipping,226 Brown Stream,Jasminebury,TX,80284,US,False
+fb929a67-2aac-4db4-85c2-fbfeea5ca04a,2609004e-90a8-450e-98f3-5ebc16841cd5,shipping,79749 Lopez Brook Apt. 080,North Julian,DC,94243,US,True
+7654907d-b0e8-4737-914f-8795849bed63,c64e9b29-2c3f-4a02-bf80-175c5a980c92,shipping,71189 Turner Mountains,New Jennifer,AZ,17256,US,False
+7e279596-dfeb-46ba-a9f2-53a2aa24c1b4,87fc5559-9d20-4780-8c0e-b7c248cd6236,shipping,5274 Lori Flats,Lake Jennifer,LA,49453,US,True
+93afe295-066e-4e89-b0d7-8969435e8782,d6de888a-0aee-4f77-a7d4-daba8f0da415,shipping,57991 Nicholas Curve Apt. 038,Serranoville,HI,62874,US,True
+754eb2aa-1648-4441-b43a-e9ec1aacda3b,4d97e8a1-7720-4190-b326-dccfa2ec4426,shipping,5409 Michael Camp,Wrightland,ND,12896,US,True
+fae3a6cc-fa88-46a8-89a5-063c608b583d,d477b62b-46ba-4eaa-a26a-8e3d43ea5a28,shipping,09143 Todd River,North Devinfort,LA,26979,US,True
+7619ea6c-f316-4e1b-bd85-13a203b63422,d285a28f-6fa3-4c70-9469-73e7fe1787ae,shipping,1391 Murphy Prairie Suite 363,North Gregory,KY,58103,US,True
+837a922e-0ce5-414b-94dc-da090585b2c4,64ad7907-f83e-403b-b5b4-b1deded9bb1d,billing,208 Melissa Via Suite 319,South Catherine,MT,15807,US,False
+2e40a3a1-ce6e-4610-b5b4-0242c6d3e36d,4b761c33-8a8a-4dbe-a0d0-fa3261b391ee,shipping,2006 Hernandez Isle,Andrewshaven,VT,64815,US,True
+bf2ddaae-e82a-44d7-9478-74660081cdef,e7f5d853-30ed-4302-9303-e11752f57b2f,shipping,469 Eric Valley,Lake Elainefort,NV,37993,US,True
+28091108-311b-444e-8222-29e88ceb5c1e,f1c1c41c-e3ac-4d0f-9604-06a648c54aa4,shipping,0454 Daniel Plaza,Erinstad,NM,06447,US,True
+2e552366-b717-4655-85e1-8109363b2eac,3cbc7f74-54e3-47c2-b02f-229f7ca60a5c,shipping,1070 Davis Plains,Tonyaborough,SD,80979,US,True
+b4e62e65-d086-4918-811a-42249c17ca51,4b8b181e-668e-45d4-a8e3-7180a41cf064,shipping,902 Gonzales Flats Suite 309,New Gavin,AZ,47652,US,True
+8444b586-e0d0-4a80-8d27-4ee0128f2a6c,5c3c91f4-9d48-426f-9862-e165bf8f616d,shipping,85969 Dylan Port Apt. 408,Ashleyborough,HI,25453,US,True
+d9bbd490-3d41-4841-894c-3237b4b4ca5f,76d2b7be-1fa1-441b-9de1-97c64d06c646,shipping,989 Carr Keys Suite 663,Teresaview,VI,38794,US,True
+51d8c58e-a2af-444b-8d49-9ea83d26fd65,83967256-31c2-4fcb-a61d-2378ac6f1ad6,shipping,078 James Orchard Suite 521,East Jenny,NH,51302,US,True
+96b9ea68-194f-47d7-bcf7-1d9b1526a384,ce69d742-4723-467f-9e5d-262fff84a6a6,shipping,8835 Palmer Extensions,West Diana,OK,44972,US,True
+57a0fbc3-5717-412d-be7f-3acf5eb96d9d,37601558-3b79-4200-800f-fc03a28a5ec7,shipping,949 Leslie Shores,West Kristenton,KS,80528,US,True
+89c932e1-ad16-4a38-b1a0-8f938a1c9d28,e9f40ffc-bea9-4cc6-abca-7fe897f37903,shipping,002 Rodriguez Tunnel,East Jessicamouth,MA,52075,US,True
+a4d36832-67fa-4865-bce9-fcc16ea9f69f,0f1df561-31c0-417e-909b-4b054c45baaf,shipping,222 Cynthia Throughway,Jonberg,MI,,US,True
+892f82a3-286f-484b-a3d1-81ca84bb77d8,b65fff66-1997-4dd8-bc91-1349a415e4a0,shipping,38503 Jones Port,West Tinachester,PA,97401,US,True
+b2ca61b4-5fc1-40f3-9312-9cb9bce6058f,d63f06df-5e5d-4adc-b0a5-43b4bac6bf5c,shipping,54857 Rodriguez Dale,West Tiffanychester,GU,20394,US,True
+0d32b546-ec90-48f0-86a6-4cfc4991f505,e8e92a9f-bec3-4873-951c-b05d0fe37715,shipping,0983 Whitney Island,Laurenberg,NC,87499,US,True
+d8c04421-ca75-4e69-b477-66bca2b069e8,2251b079-d6df-4d71-bd74-d2a00e841a9d,shipping,33155 Alexis Shoal Suite 063,Robinsonview,SD,82278,US,False
+95923b8c-35aa-4666-bd72-5d778dc4bfad,45233069-2809-4274-b243-98792794b3e9,shipping,18676 Wilson Burgs,Espinozaville,AL,72294,US,True
+a127e2ad-0db5-42e1-9cc7-ea5ad3736dd4,7bd64d99-cfe2-4e61-aed9-8b6f3d410468,billing,506 Fitzgerald Gardens Suite 050,West Catherine,TX,19816,US,False
+fc44bbd2-e393-45ca-9df4-6e96361a6207,8a77ab59-ae1e-4b71-ab66-66bda4615cfd,billing,0191 Monroe Ways Apt. 025,North John,AL,75104,US,False
+d406a24f-30fe-4155-8658-466cac17e569,e77008c8-b7e1-4bb6-93d8-8383d6385531,shipping,877 Kelly Parks,Wagnerside,MA,71349,US,True
+3010bcad-8045-431f-a486-0347c383623d,89c10b53-36ee-4f1c-8430-7090dbf04a44,shipping,24421 Troy Lake,South Craig,WY,03378,US,False
+59ab686b-2151-4560-a653-bba1fdf58c63,8678daa5-37e5-4e54-8c81-551df8fb8c0a,shipping,2480 Phillip Expressway,South Ericberg,IA,80319,US,True
+c416a118-7d89-48b8-a554-011a672d9f0e,9455079c-4344-4995-939d-8184d7eb02e7,shipping,22526 Griffith Turnpike,Briggsville,OK,56528,US,True
+de5a9912-7252-4821-a373-95d7cec51327,5b817ccb-b122-4044-b74f-bde3d1df714d,shipping,225 Brown Falls,Jasonton,MH,51568,US,True
+4c081425-7d81-4cbf-983a-97e4698b20f0,cf2dbf35-0461-492d-81bd-a783c553409a,shipping,95613 Moore Square Apt. 081,Thomasland,UT,40681,US,False
+129cb0cd-2f78-42f7-bfdf-d2f3d2060afe,7d624fe1-d3a6-4326-a6e6-32ebc0c46ea9,shipping,45547 Jason Mills Suite 742,Chandlerchester,DC,77463,US,True
+d0ae476e-f2a5-4e37-bff5-b2fed12de88c,89a5d615-2bb0-4843-8177-90bf7f452bfe,shipping,11241 Nathan Walk Suite 886,North Kathleenside,AL,14702,US,True
+0b3ac318-e488-4ca3-87c1-8146ed200756,be999c23-fb5b-4060-b4aa-bd50fe8ab5f6,shipping,22775 Heather Cove,West Jennifer,AZ,17624,US,False
+794a6942-1446-40f0-b747-25a8c64e3be0,b30877a4-5c8f-4cdb-94ea-3569b516061a,shipping,42369 Kelly Bypass,Fitzpatrickbury,AS,89433,US,True
+e9753385-da2e-4880-a3a2-0aabefd32371,f4c0d073-250c-455a-a84a-848e56ae7048,shipping,947 Clark Isle Apt. 287,West Robertberg,NJ,09289,US,True
+020c123c-00f4-4c83-bb99-9e0aedb92913,41c59ae8-bcd0-4d00-b8e9-bfaa0ce5913b,billing,5553 Griffin Causeway Suite 742,New Kelli,OH,85473,US,False
+43e4b083-ca6e-411c-95f9-826ed0c2e021,8fe1e8f7-9891-4978-ae6c-34234f35c728,shipping,5676 Murray Points Apt. 612,Kristinshire,NY,49405,US,True
+39878b1c-585c-4005-a258-4b7f751213af,b30877a4-5c8f-4cdb-94ea-3569b516061a,billing,6144 Thompson Mews Suite 923,Derekside,ID,39961,US,False
+ebc00ea6-ffe3-476b-9bec-0a00939e2d08,0327ed4c-b4a3-4746-9221-3bb172a05c50,shipping,596 Courtney Lodge,North David,MO,64546,US,True
+de02627c-c89a-4d33-a7ff-c12150e5ab1c,7b4010bf-8e77-489c-83e9-0056299e9429,shipping,320 Joseph Plaza,Obrienmouth,NC,66490,US,True
+9636ea03-6214-4268-a637-ba2a059595c6,7c2a3f62-d757-4322-a213-921d7c370838,shipping,55996 Taylor Manors,East Sheila,HI,16869,US,True
+124b502c-2c9c-47ae-9f05-4e8dcd948740,aa0533fd-252b-49cb-8070-77b5c88b04ee,shipping,3098 Flowers Crossing Suite 795,Danieltown,NM,90354,US,True
+6e0c4bd8-868b-44e1-ad32-b822f3c4af75,a0f290f7-884a-4d5d-b502-f43702abb2db,billing,627 Jessica Mews,Eddiefort,CO,65507,US,False
+e1aa951b-6cc2-43a4-aa66-ed3979449eac,f1c35457-d11b-4726-ae58-b98a09167675,shipping,762 Gates Rapid Apt. 436,South Laura,AK,38537,US,True
+45837d09-f9d4-49c0-bb3b-3a9124785497,d9464bcd-0a19-4058-8fc1-bea843e6c339,shipping,73109 Barrett Pine,Brandonbury,PA,94590,US,False
+81cc83e1-4f68-47a6-9cf8-0793736f963d,771f8441-b432-4b8a-8f8c-8890904c8a52,shipping,8788 Patel View Apt. 619,Rosebury,UT,11937,US,True
+f30ae1fd-a8f2-459a-9778-372a8c28ce7f,902c8ddc-8ba2-42a6-b380-4afc64f50ffc,billing,21224 Sylvia Union Suite 677,Richardmouth,RI,09326,US,False
+3e0fddba-a67e-4b70-ba5c-1e47fbed42ce,faae2750-9c1c-4c70-96ed-e845374e4e5e,shipping,220 Robertson Cliffs,Lake Sean,OR,,US,True
+de179020-8061-40f3-beb8-a6459be2d058,13b24541-2c78-41cb-a6b6-e8713ab9a16f,shipping,12604 Sarah Meadow,New Jameston,MS,53886,US,True
+51b34349-fe2a-4cce-a7c8-cbd0c4861ea0,2fac4408-7728-454c-94d8-16b7262380b0,shipping,92693 Matthew Rest Suite 138,New Jenniferstad,MN,03864,US,True
+39b4e929-03b4-457e-9341-1c195322e750,2a0095cd-099e-45f3-a8ed-241dbe5cde18,shipping,22050 Melissa Shores,Markland,AR,14773,US,True
+5faf7cf1-15ce-4848-8b7e-8b6fa531be58,b66095e0-346f-477d-8c25-3b70d4dfab70,shipping,22069 Calhoun Island Suite 120,Lake Derekmouth,MH,41624,US,True
+e472480f-e5cb-4b25-acd2-47290d1015de,62e44a82-c99b-4d04-9abb-f6a2eb97c7ec,shipping,5025 Christensen Park,West David,CT,56720,US,True
+93b95876-408a-4cd0-8e64-058f4c89d1c2,e100dd4b-6c96-4036-88a6-8813aa5a718f,shipping,5809 Melendez Rue Apt. 273,East Kevinland,MA,50841,US,True
+bd284eb2-50fd-4202-86e8-caf39e0e0945,8e91d584-8798-4b43-a077-64b5334460b3,billing,7475 Jeremy Extension Apt. 567,Nguyenfurt,NH,61369,US,False
+df8a8db5-caa3-453c-965d-93ac707cae76,5daa5d95-314b-4f5e-8926-8d61c9d4daa1,shipping,597 Nicole Stream,Moyerstad,WY,62409,US,True
+331ed1ba-9ff5-49ca-8320-9f6b4ea155ee,99908d5f-92b2-4e74-812d-8fbf41ddc894,shipping,48942 Kelly Lane Suite 489,Reynoldschester,AR,,US,True
+2e074774-9c4f-474e-bca0-27413de55d8a,6a9699dc-eba5-4045-9b96-91504f0cfe77,shipping,2359 Perez Mills,North Frankberg,WA,79826,US,False
+4442b478-184d-4dca-8a16-4558bb9b1a61,c5dde410-2c70-486e-bb0d-974b2798825b,shipping,82005 Lin Mountain,Amyberg,UT,71186,US,True
+bed75c87-3eaa-4258-96a5-27bbaea1a52b,3c4b0324-423a-4e3b-884c-c93438a59688,shipping,659 Fowler Throughway,Harrisfort,MI,44672,US,True
+b777b62c-6dba-4305-af94-cb415c3ff2a0,d3adc9f1-fd4e-45ad-9d75-0919a6617f7a,shipping,2585 Tim Summit Apt. 238,Port Sheri,IN,86904,US,True
+c4b9b40e-4c77-4149-b72b-c8a4c8b1ed67,90b6264d-1278-47c8-a418-6498aac365ba,billing,769 Carrillo Throughway Suite 779,South Darrenland,MS,83556,US,False
+725fdefa-35d4-4963-83d1-3ce7d7cb5f6a,300faed1-594b-427c-894e-c46855f06f22,shipping,50583 John Flats Apt. 311,Melindahaven,NM,53672,US,True
+ac142c9b-fa0c-41a0-8825-6ec73ba8de4c,627b564c-f368-4634-b7f8-d7e1c5ee980a,shipping,99663 Morgan Cape Suite 412,New Crystalport,OH,85063,US,True
+5664664e-7060-4cea-9f7b-fa3058ccef60,a2388294-855e-4447-a3d5-b3649380d30e,shipping,8331 Teresa Circle,North Ellen,NH,50971,US,True
+8dcaf870-0efa-4d75-b8e0-92fc9152fa04,0488eb84-da07-441d-ba11-055850946457,shipping,445 Wilson Lodge,Wagnerberg,OK,65276,US,True
+5e337cff-dbca-4a92-8982-c6a47bf397c7,e50d93de-3e78-4f09-8406-df4f27f26c8f,shipping,97054 Ortiz River,South Michael,PR,82372,US,True
+1efa816b-2fb2-4734-88f2-27d2734c1d8d,153f6ea8-c8e7-4bfb-8273-72ac137733ea,shipping,32176 Goodwin Dam,North Catherineland,DE,15274,US,True
+fe83764b-6f31-4d0a-843f-d25f5ffacc08,23c5eb35-05e9-4347-8854-ee86ec27393e,shipping,227 Tony Run Apt. 898,East Charles,WI,56870,US,True
+7e3c0e7f-662b-4a1b-89d1-2320d67da91e,0f8ab48c-b1fa-4600-9712-1bc2a02d8f45,shipping,7447 Kathleen Gateway,Lake William,IA,37350,US,True
+2d68a904-f37c-414a-b954-fd6a710623bb,c0a8be37-975c-4b34-8989-1eb846c63871,billing,9996 Kane Shoals,Mariamouth,CO,68948,US,False
+cfca3132-5d5e-4b58-8133-8dd0e6352bf8,d4d6e685-70a2-49ea-b511-383a54d18cfa,shipping,02032 Morris Ports,Webbstad,ID,82907,US,False
+6912edf0-ff6a-4053-9874-67b4aec4bcfe,2f771a5a-3d76-48e3-985b-b7e91e092c46,billing,8499 Garcia Haven,North Keith,NM,58030,US,False
+a9d1d5b1-6b9a-457b-93c3-ca726497d982,341da637-6927-4a64-8183-13ec96005b5f,shipping,728 Gregory Lakes,New Michael,AR,55908,US,True
+dcf8e94f-757b-4546-bba7-f0ce6184f7c9,ec4bebdf-042b-4c0a-9846-f86a1a9685e9,shipping,053 Bradley Islands Apt. 816,Carolynhaven,IL,13990,US,True
+9b4242a8-a798-408e-88ad-436082a05327,ab13dd68-d82a-4dbe-b352-0f4df96ff5e3,billing,5883 Compton Landing,Randolphside,HI,08590,US,False
+182532e6-abf7-4580-a7da-a9f1e62b1ac3,b7428f06-b3dd-477e-8569-96068f3d3dcb,shipping,8654 Philip Mountains Apt. 874,Williamsborough,MA,72812,US,True
+cd3b7b04-27bf-4f87-b1ff-8d3d74ac5945,1b25718d-795f-4b30-a424-50167ae8c0ad,shipping,1177 Chase Plain,Taylortown,ME,62923,US,True
+bb729901-4e11-40eb-bdd6-8f41314bf163,a5f46489-06cf-45af-9efd-dbd27067716c,shipping,40546 Leonard Lock Suite 215,Mosleyhaven,CT,66322,US,True
+bc902c40-7797-4324-a377-20c82e90ee9d,8a77ab59-ae1e-4b71-ab66-66bda4615cfd,shipping,633 Brian Dam,Lake Janefurt,VA,03954,US,True
+c72d748d-bf9f-4aa5-b88c-8fbff59b4374,41ca48ad-5cc0-4e25-83df-63d166b91a12,shipping,693 Hayes Parks,Lindaton,NJ,00570,US,True
+ed6a4b10-c0d5-455d-8037-c4c3015b578b,2949aa7a-85ad-46d1-8409-bf608167f72a,billing,000 Mayer Summit,New Matthew,ND,52409,US,False
+111aa5a4-6cae-467d-ab3a-748dc6d32694,cd67e795-f5fa-470f-9a4f-4060d5951279,shipping,9876 Melody Ports Suite 872,West Zachary,ID,,US,True
+59af3083-5853-4c94-ae61-e8f49aebb35f,31006b42-8446-43cf-bd23-af4d84ca2c85,shipping,00389 Fleming Street,New Timothyfurt,WI,49945,US,True
+fefd5133-c72a-459a-ac2c-d438313cc8d9,9668fd00-799b-4cff-811f-a3e0528d255d,shipping,276 Reed Mount,Port Rebecca,VA,69124,US,True
+c5c997f1-ea3c-4ac9-b700-a03495825982,5d5ea9b6-fefd-4e25-850a-9c2d365e7e27,billing,321 Wilson Ranch Suite 581,Thompsonfurt,CA,78916,US,False
+f09fdbb5-9b8d-4adf-a081-8b6f88ad5d2b,878f6e41-bcd7-4f18-aa89-90133272eafa,shipping,938 Byrd Falls,Amytown,MP,09407,US,True
+f2bf5371-6c65-457b-bf90-f8de2c70d99c,e60ba363-7c8f-4fba-8c98-2d4952e8fbc5,shipping,389 Colin Tunnel Suite 851,Lake Michael,UT,85037,US,True
+2512d6e3-a14e-4b96-b5c9-c9ce4127bffe,e5873f83-602d-4424-9c5e-184c56c9d4ba,shipping,919 Fleming Mews Suite 533,Port Troyton,KY,55713,US,True
+874ac8fb-8559-4c60-87de-c4b4d32d9807,caa8f40a-63c6-4789-87ad-05b99d694a15,shipping,0695 James Overpass,Ramseychester,CO,57826,US,True
+96e2e18d-32a5-4714-9771-e9030d1552c3,19fee9df-73a9-41e9-9777-18d2a79ab8b4,shipping,5399 Michael Haven,Lake Nicholas,WA,32958,US,True
+417569d5-3b3d-4b17-ae38-01463424128e,d45ce04e-1258-4744-ab7d-af982c28565d,billing,791 Thomas Brooks Apt. 232,South Timothy,LA,87996,US,False
+a928d2cf-9d53-4b11-ada8-2f12d8fc0dc0,19fee9df-73a9-41e9-9777-18d2a79ab8b4,billing,73715 Chapman Path Suite 497,Barajasfort,VA,55147,US,False
+3e3f147c-2cac-448f-9b02-6bb3b3505706,fa6de1f2-ff8e-43ea-8da3-98d975b096da,shipping,984 Jackson Burgs,West Jennifer,WY,17777,US,False
+9286e34a-c4cb-454f-80ca-032b1b90fa0f,27e89b40-f32c-4604-8a79-6d1613bde382,shipping,9246 Douglas Forks,Kingfurt,NH,93940,US,True
+4d062b00-276e-4f67-90f9-392c210a3ac6,aac35f19-8d02-4c6c-b979-74da55c9ddb1,shipping,1474 Jasmine Motorway Suite 292,Stephanieville,AR,43300,US,True
+eb42f738-6925-4529-a439-be76d931b72e,7bfeca78-8e06-4644-9d0b-1470c32aa9e7,billing,5998 Rebekah Lake,Hernandezchester,MN,51109,US,False
+2de2aec4-ca9a-4bb6-ad4d-60cbc3971295,05fae288-07c2-4e99-a945-fa3fbfa123ed,shipping,8570 Gross Brook Suite 935,Lake Tammyfurt,ID,69191,US,True
+6937a0b6-4af3-4072-8852-054bbc0c036c,dc634429-12c2-417d-b460-f3ed4903d539,shipping,780 John Pines,Matthewfurt,WA,21079,US,True
+bf54647e-24fb-4828-b7a0-9345022ada5b,e6e0c2ef-00b6-4d38-a129-32d4aa4e795d,billing,12920 Mcbride Crossing,East Baileyburgh,CO,,US,False
+53c1e5d6-002b-4b02-b748-824d451148c0,da9de603-2c96-4356-820d-7c1e9ac4dde7,shipping,62987 Little Neck,Port Lee,MD,97068,US,True
+aa389bba-e822-423c-b333-91f7979ccca1,63b14504-d172-4e5e-b0fa-abd9cb43352e,shipping,9116 Jason Creek,Gregoryburgh,WI,96768,US,True
+9db9b16a-223a-43b2-afcf-79d16cd7368d,aeb1bb4a-8548-48ed-a8e2-c31bc682b091,shipping,12545 Amanda Branch Suite 948,Port Matthewfurt,PA,19191,US,True
+2bcc29b9-2d85-4365-be35-cd4e81b08daa,a7cebb21-0f26-4834-8a09-e3269b21a77b,shipping,925 John Parks Apt. 950,West Deannaside,WY,,US,True
+3a1da8f9-ebf4-4178-9cb5-18f83dabfc4c,67d2941c-ef55-4f74-9994-431a09ee14db,shipping,49366 Clark Bridge,South Debra,TN,40014,US,True
+19213954-0b74-44de-bf40-911854121426,64ad7907-f83e-403b-b5b4-b1deded9bb1d,shipping,79187 Erickson Track Apt. 677,Daviston,NE,99528,US,True
+bba4353a-5ec0-4344-bb4f-709ef6859447,834105ff-e792-4a6f-be6d-fb89b4d75d4a,shipping,4914 Gibson Grove,Hallstad,SC,28658,US,False
+ecd040ec-e46f-4b9c-bcf8-e455316a7e09,41b09fe3-c0bf-4484-bc20-f48aedb5e7d5,billing,886 Sanchez Drive,North Patrickmouth,IN,18337,US,False
+7e1fc59a-a878-49f5-9419-36c40c5089e8,d6ca3f18-6708-4e27-9196-8a2238aba9b0,shipping,2603 Robert Unions Apt. 027,Michaelburgh,CA,34033,US,True
+3e2b00fd-4518-4f30-be7d-87787bd6bb03,827eed18-8ab1-4e5d-ab00-5d8ac9bb168b,billing,99499 Caitlyn Fort,West Christopherfort,DC,66341,US,False
+23d5fc24-2549-4d9c-a831-b6c81d8ddfaa,c9750567-c933-4797-9313-ec159ddcb6d2,shipping,0914 Ashley Mill,West Katie,KY,34519,US,True
+e6cdac59-6e41-4629-9247-95083d49563d,967d3e2d-8b15-4f43-a6b5-d1dd3934707d,shipping,9804 Brian Flats,Briantown,CA,51441,US,True
+9ea186e9-423a-4a59-846e-88fdbd4ebe6b,d47fa6a3-60cc-4d46-8dc2-9b3fd5e43153,shipping,1329 Fry Shore Apt. 506,Briggsberg,MT,62520,US,False
+ca6a7b1f-408d-4263-8913-588e60656d84,7e7c62c1-b8a8-4e9a-ab94-81a82d76e3e5,shipping,8860 Mack Shore,South Vanessaborough,ND,87177,US,True
+e75b9f65-a34b-4ba6-a188-5b36003340ff,7e394ed8-8aae-477f-9649-5d3e7f5658fb,shipping,761 Katie Valley,Ashleyville,KS,25672,US,True
+e1f2e745-8e91-4523-a832-2a5529fdf03e,6d883826-0157-47c4-a6cc-cb8134bcc6db,shipping,412 Williams Rest,Lake William,HI,83771,US,False
+7eea002f-76b4-400d-96a2-03c3e28b7e67,758b4602-0ce0-440a-9584-ad59ce4216ad,shipping,034 Johnson Port Suite 617,Mosleyland,WI,,US,True
+5bde2617-cdbe-442a-a225-107d71b0c0ad,3bcd90d3-7d42-4c9f-ad46-04d8af612206,shipping,68094 Kelly Rest,Port Joanton,NH,53950,US,True
+08ebdeeb-f799-43cc-9335-7d03314cdc53,a3867ed0-9303-4ce2-b40d-a9711a5efef0,shipping,62654 Horn Fields,Lake Jill,UT,71224,US,True
+4ae1a976-0170-4a6f-9e5d-b8f84d03234a,41db9c8c-af73-46c6-b7aa-64cee86dbe41,shipping,24471 Livingston Harbor,Schwartzmouth,KS,21730,US,True
+7274ca26-e559-45fd-b720-28f1baadf0c6,96f4e93c-c759-4fc7-b4a3-c8a153858bea,shipping,919 Jaclyn Cliffs,Sarahville,LA,,US,True
+321b2673-7060-4d82-bb9d-e5d712999971,91c5349a-5fb8-43b5-8af3-1b0018617bc3,shipping,90534 Carter Walks Apt. 042,Lisaberg,KY,45057,US,False
+35b041d4-09b0-4599-9a5d-0c346932d39c,bd081d89-0320-4774-bb4c-798b6e253b0e,shipping,42620 Tanner Passage,Weissside,PR,22983,US,True
+35aa6067-d857-4feb-b892-712e5d08b369,d6914b8f-0d72-4044-a61b-055adb02f005,shipping,4901 Carroll Islands Suite 277,South Alanton,MI,63442,US,True
+9d8dbe89-26a6-4da8-8132-6b73d691296a,1380e029-b899-4413-a8da-0741720a6a06,billing,54768 Tammy Parkways Apt. 683,Port Erin,WI,02692,US,False
+37b2da21-a9b8-46eb-9265-110bf95383cc,80617fda-335d-411d-aed3-ca3917a8cff2,shipping,546 Leonard Trafficway,New Josephport,MI,55165,US,True
+c792f398-2122-4ac3-92e3-a0102284d881,b2310c7d-702b-4e62-b938-3b19262bd9e9,billing,99074 Thomas River Suite 694,Port Samuelfurt,NM,03331,US,False
+f0810674-7485-4119-a573-3aabeab92eea,1c4a9464-3e0e-45d2-9ca2-87c36b03f80b,shipping,014 Shirley Path Apt. 138,Lopezhaven,TN,33106,US,True
+dfd1beab-54a3-475c-8e33-9ad29d59a653,b0fb926f-1c66-426d-b796-e9d801b13122,shipping,16667 Marie Circle,Allenchester,AZ,66589,US,True
+9d46ef5d-71de-4f9f-a5de-629faaf098aa,d6ca14b1-9b55-47f7-be97-787002ca26e5,shipping,395 Jacob Drive Apt. 421,New Carolynton,WI,17189,US,False
+94daf545-162e-4f93-93f0-3a3000a9d2dd,0ed041f5-3d65-4f50-b23e-849b527ee107,shipping,8209 David Ways Suite 709,Lake Brandonfurt,IN,92792,US,True
+67c3c587-c701-41ba-88c7-7d3c5b0b4cad,0db82818-585b-4e3f-9898-2a72727c2e42,shipping,61027 Holt Ways,Turnerstad,UT,88817,US,True
+007616c8-e2ad-4eda-ba69-3618aa50f070,a0f290f7-884a-4d5d-b502-f43702abb2db,shipping,0053 Thompson Brook Apt. 649,Port Scott,MD,35732,US,True
+60c4fe32-6059-4b4e-b370-050e2821c439,0c621caa-4854-43bb-ab8f-74e1f79ba3e4,shipping,980 Kristin Corner Apt. 005,West Sarahstad,ID,97964,US,True
+8d7f0474-31a1-4d4f-adad-760fac3f8f28,27e89b40-f32c-4604-8a79-6d1613bde382,billing,94588 Williams Ways Suite 155,West Sandra,GA,01950,US,False
+0c988de7-b363-428c-827b-d2827a053c10,58ebbf6d-7eee-4180-aa0d-151621abffcf,shipping,027 Sara Dam,North Alexandra,VT,31304,US,False
+0bb8205d-1e2b-4593-ba84-012b293f90a2,6d91807a-84e4-47c1-8e47-925d52e0dd48,shipping,021 Chan Knoll,Sullivanborough,NC,02515,US,True
+6add65cd-4fa9-4995-9a4a-8bf875379069,89c10b53-36ee-4f1c-8430-7090dbf04a44,shipping,92098 Ashley Burg Apt. 752,Lake Rachael,ME,25906,US,True
+d16efd4b-6a5f-4254-8dca-226fb078d289,1757e1cd-b99e-42a3-9e19-1b1305127836,shipping,0537 Patterson Turnpike,New Heatherville,WA,17381,US,True
+ddbce605-6492-4be6-801d-5358e8198315,d4d6e685-70a2-49ea-b511-383a54d18cfa,shipping,02032 Morris Ports,Webbstad,ID,82907,US,False
+ff80640c-9691-49db-8430-f7a64d0cef7e,e039c2ef-fe4c-4d60-97ee-99d043299f0e,shipping,497 Allison Squares,Andreaville,MH,06787,US,True
+c02f5fbe-cb8c-4dae-b543-42c4d6f18a26,afdabd06-a2b4-497a-93b8-7bcf582b5d3b,shipping,42114 Kristine Springs,Garrettberg,MA,01646,US,True
+1d868d3a-1271-446c-989b-8dba55effda0,df8c3dd7-4bc5-4996-98e5-18e7ec0046e9,shipping,190 Douglas Mill,Simonland,GU,18544,US,True
+00fe6b2a-e2af-4d6a-b116-62d50eb63c24,34a9dd73-95d0-45d9-a3fb-636e4e080a6c,shipping,84781 John Roads,Lake Cynthiashire,ME,80853,US,True
+187020d6-e16a-4e80-bc8f-140bfad09c38,35292459-521c-4d3a-a786-3b68116663fc,shipping,1091 Christina View Apt. 267,West Brittneyhaven,CA,80813,US,True
+b3291eb5-3f8c-46d1-8c0f-02eb9d3dfd00,c502b1f4-b287-444d-b643-953150ebee0d,shipping,45964 Sara Prairie Suite 125,Port Breanna,PR,54672,US,True
+1c1e4187-b791-42ef-b246-839068e6ac66,6d24a27b-89f9-4e69-8c83-6f87ce5b6d33,shipping,34141 Christopher Streets Apt. 195,Port Lawrence,MS,76118,US,True
+5b3731d2-657d-43b4-bfac-98fa667207ce,11498734-cebc-4784-a055-6bd08a18f1dc,shipping,8105 Dawn Crossing,New Stephen,NY,67674,US,False
+27d7ac1a-2de9-4d42-a67f-7848cdf64b41,b43d4e7f-d2c2-4f0e-a706-cfd02d61a398,shipping,199 Anderson Plains,Lake Andrewfurt,CO,92871,US,True
+7cfc15b9-18d8-47cb-b514-681844788e8e,e83c866a-6830-4488-8842-ce77146d8d41,shipping,7215 Stephanie Harbor,Staceytown,VT,78847,US,True
+49cf697a-44ed-4bc6-9278-11c8778d27a1,1acd402c-8758-4f7a-9a24-57636d44ede6,shipping,316 Owens Streets Apt. 512,Shawnchester,FM,03316,US,True
+e933ba4a-2744-44d1-b472-0b0cee558701,f6489f0b-4a7a-4dd2-97d4-d0008f662858,shipping,2786 Ali Corners Suite 255,Hayesside,VI,89674,US,True
+29d33a98-89f0-476b-a7b0-a5788293040f,628b0262-278b-4522-aa31-ed61da01b78a,billing,85588 Jessica Island Suite 721,Hawkinston,VT,07099,US,False
+df644b9b-8db7-4b65-8644-37419d20b804,bf060a41-af0e-4932-b757-4f010ccf07f1,shipping,64205 Rogers Lodge Suite 749,East Michealport,FL,77994,US,True
+4fdb693c-9a01-4271-adeb-2f805e0085ec,2ffdab76-6ec7-4dce-bd58-e9b2f6da991c,shipping,97265 Stephen Fields,Theresaborough,MA,17174,US,True
+3d86c79e-5f45-4edf-b853-13baa54a5f46,b8edba64-3db4-4841-8f8d-dc00dce6fb67,shipping,883 Edward Valleys,East Laurafurt,VA,95673,US,True
+8d4c0f46-bf54-4369-9e8c-23f4921a0a51,fa6de1f2-ff8e-43ea-8da3-98d975b096da,shipping,2799 Potter Island Apt. 024,Jasonland,MH,23181,US,True
+cbd6db1d-a57a-4925-b34a-87d1e61e23e4,f044be50-29c1-40c4-a16c-a1dd1f95d6f3,shipping,1817 Robinson Haven,Jamestown,RI,12551,US,True
+e654c6b2-f921-4a69-b5ba-b9e54de8fa13,22dc524c-5b2b-4982-a2a7-2a5f5a5b9ca5,shipping,90591 Christina Pines Suite 233,Port Howard,SD,65378,US,True
+27aea218-4ddc-43d2-8417-be41e2cb38b1,6f2f044e-7270-4c80-8003-fd28bb66c57c,shipping,686 Sherry Burg,South Ashley,HI,36325,US,True
+0bf2e54a-75fd-4654-b814-be06856309ba,1991aaf6-d1b3-45f3-a33b-7a9174d18f8b,shipping,4362 Jane Burg Apt. 962,Amandahaven,TX,47075,US,True
+9ccad282-dcf0-40e3-8a82-9947ab97150b,77b903b9-c97e-44ae-8274-9dea7b101277,billing,540 Mckenzie Shore Apt. 348,Parkerstad,MH,90317,US,False
+e6908ef5-362d-4f97-9397-19c559a812e2,87a00a98-1d65-4fba-92f9-41ac07bce2bd,shipping,714 Hudson Street Apt. 821,West Ashley,NH,99455,US,True
+a1fe2df2-57a3-4b2b-b649-6516b127592e,5f8c9b91-24ee-43a2-b758-fece4c2fd787,shipping,0975 Jason Causeway,Marcuston,WA,09770,US,True
+09bc5526-8421-4145-8439-e9fa747a8dcc,33f27548-d085-481a-aa4f-a851fbebe0cd,shipping,3546 Debra Mission Apt. 798,Harrisville,AZ,51285,US,True
+8209cfc0-8763-4c5c-b1f5-26ff61ffe54d,4675a031-3216-463d-8c4d-42ea1283bd56,shipping,74681 Mary Road Apt. 664,Jensenside,RI,33134,US,True
+fa42d2cc-aa36-4e62-a52b-63031f5f07ec,1a1fa253-a2de-457a-9397-7c6c80d5d589,shipping,3794 Wilson Harbors Suite 524,Lindsayfort,WI,72446,US,True
+7e28da71-2400-4a58-82b0-8b06c31e9743,aef5051b-ee62-4974-994d-fbb200c5f89c,shipping,984 Russell Rest,Kristatown,GA,17130,US,True
+08e36edc-08ba-4af3-ad1e-546c1aae99d5,0688ed48-bbd7-41d6-b5ef-c2cd771f72c2,shipping,48889 Clinton Mount Suite 224,Pamelabury,IN,34087,US,True
+8e721877-11fc-4afd-868e-83cc88de1b30,863114b5-ba0b-4849-bbc4-d76d59fd0215,shipping,2849 Kevin Heights,Port Kennethmouth,AZ,28986,US,True
+2c9e381e-0f82-4ecf-a0b9-054f7f99a6f5,6f2f044e-7270-4c80-8003-fd28bb66c57c,billing,693 Robert Mountain,Port Joanna,WV,64291,US,False
+a78eb877-8266-4b69-b124-26e867ebe896,d1a4b7a2-e152-4377-ad2c-08cb61ad6688,shipping,20417 Mary Circles,North Tylerbury,CA,27061,US,False
+392e4f1a-90f4-4a46-9b9c-a97ec46d7cd1,b2263d08-d05d-4240-a470-6fe31527b9d2,shipping,904 Daniel Mountain,Barnesmouth,IN,39188,US,True
+43c14867-2dc2-4a25-861a-3e527cac6313,3f78077b-93c7-4c4e-8976-f16cb11cfcfc,shipping,47355 Shelley Union Suite 112,Port Jake,ND,50071,US,True
+5e5b2bcf-8df3-4d78-8ef7-06bfee0382fd,d47a83f3-a765-4a20-b40c-e0993cf00e4f,shipping,27961 Jose Land,New Benjaminfurt,MO,,US,False
+13815dff-6ca6-431f-a1ea-9f428cf78f21,9a689679-4c75-46ba-92d3-6b5b0c51a34a,billing,7744 Susan Mall Apt. 936,Chelseastad,DC,08095,US,False
+3eb2bed1-567a-4ed2-873a-de6a9c9efad6,7e394ed8-8aae-477f-9649-5d3e7f5658fb,shipping,8239 Atkinson Groves Apt. 027,North Adam,PR,67858,US,False
+68a5b0e8-b4d3-4770-bbac-f77fae60fa7a,748db0ca-899a-4da8-8177-2fa1ec2a9302,shipping,28403 Elliott Station,Kristopherburgh,OK,83586,US,True
+d9ea05a6-1412-4905-9e6c-bc7604eb0d86,913a8985-53b2-4a69-b2a2-3e44370275d4,shipping,244 Jones Villages Suite 679,New Jeanette,NY,86865,US,True
+948ff1b5-e8c1-474a-b9fc-3657d52bd0b1,4cd79f83-9fc7-43e4-a4c1-89402b7124e1,shipping,94240 Laura Square,Lake Lisa,NM,90245,US,True
+4ad7e2ee-6ce5-43f6-9f7a-afea8977da72,6fcd3399-b9d5-4ab0-9d50-385be83fec9c,shipping,94640 Billy View,Allentown,NE,06761,US,True
+b3752639-cdce-44a0-80cf-04e4e526a41a,748db0ca-899a-4da8-8177-2fa1ec2a9302,billing,7422 Catherine Walks Suite 430,New Kevin,OR,02082,US,False
+e219144a-ad8a-4018-95b8-0959c39696e4,0b4a904c-b6d7-4355-b1ff-3744b3831112,shipping,8039 Katherine Dam Suite 229,Lake Jessica,MI,05798,US,True
+45b3340e-ef25-4f5b-9688-90ae9ab5e7a9,9094466a-3714-44da-802d-85c2317b80e5,shipping,84787 Benjamin Centers Suite 061,Port Desiree,NC,60580,US,False
+cebbd6cf-4160-437b-923c-0cea06fb4be1,fc41d86f-78f3-476a-882c-3eafc02d61f2,shipping,84008 Crystal Landing,South Richardmouth,MI,81997,US,True
+2943eac9-faa9-40a7-bfb9-4e753d7695dd,7c0459a0-2d38-460e-8653-72aefbf15570,shipping,14551 Barbara Prairie Apt. 304,Mckenzieside,WV,,US,True
+c90a4799-5334-4900-ba7c-ba7d532ebce8,bf060a41-af0e-4932-b757-4f010ccf07f1,shipping,93588 Case Lane,Lake Jessicafurt,WV,85594,US,False
+12d07d53-75fa-4637-8de4-c005560ca621,cee4269a-3771-43d9-adc4-762ba3bc1782,shipping,602 Cunningham Shoals Apt. 222,South Kylemouth,LA,82611,US,True
+33bde126-c669-4bae-ade2-83c1675b6ded,bf060a41-af0e-4932-b757-4f010ccf07f1,billing,39898 Ryan Crossing,New Thomashaven,NC,58306,US,False
+2eae06a4-e0b4-48f5-9013-67ab7f83ce61,3218db6b-84e5-453d-8de9-a966eecbacc6,shipping,7560 Reid Coves,Wellsview,NE,73545,US,True
+be467f24-76ac-4d9c-b7a9-af6ead2efcf3,2fac4408-7728-454c-94d8-16b7262380b0,billing,468 Smith Islands Suite 443,East Kristopherville,FM,89030,US,False
+3addbfd2-470a-44fe-a9c5-40cb40cd3c00,285bfea1-4dec-4f9d-a9f6-3b3cb20fdde9,shipping,303 Miller Port,New Valeriefort,AZ,06798,US,True
+e02c158b-316d-47da-840a-586cf50fc30d,8aff4c2d-48b5-4b85-bf21-20ad95d18b6c,shipping,27011 Warren Shoal Suite 622,Jacobberg,ID,64263,US,True
+2581b1a4-6aa1-4098-a535-b86a506654cd,9db0e79f-fdea-4290-ba7b-114141f33d1f,shipping,569 Abigail Mission Suite 038,Terrellton,OH,51278,US,False
+3456c2f0-e0bd-4ac7-b7d0-4ef0cab3803d,02c02023-75d2-4ad2-89f6-ed2c2e7ae6f5,shipping,419 Baker Flats,Lindaberg,VA,37428,US,True
+843e83f4-416a-4e4d-8149-c536d73332a5,073c6c4c-9988-45b0-9224-7ad4e69d8c6f,shipping,37976 Valentine Estate Suite 051,West Janiceport,FL,31322,US,True
+8711eaca-9521-4533-92c1-a413bd8be465,fe2e9f59-c77b-4756-ad2e-fe864a560344,shipping,969 Shawn Manors Suite 653,South Cassandra,OK,65795,US,False
+00cc6c45-3aaa-429d-b256-bdad0a165805,c0ec2b5c-22e2-4010-a8f9-94431d5860c7,shipping,12900 Preston Shoals Apt. 117,Port Danielle,SC,61228,US,False
+5ff7e5fa-cf5e-45b7-9e5e-f11a8f7804aa,66975479-1eec-445e-a34d-78b59cc44f64,shipping,07676 Teresa Ports Apt. 144,Harrisview,AK,88482,US,True
+9f1ba4cd-e1e2-4a5d-93ad-8b51fa2f99b1,ab833d6f-87cf-4229-a1f8-707b52a55e5e,shipping,6010 David Trail,West Douglastown,WY,01732,US,True
+8b1b1ce0-d8cb-4c10-8b8a-0e52dba2a489,0b7ba743-6819-4540-8542-b7fa14bd996d,shipping,0911 Jones Village,New Paulabury,MI,87163,US,True
+50e35c2a-5aee-4301-b8ef-a6557110b160,4675a031-3216-463d-8c4d-42ea1283bd56,billing,987 Conrad Light Suite 155,Tiffanyton,DE,16769,US,False
+dc442bb7-55c3-4ac4-b81a-01b82cddab09,3d097c4e-dd09-4cfa-8460-39fd4fb8a1cc,shipping,4801 Snyder Lights Suite 794,Perezchester,LA,56594,US,True
+de606922-fcea-4774-9590-9e481bfc074e,06a161e4-302f-4ae9-b96b-2734ad33f946,shipping,0580 Michael Club Suite 181,East Mark,MN,89763,US,True
+969e38bc-77a6-4edd-bcfc-5489abeeaf3e,cb969dd8-a609-4b10-b213-d1011a90ef2b,shipping,15226 Flores Manors Suite 695,Port Sherry,PW,32732,US,True
+cc5d8622-6c0d-4d29-9437-7e71489074af,36708614-1e24-453b-8593-b03eb1a7c5b8,shipping,2573 Ronald Rapids,Jeremyshire,UT,16677,US,True
+105bba7f-43f6-424f-aea6-223aa6b383d6,7160f724-2528-4ac3-ba79-b6e99e6b8a01,shipping,4358 Ramirez Rapid,Santiagoborough,WI,80855,US,True
+fb892cc9-13c8-4d4b-8bdb-1bd1b14e4403,1fcfe435-1e78-4646-a517-19906c49735a,billing,6283 Crystal Grove,Lake Nathan,TN,85405,US,False
+1bcacf34-0877-4931-93c0-2d76b0e47354,3b47f466-5256-41a1-951c-efee13597676,shipping,2025 Kim Road Suite 798,Charlesmouth,NC,,US,True
+04900a8f-69a1-4b0d-8292-d118f2d9c306,11498734-cebc-4784-a055-6bd08a18f1dc,shipping,2444 Green Meadow Apt. 838,Haleyfort,PA,81705,US,True
+b5a239a2-549c-4927-a05e-88c0abe8d1a0,f03fb49f-283d-405e-bf8d-52046ca6e77d,billing,716 Morrison Summit Suite 166,East Javierport,AR,64073,US,False
+4402a8e7-83a1-48b6-ab36-947e6632f905,827eed18-8ab1-4e5d-ab00-5d8ac9bb168b,shipping,52056 Turner Summit,Edwinborough,CT,17742,US,True
+eed44f43-4945-407d-b90a-15e5af218e46,2251b079-d6df-4d71-bd74-d2a00e841a9d,shipping,12206 Lisa Islands,New Jamie,ND,52282,US,True
+537fc6f3-9343-4ace-8665-aab5461dc70e,e4d6980c-4b68-4255-97a5-2540f5ef35bc,shipping,73615 Harris Throughway Suite 271,Lake Michael,VA,79089,US,True
+46d7a5db-a69d-4806-a3e7-2a4de3b243f6,1076f00e-5dd1-41d1-b2a5-0c59e18a5310,shipping,39521 Samantha Springs,Austinside,AZ,63715,US,True
+dac482e1-0b30-4e01-aba2-bda8f7e905e8,b66b0e13-b74e-40e7-b3e7-1583f2f08a9b,shipping,850 Lori Highway,Peterstad,CA,21192,US,True
+04dd1376-10f3-43de-b333-a7a630a7fdcb,2ef2eede-fcc3-4c79-a843-4f5ae828d591,shipping,370 Moore Fields Suite 100,Perryfort,NH,86789,US,True
+65f99891-a615-4c18-9c90-fef1b5e342d7,4dba6ec7-4085-4058-9f0e-5109b846f1c1,shipping,44671 Ramos Lane Apt. 969,West Jeffreyfurt,DC,77526,US,True
+5e1371af-c71a-4096-bd68-4b990e71b2a0,4dc2aa9c-8633-4861-b795-5b285cf76a1f,shipping,82755 Patricia Grove Apt. 373,Lake John,KS,27603,US,True
+7a907e6c-0a1f-4aa2-85f7-643715a20481,97bbee89-2209-4d9a-9f20-d3327baf7efe,shipping,197 Norman Station Suite 851,South Amanda,MS,88937,US,True
+a45b2795-050f-4488-871d-4d2d42f11ef9,b745eacd-b8ee-4507-82ff-98d3c4daffc7,shipping,15502 Patrick Stream Apt. 546,Johnsonview,VA,86077,US,True
+41a85c42-ef1e-4742-bd31-158fc94ba1f6,a57c96be-0b7a-41c6-bd9a-9330e20c497a,billing,0335 Katherine Walk,North Jodibury,RI,19857,US,False
+7436cf2a-85a7-47e7-a5c9-9b17b6f7987d,bb0bc182-b8f7-4f26-b794-dca522dd4cec,billing,617 Rick Fort Apt. 489,East Kathrynberg,ME,74982,US,False
+96f88539-45d7-407a-8b16-ca6ef4b66dc2,b418aed1-0951-4085-9fe4-e750e7fe45f9,shipping,47276 Darren Drives,Maynardfort,AK,59419,US,True
+7b8c7b20-6bda-4aca-8804-ec6ce7e3aba0,3f3af4f6-a87b-4f03-8669-2e1a8e3c6d8b,shipping,811 Hopkins Rapids,Port Erikachester,NC,55640,US,True
+e83313b3-be42-466f-a441-f4b310955bfe,0bc37503-ab88-4833-9b4e-1355bdd20deb,shipping,97013 Wilson Harbor Apt. 658,Amberfurt,ME,17584,US,True
+46bdc6ee-345e-4ad5-ac80-f53375e10228,2dcc7662-f1ce-442c-b998-bbe351d5e186,shipping,4815 Molly Plains,Nicholsfurt,ME,01606,US,True
+aaa4bd02-fa9e-4bc3-9d66-c0987ce81b04,1095b08b-dad8-473d-9ec9-bafeb20e71c9,shipping,6246 Gallagher Port,Kellerside,OK,62081,US,True
+e5e8570c-a66e-47e8-83db-7cd2aa02b479,8dcd5fa7-1a1d-413e-9468-5f4b02f2f3fe,shipping,43244 Baker Overpass,Bethstad,WI,84626,US,True
+8bb7a4db-dd6f-4a21-b4e9-9ff63ca99fce,71c65b56-3757-459a-ac5b-b50c76fb6a5e,shipping,338 Robert Club,Port Davidtown,NJ,46141,US,False
+be2b2122-ea04-4e27-a97e-1609a644b6e4,dec2b1be-3447-4044-b4e3-17848dfd390e,shipping,376 Wanda Club,New Katiemouth,MT,59606,US,True
+ae59d264-e81c-4e42-8bec-3c5a973178ca,8c5628d0-6d15-4a6d-80f2-9c723e39ba83,shipping,83647 James Plaza,Cooperside,GA,62322,US,True
+b8863dc4-67ad-4738-b579-c9d110fdb1d4,9e22e2d2-ef3f-4b75-8aa0-f3ae453183e1,shipping,0014 Amy Grove,Port Cody,WA,,US,True
+e46ab76c-9e57-4426-81d3-be92f2330ae6,7d0a9ece-1d73-43ea-98e7-8bbe21e890ec,shipping,1648 Johnson Path Suite 887,Williamsborough,MD,67858,US,True
+d960d473-5c0c-405b-a9c1-2eb54bd2f041,ef097aa6-f4d9-4c16-bc17-a7cc87116f35,shipping,16417 Little Plain,East Kimberly,WV,30883,US,True
+c0c77b7c-3e03-4d0d-b3a5-56ccb373a860,8ebb4b7d-ed19-43be-a647-6c3a9a6a166a,shipping,24204 Hopkins Fall,Lake Toddtown,AR,11501,US,True
+fc096041-c06b-4e36-b159-1dbfdbbc3c0a,3870073a-f764-4a2b-bc64-18e4569bf784,billing,7303 Moss Court,South Paul,ME,42845,US,False
+2889a85b-c562-4ea1-84f8-1b814b2e85fc,2030e11b-f809-402e-8a1e-00aa3cb751da,shipping,147 David Wall Suite 586,Lake Jason,AR,14827,US,True
+a5040f1d-277b-4ecb-b0b2-4a6a4c3b9820,19d5ac88-a8cd-46b8-9f3d-d5ef3a0adfe2,shipping,520 Wyatt Trail Suite 639,South Neil,WA,01899,US,False
+b3f30c3d-03d0-437b-bc05-8dce2db388f2,bbc4757e-2351-486e-9ca8-f73b9dac716f,shipping,929 Christopher Walks,Atkinsborough,OR,62562,US,True
+34060dac-09f9-4465-91f2-fee7230b70a4,367f1e9a-938e-4d15-8ec1-50ce91fef6ce,shipping,0496 Curtis Centers,West Melissafurt,CT,81412,US,True
+9f412b7d-49f8-4e46-90c9-625541e87ee9,cec4dd97-5c6e-415b-ba06-47dc8ef4570f,shipping,1220 Daniel Brook Apt. 037,Lake John,MP,82559,US,True
+d1d2fb44-0703-4c64-b032-2bd384df76d5,9ff834d1-4ca0-4dd5-bb53-ea96ad8611bb,shipping,272 Chris Row,Jasonburgh,GA,47978,US,True
+3bafbd2f-ea60-4537-919b-aebdb7d3665e,358fc32a-8446-4c62-b4a1-92b145a689e8,shipping,655 Key Viaduct Apt. 566,West Morganville,AL,60390,US,True
+b9d2b942-049c-45f5-9e31-db829e628455,1740f65f-2823-4d8a-9ff9-2bf6dfcddfb6,shipping,988 Kelsey Street Apt. 538,Port Toni,MA,95593,US,False
+8f1bd76d-61f9-4597-a013-7bbcc24e017b,63b6d2f8-4e38-4b4c-bf67-6651399b4453,shipping,37271 Elizabeth Valleys Suite 957,Barbaraside,FM,97771,US,False
+f7f8b0ca-3bcb-4a19-abe9-74acfb7be180,2f162c0f-4d00-4d10-88ca-6dd2b94f24f5,shipping,1849 Margaret Plains Suite 679,New Kathleentown,SD,16008,US,False
+96b64546-c55d-4e8b-b0d2-0f1932b11be5,7c2a3f62-d757-4322-a213-921d7c370838,shipping,55996 Taylor Manors,East Sheila,HI,16869,US,True
+118e0003-bbec-4e23-b65c-f70a57b36408,99b2e147-d4f4-4a75-8f55-17304a277ed2,shipping,7232 Mills Loop Apt. 290,Lake Vincent,CO,82708,US,True
+5e017b2d-bf7d-46a0-8931-7cc8635272df,1233e680-06d7-4b38-8c6e-796ef158556a,shipping,820 Barbara Forest Suite 489,Michaelton,NC,26800,US,True
+3e0b3525-4107-4b64-b321-ff3cb319e623,953ad96a-103b-4460-a3b5-14b78403eb5d,shipping,5604 Madeline Overpass,Mclaughlinmouth,VT,55861,US,True
+9f80d8c3-e138-498b-a936-20208fa4beec,e69b7e32-9292-400a-b228-b3ecc6727760,billing,02876 Murphy Parkway Apt. 386,Schroederfort,MI,41364,US,False
+c511a896-a931-4b30-800d-4535514f9fb7,a0f290f7-884a-4d5d-b502-f43702abb2db,billing,2239 Harding Falls,Andrewburgh,FM,23796,US,False
+0e200a50-eaa2-4082-ac69-18eb0fb84dc8,1c8233dc-8ccb-4d27-84e7-e00d33ff6674,shipping,72629 Beck Falls Apt. 661,Elizabethhaven,AK,85213,US,False
+58f40c2a-b538-4a04-bdd8-30990bcf4d79,cf1ff13a-ac47-45d6-92eb-1583ead19df6,shipping,11457 Hunter Gardens Apt. 102,New Jacobborough,NV,86990,US,True
+f16f6f4c-955e-4b80-a5d2-6666b52327a7,9d37a85b-84b4-486d-b852-fd896a50fbf6,shipping,2934 Aaron Burg Suite 139,Gutierrezmouth,MI,73955,US,True
+70ae7c77-e664-455e-93eb-aeff2b295118,2aaf9fc4-0801-4163-8cc8-39558682f704,shipping,99201 Dawn Lights Suite 918,South Gabriel,NE,33645,US,True
+471c6440-7a41-4303-a14b-99eb138af48b,672a02fc-236c-4c57-9ef9-218b783ce0e3,shipping,84376 Morris Parks Suite 793,Drewland,PA,92111,US,True
+1e15b683-84e3-450c-8068-b0089eb9b8f8,d78e6e3f-3ff1-49b6-9dcb-129816aa0ecb,shipping,98315 Jacob Port Apt. 073,East Joann,GU,,US,True
+dccc03e5-5b02-4c65-b4be-a96a7a3728bf,1380e029-b899-4413-a8da-0741720a6a06,shipping,158 Brown Lakes Suite 082,East Theresaville,DE,72651,US,True
+bb8cd11f-947d-4ada-83b2-a0d8e408cf10,8cf43099-d49e-4e95-8b08-3d61df8b947f,shipping,74883 Sharp Knoll,Port Sarahshire,AS,86829,US,True
+fd8ada79-3acc-4c5f-a60f-5b1c72fefcc7,6ffc9798-2bb6-43ca-823b-e9dda0935299,shipping,7130 Marquez Isle,North Lisaport,MN,70060,US,True
+3807bfb2-fd78-46ed-a749-397e344b674c,99b2e147-d4f4-4a75-8f55-17304a277ed2,shipping,7232 Mills Loop Apt. 290,Lake Vincent,CO,82708,US,True
+135aef93-a91e-4bcb-81c1-9f4ffd8ad179,3455f0ff-3219-4cd9-acd8-091f34518293,shipping,2515 Marie Vista Apt. 447,Josephtown,WA,83230,US,True
+497ae6b4-5cd3-4574-966b-013ea359e176,8020c8de-2e83-4aae-8bd6-638db33f0978,shipping,07202 Terrell Lakes,Elizabethland,AZ,22156,US,True
+15635d3b-ef85-43e6-a5cb-1cff7b41045a,9adbebb4-c5dd-473e-b0ca-c36f10577392,shipping,42346 Brandy Trafficway Suite 237,Andradechester,PA,98422,US,False
+96c52d04-67dc-4f5c-baa3-609609c766ec,b5261e71-886e-4d78-8d1d-310ed9754704,billing,26773 Lauren Trail,East Samuel,MS,88968,US,False
+83d53c69-6304-40c6-8e34-e7e6d97d84b0,212484cd-56e9-4934-ab9b-69d43228ee16,shipping,51526 Amy Glen Apt. 911,East Matthew,NC,90879,US,True
+58848f31-d3e2-41e4-b09a-208bfd305eb5,e8da2040-0489-4880-a881-ef127727f204,billing,3390 Cervantes Brook,Peggyhaven,GU,16851,US,False
+7fca2409-e573-4147-ba7c-f0559f0e765d,f7989645-3a12-42f6-a926-2a7388aeb297,shipping,76037 Mitchell Extension,West Nathanchester,MN,83003,US,True
+bb8a1978-ed9e-494a-9423-3100e0944d15,0edeaba5-35f3-4e68-98ca-f412d9cd14b5,billing,59095 Long Place,Jenniferhaven,VA,97428,US,False
+440cceb5-6eee-4912-b447-9c1a130b03a9,b2664ec9-be42-46bd-9f6d-073a50105636,shipping,597 Oneill Road,Mccannville,MN,67678,US,True
+6ea5f3c1-8dd0-4871-bdde-4f265181ea77,e215d555-cc18-4890-8969-89abf72d28ae,shipping,476 Wendy Squares,Joshuaton,OK,04489,US,True
+b69b637a-d581-4ffc-b52d-6994bf9e9809,2977486c-8467-4a72-a290-db87a9022320,shipping,63353 Christopher Manor,North Matthewborough,TX,88181,US,False
+9b8e5928-c631-4cde-a712-e6430cea1757,a43342bc-a956-480b-8ef3-7b28e61c9b9b,shipping,78931 Franklin Drives Suite 284,Suzanneport,VI,07502,US,True
+55093700-4fe3-403b-92fe-86d70a64027b,3207b0f3-9af4-4ba4-acb1-6ba8ea25f52e,billing,06634 Richard Ranch Suite 897,Rodriguezton,SD,33130,US,False
+69c3f668-d9c5-434d-bd33-71c8c1d465e6,d6ca14b1-9b55-47f7-be97-787002ca26e5,shipping,55333 Martin Groves Apt. 350,South David,MS,03833,US,False
+73522c6a-58f7-429e-b5cf-22b84a7a7156,5948da4d-8a3d-4122-9885-6f62f017c7b2,billing,71058 Christopher Ports Suite 092,Blackwellville,GU,86607,US,False
+e42915a7-ece4-4a26-9d74-19b7f51ffd34,495a6541-1c93-4076-90e3-345d72d9c83c,shipping,85478 Jasmine Island Apt. 618,Jamesside,TN,82562,US,True
+ab8e794c-745c-4915-9ce2-50968a39a090,e94d8a6e-9b23-411a-baf2-75f02c42d8cb,shipping,231 James Divide,Lake Kevinland,AR,49935,US,False
+50ef3eff-91f0-4c43-8afd-16a423e48fda,6f80c5c6-04ed-4548-83b7-aee06e3700c4,shipping,9050 Mcdaniel Centers,Johnborough,IL,47039,US,True
+b863f57e-711b-4d4c-931c-db6f836573cf,b761dca2-f8ff-4709-b645-9b0591dfa353,shipping,2023 Krueger Flats Apt. 600,Jenniferstad,MA,00859,US,True
+98d85e83-b0f0-4249-a3a2-7bbc6a03da48,3483e39a-260f-4974-9366-50c2d833307f,shipping,341 Patricia Vista,Port Bonniefurt,WI,77838,US,True
+2f664e28-178c-4fa3-a416-7b7b65957c79,55ae024c-4a5e-49d8-be84-2f493dc83880,shipping,3039 Stevenson Isle,West Lonnie,WY,05692,US,True
+d66d5872-224b-4897-ac65-5e854aefdb59,3934f6b2-65db-491f-93be-76ec718440d9,shipping,543 Lauren Pike Suite 698,Port Meredith,MI,17737,US,True
+05cf1130-afcc-40a2-85c6-8d49c2740d59,09a354a5-a7cb-4687-8a52-c4a71feba0d2,shipping,277 Merritt Fords,Port Kaitlin,WA,85860,US,True
+3764201f-1a86-4844-bb15-892dc4795572,3870073a-f764-4a2b-bc64-18e4569bf784,shipping,46187 James Ville,Lisatown,DE,94175,US,True
+d30480b3-6a65-413b-89e5-b8df4bf66f8a,5484b02b-221a-4bbe-86a3-3eccdcf8d2ae,shipping,97398 Garcia Estate Apt. 097,North Hayley,DE,63250,US,True
+2e125390-7526-4807-b358-756adaf036eb,33a6f9f2-9265-47a5-ab40-37c29c87ed07,shipping,91241 Jackson Skyway,Lake Joshuamouth,MI,23823,US,True
+ed86c29b-f2f4-45b5-b606-2e2fe8ad2784,2a26f327-c9ef-40f4-bb8c-c809417caad1,shipping,15291 Jennifer Mews Suite 713,East Sophia,GU,35392,US,True
+9ffbe513-4fe5-4236-a14e-6fb49c8b6292,2f162c0f-4d00-4d10-88ca-6dd2b94f24f5,shipping,566 Brittany Ways,Deannatown,PW,47350,US,True
+eff744c3-ac53-47f8-a0bd-8905b6eb0fd9,3c7a4cde-d92b-4d90-a731-9c0461ae8c90,shipping,463 Gomez Ways,Tommyfort,FM,79696,US,True
+9e4b770d-646a-47cc-8d95-c2caceee4b06,bbe44e0a-dc83-4c13-a357-89d0c4f06f29,shipping,52386 Myers Flat Apt. 097,Omarland,RI,08821,US,True
+87a5b2d2-0b08-4e9c-a412-355f56e84928,dcddb844-390f-4861-a4ee-0a32b75bb218,shipping,39848 Douglas Island Apt. 116,New Jennifermouth,MN,05538,US,True
+4bf79d29-298f-4a9a-8aca-09d92524869d,8639eac0-9cd8-4fe5-9e10-8526a16018d1,shipping,68011 Jesse Way Apt. 376,North Erinside,NV,94667,US,True
+27d20c0c-3d3f-41bb-8798-9f62c5e0501e,aeb1bb4a-8548-48ed-a8e2-c31bc682b091,billing,9664 White Walk Apt. 074,East Micheal,VT,77637,US,False
+83908e17-c8ef-4659-9380-2de2bc9294d0,4da311cb-8e0d-487a-8fdd-4a94529db3e4,shipping,2292 Frye Mountains,Chanview,IN,34953,US,True
+66e5afa1-fb77-4520-87f2-812a5fe80ed9,ed7f8737-2c99-408f-afd0-f91c740e414c,shipping,76095 Wright Mountains,West Marissa,GU,44225,US,True
+6cf23c6f-e694-4339-b4ca-ce671ae73ef1,2e1fd151-264e-4a4a-8584-733dd5da3152,shipping,2159 Alicia Village Apt. 700,West Richardchester,CT,41212,US,True
+00426dc4-6a07-4431-bcd0-bf1e5ecbfba6,ae6e644d-c310-4f23-84dc-5063fc2e2953,billing,0930 Park Summit,Johnhaven,TX,80349,US,False
+36bc174a-8a30-4004-9030-8d0da2b5ed64,6bb3949d-b446-4beb-bcc9-01846e7ef85f,shipping,37389 Sharp Mountain,Latoyamouth,PR,25122,US,True
+7d49e739-cda4-4ac1-9a98-4d9ce2748e53,49421d99-2baa-4a3f-bbff-4e4d4e0062aa,shipping,769 Brian Falls,Port David,PW,07153,US,True
+801e689a-3e4b-4d84-ac95-87d561206860,0b4a904c-b6d7-4355-b1ff-3744b3831112,shipping,3145 Brad Ford,Paulmouth,FM,06587,US,False
+9cd76b3e-eb59-4d00-bd99-32a5e8f07bb5,8e104807-9dc2-4625-a1b7-9d858ddd96de,shipping,58273 Dennis Turnpike Suite 207,North Adrianland,VT,85927,US,True
+02032546-96c3-4417-9304-5d29cf70ddc3,83864095-dda9-4a16-ab3a-ba6429fa3dbd,shipping,19036 Vicki Bridge,Port Brian,AR,17109,US,True
+ddbe8606-caf1-4bc3-8b7c-8445f736c4fe,f6722fed-e7e1-443f-84e8-a753dc7dcd63,shipping,31277 Ernest Cape Apt. 543,Kingmouth,AZ,14187,US,True
+7a9c21c1-d67f-4771-802c-944746b5f574,367f1e9a-938e-4d15-8ec1-50ce91fef6ce,shipping,99076 Pope River Apt. 507,Brianaville,CT,02111,US,False
+fed82aac-3760-4591-a643-f9689db07ccc,cf2dbf35-0461-492d-81bd-a783c553409a,shipping,61880 Barbara Glens Apt. 357,West Jessicastad,OH,52269,US,True
+843c0c69-42ac-4e63-92b3-97398597f747,6b991ab8-8048-4161-b67d-7f862b2cc13e,shipping,159 Riley Place Apt. 845,Thompsontown,VT,96430,US,True
+a54bf6ed-6f9d-4603-8868-1b75fe41c1ef,9368e74c-0581-4d77-9358-94e415a80423,shipping,4064 Laura Plaza Suite 368,Fosterburgh,VT,97116,US,True
+53d9f648-3b1c-43a1-90aa-f6ee5fc5c596,2251b079-d6df-4d71-bd74-d2a00e841a9d,shipping,12206 Lisa Islands,New Jamie,ND,52282,US,True
+b68d76c0-940f-4a2c-a80b-6e600507e53a,b4624db2-8aba-4c57-a0f7-0f5cb8bf0a04,shipping,040 Perez Crest Suite 196,West Ronaldfort,MH,72832,US,True
+f5513254-0cac-4ea3-a68c-031186ccc205,b1554012-ee9c-477f-a055-e067482499a6,billing,8517 Holland Fall,South Donnaport,UT,51632,US,False
+44c9b8cf-f6bd-41c3-a55d-60bbb9f45696,e0cbd2e1-eee7-409c-9cf1-707eb4f867ce,shipping,416 Powers Course Suite 231,New Elizabethshire,WI,69347,US,True
+84feb274-28de-4c5b-a8e6-7a8f2df73c5f,c90ea8ef-05ef-4528-bb65-06a8180093d8,shipping,9469 Green Ports,Sarashire,NM,68619,US,True
+b515f5d6-200d-4c44-83c7-049cdae2be54,0ea8c796-5c53-421e-9442-830bc190960b,shipping,471 Brandi Crescent Apt. 332,Deanfurt,AL,49241,US,True
+f28b8648-7a8b-45fe-930d-09986a69c316,779b7f09-bfd0-4ab7-a46f-9f6eecb13030,billing,718 Catherine Flat Apt. 913,Robinsonfurt,SD,42839,US,False
+39d2066c-1015-4850-a3d0-3ab66d76ca25,b4413ac0-2fc9-4c91-b188-71c109d9be8f,shipping,0615 Barbara Run Apt. 455,Hamptonmouth,FM,,US,True
+d4176666-aadb-4787-8f2f-b148aab4d506,eb16c915-257c-4e0d-8f75-ef88a49065b6,shipping,963 Williams Meadow Suite 917,Hughesville,DC,24238,US,True
+b8290f66-ba48-41e5-b3f2-8c57da7f16b2,03a59f85-596f-4b87-9ab3-5f1a84f37beb,shipping,77959 Jensen Manor Suite 217,South Jeffreytown,SC,29733,US,True
+f8abd7ee-8207-4440-b2e5-e914f1edbf53,143944c0-b4d0-48f7-ac1f-6ffaeff64a70,shipping,9266 Billy Junctions Suite 327,West Taylorland,PW,63102,US,True
+935502f5-3d1a-4bd0-820e-99ac29322da5,adf0d9db-c6a0-4226-a93f-30482ccd9d28,shipping,36149 Jackson Fields,North Brianna,WA,09027,US,True
+0da4946b-d8d3-4564-bb63-18ccfe781253,bacd6bed-844e-4650-8181-7f73dd1352e2,shipping,6084 Peters Brook Apt. 955,East Juantown,MA,49684,US,True
+985ae045-f054-4dc0-afaf-141623da232e,eccb6e23-700f-4b9e-803e-9c681f12dd9e,shipping,521 Amber Lodge,Rebeccaburgh,SD,39142,US,True
+0acbf3bf-c98a-49f3-9e1d-d432e86256e5,0a34659d-f0b2-4bdb-bf92-759aea838e90,billing,5027 Victor Island,Port Tarachester,KS,68749,US,False
+a48d2aee-87fb-478d-ae16-b0cb09c7176d,b66b0e13-b74e-40e7-b3e7-1583f2f08a9b,billing,89389 Ross Centers Apt. 974,North Matthewview,ID,44349,US,False
+67c3f75c-b852-46d6-923e-5b0149a20272,49a68f77-776a-4b4b-b668-48e489f414ae,shipping,287 Gilmore Gateway Apt. 638,South Josephberg,TX,09090,US,True
+562cd6f2-fd45-467e-a479-f41fdf09df41,f35eb7b6-1b25-433b-90b5-29212b72f6e2,shipping,50812 Alexander Roads,Bradleytown,ID,26430,US,True
+ea435504-b1fa-4c36-a1ab-5176a216b633,5a2b4f14-e7ac-4b3a-bf58-688bca696e5f,shipping,951 Jones Village,East Monica,OK,12765,US,True
+44cedc26-91a5-4a44-930f-bb90152cc90b,12d19891-03e3-455b-b4f2-7d8f8f6b8f01,shipping,76015 Kyle Fork Apt. 491,West Victor,OK,84208,US,True
+dd0826dc-52dc-45f8-af11-d1c11e069179,36df5a68-777a-4824-9342-f7f557e872ba,shipping,0635 Nicole Valley Apt. 361,East Frank,ME,08738,US,True
+54a31641-cbe8-40b3-9922-caf02caa340e,bbffd265-99c5-491d-a03e-fee1fec9e123,shipping,576 Samantha Neck Suite 319,North Melissaton,PR,01970,US,False
+013ab9b6-77f2-41c1-837c-f2e555ebda00,8e91d584-8798-4b43-a077-64b5334460b3,shipping,0961 Smith Summit Apt. 595,New Josemouth,NV,47439,US,True
+9a9084e1-9df1-46fb-97fb-1a11bc6ddfde,4d6ee3e3-9ec6-4c2e-9552-a75af6d19f14,shipping,9217 Stanley Spur,Ruizbury,FL,81364,US,True
+3e8c4b06-d3b4-4bee-b607-dbfbb704f050,3d6f18db-a49c-4563-9445-68d4e02bd664,shipping,8849 Aguilar Mill Apt. 857,Cynthiashire,MI,99359,US,True
+b4012f43-8c38-4eca-a188-24653a9b59d2,bb0bc182-b8f7-4f26-b794-dca522dd4cec,shipping,24124 Gregory Circle Suite 200,Petermouth,FL,54610,US,True
+e7eb5c1e-b096-4eb9-9ca7-6f86514caf8f,ab13dd68-d82a-4dbe-b352-0f4df96ff5e3,shipping,11708 Reilly Pass Apt. 186,Kevinberg,GA,99831,US,True
+a3552116-8401-479a-9439-f43e9ffd3b51,3d0fd916-f8d9-4f59-9d2f-75d16ed75c58,shipping,9844 Jacqueline Neck,Lake Heatherborough,CA,52607,US,True
+3c7217f1-6627-460a-abc1-a9364c89ce29,5ed25035-4723-4154-823d-a8c8b4c02e51,shipping,3009 April Lane Apt. 565,East Ronaldshire,KS,34750,US,True
+31dc3491-ed30-4655-9733-85a9ae210d3c,40da201b-b0f6-453a-97ca-b9d61306ad15,shipping,15950 Julian Plains,North Jasontown,WV,41017,US,True
+4edcf020-8a92-493d-9428-1e71236f39b1,2660b7ac-6c46-4392-8ddc-26194c532341,shipping,04380 Cervantes Cove Apt. 863,Heatherton,MS,51298,US,True
+1ccac4f0-09fe-47a8-9a0a-08c26dbaee38,a3f993fd-aeaa-43c7-9e5c-9ad7b7c0f8d9,shipping,47692 Brian Forge Apt. 651,Roberttown,ME,05087,US,True
+addca9c1-a97d-423d-aeca-aeffc56b47d4,019bbbbd-bb75-49d2-8d74-d1c01012bd21,shipping,10415 Lynn Port Suite 501,Lake Jamieberg,OH,97549,US,True
+602b3a7e-d316-47da-a401-32ff8e561c76,723f776c-3ad0-4fa2-8177-a80f2cab59d9,shipping,842 Mary Square,East John,AZ,,US,True
+5a8afb47-26ab-41a5-aa36-48c4106de2cb,d64805ac-2294-4438-af7d-1f1483e8fd7b,shipping,9196 Gonzalez Knoll Suite 172,New Johnnychester,LA,79653,US,True
+088fb1ab-e0b3-41ee-b03c-19c0109fbc3a,4423c47b-1f8b-4df4-bfe9-531cd8e6441b,shipping,665 Lopez Mountain,North Joshuaton,SD,06614,US,True
+e9242b6c-ded9-4b93-92e6-37dc99473192,6d83b2dd-2590-42ba-8d66-d65101b1a517,shipping,694 Aimee Rue,Rickeyburgh,AK,32314,US,True
+41dad354-5e8f-4c4a-8fd6-45b883b39e93,2ba287a4-72ee-4028-bc13-39a65e78db4d,shipping,5790 Richardson Rue,New Jennaborough,DC,44400,US,True
+c0e05d95-4258-4257-94fa-f8d992878178,82205f5f-43a1-4172-aab8-523ed6a89f26,shipping,67286 Christopher Stream Apt. 038,Karenside,DE,11237,US,True
+63bcaaaa-6e4a-4797-8be6-ecf70bb6e464,c052cca8-a71b-4e49-b713-c012bcfce146,shipping,589 Rodriguez Spur Apt. 263,West Tyler,IA,76206,US,True
+94f6b658-8675-47ce-82a6-ed26c4f54d8c,b5261e71-886e-4d78-8d1d-310ed9754704,shipping,5988 Wong Manor,Johnborough,SC,90277,US,False
+ae4edcc8-db1f-4117-850a-4c87b9d48e26,7fcd9f31-c0cb-4414-9981-9d014f593081,shipping,731 Amanda Groves,Suttonfort,KY,14203,US,True
+e117aa51-0d59-4402-b749-ff98ce253b0c,848bb1e9-3367-4758-8f73-e886fadfadab,shipping,7246 Benjamin Corners,Pageburgh,KY,,US,True
+2bcdb087-ba36-4baa-a8aa-70413884a423,d84ec4ed-ae05-416c-9cbe-eace4567132d,shipping,9121 Miller Stravenue Suite 119,Markview,AK,75156,US,True
+fa897c72-954e-4bed-84cf-e895570c7986,a692df88-38f3-4725-84a6-73ec7e6c7ab5,shipping,9692 Alexander Creek Suite 296,West Jamie,UT,49123,US,True
+a78d5eaf-23a3-45b8-8159-c6c85fd83dca,b6b6f9ac-f08b-4ef6-8e52-a2c0bb49b17d,billing,69708 Amber Point Apt. 787,West Anthonyshire,NE,24173,US,False
+7314210d-e7af-4a53-a5c9-847107f67e90,e860f5d5-878c-468e-a446-059ba8434d4b,shipping,84719 Christopher Stravenue,East Dorothy,DC,38862,US,True
+aaa26ef7-0136-4510-b7d0-56c4127aea93,f55982fc-a2f7-407d-b845-3b32df0463f7,billing,987 Henry Trafficway,East Gregoryport,NY,,US,False
+b92201a6-f5e1-4782-a01e-85eaba11be79,a2053515-1d0d-41cb-a47d-485aed398e8b,billing,81319 Ashley Tunnel Apt. 487,Jacobsonbury,AK,26110,US,False
+180da500-6bd7-4ede-81d8-93e3cdcc0063,68f7b3c8-c205-42bc-bb75-a97603ceab5f,shipping,74584 Alison Grove Suite 881,West Rachelfort,KY,10783,US,True
+062d93f3-ea48-4e53-bd8b-807325d23b3c,34a7e239-a098-4105-a6ab-b1a2c1c1c160,shipping,9384 Melanie Brooks,Erinmouth,AL,56483,US,True
+ebb9e23b-ba5b-48c4-b86e-307f97f9561d,5b6d3273-0554-4f9d-bc05-2157626c1ad0,shipping,031 Dodson Forges Suite 137,New Danielle,AL,06429,US,True
+daec4831-4f0d-44bc-9b3c-3b61acbb31cd,582e9081-9542-4d02-9ed4-d41c93fa8b2c,shipping,24707 Christine Bypass,Lake Rhondaborough,MN,82700,US,True
+3dce43b9-8286-4308-b4d7-bd7c95233efa,758b4602-0ce0-440a-9584-ad59ce4216ad,shipping,498 Amy Stream,Port Richardside,FL,13201,US,False
+ed05d8e9-0f5c-4eef-aa8f-2b72cccbe5d4,779b7f09-bfd0-4ab7-a46f-9f6eecb13030,shipping,495 Ralph Forges,Port Curtis,CT,93733,US,True
+dc588b8a-bb0d-4a6e-9c1e-e57078c2ba17,5b16d3ac-510a-4143-8a0a-785ce783f3d8,shipping,3561 Brown Stream,New Keith,MD,85681,US,True
+0c43e391-496d-46c9-987e-7b3eed753409,73d9c423-e9d4-428f-bfaa-b073b2c1f454,billing,4485 Estrada Glen,Christopherville,VT,64142,US,False
+cdf704c3-d9a9-4092-896b-560523f11fc6,6939d1d2-fba3-4888-8c53-6898bb73c26f,shipping,8595 Rachel Islands Apt. 993,South Anna,FM,03043,US,True
+11612c8b-0967-42d4-8f91-e8370ec94633,6a49a618-20de-4b7a-af94-1b4afeb9a85e,shipping,688 Oneal Mountain Suite 996,Alexandrachester,GA,66450,US,True
+dd153ab4-feef-4c1e-b116-a4198bf3dab2,ae6e644d-c310-4f23-84dc-5063fc2e2953,shipping,1113 Frederick Centers Apt. 487,South Ericaberg,NJ,65749,US,True
+c617fccb-1f86-46fa-9c12-eaa95248d1b9,f4c4994a-5a77-4a2f-902b-4f69c22ccee3,shipping,6810 Green Parkways,Davidville,NV,39555,US,True
+40239e7d-99ad-4ab1-9eeb-62df4fd0549a,d7615aca-6de3-4a17-8fd0-212330ca9c28,shipping,964 Jennifer Place,Randyfurt,CT,97007,US,True
+6f4851e7-8e3d-4233-a471-17061147d6b7,15b9a6ba-816d-4956-936f-2894eff8b72d,shipping,34785 Sarah Ramp,Davischester,SC,36326,US,True
+f19f3d3f-c301-4d2e-8778-4b2e357b9abe,28a5a7b8-b34b-47a6-91f7-8e384d6b6f59,shipping,34258 Gregory Brooks Apt. 410,South Diana,FM,15045,US,True
+84fceab4-8e0a-4bf8-88cf-ba41d9040ef7,a4bf9059-6cd4-4e62-9a86-ff20975d7434,shipping,839 David Isle Apt. 142,Stephenburgh,NH,00611,US,True
+9eb8602b-6a52-452c-ad48-2bf3d877895c,758d0e66-e551-46a4-b8f9-0a98d7161e93,shipping,4556 Christopher Camp,Davidside,MT,98430,US,True
+f2a3aadc-0b4a-46e8-bf2a-258e681523c3,3f13d579-3df8-478c-b978-eec7255facfa,billing,092 Jackson Park,Natalieberg,CO,42092,US,False
+2bcada13-c1f3-46e6-b544-4411d2426318,0206c59d-8464-4845-9680-9463df25efd9,shipping,7128 Melissa Harbors,Davidview,KY,34180,US,True
+f34357b0-d1c6-4d8c-b68b-d82b80af8100,0e105436-465e-4326-94d3-f6a0e7051725,shipping,28516 Ernest Knolls Apt. 648,North Wayne,OK,29599,US,True
+42bc6917-4a38-4c46-9e18-8235ef6014a6,adc6b3eb-08c6-47a0-a6ce-19384284547a,shipping,9632 Serrano Ridge Suite 232,Kristinebury,VI,26003,US,False
+13f570ce-3737-44c1-aa41-f0c0f5e00d28,d47fa6a3-60cc-4d46-8dc2-9b3fd5e43153,shipping,94412 Megan Forges Apt. 721,Robertfurt,MT,74762,US,True
+b2cd7ec7-f0ca-4873-98c1-946dac998e97,8f40d15b-7ab5-4fdb-b9a0-767514af456f,billing,7766 Ballard Island Suite 602,Hallland,MI,11303,US,False
+829cedd9-d80a-471a-b7bd-bfc4096b4c11,af3dbfea-4df6-42c8-9826-57806904f81c,billing,91919 David Track Apt. 599,Ochoaton,MI,85316,US,False
+d2493d4d-566c-467a-9819-c4f21b5cdc22,efc6a229-f984-41c8-b741-83d9a46c5fd1,billing,777 Perkins Route Apt. 333,Royfurt,IL,40608,US,False
+02fda228-cb36-4922-8884-1d5987b99be1,41653b96-0020-4b26-86da-cb8f9aac99a0,shipping,881 House Courts Apt. 150,West James,MA,,US,True
+3b630358-11ca-428f-9ca5-71af6f8c927b,341ed9b2-1760-4720-a1b1-42681d273c63,shipping,106 Brian Centers,West Karen,GA,38068,US,True
+3d46a808-a01a-407b-80c5-23305d50c432,2d4e6ed6-f081-4049-b92a-7792dbe97b89,shipping,2787 Alec Views,Whiteland,MD,24295,US,True
+b0c7e210-16ae-4f06-9f2b-1c0010972605,cd8175bc-ff34-4742-8b86-61ec290e632f,shipping,4645 Benjamin Spurs,Savageview,UT,27924,US,False
+015d2c08-69ff-4864-bf0a-905d252e0ef3,26ef1453-7eb5-4f13-9c8c-22a3f738d060,shipping,087 Wayne Mountain,Heidifurt,AS,70711,US,True
+e1185920-b88f-48ad-847c-9094c918f017,4ba2a669-8d0b-4aef-96c0-aae24b7711ff,shipping,1996 Ryan Fall,East Carrie,NJ,44314,US,True
+fa75f8be-aebd-4beb-b253-7ce7bbe84bc8,19d5ac88-a8cd-46b8-9f3d-d5ef3a0adfe2,shipping,5830 Murphy Land,Wesleytown,PA,36287,US,False
+71bee05e-41ef-47e6-b902-9774c2e6375a,6a0e8a99-d39a-4600-9876-1344b693450f,shipping,98763 Flynn Run Suite 846,Jamesfurt,KS,,US,True
+bf7865b7-2a0f-4d9d-a407-25861b2dd8b5,1ed31084-8b68-49ca-91d6-7162d8521c02,shipping,132 Avila Forks,South Cynthia,OR,39392,US,True
+0e6aa82e-5f21-481d-b690-2a5f00e316da,51e5a1ad-d8d2-4387-82fe-860a54c87f4b,shipping,781 Landry Junction,Port Andrewshire,SC,22380,US,True
+483bc72e-dbaf-4b3b-bd2f-4bd265c797b9,3ad60b3b-8b4b-4504-9d49-adfd74fe548c,shipping,7970 Watts Squares,Wrightshire,MS,08275,US,False
+86509822-2f5a-4677-abbd-26a74c2b09b8,6bb3949d-b446-4beb-bcc9-01846e7ef85f,shipping,637 Farrell Burgs Suite 292,Sherrytown,NM,86857,US,False
+ff9e569b-c752-4112-ba4b-e3c53588f429,9a689679-4c75-46ba-92d3-6b5b0c51a34a,shipping,60119 Chang Islands,Davishaven,PR,53873,US,True
+bfd989b1-6cca-495e-a2d9-87074be015bd,72fd6924-b954-4c8f-9c0b-2545d0efe53b,shipping,727 Lindsey Parkway Suite 468,West Cynthia,CO,40564,US,False
+8ea27163-252b-46b0-882e-ba2a54f82f26,bb9bad76-c7ec-4f36-842c-54c3bbb40467,shipping,72311 Erik Turnpike Suite 128,Garyview,TX,94220,US,True
+66b636c2-7d6b-456c-b1ec-755b3b26e894,a054cb90-d7e9-4236-9533-fc7fd2b1fd77,shipping,71261 Newman View,New Erica,SC,24472,US,True
+1e259958-b6a2-491c-ac2b-9141483756cd,40c889c0-2020-4661-bb9a-564950b1a262,shipping,03083 Myers Rest Apt. 062,Jonesborough,CT,23505,US,True
+b116a2d6-0dff-4720-8c4d-c6ee21239fe7,1fcfe435-1e78-4646-a517-19906c49735a,shipping,542 Jones Glens,Patrickburgh,MO,60278,US,False
+99838a62-5dc1-4594-92ca-a8563b76bc0e,04b679f3-0691-47bc-975a-fdac41f52db4,shipping,3666 Nguyen Brooks Apt. 225,Bairdborough,MO,08851,US,True
+10c856b1-cb7e-430f-a48f-3406899cf724,f3feb7f9-9069-4fd7-be91-3800d1307935,shipping,51477 Martin Streets Apt. 388,Anaberg,UT,92088,US,True
+0b1b9251-95e0-4297-9895-5827238e9e44,b0382b3d-f5c4-4ecd-9e82-9ec911feb36a,shipping,0155 Tucker Pine Apt. 788,Shannonstad,AS,88752,US,True
+c8c15f75-0fd2-4531-b5c0-65c17478bdef,bbffd265-99c5-491d-a03e-fee1fec9e123,shipping,394 William Inlet,East Mariamouth,IL,65983,US,True
+fad7c669-29e2-4a13-b7cd-6ef9c1c04481,b69dd468-7a0d-45e5-951c-ead1fcda2225,shipping,4918 Daniel Shore Suite 226,North Robertport,MD,,US,False
+7f896192-07c4-49d6-8dcd-a4e59cfa368c,94638355-4830-4837-8708-12531dc89dbf,shipping,14035 Valerie Views Apt. 560,East Carol,RI,88126,US,True
+a0acc3e8-f306-4227-8394-4e51ed430a38,f84190e8-5c4a-4bec-be4d-2e554dd46614,shipping,6519 Marc Underpass Apt. 092,Bryanview,FL,99794,US,True
+63a30b3b-4661-4f37-9641-f1393d6e356c,57476af2-aff3-4f50-9313-77926b1859bc,shipping,281 Shane Crescent Suite 330,North Dawnbury,NJ,06057,US,True
+ebc7ebaf-387d-4790-89e2-bfaeefbbbcae,d33f758e-ba0e-463c-ba18-0cd99108c547,billing,51602 Anderson Parkways Suite 707,Hendersonton,ME,56204,US,False
+8c493251-6e6a-4741-a0e8-8611044ac413,b0cab1cc-6689-4922-a78f-5c6e1c458cd1,shipping,9056 Ronnie Knolls Suite 503,East Deborah,OR,11634,US,True
+d5b8d1d6-ce1f-4f65-b1e5-0ed58824ee6a,9f72b282-1f70-450b-988f-9b3029fa121e,shipping,335 Lauren Circle Apt. 585,Davisport,NV,87750,US,True
+16d7d648-7db5-4ea1-a3f7-270f52a906cf,d23755ac-d315-4dfd-ae80-4fa042f7d833,shipping,2429 Marsh Flat Apt. 652,Waltershire,IN,03218,US,True
+fad18fab-78c1-49f1-ae37-0f20ef4b32b0,ef7f92e8-2f80-4e44-9e56-9ee276819791,shipping,116 Ethan Islands,Mirandabury,VA,34268,US,True
+d182b93e-9f71-407e-bfa6-2db5d68df790,33d208d7-91f2-4d70-9f75-c1bf87481c15,shipping,699 Mcneil Pines Apt. 904,Timothyberg,MP,63329,US,True
+3131d68e-cbf1-4dd8-9b9d-95a49de182e8,3f13d579-3df8-478c-b978-eec7255facfa,shipping,53759 Adam Parkways,Turnerfurt,TN,49115,US,True
+71b973c7-de87-4833-989e-90155037e192,8678daa5-37e5-4e54-8c81-551df8fb8c0a,billing,473 Thompson Creek Apt. 290,South Derekport,NH,69824,US,False
+9cd012b6-c6bf-4540-88ed-e82c1667fcaa,e9415456-41d5-4caa-84d2-e8a6d49cb1ae,shipping,6798 Kimberly Field,West Rodneyport,VI,76161,US,True
+6256e0df-ffdf-42f8-9279-5b9cc19ab27f,afa83ff8-2b40-47b8-8bcf-1f9285c11695,shipping,678 Matthew Island Suite 727,Clarkburgh,TX,51627,US,True
+09f301eb-d4c6-4bdc-abc6-2f64fdc17f1a,4feef355-aeb7-41f9-a391-7f991eeb7b15,shipping,162 Miller Overpass Suite 941,Priceborough,WY,36704,US,True
+8aa6824e-6769-42b8-878d-dcc5d6cb37ac,8f40d15b-7ab5-4fdb-b9a0-767514af456f,shipping,9254 Dennis Corner Suite 785,New Blake,NY,81913,US,True
+0126d14e-7050-4e97-9ffc-bcb446e2de44,d77ac8a9-6445-4f65-9a77-b0fb3abe853d,shipping,03195 Wilson Loop Suite 645,West Tonytown,IL,57587,US,True
+9f5a3b10-9d37-4986-8ad1-47aca11f24f9,ed79e1d1-f247-47da-b20f-17c6184db706,shipping,263 Lisa Estate,New Carolyn,FL,10134,US,True
+1ca0b307-c34d-4697-a4f0-7c3fde323be9,3207b0f3-9af4-4ba4-acb1-6ba8ea25f52e,shipping,156 Edward Parkway,Romeroton,NV,36229,US,True
+7e058f51-128c-4c1f-a103-c09fdc8e1094,0872893c-bf01-4853-b91f-a1cc0263fedf,shipping,9155 Lopez Greens,West Thomas,RI,45471,US,True
+10cfe6c6-7cbc-4bba-9af4-0b9365020623,c502b1f4-b287-444d-b643-953150ebee0d,billing,188 Becky Shore Suite 457,North Joseph,LA,93743,US,False
+0456a297-6f87-4d1c-a7c6-863998e5fcac,5261268c-aa94-438a-921a-05efc0d414ac,shipping,26984 Joseph Plaza Apt. 339,Glendaberg,VT,85709,US,True

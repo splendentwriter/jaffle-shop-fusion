@@ -1,0 +1,22 @@
+models:
+  - name: stg_customer_devices
+    description: One row per device seen for a customer.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: device_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: device_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['ios', 'android', 'web']
