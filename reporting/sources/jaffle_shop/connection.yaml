@@ -1,6 +1,0 @@
-name: jaffle_shop
-type: bigquery
-options:
-  project_id: jaffle-shop-505616
-  location: US
-  authenticator: gcloud-cli
