@@ -1,0 +1,24 @@
+models:
+  - name: stg_order_addresses
+    description: >
+      One row per order address (shipping or billing). Not every order has
+      a row — this covers a sample of existing orders, not the full history.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: order_address_id
+        data_tests:
+          - not_null
+          - unique
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+      - name: address_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['shipping', 'billing']

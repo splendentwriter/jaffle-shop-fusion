@@ -81,3 +81,13 @@ sources:
         description: Append-only checkout funnel event log (started, address_entered, shipping_selected, completed, abandoned, payment_failed).
       - name: raw_checkout_failures
         description: One record per failed payment attempt during checkout, with a failure reason.
+      - name: raw_order_addresses
+        description: >
+          Shipping/billing address snapshot for a sample of existing orders. Not every order has a row —
+          see CONVENTIONS.md / scripts/generate_order_domain_seeds.py for why full coverage wasn't attempted.
+      - name: raw_order_status_history
+        description: >
+          Append-only order status log (placed, processing, fulfilled, delivered, cancelled) for a
+          sample of existing orders. A small number of rows reference an order_id that no longer exists.
+      - name: raw_order_adjustments
+        description: One record per post-order adjustment (discount, goodwill credit, price/tax correction) applied to an order.

@@ -1,0 +1,24 @@
+models:
+  - name: fct_order_status
+    description: >
+      One row per order that has status history (a sample of existing
+      orders, not full coverage — see stg_order_status_history). Reduces
+      the append-only status log to the current status per order.
+      Orphaned status rows (order_id no longer resolves to a real order)
+      are excluded via inner join, not counted here.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+      - name: current_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['placed', 'processing', 'fulfilled', 'delivered', 'cancelled']

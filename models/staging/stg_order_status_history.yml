@@ -1,0 +1,27 @@
+models:
+  - name: stg_order_status_history
+    description: >
+      Append-only order status log. One row per status change. A small
+      number of rows reference an order_id that no longer resolves to an
+      order — see the warn-severity relationship test below.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: order_status_id
+        data_tests:
+          - not_null
+          - unique
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['placed', 'processing', 'fulfilled', 'delivered', 'cancelled']

@@ -1,0 +1,17 @@
+models:
+  - name: fct_order_adjustment_summary
+    description: >
+      One row per order that has at least one adjustment, with adjustment
+      amounts rolled up. Most orders have no row here — adjustments are an
+      exception case, not the norm.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id

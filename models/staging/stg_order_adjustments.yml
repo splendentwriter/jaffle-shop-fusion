@@ -1,0 +1,25 @@
+models:
+  - name: stg_order_adjustments
+    description: >
+      One row per post-order adjustment. amount_cents is negative for
+      discounts and goodwill credits, and can be either sign for
+      price/tax corrections.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: order_adjustment_id
+        data_tests:
+          - not_null
+          - unique
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+      - name: adjustment_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['discount', 'goodwill_credit', 'price_correction', 'tax_correction']
