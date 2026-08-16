@@ -1,0 +1,16 @@
+models:
+  - name: mart_catalogue_health
+    description: >
+      One row per currently-active product (dim_product where is_current),
+      with completeness flags (image/description/brand/category present)
+      and stock status. Note: inventory (Phase 10) only covers the 10
+      products in the original seed, so products added later by the live
+      streaming service will show available_quantity=0 / is_out_of_stock —
+      that's "no inventory tracked yet", not "sold out".
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: product_id
+        data_tests:
+          - not_null
+          - unique
