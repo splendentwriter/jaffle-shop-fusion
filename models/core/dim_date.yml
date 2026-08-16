@@ -1,0 +1,35 @@
+models:
+  - name: dim_date
+    description: >
+      Calendar date dimension, one row per day from 2000-01-01 to 2030-01-01.
+      Built on top of metricflow_time_spine so it stays in lockstep with the
+      semantic layer's time spine rather than maintaining a second date range.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: date_id
+        description: Surrogate key for the date (hash of date_day).
+        data_tests:
+          - not_null
+          - unique
+      - name: date_day
+        description: The calendar date.
+        data_tests:
+          - not_null
+          - unique
+      - name: year_number
+        description: Calendar year, e.g. 2026.
+      - name: quarter_number
+        description: Calendar quarter, 1-4.
+      - name: month_number
+        description: Calendar month, 1-12.
+      - name: month_name
+        description: Full month name, e.g. "August".
+      - name: week_number
+        description: ISO-ish week of year (BigQuery default week numbering).
+      - name: day_of_week_number
+        description: Day of week, 1 (Sunday) - 7 (Saturday), per BigQuery EXTRACT(DAYOFWEEK).
+      - name: day_name
+        description: Full day name, e.g. "Sunday".
+      - name: is_weekend
+        description: True for Saturday/Sunday.

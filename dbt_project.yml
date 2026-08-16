@@ -32,6 +32,9 @@ models:
     staging:
       +materialized: view
       +schema: ingestion
+    core:
+      +materialized: table
+      +schema: analytics
     marts:
       +materialized: table
       +schema: analytics

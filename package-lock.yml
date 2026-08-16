@@ -1,11 +1,11 @@
 packages:
-- git: https://github.com/dbt-labs/dbt-audit-helper.git
-  name: audit_helper
-  revision: 71817f0a7fa3df9f63adb90db0cf28f7423f720b
-- package: dbt-labs/dbt_utils
-  name: dbt_utils
-  version: 1.4.1
-- package: elementary-data/elementary
-  name: elementary
-  version: 0.25.1
-sha1_hash: 2766085de128cb9e2231635abb91d18e93ad216d
+  - name: dbt_utils
+    package: dbt-labs/dbt_utils
+    version: 1.4.1
+  - git: https://github.com/dbt-labs/dbt-audit-helper.git
+    name: audit_helper
+    revision: 71817f0a7fa3df9f63adb90db0cf28f7423f720b
+  - name: elementary
+    package: elementary-data/elementary
+    version: 0.25.1
+sha1_hash: 2a92bbabb5de9026b1f461b5f7fa6317b74344a6
