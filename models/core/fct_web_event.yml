@@ -1,0 +1,39 @@
+models:
+  - name: fct_web_event
+    description: >
+      One row per clickstream event. Incremental (merged on event_id, keyed
+      off occurred_at), partitioned by event_date and clustered by
+      event_type per the plan's BigQuery-optimization guidance — this is
+      the highest-volume table in the project so far and the one most
+      likely to be scanned with an event_type or date filter. Note: this
+      table's source (raw_web_events) is a static seed, not fed by the live
+      streaming service, so the incremental branch won't have new rows to
+      pick up until a real event producer exists — the mechanism is real,
+      the ongoing volume isn't yet.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: session_id
+        data_tests:
+          - not_null
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_sessions')
+                field: session_id
+      - name: product_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['page_view', 'product_view', 'search', 'add_to_cart']

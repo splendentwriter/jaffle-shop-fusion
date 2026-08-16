@@ -1,0 +1,40 @@
+models:
+  - name: stg_web_events
+    description: >
+      Unified clickstream event stream, one row per event. Consolidates what
+      the build-out plan calls "page views / product views / searches /
+      events / user interactions" into a single typed stream distinguished
+      by event_type, matching how real systems (Segment, Snowplow, GA4)
+      emit clickstream data rather than one raw table per event shape.
+      A small number of events reference a session_id with no matching
+      session record — see the warn-severity relationship test below.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: session_id
+        data_tests:
+          - not_null
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_sessions')
+                field: session_id
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['page_view', 'product_view', 'search', 'add_to_cart']
+      - name: occurred_at
+        data_tests:
+          - not_null
+      - name: product_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id

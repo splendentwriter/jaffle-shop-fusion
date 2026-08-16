@@ -1,0 +1,22 @@
+models:
+  - name: fct_session
+    description: >
+      One row per browsing session, with event counts rolled up from
+      stg_web_events. duration_seconds is null for sessions that never
+      closed and negative for the small number of clock-skew sessions
+      flagged by stg_sessions' warn-severity test — both are left visible
+      rather than clamped, since silently flooring them would hide the
+      exact rows that test exists to surface.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: session_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id

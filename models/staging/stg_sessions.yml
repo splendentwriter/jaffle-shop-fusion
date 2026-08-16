@@ -1,0 +1,36 @@
+models:
+  - name: stg_sessions
+    description: >
+      One row per browsing session. customer_id/device_id are null for
+      anonymous (unauthenticated) sessions. A small number of sessions never
+      closed (null ended_at) or have ended_at logged before started_at —
+      see the warn-severity check below.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          config:
+            severity: warn
+          arguments:
+            expression: "ended_at >= started_at"
+    columns:
+      - name: session_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: device_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customer_devices')
+                field: device_id
+      - name: referrer_source
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['direct', 'organic_search', 'paid_search', 'social', 'email', 'referral']
