@@ -150,3 +150,15 @@ sources:
           Append-only fulfillment lifecycle event log. "Picking" and "packing" from the build-out plan
           are event_type values here (picking_started/picking_completed/packing_started/packing_completed),
           not separate tables.
+      - name: raw_carriers
+        description: One record per shipping carrier.
+      - name: raw_shipments
+        description: >
+          One record per shipment. Only created for shipped fulfillment orders whose checkout picked an
+          actual shipping method — pickup orders never get a shipment.
+      - name: raw_shipment_items
+        description: One record per line item on a shipment.
+      - name: raw_tracking_events
+        description: Append-only carrier tracking event log (label_created, picked_up, in_transit, out_for_delivery, delivered, exception).
+      - name: raw_delivery_attempts
+        description: One record per delivery attempt against a shipment. A shipment can have more than one attempt.

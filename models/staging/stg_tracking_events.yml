@@ -1,0 +1,22 @@
+models:
+  - name: stg_tracking_events
+    description: Append-only carrier tracking event log. One row per event.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: tracking_event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: shipment_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_shipments')
+                field: shipment_id
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['label_created', 'picked_up', 'in_transit', 'out_for_delivery', 'delivered', 'exception']

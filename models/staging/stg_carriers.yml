@@ -1,0 +1,10 @@
+models:
+  - name: stg_carriers
+    description: One row per shipping carrier.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: carrier_id
+        data_tests:
+          - not_null
+          - unique

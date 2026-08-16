@@ -1,0 +1,28 @@
+models:
+  - name: fct_shipment
+    description: >
+      One row per shipment, with item counts, delivery-attempt count, and
+      the actual delivered_at (from tracking events) rolled up. was_late
+      compares delivered_at to the shipment's own estimated_delivery_at.
+      delivered_at/hours_to_deliver/was_late are null for shipments that
+      haven't delivered (in_transit/lost).
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: shipment_id
+        data_tests:
+          - not_null
+          - unique
+      - name: fulfillment_order_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_fulfillment_orders')
+                field: fulfillment_order_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['delivered', 'delayed', 'lost', 'in_transit']

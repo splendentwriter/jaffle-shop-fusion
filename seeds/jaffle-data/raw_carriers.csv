@@ -1,0 +1,4 @@
+id,name,tracking_url_template
+CAR-UPS,UPS,https://ups.example/track/{tracking_number}
+CAR-FEDEX,FedEx,https://fedex.example/track/{tracking_number}
+CAR-USPS,USPS,https://usps.example/track/{tracking_number}
