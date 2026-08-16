@@ -79,6 +79,7 @@ final as (
         current_month.month as current_month,
 
         ---------- revenue
+        prior_month.month as prior_month,
         current_month.revenue as net_revenue,
         prior_month.revenue as prior_month_revenue,
         round(safe_divide(current_month.revenue - prior_month.revenue, prior_month.revenue), 4)
