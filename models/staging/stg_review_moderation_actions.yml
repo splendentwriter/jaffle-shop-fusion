@@ -1,0 +1,25 @@
+models:
+  - name: stg_review_moderation_actions
+    description: >
+      One row per moderation decision. Only exists for reviews that were
+      actually moderated — pending reviews have no row here.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: moderation_action_id
+        data_tests:
+          - not_null
+          - unique
+      - name: review_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_reviews')
+                field: review_id
+      - name: action
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['approved', 'rejected']

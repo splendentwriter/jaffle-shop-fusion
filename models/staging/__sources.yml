@@ -173,3 +173,13 @@ sources:
         description: Append-only return lifecycle event log (requested, approved, rejected, item_received, inspection_completed, refund_issued).
       - name: raw_return_inspections
         description: One record per inspection performed on a returned line item.
+      - name: raw_reviews
+        description: One record per product review.
+      - name: raw_review_votes
+        description: >
+          One record per customer's helpful/not_helpful vote on a review. A small number of rows are
+          duplicate votes from the same customer on the same review (a known client-side double-submit bug).
+      - name: raw_review_moderation_actions
+        description: One record per moderation decision made on a review. Only present for reviews that were actually moderated (not pending).
+      - name: raw_review_responses
+        description: One record per merchant/support response to a review.

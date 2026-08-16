@@ -1,0 +1,25 @@
+models:
+  - name: fct_review
+    description: >
+      One row per review, with vote counts, moderation outcome, and
+      response count rolled up. moderation_action/moderation_reason are
+      null for still-pending reviews.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: review_id
+        data_tests:
+          - not_null
+          - unique
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['published', 'rejected', 'pending']

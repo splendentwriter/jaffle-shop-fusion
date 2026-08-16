@@ -1,0 +1,33 @@
+models:
+  - name: stg_review_votes
+    description: >
+      One row per customer's vote on a review. Not guaranteed unique on
+      (review_id, customer_id) — a small number of rows are duplicate votes
+      from the same customer on the same review (a known client-side
+      double-submit bug, see the warn-severity check below).
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.unique_combination_of_columns:
+          config:
+            severity: warn
+          arguments:
+            combination_of_columns:
+              - review_id
+              - customer_id
+    columns:
+      - name: review_vote_id
+        data_tests:
+          - not_null
+          - unique
+      - name: review_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_reviews')
+                field: review_id
+      - name: vote_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['helpful', 'not_helpful']

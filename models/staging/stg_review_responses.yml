@@ -1,0 +1,22 @@
+models:
+  - name: stg_review_responses
+    description: One row per merchant/support response to a review.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: review_response_id
+        data_tests:
+          - not_null
+          - unique
+      - name: review_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_reviews')
+                field: review_id
+      - name: responder_role
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['merchant', 'support']
