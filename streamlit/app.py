@@ -10,6 +10,7 @@ import plotly.express as px
 import streamlit as st
 
 from components.kpi_cards import kpi_row
+from queries.alerts import get_alert_summary
 from queries.sales import get_ecommerce_kpis, get_sales_trend
 from utils.config import APP_ICON, APP_TITLE
 from utils.formatting import fmt_month, fmt_num, fmt_pct, fmt_usd
@@ -17,7 +18,7 @@ from utils.formatting import fmt_month, fmt_num, fmt_pct, fmt_usd
 st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
 
 st.title(f"{APP_ICON} Jaffle Shop")
-st.caption("Executive Overview")
+st.caption("Executive Command Center")
 
 kpis = get_ecommerce_kpis()
 trend = get_sales_trend()
@@ -33,6 +34,14 @@ st.info(
     "`models/marts/mart_ecommerce_kpis.yml` for why.",
     icon="ℹ️",
 )
+
+st.subheader("Attention needed")
+alerts = get_alert_summary()
+alert_cols = st.columns(4)
+alert_cols[0].metric("Failing Data Tests", fmt_num(alerts["failing_tests"]))
+alert_cols[1].metric("Low Stock Positions", fmt_num(alerts["low_stock_positions"]))
+alert_cols[2].metric("Unreconciled Payouts", fmt_num(alerts["unreconciled_payouts"]))
+alert_cols[3].metric("Urgent Open Tickets", fmt_num(alerts["urgent_open_tickets"]))
 
 st.subheader("Headline metrics")
 kpi_row(
@@ -95,7 +104,6 @@ health_cols[3].markdown(
 )
 
 st.caption(
-    "This is Loop 1 of the analytics command center (Executive Overview only) — "
-    "Sales, Customers, Products, Operations, Finance, Marketing, and the other pages "
-    "from the full spec come next, pending review of this page."
+    "Drill into Sales, Customers, Products, Operations, Finance, Marketing, Customer "
+    "Experience, and Data Platform via the navigation on the left."
 )
