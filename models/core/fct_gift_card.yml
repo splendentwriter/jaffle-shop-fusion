@@ -1,0 +1,19 @@
+models:
+  - name: fct_gift_card
+    description: >
+      One row per gift card, with issued/redeemed/credited/expired amounts
+      rolled up from the transaction ledger.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "current_balance_cents = issued_cents - redeemed_cents + credited_cents - expired_cents"
+    columns:
+      - name: gift_card_id
+        data_tests:
+          - not_null
+          - unique
+      - name: code
+        data_tests:
+          - not_null
+          - unique

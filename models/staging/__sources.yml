@@ -215,3 +215,10 @@ sources:
           Unified points ledger (earn, redeem, expire, adjustment), one row per event. "Reward
           redemptions" from the build-out plan are transaction_type='redeem' rows with reward_id set,
           not a separate table.
+      - name: raw_gift_cards
+        description: One record per gift card. purchased_by_customer_id is null for cards issued without a purchaser on file (e.g. promo/goodwill issuance).
+      - name: raw_gift_card_transactions
+        description: >
+          Unified gift card ledger (issue, redeem, refund_credit, expire), one row per event. "Gift
+          card redemptions" from the build-out plan are transaction_type='redeem' rows here, not a
+          separate table.

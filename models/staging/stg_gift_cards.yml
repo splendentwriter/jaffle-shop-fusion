@@ -1,0 +1,28 @@
+models:
+  - name: stg_gift_cards
+    description: One row per gift card.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "current_balance_cents >= 0 and current_balance_cents <= initial_balance_cents"
+    columns:
+      - name: gift_card_id
+        data_tests:
+          - not_null
+          - unique
+      - name: code
+        data_tests:
+          - not_null
+          - unique
+      - name: purchased_by_customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'redeemed', 'expired']
