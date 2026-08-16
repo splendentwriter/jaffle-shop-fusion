@@ -20,8 +20,10 @@ renamed as (
         account_type,
 
         ---------- timestamps
-        created_at,
-        updated_at
+        -- cast to timestamp (not datetime) so this matches the type dbt's
+        -- snapshot machinery uses internally for dbt_valid_from/dbt_valid_to
+        cast(created_at as timestamp) as created_at,
+        cast(updated_at as timestamp) as updated_at
 
     from source
 
