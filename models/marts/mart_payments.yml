@@ -1,0 +1,13 @@
+models:
+  - name: mart_payments
+    description: >
+      One row per payment attempt, with the payment method and captured/
+      refunded/net amounts converted to dollars, plus success/decline/
+      chargeback flags for funnel and risk analysis.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: payment_attempt_id
+        data_tests:
+          - not_null
+          - unique

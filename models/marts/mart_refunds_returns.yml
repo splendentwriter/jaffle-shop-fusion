@@ -1,0 +1,12 @@
+models:
+  - name: mart_refunds_returns
+    description: >
+      One row per return with refund amount in dollars, time-to-refund, and
+      a has_unsellable_items flag for inspected-but-not-resellable items.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: return_id
+        data_tests:
+          - not_null
+          - unique

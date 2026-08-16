@@ -1,0 +1,15 @@
+models:
+  - name: mart_revenue_profitability
+    description: >
+      One row per month, rolling up fct_revenue (items subtotal, discounts,
+      refunds, processing fees, gross/net revenue) to a monthly grain using
+      checkout completed_at. Net margin nets out processing fees on top of
+      discounts and refunds, unlike mart_sales_performance's gross_margin_pct
+      which only nets out COGS.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: month
+        data_tests:
+          - not_null
+          - unique
