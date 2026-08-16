@@ -4,13 +4,11 @@ import plotly.express as px
 import streamlit as st
 
 from components.kpi_cards import kpi_row
+from components.section_header import section_header
 from queries.finance import get_reconciliation
-from utils.config import APP_ICON, APP_TITLE
 from utils.formatting import fmt_num, fmt_pct, fmt_usd
 
-st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
-
-st.title("🧾 Reconciliation")
+section_header("Finance", "Reconciliation", "🧾")
 
 payouts = get_reconciliation()
 for col in ["payout_amount", "computed_net_amount", "discrepancy_amount"]:

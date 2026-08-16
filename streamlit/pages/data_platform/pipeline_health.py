@@ -4,13 +4,11 @@ import plotly.express as px
 import streamlit as st
 
 from components.kpi_cards import kpi_row
+from components.section_header import section_header
 from queries.data_platform import get_pipeline_health
-from utils.config import APP_ICON, APP_TITLE
 from utils.formatting import fmt_num, fmt_pct
 
-st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
-
-st.title("⚙️ Pipeline Health")
+section_header("Data Platform", "Pipeline Health", "⚙️")
 
 runs = get_pipeline_health()
 

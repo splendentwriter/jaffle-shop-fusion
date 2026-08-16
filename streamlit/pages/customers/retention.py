@@ -4,13 +4,11 @@ import plotly.express as px
 import streamlit as st
 
 from components.kpi_cards import kpi_row
+from components.section_header import section_header
 from queries.customers import get_retention_cohorts
-from utils.config import APP_ICON, APP_TITLE
 from utils.formatting import fmt_pct
 
-st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
-
-st.title("🔁 Retention & Cohorts")
+section_header("Customers", "Customer Retention", "🔁")
 
 cohorts = get_retention_cohorts()
 cohorts["cohort_month"] = cohorts["cohort_month"].astype(str)

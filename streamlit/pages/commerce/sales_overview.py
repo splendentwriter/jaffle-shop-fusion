@@ -4,13 +4,11 @@ import plotly.express as px
 import streamlit as st
 
 from components.kpi_cards import kpi_row
+from components.section_header import section_header
 from queries.sales import get_ecommerce_kpis, get_sales_by_category, get_sales_by_location, get_sales_trend
-from utils.config import APP_ICON, APP_TITLE
 from utils.formatting import fmt_num, fmt_pct, fmt_usd
 
-st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
-
-st.title("💰 Sales Overview")
+section_header("Commerce", "Sales Overview", "💰")
 
 kpis = get_ecommerce_kpis()
 trend = get_sales_trend()

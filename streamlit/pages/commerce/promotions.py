@@ -4,13 +4,11 @@ import plotly.express as px
 import streamlit as st
 
 from components.kpi_cards import kpi_row
+from components.section_header import section_header
 from queries.marketing import get_promotions
-from utils.config import APP_ICON, APP_TITLE
 from utils.formatting import fmt_num, fmt_usd
 
-st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
-
-st.title("🏷️ Promotions")
+section_header("Commerce", "Promotions", "🏷️")
 
 promotions = get_promotions()
 for col in ["total_discount_given", "attributed_revenue"]:

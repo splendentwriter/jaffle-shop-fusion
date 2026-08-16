@@ -4,13 +4,11 @@ import plotly.express as px
 import streamlit as st
 
 from components.kpi_cards import kpi_row
+from components.section_header import section_header
 from queries.customers import get_customer_acquisition
-from utils.config import APP_ICON, APP_TITLE
 from utils.formatting import fmt_num, fmt_usd
 
-st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
-
-st.title("📥 Acquisition")
+section_header("Customers", "Customer Acquisition", "📥")
 st.caption(
     "No real ad-spend data exists in this dataset, so CAC/ROAS aren't shown here — "
     "see Marketing → Campaign Performance for actual campaign spend."

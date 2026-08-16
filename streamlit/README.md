@@ -1,7 +1,10 @@
 # Jaffle Shop Analytics Command Center (Streamlit)
 
-Replaces the earlier Evidence.dev report. Currently: **Executive Overview
-only** (loop 1 of the planned ~20-page build) — see `app.py`.
+Replaces the earlier Evidence.dev report. A 24-page app organized around
+how an e-commerce business actually operates — Executive, Commerce,
+Customers, Products, Operations, Finance, Marketing, Customer Experience,
+and Data Platform — via `st.navigation()` with top-position, grouped nav
+in `app.py`.
 
 ## Principle
 
@@ -48,16 +51,38 @@ of truth for the app/dbt/generator code; the credentials never enter it.
 
 ```
 streamlit/
-├── app.py              # Executive Overview (current landing/only page)
-├── pages/               # future pages land here — Streamlit auto-discovers
-│                         # files in this folder as additional nav items
-├── components/          # reusable UI pieces (kpi_cards.py, ...)
+├── app.py                    # nav shell: builds st.Page()s, groups them into
+│                              # business sections, position="top", pg.run()
+├── pages/
+│   ├── executive/             # Command Center (landing/default), Overview
+│   ├── commerce/               # Sales Overview, Sales Funnel, Orders, Promotions
+│   ├── customers/               # Customer 360, Acquisition, Retention
+│   ├── products/                 # Product Performance, Catalogue Health
+│   ├── operations/                # Inventory, Fulfillment, Shipping & Delivery
+│   ├── finance/                     # Payments, Revenue & Profitability,
+│   │                                 # Returns & Refunds, Reconciliation
+│   ├── marketing/                    # Campaign Performance, Attribution
+│   ├── customer_experience/           # Reviews, Support
+│   └── data_platform/                  # Data Quality, Pipeline Health,
+│                                         # Model Performance
+├── components/          # reusable UI pieces (kpi_cards, section_header,
+│                         # status_badge, insight_card, data_table, charts,
+│                         # filters)
 ├── queries/              # thin pass-throughs to marts, no business logic
 └── utils/
     ├── bigquery.py       # cached BigQuery client + query runner
     ├── config.py         # project/dataset constants
     └── formatting.py     # display formatting only
 ```
+
+Individual page files don't call `st.set_page_config()` — that's set once
+in `app.py`, which is why every page file was edited to drop that line (a
+navigation-layer change, not a business-logic one) when this was
+restructured from Streamlit's old flat `pages/` auto-discovery into
+grouped `st.navigation()`. Each page opens with a
+`section_header("Section", "Page Title", "icon")` call instead of a bare
+`st.title()`, so the business section a page belongs to is always visible
+even without looking at the nav bar.
 
 ## Known data characteristic
 
@@ -66,4 +91,5 @@ ends August 2025, and the live streaming service's activity starts fresh
 at "now" (currently August 2026) — nothing in between. The Executive
 Overview's month-over-month comparison uses the two most recent *complete*
 months with data, which today means Aug 2025 vs Jul 2025, not a real-time
-current month. This is labelled explicitly on the page rather than hidden.
+current month. This is labelled explicitly on the Executive Command Center
+page rather than hidden.

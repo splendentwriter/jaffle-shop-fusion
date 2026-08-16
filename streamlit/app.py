@@ -1,109 +1,157 @@
-"""Jaffle Shop — Executive Overview.
+"""Jaffle Shop — Analytics Command Center application shell.
 
-Landing page of the analytics command center. Pulls directly from
-mart_ecommerce_kpis and mart_sales_performance — all business logic
-(revenue, margin, conversion, on-time delivery, etc.) is computed in dbt;
-this file only renders it. See CONVENTIONS.md in the repo root.
+Defines the business-operation navigation (Executive, Commerce, Customers,
+Products, Operations, Finance, Marketing, Customer Experience, Data
+Platform) and hands off to the selected page. No business logic lives
+here — see CONVENTIONS.md in the repo root: dbt owns business logic,
+Streamlit only presents it.
 """
 
-import plotly.express as px
 import streamlit as st
 
-from components.kpi_cards import kpi_row
-from queries.alerts import get_alert_summary
-from queries.sales import get_ecommerce_kpis, get_sales_trend
 from utils.config import APP_ICON, APP_TITLE
-from utils.formatting import fmt_month, fmt_num, fmt_pct, fmt_usd
 
 st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
 
-st.title(f"{APP_ICON} Jaffle Shop")
-st.caption("Executive Command Center")
-
-kpis = get_ecommerce_kpis()
-trend = get_sales_trend()
-
-if kpis is None:
-    st.warning("No KPI data available yet.")
-    st.stop()
-
-st.info(
-    f"Showing **{fmt_month(kpis['current_month'])}** vs **{fmt_month(kpis['prior_month'])}** "
-    "— the two most recent complete months with order data. There's a real gap in the underlying "
-    "history between the original seed data and the live streaming service's activity; see "
-    "`models/marts/mart_ecommerce_kpis.yml` for why.",
-    icon="ℹ️",
+executive_command_center = st.Page(
+    "pages/executive/command_center.py",
+    title="Command Center",
+    icon="🏠",
+    url_path="executive-command-center",
+    default=True,
+)
+executive_overview = st.Page(
+    "pages/executive/overview.py", title="Overview", icon="📊", url_path="executive-overview"
 )
 
-st.subheader("Attention needed")
-alerts = get_alert_summary()
-alert_cols = st.columns(4)
-alert_cols[0].metric("Failing Data Tests", fmt_num(alerts["failing_tests"]))
-alert_cols[1].metric("Low Stock Positions", fmt_num(alerts["low_stock_positions"]))
-alert_cols[2].metric("Unreconciled Payouts", fmt_num(alerts["unreconciled_payouts"]))
-alert_cols[3].metric("Urgent Open Tickets", fmt_num(alerts["urgent_open_tickets"]))
-
-st.subheader("Headline metrics")
-kpi_row(
-    [
-        {"label": "Net Revenue", "value": fmt_usd(kpis["net_revenue"]), "delta": kpis["revenue_change_pct"]},
-        {"label": "Orders", "value": fmt_num(kpis["orders"]), "delta": kpis["orders_change_pct"]},
-        {"label": "Customers", "value": fmt_num(kpis["customers"]), "delta": kpis["customers_change_pct"]},
-        {
-            "label": "Avg Order Value",
-            "value": fmt_usd(kpis["avg_order_value"], decimals=2),
-            "delta": kpis["avg_order_value_change_pct"],
-        },
-    ]
+sales_overview = st.Page(
+    "pages/commerce/sales_overview.py", title="Sales Overview", icon="💰", url_path="commerce-sales"
+)
+sales_funnel = st.Page(
+    "pages/commerce/sales_funnel.py", title="Sales Funnel", icon="🔻", url_path="commerce-funnel"
+)
+orders = st.Page("pages/commerce/orders.py", title="Orders", icon="📋", url_path="commerce-orders")
+promotions = st.Page(
+    "pages/commerce/promotions.py", title="Promotions", icon="🏷️", url_path="commerce-promotions"
 )
 
-st.subheader("Funnel & operational health")
-kpi_row(
-    [
-        {"label": "Checkout Conversion", "value": fmt_pct(kpis["checkout_conversion_rate"])},
-        {"label": "Gross Margin", "value": fmt_pct(kpis["gross_margin_pct"])},
-        {"label": "Refund Rate", "value": fmt_pct(kpis["refund_rate"])},
-        {"label": "On-Time Delivery", "value": fmt_pct(kpis["on_time_delivery_rate"])},
-    ]
+customer_360 = st.Page(
+    "pages/customers/customer_360.py", title="Customer 360", icon="👥", url_path="customers-360"
+)
+acquisition = st.Page(
+    "pages/customers/acquisition.py",
+    title="Customer Acquisition",
+    icon="📥",
+    url_path="customers-acquisition",
+)
+retention = st.Page(
+    "pages/customers/retention.py", title="Customer Retention", icon="🔁", url_path="customers-retention"
 )
 
-st.subheader("Revenue trend")
-fig = px.line(trend, x="month", y="revenue", markers=True)
-fig.update_layout(yaxis_title="Revenue ($)", xaxis_title=None, height=400)
-fig.update_yaxes(tickprefix="$", separatethousands=True)
-st.plotly_chart(fig, width='stretch')
-
-with st.expander("Monthly detail"):
-    st.dataframe(
-        trend[["month", "order_count", "customer_count", "revenue", "avg_order_value", "gross_margin_pct"]],
-        width='stretch',
-        hide_index=True,
-    )
-
-st.subheader("Business health")
-
-
-def health_badge(condition_good: bool, condition_watch: bool) -> str:
-    if condition_good:
-        return "🟢 Strong"
-    if condition_watch:
-        return "🟡 Watch"
-    return "🔴 Attention"
-
-
-health_cols = st.columns(4)
-health_cols[0].markdown(f"**Sales**  \n{health_badge(kpis['revenue_change_pct'] >= 0, kpis['revenue_change_pct'] >= -0.05)}")
-health_cols[1].markdown(
-    f"**Payments**  \n{health_badge(kpis['refund_rate'] < 0.05, kpis['refund_rate'] < 0.10)}"
+product_performance = st.Page(
+    "pages/products/performance.py",
+    title="Product Performance",
+    icon="🛍️",
+    url_path="products-performance",
 )
-health_cols[2].markdown(
-    f"**Fulfillment**  \n{health_badge(kpis['on_time_delivery_rate'] >= 0.90, kpis['on_time_delivery_rate'] >= 0.75)}"
-)
-health_cols[3].markdown(
-    f"**Inventory**  \n{health_badge(kpis['low_stock_sku_count'] == 0, kpis['low_stock_sku_count'] <= 3)}"
+catalogue_health = st.Page(
+    "pages/products/catalogue_health.py",
+    title="Catalogue Health",
+    icon="📋",
+    url_path="products-catalogue-health",
 )
 
-st.caption(
-    "Drill into Sales, Customers, Products, Operations, Finance, Marketing, Customer "
-    "Experience, and Data Platform via the navigation on the left."
+inventory = st.Page(
+    "pages/operations/inventory.py", title="Inventory", icon="📦", url_path="operations-inventory"
 )
+fulfillment = st.Page(
+    "pages/operations/fulfillment.py", title="Fulfillment", icon="🏭", url_path="operations-fulfillment"
+)
+shipping = st.Page(
+    "pages/operations/shipping.py",
+    title="Shipping & Delivery",
+    icon="🚚",
+    url_path="operations-shipping",
+)
+
+payments = st.Page("pages/finance/payments.py", title="Payments", icon="💳", url_path="finance-payments")
+revenue_profitability = st.Page(
+    "pages/finance/revenue_profitability.py",
+    title="Revenue & Profitability",
+    icon="💰",
+    url_path="finance-profitability",
+)
+returns_refunds = st.Page(
+    "pages/finance/returns_refunds.py",
+    title="Returns & Refunds",
+    icon="↩️",
+    url_path="finance-returns-refunds",
+)
+reconciliation = st.Page(
+    "pages/finance/reconciliation.py",
+    title="Reconciliation",
+    icon="🧾",
+    url_path="finance-reconciliation",
+)
+
+campaigns = st.Page(
+    "pages/marketing/campaigns.py",
+    title="Campaign Performance",
+    icon="📣",
+    url_path="marketing-campaigns",
+)
+attribution = st.Page(
+    "pages/marketing/attribution.py",
+    title="Marketing Attribution",
+    icon="🎯",
+    url_path="marketing-attribution",
+)
+
+reviews = st.Page(
+    "pages/customer_experience/reviews.py",
+    title="Reviews",
+    icon="⭐",
+    url_path="customer-experience-reviews",
+)
+support = st.Page(
+    "pages/customer_experience/support.py",
+    title="Customer Support",
+    icon="🎧",
+    url_path="customer-experience-support",
+)
+
+data_quality = st.Page(
+    "pages/data_platform/data_quality.py",
+    title="Data Quality",
+    icon="🔍",
+    url_path="data-platform-quality",
+)
+pipeline_health = st.Page(
+    "pages/data_platform/pipeline_health.py",
+    title="Pipeline Health",
+    icon="⚙️",
+    url_path="data-platform-pipeline",
+)
+model_performance = st.Page(
+    "pages/data_platform/model_performance.py",
+    title="Model Performance",
+    icon="🏗️",
+    url_path="data-platform-model-performance",
+)
+
+pg = st.navigation(
+    {
+        "🏠 Executive": [executive_command_center, executive_overview],
+        "🛒 Commerce": [sales_overview, sales_funnel, orders, promotions],
+        "👥 Customers": [customer_360, acquisition, retention],
+        "🏷️ Products": [product_performance, catalogue_health],
+        "📦 Operations": [inventory, fulfillment, shipping],
+        "💳 Finance": [payments, revenue_profitability, returns_refunds, reconciliation],
+        "📣 Marketing": [campaigns, attribution],
+        "❤️ Customer Experience": [reviews, support],
+        "⚙️ Data Platform": [data_quality, pipeline_health, model_performance],
+    },
+    position="top",
+)
+
+pg.run()
