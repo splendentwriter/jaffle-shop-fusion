@@ -1,4 +1,4 @@
-// runner drives the dbt pipeline (deps, seed, snapshot, build, test) with
+// runner drives the dbt pipeline (deps, snapshot, build, test) with
 // per-step retries, so a transient BigQuery/network error doesn't fail
 // the whole Cloud Run Job. Reports the outcome to Slack.
 package main
@@ -18,7 +18,7 @@ const (
 	pipelineScript = "pipeline.sh"
 )
 
-var steps = []string{"deps", "seed", "snapshot", "build", "test"}
+var steps = []string{"deps", "snapshot", "build", "test"}
 
 func runStep(name string) error {
 	var lastErr error

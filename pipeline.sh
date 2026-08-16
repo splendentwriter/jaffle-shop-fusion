@@ -12,7 +12,9 @@ case "$1" in
     dbt snapshot
     ;;
   build)
-    dbt build
+    # exclude seeds: raw tables are now kept fresh by the streaming generator
+    # (scripts/generate_stream_data.py), not by re-loading the static CSVs
+    dbt build --exclude resource_type:seed
     ;;
   test)
     dbt test
