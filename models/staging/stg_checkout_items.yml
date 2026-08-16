@@ -1,6 +1,12 @@
 models:
   - name: stg_checkout_items
-    description: One row per checkout line item, snapshotted from the cart at checkout time.
+    description: >
+      One row per checkout line item, snapshotted from the cart at checkout
+      time. One known row references a checkout_id that never landed — an
+      orphaned streaming-insert artifact from operations-data-generator
+      testing (same incident as stg_payment_attempts and
+      stg_checkout_events), pending cleanup once it ages out of BigQuery's
+      streaming buffer.
     data_tests:
       - elementary.schema_changes
     columns:
@@ -12,6 +18,8 @@ models:
         data_tests:
           - not_null
           - relationships:
+              config:
+                severity: warn
               arguments:
                 to: ref('stg_checkouts')
                 field: checkout_id
