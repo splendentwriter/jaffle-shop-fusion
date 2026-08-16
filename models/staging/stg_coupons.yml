@@ -1,0 +1,21 @@
+models:
+  - name: stg_coupons
+    description: One row per redeemable coupon code. max_redemptions is null for unlimited codes.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: coupon_id
+        data_tests:
+          - not_null
+          - unique
+      - name: promotion_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_promotions')
+                field: promotion_id
+      - name: code
+        data_tests:
+          - not_null
+          - unique

@@ -1,0 +1,9 @@
+id,name,description,promotion_type,discount_value,min_order_value_cents,max_discount_cents,starts_at,ends_at,is_active
+6ac9924e-9e9e-47b4-8cfd-9ad143fbed7c,Welcome10,Welcome10 promotional offer,percentage_off,10,0,500,2025-11-06T15:58:33,,True
+7b9ef875-5700-4388-a933-51e09d417eed,Summer20,Summer20 promotional offer,percentage_off,20,1500,1000,2026-02-17T15:58:33,2026-04-16T15:58:33,False
+fa3e9328-5c80-4797-9916-40e8a70a1150,FreeShipWeekend,FreeShipWeekend promotional offer,free_shipping,0,2000,1200,2026-01-15T15:58:33,,True
+d8a8fddd-4173-4d3e-bd19-3115bc95b8db,Flat5Off,Flat5Off promotional offer,fixed_amount_off,500,1000,500,2026-01-27T15:58:33,2026-03-14T15:58:33,False
+812cd9e6-f14c-4663-88c6-f4f71599f3a1,BOGOJaffle,BOGOJaffle promotional offer,bogo,100,0,1500,2026-04-19T15:58:33,2026-05-30T15:58:33,False
+97230f0d-f1e5-405e-afde-e4642983b78f,LoyaltyThanks,LoyaltyThanks promotional offer,fixed_amount_off,300,500,300,2026-02-18T15:58:33,2026-03-25T15:58:33,False
+9ebe6d38-d2f4-439c-beb2-d12c5102d081,BlackFriday,BlackFriday promotional offer,percentage_off,30,2000,2000,2026-01-08T15:58:33,2026-03-03T15:58:33,False
+2a14e3dc-933a-443c-a44e-ae75006676c5,NewYear15,NewYear15 promotional offer,percentage_off,15,1000,800,2026-03-07T15:58:33,2026-04-04T15:58:33,False

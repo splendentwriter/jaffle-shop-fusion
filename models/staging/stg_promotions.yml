@@ -1,0 +1,23 @@
+models:
+  - name: stg_promotions
+    description: >
+      One row per promotion. Discount-rule configuration (discount_value,
+      min_order_value_cents, max_discount_cents) lives on the promotion
+      itself rather than a separate rules table.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          config:
+            severity: warn
+          arguments:
+            expression: "ends_at is null or ends_at >= starts_at"
+    columns:
+      - name: promotion_id
+        data_tests:
+          - not_null
+          - unique
+      - name: promotion_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['percentage_off', 'fixed_amount_off', 'free_shipping', 'bogo']

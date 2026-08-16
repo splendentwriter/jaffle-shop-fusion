@@ -107,3 +107,11 @@ sources:
         description: >
           One record per payment dispute. status covers the full outcome range including chargeback -
           a chargeback is modeled as a dispute outcome, not a separate entity.
+      - name: raw_promotions
+        description: One record per promotion. Discount rule fields (discount_value, min/max) live on the promotion itself.
+      - name: raw_coupons
+        description: One record per redeemable coupon code. A promotion can have more than one code.
+      - name: raw_coupon_redemptions
+        description: >
+          One record per coupon redemption against a checkout. A small number of rows are duplicate
+          redemptions of the same coupon on the same checkout (a known upstream retry-button bug).

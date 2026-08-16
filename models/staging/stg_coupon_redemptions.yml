@@ -1,0 +1,35 @@
+models:
+  - name: stg_coupon_redemptions
+    description: >
+      One row per coupon redemption against a checkout. Not unique on
+      (coupon_id, checkout_id) — a small number of rows are duplicate
+      redemptions of the same coupon on the same checkout (a known
+      upstream retry-button bug, see the warn-severity check below).
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.unique_combination_of_columns:
+          config:
+            severity: warn
+          arguments:
+            combination_of_columns:
+              - coupon_id
+              - checkout_id
+    columns:
+      - name: redemption_id
+        data_tests:
+          - not_null
+          - unique
+      - name: coupon_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_coupons')
+                field: coupon_id
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id

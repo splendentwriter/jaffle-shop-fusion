@@ -1,0 +1,27 @@
+models:
+  - name: fct_coupon_redemption
+    description: >
+      One row per coupon redemption, enriched with the coupon code and
+      owning promotion's name/type. Inherits stg_coupon_redemptions' known
+      duplicate-redemption rows (same coupon+checkout) rather than
+      deduplicating them — see stg_coupon_redemptions for the warn-severity
+      check that surfaces this.
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: redemption_id
+        data_tests:
+          - not_null
+          - unique
+      - name: checkout_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_checkouts')
+                field: checkout_id
+      - name: promotion_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['percentage_off', 'fixed_amount_off', 'free_shipping', 'bogo']
