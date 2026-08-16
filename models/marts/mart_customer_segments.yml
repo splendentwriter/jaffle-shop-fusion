@@ -1,0 +1,21 @@
+models:
+  - name: mart_customer_segments
+    description: >
+      One row per customer, assigned to an RFM-style segment (Champions,
+      Loyal, High Value, New, Occasional, At Risk, Churned) via a waterfall
+      of rules against recency/frequency/monetary quartile thresholds
+      computed across the customer base. Rules are evaluated in order —
+      churn-risk segments take precedence over upside segments so a
+      long-lapsed high-spender is flagged "Churned", not "High Value".
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+      - name: segment
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Champions', 'Loyal', 'High Value', 'New', 'Occasional', 'At Risk', 'Churned']

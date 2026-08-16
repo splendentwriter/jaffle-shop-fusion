@@ -34,7 +34,17 @@ def get_client() -> bigquery.Client:
 
 
 @st.cache_data(ttl=300)
-def run_query(sql: str):
+def run_query(sql: str, params: tuple[tuple[str, str, str], ...] = ()):
     """Runs a query and returns a pandas DataFrame. Cached for 5 minutes so
-    repeated widget interactions on a page don't re-hit BigQuery."""
-    return get_client().query(sql).to_dataframe()
+    repeated widget interactions on a page don't re-hit BigQuery.
+
+    `params` is a tuple of (name, type, value) — plain hashable primitives,
+    not bigquery.ScalarQueryParameter objects, both because st.cache_data
+    can't hash the latter and because a naive underscore-prefix workaround
+    to skip hashing would make every distinct query return the same cached
+    result. Always use this for any value that isn't a hardcoded literal
+    (e.g. something chosen via a selectbox/text_input), never f-string
+    interpolation, to avoid SQL injection."""
+    query_parameters = [bigquery.ScalarQueryParameter(name, type_, value) for name, type_, value in params]
+    job_config = bigquery.QueryJobConfig(query_parameters=query_parameters) if query_parameters else None
+    return get_client().query(sql, job_config=job_config).to_dataframe()

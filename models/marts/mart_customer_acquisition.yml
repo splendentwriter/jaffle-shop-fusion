@@ -1,0 +1,15 @@
+models:
+  - name: mart_customer_acquisition
+    description: >
+      One row per acquisition channel, with customer count and downstream
+      lifetime value. Does not include CAC/spend/ROAS — this dataset has no
+      real ad-spend figures, so those aren't fabricated here (Marketing's
+      mart_campaign_performance is where actual campaign spend/ROAS live,
+      scoped to campaign-attributed activity only).
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: acquisition_channel
+        data_tests:
+          - not_null
+          - unique

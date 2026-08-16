@@ -1,0 +1,23 @@
+models:
+  - name: mart_customer_retention_cohorts
+    description: >
+      One row per (cohort_month, month_index): retention_rate = customers
+      from that monthly cohort who placed an order month_index months after
+      their first order, divided by cohort size. Note: because of the real
+      ~1-year gap in order history (see mart_ecommerce_kpis), cohorts whose
+      first-order month falls before the gap will show retention data only
+      at month_index 0 and then a sparse jump wherever a customer happens
+      to reorder after the gap — an accurate reflection of the data, not a
+      bug.
+    data_tests:
+      - elementary.schema_changes
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "retention_rate between 0 and 1"
+    columns:
+      - name: cohort_month
+        data_tests:
+          - not_null
+      - name: month_index
+        data_tests:
+          - not_null

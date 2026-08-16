@@ -1,0 +1,15 @@
+models:
+  - name: mart_customer_360
+    description: >
+      One row per customer: order history, lifetime value, account status,
+      acquisition channel, support tickets, and reviews. Powers the
+      Customer 360 page's drill-down. account_status/account_type are null
+      for customers with no dim_customer account row (e.g. guest-only
+      customers).
+    data_tests:
+      - elementary.schema_changes
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
