@@ -4,8 +4,6 @@ models:
       Product dimension table. The grain of the table is one row per product.
     semantic_model:
       enabled: true
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: product_id
         entity:

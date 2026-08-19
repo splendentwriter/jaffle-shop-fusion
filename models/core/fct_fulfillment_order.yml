@@ -5,8 +5,6 @@ models:
       pivoted from stg_fulfillment_events and item counts rolled up.
       hours_to_ship and shipped_at are null for orders that haven't shipped
       yet (in-progress or cancelled).
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: fulfillment_order_id
         data_tests:

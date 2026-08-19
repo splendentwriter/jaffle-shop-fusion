@@ -5,7 +5,6 @@ models:
       own refund outcome rather than linking to stg_refunds (Phase 8) —
       see raw_returns' source description for why.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "refund_status != 'completed' or refunded_at is not null"

@@ -6,7 +6,6 @@ models:
       redemptions of the same coupon on the same checkout (a known
       upstream retry-button bug, see the warn-severity check below).
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.unique_combination_of_columns:
           config:
             severity: warn

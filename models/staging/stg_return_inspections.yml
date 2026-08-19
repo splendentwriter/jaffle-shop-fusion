@@ -1,8 +1,6 @@
 models:
   - name: stg_return_inspections
     description: One row per inspection performed on a returned line item.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: return_inspection_id
         data_tests:

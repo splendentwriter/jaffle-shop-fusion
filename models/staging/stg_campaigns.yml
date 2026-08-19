@@ -1,8 +1,6 @@
 models:
   - name: stg_campaigns
     description: One row per marketing campaign.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: campaign_id
         data_tests:

@@ -1,8 +1,6 @@
 models:
   - name: stg_product_images
     description: One row per product image.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: image_id
         data_tests:

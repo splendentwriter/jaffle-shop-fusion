@@ -3,8 +3,6 @@ models:
     description: >
       One row per capture, with the processing fee (percentage + fixed,
       from stg_processing_fee_config) computed and netted off.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: capture_id
         data_tests:

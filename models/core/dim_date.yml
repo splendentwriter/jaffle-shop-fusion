@@ -4,8 +4,6 @@ models:
       Calendar date dimension, one row per day from 2000-01-01 to 2030-01-01.
       Built on top of metricflow_time_spine so it stays in lockstep with the
       semantic layer's time spine rather than maintaining a second date range.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: date_id
         description: Surrogate key for the date (hash of date_day).

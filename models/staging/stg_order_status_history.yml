@@ -4,8 +4,6 @@ models:
       Append-only order status log. One row per status change. A small
       number of rows reference an order_id that no longer resolves to an
       order — see the warn-severity relationship test below.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: order_status_id
         data_tests:

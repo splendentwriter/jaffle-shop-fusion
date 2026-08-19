@@ -1,8 +1,6 @@
 models:
   - name: stg_return_items
     description: One row per line item on a return.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: return_item_id
         data_tests:

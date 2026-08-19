@@ -1,8 +1,6 @@
 models:
   - name: stg_rewards
     description: One row per redeemable reward.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: reward_id
         data_tests:

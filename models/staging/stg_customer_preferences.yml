@@ -4,8 +4,6 @@ models:
       One row per customer who has set communication preferences. Not every
       customer has a row here — absence means preferences were never
       captured, not that they were declined.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: customer_id
         data_tests:

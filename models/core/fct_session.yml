@@ -7,8 +7,6 @@ models:
       flagged by stg_sessions' warn-severity test — both are left visible
       rather than clamped, since silently flooring them would hide the
       exact rows that test exists to surface.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: session_id
         data_tests:

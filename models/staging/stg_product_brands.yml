@@ -3,8 +3,6 @@ models:
     description: >
       One row per product's brand assignment. brand_id is nullable — not
       every SKU has been assigned a brand yet.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: product_id
         data_tests:

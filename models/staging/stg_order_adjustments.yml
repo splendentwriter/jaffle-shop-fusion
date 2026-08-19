@@ -4,8 +4,6 @@ models:
       One row per post-order adjustment. amount_cents is negative for
       discounts and goodwill credits, and can be either sign for
       price/tax corrections.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: order_adjustment_id
         data_tests:

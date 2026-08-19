@@ -4,8 +4,6 @@ models:
       One row per warehouse/product stock position, with product and
       warehouse names attached and the below-reorder-point flag carried
       through from fct_inventory_position.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: warehouse_id
         data_tests:

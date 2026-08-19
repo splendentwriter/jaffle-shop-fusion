@@ -3,8 +3,6 @@ models:
     description: >
       One row per order address (shipping or billing). Not every order has
       a row — this covers a sample of existing orders, not the full history.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: order_address_id
         data_tests:

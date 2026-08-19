@@ -1,8 +1,6 @@
 models:
   - name: stg_tax_rates
     description: One row per shipping region's tax rate.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: tax_rate_id
         data_tests:

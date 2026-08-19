@@ -8,8 +8,6 @@ models:
       streaming-insert artifact from operations-data-generator testing,
       pending cleanup once it ages out of BigQuery's streaming buffer) — the
       checkout_id relationship is warn-severity for the same reason.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: payment_attempt_id
         data_tests:

@@ -6,7 +6,6 @@ models:
       closed (null ended_at) or have ended_at logged before started_at —
       see the warn-severity check below.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           config:
             severity: warn

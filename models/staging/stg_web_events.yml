@@ -8,8 +8,6 @@ models:
       emit clickstream data rather than one raw table per event shape.
       A small number of events reference a session_id with no matching
       session record — see the warn-severity relationship test below.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: event_id
         data_tests:

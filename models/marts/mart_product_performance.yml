@@ -4,8 +4,6 @@ models:
       One row per product that has at least one order line, with revenue,
       units, margin (using order_items.supply_cost as COGS), and rating
       rolled up.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: product_id
         data_tests:

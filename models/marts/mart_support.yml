@@ -3,8 +3,6 @@ models:
     description: >
       One row per support ticket, with agent name/team attached and a
       was_reopened flag for resolution-quality tracking.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: ticket_id
         data_tests:

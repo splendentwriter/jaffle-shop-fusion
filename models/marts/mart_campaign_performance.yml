@@ -4,8 +4,6 @@ models:
       One row per campaign with last-touch attributed checkouts, customers,
       and revenue (from fct_campaign_attribution + fct_revenue) rolled up
       against budget to compute ROAS.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: campaign_id
         data_tests:

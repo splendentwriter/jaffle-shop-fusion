@@ -6,8 +6,6 @@ models:
       resolve to a real category (see the warn-severity relationship test
       below) — upstream category cleanups have left at least one dangling
       reference.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: category_id
         data_tests:

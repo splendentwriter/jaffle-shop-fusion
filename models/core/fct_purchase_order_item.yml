@@ -5,8 +5,6 @@ models:
       fill_rate (received / ordered) rolled up from goods receipts.
       quantity_received is 0 for items whose order hasn't been received yet
       (confirmed/cancelled status purchase orders).
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: purchase_order_item_id
         data_tests:

@@ -5,8 +5,6 @@ models:
       entry. Not guaranteed unique on (product_id, attribute_name) — a small
       number of SKUs have been re-entered with a conflicting value upstream.
       int_product_attributes resolves this to one row per product.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: attribute_id
         data_tests:

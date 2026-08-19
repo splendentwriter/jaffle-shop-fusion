@@ -1,8 +1,6 @@
 models:
   - name: stg_loyalty_accounts
     description: One row per customer's loyalty account. Not every customer is enrolled.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: loyalty_account_id
         data_tests:

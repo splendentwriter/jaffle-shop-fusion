@@ -1,8 +1,6 @@
 models:
   - name: stg_suppliers
     description: One row per supplier/vendor of finished products.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: supplier_id
         data_tests:

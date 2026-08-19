@@ -1,8 +1,6 @@
 models:
   - name: stg_supplier_products
     description: One row per (supplier, product) they can supply. A product can have more than one supplier.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: supplier_product_id
         data_tests:

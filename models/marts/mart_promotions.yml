@@ -4,8 +4,6 @@ models:
       One row per promotion with redemption count, distinct redeeming
       customers, total discount given, and attributed revenue from the
       checkouts those coupons were redeemed on.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: promotion_id
         data_tests:

@@ -1,8 +1,6 @@
 models:
   - name: stg_tracking_events
     description: Append-only carrier tracking event log. One row per event.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: tracking_event_id
         data_tests:

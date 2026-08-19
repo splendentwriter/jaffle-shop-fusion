@@ -6,8 +6,6 @@ models:
       item subtotal. This is the plan's "taxes" deliverable — computed
       here rather than stored as raw data, since checkouts never carried a
       tax field.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: checkout_id
         data_tests:

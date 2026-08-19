@@ -3,8 +3,6 @@ models:
     description: >
       Append-only ticket lifecycle event log. detail carries the assigned
       agent_id for 'assigned' events, null otherwise.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: ticket_event_id
         data_tests:

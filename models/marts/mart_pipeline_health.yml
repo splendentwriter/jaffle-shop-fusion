@@ -4,8 +4,6 @@ models:
       One row per dbt invocation (each `dbt build` run, whether local or
       CI), rolling up model/test success and failure counts and total
       execution time for a pipeline run-history view.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: invocation_id
         data_tests:

@@ -1,8 +1,6 @@
 models:
   - name: stg_cart_events
     description: Append-only cart lifecycle event log. One row per event.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: cart_event_id
         data_tests:

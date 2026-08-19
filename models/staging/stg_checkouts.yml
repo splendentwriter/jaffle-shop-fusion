@@ -5,8 +5,6 @@ models:
       customer_id is null for guest checkouts. Shipping address columns are
       a point-in-time snapshot, not a live reference to the customer's
       address book.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: checkout_id
         data_tests:

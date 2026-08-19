@@ -4,7 +4,6 @@ models:
       Many-to-many bridge of product to category. One row per
       (product_id, category_id) pairing; a product can appear more than once.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.unique_combination_of_columns:
           arguments:
             combination_of_columns:

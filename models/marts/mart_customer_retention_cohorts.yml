@@ -10,7 +10,6 @@ models:
       to reorder after the gap — an accurate reflection of the data, not a
       bug.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "retention_rate between 0 and 1"

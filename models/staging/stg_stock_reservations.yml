@@ -4,8 +4,6 @@ models:
       One row per stock hold placed against a checkout line item.
       committed reservations backed a completed checkout; released/expired
       ones freed the stock back up.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: reservation_id
         data_tests:

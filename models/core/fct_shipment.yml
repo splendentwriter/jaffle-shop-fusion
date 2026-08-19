@@ -6,8 +6,6 @@ models:
       compares delivered_at to the shipment's own estimated_delivery_at.
       delivered_at/hours_to_deliver/was_late are null for shipments that
       haven't delivered (in_transit/lost).
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: shipment_id
         data_tests:

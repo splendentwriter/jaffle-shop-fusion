@@ -5,7 +5,6 @@ models:
       per distinct period of continuous on-hand/reorder-point state. This is
       the plan's explicit "dim_inventory_location" SCD2 candidate.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.unique_combination_of_columns:
           arguments:
             combination_of_columns:

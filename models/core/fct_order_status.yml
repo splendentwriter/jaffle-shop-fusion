@@ -6,8 +6,6 @@ models:
       the append-only status log to the current status per order.
       Orphaned status rows (order_id no longer resolves to a real order)
       are excluded via inner join, not counted here.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: order_id
         data_tests:

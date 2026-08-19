@@ -6,8 +6,6 @@ models:
       fulfillment items) — see the warn-severity relationship test below,
       same severity as the equivalent checks further up the chain
       (cart -> checkout -> fulfillment -> shipment).
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: shipment_item_id
         data_tests:

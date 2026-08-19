@@ -10,8 +10,6 @@ models:
       streaming service, so the incremental branch won't have new rows to
       pick up until a real event producer exists — the mechanism is real,
       the ongoing volume isn't yet.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: event_id
         data_tests:

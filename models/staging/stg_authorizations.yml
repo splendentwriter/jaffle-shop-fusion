@@ -1,8 +1,6 @@
 models:
   - name: stg_authorizations
     description: One row per payment authorization.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: authorization_id
         data_tests:

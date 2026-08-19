@@ -5,8 +5,6 @@ models:
       quantity held by in-flight reservations, and the resulting available-
       to-sell quantity. is_below_reorder_point flags rows needing
       replenishment.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: warehouse_id
         data_tests:

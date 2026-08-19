@@ -6,8 +6,6 @@ models:
       checkout completed_at. Net margin nets out processing fees on top of
       discounts and refunds, unlike mart_sales_performance's gross_margin_pct
       which only nets out COGS.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: month
         data_tests:

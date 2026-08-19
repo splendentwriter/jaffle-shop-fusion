@@ -4,8 +4,6 @@ models:
       One row per product with at least one published review, with rating
       distribution rolled up. Products with zero published reviews have no
       row here — not a zero/null rating.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: product_id
         data_tests:

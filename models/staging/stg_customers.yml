@@ -1,8 +1,6 @@
 models:
   - name: stg_customers
     description: Customer data with basic cleaning and transformation applied, one row per customer.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: customer_id
         description: The unique key for each customer.

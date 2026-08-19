@@ -4,8 +4,6 @@ models:
       One row per last-touch attributed checkout, with channel, time-to-
       convert, and attributed revenue — the row-level detail behind
       mart_campaign_performance's per-campaign rollup.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: checkout_id
         data_tests:

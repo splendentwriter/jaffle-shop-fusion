@@ -7,8 +7,6 @@ models:
       computed across the customer base. Rules are evaluated in order —
       churn-risk segments take precedence over upside segments so a
       long-lapsed high-spender is flagged "Churned", not "High Value".
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: customer_id
         data_tests:

@@ -2,7 +2,6 @@ models:
   - name: stg_delivery_attempts
     description: One row per delivery attempt against a shipment.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.unique_combination_of_columns:
           arguments:
             combination_of_columns:

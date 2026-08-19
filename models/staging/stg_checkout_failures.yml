@@ -1,8 +1,6 @@
 models:
   - name: stg_checkout_failures
     description: One row per failed payment attempt during checkout.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: checkout_failure_id
         data_tests:

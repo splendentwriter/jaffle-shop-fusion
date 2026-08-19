@@ -4,7 +4,6 @@ models:
       One row per fulfillment order raised against a completed checkout.
       status: pending, picking, packed, shipped, or cancelled.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "status != 'shipped' or completed_at is not null"

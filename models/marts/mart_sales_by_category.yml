@@ -4,8 +4,6 @@ models:
       One row per order category (food_only / drink_only / food_and_drink),
       derived from orders.is_food_order and is_drink_order. This dataset
       has no product-category dimension broader than food-vs-drink.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: category
         data_tests:

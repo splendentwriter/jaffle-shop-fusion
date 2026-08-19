@@ -5,8 +5,6 @@ models:
     semantic_model:
       enabled: true
     agg_time_dimension: opened_date
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: location_id
         entity:

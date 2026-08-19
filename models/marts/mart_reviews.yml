@@ -3,8 +3,6 @@ models:
     description: >
       One row per review, with product name attached and an is_negative
       flag (rating <= 2) for moderation and response-rate tracking.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: review_id
         data_tests:

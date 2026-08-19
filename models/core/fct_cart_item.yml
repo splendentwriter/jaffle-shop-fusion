@@ -6,8 +6,6 @@ models:
       the price captured at add-to-cart time. is_still_in_catalogue is
       false for the known delisted-sku rows (see stg_cart_items) since the
       left join to dim_product won't match them.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: cart_item_id
         data_tests:

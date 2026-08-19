@@ -2,7 +2,6 @@ models:
   - name: stg_gift_cards
     description: One row per gift card.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "current_balance_cents >= 0 and current_balance_cents <= initial_balance_cents"

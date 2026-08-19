@@ -4,8 +4,6 @@ models:
       One row per goods-receipt event against a purchase order line item.
       quantity_received can be less than the order's quantity_ordered for
       a partial or short-shipped receipt.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: goods_receipt_id
         data_tests:

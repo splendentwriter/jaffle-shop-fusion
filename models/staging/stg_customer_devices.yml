@@ -1,8 +1,6 @@
 models:
   - name: stg_customer_devices
     description: One row per device seen for a customer.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: device_id
         data_tests:

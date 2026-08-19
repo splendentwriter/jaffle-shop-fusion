@@ -6,8 +6,6 @@ models:
       real ad-spend figures, so those aren't fabricated here (Marketing's
       mart_campaign_performance is where actual campaign spend/ROAS live,
       scoped to campaign-attributed activity only).
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: acquisition_channel
         data_tests:

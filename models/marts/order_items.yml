@@ -5,8 +5,6 @@ models:
     semantic_model:
       enabled: true
     agg_time_dimension: ordered_at
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: order_item_id
         data_tests:

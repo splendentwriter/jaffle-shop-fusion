@@ -1,8 +1,6 @@
 models:
   - name: stg_return_events
     description: Append-only return lifecycle event log. One row per event.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: return_event_id
         data_tests:

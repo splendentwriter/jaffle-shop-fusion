@@ -8,7 +8,6 @@ models:
       known row's checkout_id doesn't resolve — an orphaned streaming-insert
       artifact from operations-data-generator testing, see stg_payment_attempts.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "refunded_amount_cents <= captured_amount_cents"

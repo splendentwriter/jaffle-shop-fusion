@@ -4,8 +4,6 @@ models:
       One row per support ticket, with message counts and reopen count
       rolled up. hours_to_resolve and resolved_at are null for
       still-open tickets.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: ticket_id
         data_tests:

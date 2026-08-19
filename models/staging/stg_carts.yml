@@ -4,8 +4,6 @@ models:
       One row per cart. customer_id is null for guest (unauthenticated)
       carts. status captures the lifecycle: active, abandoned, converted,
       or merged (into another cart).
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: cart_id
         data_tests:

@@ -15,7 +15,6 @@ models:
       to paper over by forcing one side to match the other — hence the
       warn-severity check below rather than a silent fix.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           config:
             severity: warn

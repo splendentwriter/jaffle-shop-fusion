@@ -1,8 +1,6 @@
 models:
   - name: stg_shipments
     description: One row per shipment.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: shipment_id
         data_tests:

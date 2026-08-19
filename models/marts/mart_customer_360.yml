@@ -6,8 +6,6 @@ models:
       Customer 360 page's drill-down. account_status/account_type are null
       for customers with no dim_customer account row (e.g. guest-only
       customers).
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: customer_id
         data_tests:

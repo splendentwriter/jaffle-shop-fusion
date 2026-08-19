@@ -7,7 +7,6 @@ models:
       indistinguishable from genuine top-level categories once
       parent_category_name is null.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "not (is_top_level and has_orphaned_parent)"

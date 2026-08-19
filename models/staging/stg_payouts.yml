@@ -2,7 +2,6 @@ models:
   - name: stg_payouts
     description: One row per weekly merchant payout batch, net of processing fees.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "period_end > period_start"

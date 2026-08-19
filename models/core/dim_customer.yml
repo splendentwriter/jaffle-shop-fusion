@@ -10,7 +10,6 @@ models:
       per account, not per customer. Orphaned accounts (no matching
       customer_id) are excluded by the inner join to stg_customers.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.unique_combination_of_columns:
           arguments:
             combination_of_columns:

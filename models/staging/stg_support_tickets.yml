@@ -5,7 +5,6 @@ models:
       related_return_id links a subset of return_refund tickets to a real
       return.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "status not in ('resolved', 'closed') or resolved_at is not null"

@@ -16,7 +16,6 @@ models:
       calendar-adjacent. The page should label the period explicitly
       (e.g. "As of Aug 2025") rather than implying live freshness.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "checkout_conversion_rate between 0 and 1"

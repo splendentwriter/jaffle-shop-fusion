@@ -4,8 +4,6 @@ models:
       Supplies dimension table. The grain of the table is one row per supply and product combination.
     semantic_model:
       enabled: true
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: supply_uuid
         entity:

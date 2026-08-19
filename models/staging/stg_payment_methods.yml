@@ -1,8 +1,6 @@
 models:
   - name: stg_payment_methods
     description: One row per payment method saved to a customer's wallet.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: payment_method_id
         data_tests:

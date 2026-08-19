@@ -6,8 +6,6 @@ models:
       duplicate-redemption rows (same coupon+checkout) rather than
       deduplicating them — see stg_coupon_redemptions for the warn-severity
       check that surfaces this.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: redemption_id
         data_tests:

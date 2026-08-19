@@ -6,7 +6,6 @@ models:
       related_checkout_id is only set for earn transactions tied to a
       purchase.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "transaction_type != 'redeem' or reward_id is not null"

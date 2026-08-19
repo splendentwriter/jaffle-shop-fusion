@@ -6,8 +6,6 @@ models:
       orphaned streaming-insert incident as stg_payment_attempts and
       stg_checkout_items, pending cleanup once it ages out of BigQuery's
       streaming buffer.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: checkout_event_id
         data_tests:

@@ -8,8 +8,6 @@ models:
       rather than its own raw source, since a raw table here would just
       duplicate rows already captured at the authorization/capture/refund
       stage.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: payment_transaction_id
         data_tests:

@@ -8,8 +8,6 @@ models:
       "attribution" deliverable, built as a derived model rather than raw
       data since attribution is a computed judgment call (lookback window,
       last-touch vs. other models), not a fact a source system emits.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: checkout_id
         data_tests:

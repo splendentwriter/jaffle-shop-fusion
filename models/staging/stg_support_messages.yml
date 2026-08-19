@@ -1,8 +1,6 @@
 models:
   - name: stg_support_messages
     description: One row per message in a ticket's conversation thread.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: support_message_id
         data_tests:

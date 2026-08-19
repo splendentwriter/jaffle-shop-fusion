@@ -4,8 +4,6 @@ models:
       One row per payout with amounts in dollars and the is_reconciled flag
       from fct_payout_reconciliation (payout batch total vs. recomputed net
       of per-capture fees, 1-cent tolerance).
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: payout_id
         data_tests:

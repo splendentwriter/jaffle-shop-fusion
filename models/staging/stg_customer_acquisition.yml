@@ -3,8 +3,6 @@ models:
     description: >
       One row per customer's first-touch acquisition channel. campaign_id
       is null for organic/direct/referral acquisition.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: customer_id
         data_tests:

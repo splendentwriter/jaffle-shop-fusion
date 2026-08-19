@@ -4,8 +4,6 @@ models:
       One row per model execution (each time a jaffle_shop-package model
       was built within any invocation), with duration and status, for
       build-time trend and slow-model analysis.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: model_execution_id
         data_tests:

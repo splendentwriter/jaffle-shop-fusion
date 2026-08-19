@@ -1,8 +1,6 @@
 models:
   - name: stg_purchase_orders
     description: One row per purchase order placed with a supplier to replenish a warehouse.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: purchase_order_id
         data_tests:

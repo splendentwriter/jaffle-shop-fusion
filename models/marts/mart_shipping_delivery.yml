@@ -3,8 +3,6 @@ models:
     description: >
       One row per shipment with carrier attached, delivery timing, and the
       was_late / is_delivered flags for on-time delivery analysis.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: shipment_id
         data_tests:

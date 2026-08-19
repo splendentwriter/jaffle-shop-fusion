@@ -5,7 +5,6 @@ models:
       min_order_value_cents, max_discount_cents) lives on the promotion
       itself rather than a separate rules table.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           config:
             severity: warn

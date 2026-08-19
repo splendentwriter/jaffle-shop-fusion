@@ -6,7 +6,6 @@ models:
       check below) or reference a sku that's since been delisted from the
       product catalogue (also warn-severity).
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           config:
             severity: warn

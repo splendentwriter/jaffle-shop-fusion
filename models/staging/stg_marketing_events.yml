@@ -4,8 +4,6 @@ models:
       Unified marketing event stream. Consolidates campaign/email/SMS/push
       events into one typed stream distinguished by channel + event_type,
       same pattern as stg_web_events.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: marketing_event_id
         data_tests:

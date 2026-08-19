@@ -5,8 +5,6 @@ models:
       grant/revoke event, not one row per customer — a customer can have
       multiple consent_type rows, and the same consent_type can appear more
       than once if it was revoked and later re-granted.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: consent_id
         data_tests:

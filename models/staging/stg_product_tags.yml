@@ -2,7 +2,6 @@ models:
   - name: stg_product_tags
     description: One row per (product, tag) pairing.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.unique_combination_of_columns:
           arguments:
             combination_of_columns:

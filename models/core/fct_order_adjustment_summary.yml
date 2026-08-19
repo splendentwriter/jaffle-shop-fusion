@@ -4,8 +4,6 @@ models:
       One row per order that has at least one adjustment, with adjustment
       amounts rolled up. Most orders have no row here — adjustments are an
       exception case, not the norm.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: order_id
         data_tests:

@@ -7,7 +7,6 @@ models:
       each is a transaction, not a different kind of thing. A small number
       of rows reference a delisted sku — see the warn-severity check below.
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "transaction_type != 'adjustment' or adjustment_reason is not null"

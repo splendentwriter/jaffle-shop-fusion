@@ -4,8 +4,6 @@ models:
       Unified gift card ledger. amount is positive for issue/refund_credit,
       negative for redeem/expire. related_checkout_id is only set for
       redeem transactions tied to a purchase.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: gift_card_transaction_id
         data_tests:

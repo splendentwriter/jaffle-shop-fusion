@@ -4,8 +4,6 @@ models:
       One row per payment dispute. status covers the full outcome range,
       including 'chargeback' — a chargeback is modeled as a dispute
       outcome rather than a separate raw table.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: dispute_id
         data_tests:

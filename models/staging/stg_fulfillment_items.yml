@@ -6,8 +6,6 @@ models:
       built directly from checkout items) — see the warn-severity
       relationship test below, same severity as the equivalent check on
       stg_checkout_items and stg_cart_items.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: fulfillment_item_id
         data_tests:

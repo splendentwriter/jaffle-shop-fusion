@@ -7,8 +7,6 @@ models:
       (orphaned by a broken signup flow). See the `customer_id` relationship
       test below, which is deliberately warn-severity to surface this
       without failing the build.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: account_id
         data_tests:

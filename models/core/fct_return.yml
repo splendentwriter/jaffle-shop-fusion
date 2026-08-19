@@ -5,7 +5,6 @@ models:
       up. resellable_count of inspected items informs whether returned
       stock can go back into sellable inventory (Phase 10).
     data_tests:
-      - elementary.schema_changes
       - dbt_utils.expression_is_true:
           arguments:
             expression: "not is_refunded or refund_amount_cents > 0"

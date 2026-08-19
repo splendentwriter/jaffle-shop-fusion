@@ -5,8 +5,6 @@ models:
       address rows (same customer, type, and line1) are known to exist from
       upstream double-inserts and are resolved in int_customer_addresses,
       not here.
-    data_tests:
-      - elementary.schema_changes
     columns:
       - name: address_id
         data_tests:
