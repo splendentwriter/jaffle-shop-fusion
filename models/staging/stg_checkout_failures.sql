@@ -3,6 +3,7 @@ with
 source as (
 
     select * from {{ source('ecom', 'raw_checkout_failures') }}
+    {{ limit_in_dev() }}
 
 ),
 

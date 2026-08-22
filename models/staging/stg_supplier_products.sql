@@ -3,6 +3,7 @@ with
 source as (
 
     select * from {{ source('ecom', 'raw_supplier_products') }}
+    {{ limit_in_dev() }}
 
 ),
 

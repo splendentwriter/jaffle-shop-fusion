@@ -18,6 +18,10 @@ events as (
     where occurred_at > (select max(occurred_at) from {{ this }})
     {% endif %}
 
+    -- guards against duplicate event_id rows being merged in as new inserts
+    -- if this batch is ever processed more than once (e.g. overlapping runs)
+    qualify row_number() over (partition by event_id order by occurred_at desc) = 1
+
 ),
 
 sessions as (

@@ -3,6 +3,7 @@ with
 source as (
 
     select * from {{ source('ecom', 'raw_support_messages') }}
+    {{ limit_in_dev() }}
 
 ),
 

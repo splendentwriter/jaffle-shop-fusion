@@ -3,6 +3,7 @@ with
 source as (
 
     select * from {{ source('ecom', 'raw_return_events') }}
+    {{ limit_in_dev() }}
 
 ),
 

@@ -2,7 +2,8 @@
 
     {% set default_schema = target.schema %}
 
-    {# fixed layer datasets: raw seeds, lightly-cleaned staging, business-ready analytics, elementary tracking #}
+    {# fixed layer datasets: raw seeds, lightly-cleaned staging, business-ready analytics, elementary tracking.
+       Only applied for the prod target, so CI/dev builds never write into the production datasets. #}
     {% set layer_datasets = {
         "raw": "jaffle_shop_raw",
         "ingestion": "jaffle_shop_ingestion",
@@ -10,7 +11,7 @@
         "elementary": "jaffle_shop_elementary",
     } %}
 
-    {% if custom_schema_name in layer_datasets %}
+    {% if target.name == 'prod' and custom_schema_name in layer_datasets %}
         {{ layer_datasets[custom_schema_name] }}
 
     {# non-specified schemas go to the default target schema #}

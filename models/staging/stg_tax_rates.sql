@@ -3,6 +3,7 @@ with
 source as (
 
     select * from {{ source('ecom', 'raw_tax_rates') }}
+    {{ limit_in_dev() }}
 
 ),
 

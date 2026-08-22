@@ -3,6 +3,7 @@ with
 source as (
 
     select * from {{ source('ecom', 'raw_coupon_redemptions') }}
+    {{ limit_in_dev() }}
 
 ),
 

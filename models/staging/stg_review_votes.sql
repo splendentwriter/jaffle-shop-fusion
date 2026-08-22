@@ -3,6 +3,7 @@ with
 source as (
 
     select * from {{ source('ecom', 'raw_review_votes') }}
+    {{ limit_in_dev() }}
 
 ),
 

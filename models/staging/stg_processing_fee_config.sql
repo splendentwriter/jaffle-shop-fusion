@@ -3,6 +3,7 @@ with
 source as (
 
     select * from {{ source('ecom', 'raw_processing_fee_config') }}
+    {{ limit_in_dev() }}
 
 ),
 
