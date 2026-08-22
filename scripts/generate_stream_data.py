@@ -59,13 +59,21 @@ SUPPLY_WORDS = [
 ]
 
 
-def bq_insert(client, project, dataset, table, rows):
+def bq_insert(client, project, dataset, table, rows, max_attempts=3):
+    """Streams rows into a table, retrying transient failures. Returns True
+    once the rows land (or there were none to insert), False if every
+    attempt failed."""
     if not rows:
-        return
+        return True
     table_ref = f"{project}.{dataset}.{table}"
-    errors = client.insert_rows_json(table_ref, rows)
-    if errors:
-        print(f"[error] insert into {table} failed: {errors}")
+    for attempt in range(1, max_attempts + 1):
+        errors = client.insert_rows_json(table_ref, rows)
+        if not errors:
+            return True
+        print(f"[error] insert into {table} failed (attempt {attempt}/{max_attempts}): {errors}")
+        if attempt < max_attempts:
+            time.sleep(2 * attempt)
+    return False
 
 
 def next_sequence(existing_ids, prefix):
@@ -202,10 +210,25 @@ def generate_forever(project, dataset, interval):
             batch["raw_orders"].append(order)
             batch["raw_items"].extend(order_items)
 
-        for table, rows in batch.items():
-            bq_insert(client, project, dataset, table, rows)
+        # Insert order_items before orders, and only insert orders if their
+        # items landed: two separate streaming-insert calls can't be made
+        # atomic, but ordering them this way means a failed items insert
+        # just drops orders from this cycle instead of leaving them
+        # permanently orphaned with no items.
+        for table in ("raw_customers", "raw_stores", "raw_products", "raw_supplies"):
+            bq_insert(client, project, dataset, table, batch[table])
 
-        counts = ", ".join(f"+{len(rows)} {table}" for table, rows in batch.items() if rows)
+        items_ok = bq_insert(client, project, dataset, "raw_items", batch["raw_items"])
+        if items_ok:
+            bq_insert(client, project, dataset, "raw_orders", batch["raw_orders"])
+        elif batch["raw_orders"]:
+            print(f"[error] skipping {len(batch['raw_orders'])} orders this cycle: order_items insert failed")
+
+        counts = ", ".join(
+            f"+{len(rows)} {table}"
+            for table, rows in batch.items()
+            if rows and (table != "raw_orders" or items_ok)
+        )
         print(f"[{now_iso()}] {counts}")
 
         time.sleep(interval)
