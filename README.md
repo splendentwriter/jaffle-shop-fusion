@@ -1,293 +1,297 @@
 # 🥪 The Jaffle Shop 🦘
 
-This is a sandbox project for exploring the basic functionality and latest features of dbt. It's based on a fictional restaurant called the Jaffle Shop that serves [jaffles](https://en.wikipedia.org/wiki/Pie_iron).
-
-This README will guide you through setting up the project on dbt Cloud. Working through this example should give you a good sense of how dbt Cloud works and what's involved with setting up your own project. We'll also _optionally_ cover some intermediate topics like setting up Environments and Jobs in dbt Cloud, working with a larger dataset, and setting up pre-commit hooks if you'd like.
+A fictional e-commerce business — the Jaffle Shop, purveyor of [jaffles](https://en.wikipedia.org/wiki/Pie_iron) — built out from dbt Labs' Jaffle Shop sandbox into a full analytics platform: 20+ modeled business domains on BigQuery, two live data generators, an automated dev→main CI/CD pipeline, and a 25-page Streamlit BI app on top.
 
 > [!NOTE]
-> **The `main` branch is compatible with [dbt Fusion](https://docs.getdbt.com/docs/fusion/about-fusion).** and dbt Core v1.12 and higher. It uses the latest Semantic Layer YAML spec, with semantic models embedded in model YAML files, `type: simple` metrics replacing measures, and `type_params` promoted to top-level keys. If you're looking for the legacy project using the legacy YAML semantic layer spec, check out the [`jaffle-shop-old`](../../tree/jaffle-shop-old) branch.
+> **This project runs on [dbt Fusion](https://docs.getdbt.com/docs/fusion/about-fusion)** and dbt Core v1.12+, using the current Semantic Layer YAML spec (semantic models embedded in model YAML, `type: simple` metrics, top-level `type_params`).
 
-> [!NOTE]
-> This project is geared towards folks learning dbt Cloud with a cloud warehouse. If you're brand new to dbt, we recommend starting with the [dbt Learn](https://learn.getdbt.com/) platform. It's a free, interactive way to learn dbt, and it's a great way to get started if you're new to the tool. If you just want to try dbt locally as quickly as possible without setting up a data warehouse check out [`jaffle_shop_duckdb`](https://github.com/dbt-labs/jaffle_shop_duckdb).
-
-Ready to go? Grab some water and a nice snack, and let's dig in!
-
-<div>
- <a href="https://www.loom.com/share/a90b383eea594a0ea41e91af394b2811?t=0&sid=da832f06-c08e-43e7-acae-a2a3d8d191bd">
-   <p>Welcome to the Jaffle Shop - Watch Intro Video</p>
- </a>
- <a href="https://www.loom.com/share/a90b383eea594a0ea41e91af394b2811?t=0&sid=da832f06-c08e-43e7-acae-a2a3d8d191bd">
-   <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a90b383eea594a0ea41e91af394b2811-with-play.gif">
- </a>
-</div>
+> [!TIP]
+> New to dbt itself, rather than to this project? Start with [dbt Learn](https://learn.getdbt.com/), or try [`jaffle_shop_duckdb`](https://github.com/dbt-labs/jaffle_shop_duckdb) for a zero-warehouse local walkthrough. This README assumes you already know the basics and want to understand how *this* project is put together.
 
 ## Table of contents
 
-1. [Prerequisites](#-prerequisites)
-2. [Create new repo from template](#-create-new-repo-from-template)
-3. [Platform setup](#%EF%B8%8F-platform-setup)
-   1. [dbt Cloud IDE](#%EF%B8%8F-dbt-cloud-ide-most-beginner-friendly)
-   2. [dbt Cloud CLI](#-dbt-cloud-cli-if-you-prefer-to-work-locally)
-   3. [Load the data](#-load-the-data)
-4. [Project setup](#%EF%B8%8F-project-setup)
-5. [Going further](#-going-further)
-   1. [Setting up dbt Cloud Environments and Jobs](#%EF%B8%8F-setting-up-dbt-cloud-environments-and-jobs)
-      1. [Creating an Environment](#-creating-an-environment)
-      2. [Creating a Job](#%EF%B8%8F-creating-a-job)
-      3. [Explore your DAG](#%EF%B8%8F-explore-your-dag)
-   2. [Working with a larger dataset](#-working-with-a-larger-dataset)
-      1. [Load the data from S3](#-load-the-data-from-s3)
-      2. [Generate via `jafgen` and seed the data with dbt Core](#-generate-via-jafgen-and-seed-the-data-with-dbt-core)
-   3. [Pre-commit and SQLFluff](#-pre-commit-and-sqlfluff)
+1. [Implementation architecture](#implementation-architecture)
+   1. [System overview](#system-overview)
+   2. [Data layering (medallion architecture)](#data-layering-medallion-architecture)
+   3. [Business domains](#business-domains)
+   4. [Live data generation](#live-data-generation)
+   5. [CI/CD pipeline](#cicd-pipeline)
+   6. [Environment isolation](#environment-isolation)
+   7. [Testing and data quality](#testing-and-data-quality)
+   8. [Analytics application (Streamlit)](#analytics-application-streamlit)
+   9. [Repository structure](#repository-structure)
+2. [Local development](#local-development)
+   1. [Prerequisites](#prerequisites)
+   2. [Clone and install](#clone-and-install)
+   3. [Configure your dbt profile](#configure-your-dbt-profile)
+   4. [Load data](#load-data)
+   5. [Build and test](#build-and-test)
+   6. [Run the Streamlit app](#run-the-streamlit-app)
+3. [Testing and code quality tooling](#testing-and-code-quality-tooling)
+4. [Extending the project](#extending-the-project)
 
-## 💾 Prerequisites
+## Implementation architecture
 
-- A dbt Cloud account
-- A data warehouse (BigQuery, Snowflake, Redshift, Databricks, or Postgres) with adequate permissions to create a fresh database for this project and run dbt in it
-- _Optional_ Python 3.9 or higher (for generating synthetic data with `jafgen`)
+### System overview
 
-## 📓 Create new repo from template
+Two always-running data generators stream directly into BigQuery, dbt transforms that raw data through four modeled layers, and a Streamlit app reads the resulting marts. Data quality results from every `dbt build`/`dbt test` land in `jaffle_shop_elementary` and surface on the Data Platform pages.
 
-1. <details>
-   <summary>Click the green "Use this template" button at the top of the page to create a new repository from this template.</summary>
+```mermaid
+flowchart LR
+    subgraph GEN["Data generation"]
+        SVC["generate_stream_data.py<br/>Cloud Run service · always-on"]
+        JOB["generate_operations_data.py<br/>Cloud Run Job · hourly via Cloud Scheduler"]
+        SEEDCSV["seeds/jaffle-data CSVs<br/>one-time dbt seed"]
+    end
 
-   ![Click 'Use this template'](/.github/static/use-template.gif)
-   </details>
+    SVC -->|streaming insert| RAW[("jaffle_shop_raw")]
+    JOB -->|streaming insert| RAW
+    SEEDCSV -->|dbt seed| RAW
 
-2. Follow the steps to create a new repository. You can choose to only copy the `main` branch for simplicity, or take advantage of the Write-Audit-Publish (WAP) flow we use to maintain the project and copy all branches (which will include `main` and `staging` along with any active feature branches). Either option is fine!
+    RAW --> STG["staging<br/>views · jaffle_shop_ingestion<br/>81 models"]
+    STG --> INT["intermediate<br/>views · jaffle_shop_analytics<br/>2 models"]
+    STG --> CORE
+    INT --> CORE["core: dim_* / fct_*<br/>tables · jaffle_shop_analytics<br/>32 models"]
+    CORE --> MARTS["marts<br/>tables · jaffle_shop_analytics<br/>31 models"]
+    MARTS --> APP["Streamlit Analytics Command Center<br/>25 pages · 9 business sections"]
 
-> [!TIP]
-> In a setup that follows a WAP flow, you have a `main` branch that serves production data (like downstream dashboards) and is tied to a Production Environment in dbt Cloud, and a `staging` branch that serves a clone of that data and is tied to a Staging Environment in dbt Cloud. You then branch off of `staging` to add new features or fix bugs, and merge back into `staging` when you're done. When you're ready to deploy to production, you merge `staging` into `main`. Staging is meant to be more-or-less a mirror of production, but safe to test breaking changes, so you can verify changes in a production-like environment before deploying them fully. You _write_ to `staging`, _audit_ in `staging`, and _publish_ to `main`.
-
-## 🏗️ Platform setup
-
-1. Create a logical database in your data warehouse for the Jaffle Shop project. We recommend using the name `jaffle_shop` for consistency with the project. This looks different on different platforms (for instance on BigQuery this constitutes creating a new _project_, on Snowflake this is achieved via `create database jaffle_shop;`, and if you're running Postgres locally you can probably skip this). If you're not sure how to do this, we recommend checking out the [Quickstart Guide for your data platform in the dbt Docs](https://docs.getdbt.com/guides).
-
-2. Set up a dbt Cloud account (if you don't have one already, if you do, just create a new project) and follow Step 4 in the [Quickstart Guide for your data platform](https://docs.getdbt.com/guides), to connect your platform to dbt Cloud. Make sure the user you configure for your connections has [adequate database permissions to run dbt](https://docs.getdbt.com/reference/database-permissions/about-database-permissions) in the `jaffle_shop` database.
-
-3. Choose the repo you created in Step 1 of the **Create new repo from template** section as the repository for your dbt Project's codebase.
-
-<img width="500" alt="Repo selection in dbt Cloud" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/daac5bbc-097c-4d57-9628-0c85d348e4a4">
-
-### 🏁 Checkpoint
-
-The following should now be done:
-
-- dbt Cloud connected to your warehouse
-- Your copy of this repo set up as the codebase
-- dbt Cloud and the codebase pointed at a fresh database or project in your warehouse to work in
-
-You're now ready to start developing with dbt Cloud! Choose a path below (either the [dbt Cloud IDE](<#dbt-cloud-ide-(most-beginner-friendly)>) or the [Cloud CLI](<#dbt-cloud-cli-(if-you-prefer-to-work-locally)>) to get started.
-
-### 😶‍🌫️ dbt Cloud IDE (most beginner friendly)
-
-1. Click `Develop` in the dbt Cloud nav bar. You should be prompted to run a `dbt deps`, which you should do. This will install the dbt packages configured in the `packages.yml` file.
-
-### 💽 dbt Cloud CLI (if you prefer to work locally)
-
-1. Run `git clone [new repo git link]` (or `gh repo clone [repo owner]/[new repo name]` if you prefer GitHub's excellent CLI) to clone your new repo from the first step of the **Create new repo from template** section to your local machine.
-
-2. [Follow the steps on this page](https://cloud.getdbt.com/cloud-cli) to install and set up a dbt Cloud connection with the dbt Cloud CLI.
-
-### 📊 Load the data
-
-There are a few ways to load the data for the project:
-
-- **Using the sample data in the repo**. Seeds are static data files in CSV format that dbt will upload, usually for reference models, like US zip codes mapped to country regions for example, but in this case the feature is hacked to do some data ingestion. This is not what seeds are meant to be used for (dbt is not a data loading tool), but it's useful for this project to give you some data to get going with quickly. Run the command below and when it's done either delete the `seeds/jaffle-data` folder, remove `jaffle-data` config from the `dbt_project.yml`, or ideally, both.
-
-```bash
-dbt seed --full-refresh --vars '{"load_source_data": true}'
+    CORE -.tests.-> ELEM[("jaffle_shop_elementary<br/>test results")]
+    MARTS -.tests.-> ELEM
+    ELEM -.-> DQ["Data Quality page"]
 ```
 
-- **Load the data via S3**. If you'd prefer a larger dataset (6 years instead of 1), and are working via the dbt Cloud IDE and your platform's web interface, you can also copy the data from a public S3 bucket to your warehouse into a schema called `raw` in your `jaffle_shop` database. [This is discussed here](#-load-the-data-from-s3).
+### Data layering (medallion architecture)
 
-- **Generate a larger dataset on the command line**. If you're working with the dbt Cloud CLI and comfortable with command line basics, you can generate as many years of data as you'd like (up to 10) to load into your warehouse. [This is discussed here](#-generate-via-jafgen-and-seed-the-data-with-dbt-core).
+Established in `CONVENTIONS.md` and enforced by convention across every domain build-out:
 
-## 👷🏻‍♀️ Project setup
+| Layer | Folder | Schema (BigQuery dataset) | Materialization | Purpose |
+|---|---|---|---|---|
+| raw | `seeds/`, streamed | `jaffle_shop_raw` | table | Untouched source data — seeded once or streamed continuously by `scripts/generate_stream_data.py` / `scripts/generate_operations_data.py` |
+| staging | `models/staging/` | `jaffle_shop_ingestion` | view | 1:1 with a source table. Renaming, casting, light cleaning. No joins. |
+| intermediate | `models/intermediate/` | `jaffle_shop_analytics` | view | Joins, dedup, reusable business logic not yet a final entity. Not exposed to BI. |
+| core | `models/core/` | `jaffle_shop_analytics` | table | Reusable dimensions (`dim_*`) and facts (`fct_*`) with a documented grain — the building blocks marts are assembled from. |
+| marts | `models/marts/` | `jaffle_shop_analytics` | table | Business-facing, denormalized tables the Streamlit app queries directly. |
 
-Once your development platform of choice and dependencies are set up, use the following steps to get the project ready for whatever you'd like to do with it.
+`intermediate` is deliberately thin (2 models) — it's only used when a domain's joins genuinely aren't a final entity yet; most domains go straight from staging to core.
 
-1. Run a `dbt build` to build the project.
+### Business domains
 
-### 🏁 Checkpoint
+The warehouse spans 20+ business domains, each shipped in its own build-out phase as seeds → staging → core → marts → Streamlit page(s) in one commit (see `git log` for the full phase-by-phase history). Grouped by the Streamlit section that surfaces them:
 
-The following should now be done:
+| Section | Business domains covered | Key marts |
+|---|---|---|
+| 🏠 Executive | Cross-domain KPI rollup + attention-needed alerting | `mart_ecommerce_kpis`, `mart_sales_performance` |
+| 🛒 Commerce | Orders, cart, checkout, promotions, session funnel | `orders`, `order_items`, `mart_sales_performance`, `mart_sales_by_category`, `mart_sales_by_location`, `mart_session_funnel`, `mart_promotions` |
+| 👥 Customers | Customer profile, acquisition, retention/cohorts, segmentation | `customers`, `mart_customer_360`, `mart_customer_acquisition`, `mart_customer_retention_cohorts`, `mart_customer_segments` |
+| 🏷️ Products | Catalog, brands/categories, ratings | `products`, `mart_product_performance`, `mart_catalogue_health` |
+| 📦 Operations | Inventory, procurement, fulfillment, shipping & delivery | `supplies`, `locations`, `mart_inventory_health`, `mart_fulfillment_performance`, `mart_shipping_delivery` |
+| 💳 Finance | Payments, gift cards, returns, tax/fees, payout reconciliation | `mart_payments`, `mart_revenue_profitability`, `mart_refunds_returns`, `mart_reconciliation` |
+| 📣 Marketing | Campaigns, channels, attribution | `mart_campaign_performance`, `mart_attribution` |
+| ❤️ Customer Experience | Reviews, moderation, support tickets | `mart_reviews`, `mart_support` |
+| ⚙️ Data Platform | dbt + Elementary run/test observability | `mart_data_quality`, `mart_pipeline_health`, `mart_model_performance` |
 
-- Synthetic data loaded into your warehouse
-- Development environment set up and ready to go
-- The project built and tested
+Every core/mart primary key carries `unique` + `not_null` tests and every foreign key a `relationships` test to its parent (see [Testing and data quality](#testing-and-data-quality)).
 
-You're free to explore the Jaffle Shop from here, or if you want to learn more about [setting up Environment and Jobs](#%EF%B8%8F-setting-up-dbt-cloud-environments-and-jobs), [generating a larger dataset](#-working-with-a-larger-dataset), or [setting up pre-commit hooks](#-pre-commit-and-sqlfluff) to standardize formatting and linting workflows, carry on!
+### Live data generation
 
-## 🌅 Going further
+`jaffle_shop_raw` is continuously fed by two independent Python generators, both running on Cloud Run against BigQuery via `google-cloud-bigquery` streaming inserts:
 
-> [!NOTE]
-> 🐉 Here be dragons! The following sections are for folks who are comfortable with the basics and want to explore more advanced topics. If you're just getting started, it's okay to skip these for now and come back later.
+| Generator | Runs as | Scope | Notes |
+|---|---|---|---|
+| `scripts/generate_stream_data.py` | Cloud Run **service**, always-on (background thread + `$PORT` health check) | The 6 original reference tables: customers, orders, order_items, products, stores, supplies | Simulates a live storefront feed at a configurable `--interval` |
+| `scripts/generate_operations_data.py` | Cloud Run **Job**, triggered hourly by Cloud Scheduler | Full purchase funnel: sessions → carts → checkouts → payments → fulfillment → shipments | Each run is self-contained (a cart opened this run either converts or abandons within the same run); posts a Slack notification on completion |
 
-### ☁️ Setting up dbt Cloud Environments and Jobs
+Because of this, there's a real ~1 year gap in `orders` history between the original seed data (ending August 2025) and the streaming service's activity (starting at "now"). The Executive Command Center labels this explicitly rather than hiding it — see `streamlit/README.md`.
 
-#### 🌍 Creating an Environment
+### CI/CD pipeline
 
-dbt Cloud has a powerful abstraction called an Environment. An Environment in dbt Cloud is a _set of configurations_ that dbt uses when it runs your code. It includes things like what version of dbt to use, what schema to build into, credentials to use, and more. You can set up multiple environments in dbt Cloud, and each environment can have its own set of configurations. This is very useful for _running Jobs_. A Job is a set of dbt commands which run in an Environment. Understanding these two concepts is key for getting those most out of dbt Cloud, especially building a robust deployment workflow. Now that we're able to develop in our project, this section will walk you through setting up an Environment and a Job to deploy our project to production.
+Pushing to `dev` is the only way changes reach production. A GitHub Actions workflow (`.github/workflows/dev-build.yml`) builds against a disposable `ci` target and only promotes to `main` if that build passes — `main` is never built against directly, so a red build can never land in production.
 
-1. Go to the Deploy tab in the dbt Cloud nav bar and click `Environments`.
+```mermaid
+flowchart TD
+    A["git push origin dev"] --> B["GitHub Actions: dev-build.yml"]
+    B --> C["Auth via Workload Identity Federation<br/>no long-lived service-account keys"]
+    C --> D["dbt deps + dbt build<br/>target = ci"]
+    D -->|pass| E["git push dev -> main<br/>fast-forward promotion"]
+    D -->|fail| X["Workflow fails · main untouched"]
+    E --> F["Cloud Build: cloudbuild.yaml<br/>docker build jaffle-shop-fusion"]
+    F --> G["Artifact Registry image"]
+    G --> H["Cloud Run Job: runner (Go)<br/>pipeline.sh: deps -> snapshot -> build -> test<br/>target = prod, 3 retries per step"]
+    H --> I[("prod BigQuery datasets")]
+    H --> J["Slack webhook<br/>success / failure per run"]
+```
 
-2. On the Environment page, click `+ Create Environment`.
+The Go `runner` (`runner/main.go`) wraps each `pipeline.sh` step with up to 3 retries and linear backoff, so a transient BigQuery/network blip doesn't fail an entire scheduled production run, and reports the final outcome to Slack either way.
 
-   <img width="500" alt="create_environment" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/2fd8039a-8fde-4d7d-84c3-0a30d56fd61f">
+### Environment isolation
 
-3. Name your Environment `Prod` and set it as a `Production` Environment.
+Two macros keep CI and local `dev` runs from ever touching production data or schemas, so a bad `dbt build` on a feature branch can't corrupt `prod`:
 
-   <img width="391" alt="prod_env" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/845d4a31-5a39-4550-944a-ca5bb7b90e55">
+```mermaid
+flowchart TD
+    T{"target.name"} -->|prod| P["generate_schema_name routes to real datasets:<br/>jaffle_shop_raw / _ingestion / _analytics / _elementary<br/>full source data, no row cap"]
+    T -->|"anything else (ci, dev, ...)"| D["All models collapse into the target's single default schema<br/>+ limit_in_dev() caps source rows per model<br/>+ relationships tests downgrade error -> warn"]
+```
 
-4. Fill out the credentials with your warehouse connection details, in real production you'll want to make a Service Account or similar and only give access to the production schema to that user, so that only dbt Cloud Jobs can build into production. For this demo project, it's okay to just use your account credentials.
+- **`macros/generate_schema_name.sql`** — only routes models into the named production datasets (`jaffle_shop_raw`, `_ingestion`, `_analytics`, `_elementary`) when `target.name == 'prod'`. Every other target builds everything into one schema, so CI and dev runs can never write into a production dataset even by accident.
+- **`macros/limit_in_dev.sql`** — appends a `limit` clause to source-reading models for any non-prod target, capping the data volume CI/dev builds churn through.
+- **`macros/relationships.sql`** — because row-capping samples each source table independently, foreign keys can legitimately fail to line up across the sampled rows outside of prod. This downgrades the `relationships` test to a `warn` for non-prod targets while keeping it at full `error` severity in prod; every other test type is unaffected.
 
-5. Set the `branch` that this Environment runs on to `main`, then the schema that this Environment builds into to `prod`. This ensures that Jobs configured in this Environment always build into the `prod` schema and run on the `main` branch which we've protected as our production branch.
+### Testing and data quality
 
-   <img width="500" alt="custom_branch_main" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/163764c6-bc3c-490b-b262-47e6c71553c9">
+Data quality is tracked with the [Elementary](https://www.elementary-data.com/) dbt package (`elementary-data/elementary`), which persists every `dbt test`/`dbt build` result into `jaffle_shop_elementary` and powers the Data Platform → Data Quality page. As of this writing that page reports **795 tests, 95.1% passing** (2 failing, 15 warning) — see the screenshot below.
 
-6. Click `Save`.
+- `unique` / `not_null` on every core/mart primary key, `relationships` on every foreign key (severity-aware per [Environment isolation](#environment-isolation)).
+- `dbt_utils.expression_is_true` for cross-column business-rule invariants (e.g. `order_total = subtotal + tax_paid`).
+- `unit_tests` for models with non-trivial transformation logic.
+- Blanket `elementary.schema_changes` tests were originally applied to every single model to catch upstream schema drift; they were later removed project-wide to cut down redundant test surface (148 files, one line each) now that Elementary's run/test history already gives visibility into drift via the Pipeline Health and Model Performance pages.
 
-#### 🛠️ Creating a Job
+### Analytics application (Streamlit)
 
-Now we'll create a Job to deploy our project to production. This Job will run the `dbt build` command in the `prod` Environment we just created.
+Replaces an earlier Evidence.dev report. `streamlit/app.py` is a pure navigation shell — `st.navigation()` in `position="top"` mode, grouped into the same 9 business sections as the domain table above — that hands off to 25 page modules. **dbt owns business logic, Streamlit only presents it**: every number comes from a mart in `models/marts/`, pages and `streamlit/queries/*.py` only select and format (see `CONVENTIONS.md` and `streamlit/README.md`).
 
-1. Go to the `Prod` Environment you just created.
+Auth uses a read-only `evidence-reporting` BigQuery service account, wired through Streamlit Secrets (`st.secrets["gcp_service_account"]`) so the identical code runs locally and on Streamlit Community Cloud.
 
-2. Click `+ Create Job` and choose `Deploy Job` as the Job type.
+<table>
+<tr>
+<td width="50%">
 
-   <img width="500" alt="create_job" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/9eda2a35-edac-4ad5-b5f4-d273ab3e5351">
+**Executive Command Center** — top-line KPIs, cross-domain "attention needed" alerts, and a business-health grid, one glance across all 9 sections.
 
-3. Name your Job `Production Build`.
+<img src=".github/static/app/command-center.png" alt="Executive Command Center dashboard showing revenue, orders, customer counts, attention-needed alerts, and a business health grid" width="100%">
 
-4. You can otherwise leave the defaults in place and just click `Save`.
+</td>
+<td width="50%">
 
-5. Click into your newly created Job and click `Run Now` in the top right corner.
+**Data Platform → Data Quality** — live Elementary test results: pass/warn/fail breakdown and a failing/warning tests table, sourced from `mart_data_quality`.
 
-   <img width="500" alt="run_now" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/78cbf863-619a-4213-babe-d26b94363e84">
+<img src=".github/static/app/data-quality.png" alt="Data Quality dashboard showing 795 tests at 95.1% passing, a status breakdown donut, and tests-by-type bar chart" width="100%">
 
-6. This will kick off a Job to build your project in the `Prod` Environment, which will build into the `prod` schema in your warehouse.
+</td>
+</tr>
+</table>
 
-7. Go check out the `prod` schema in your `jaffle_shop` database on your warehouse, you should see the project's models built there!
+**Commerce → Sales Overview** — revenue trend, revenue by location and category, driven entirely by `mart_sales_performance` and friends. Note the visible step up around Aug 2025: that's the seed-data → live-streaming-data handoff described in [Live data generation](#live-data-generation), left visible rather than smoothed over.
 
-> [!TIP]
-> If you're working in the dbt Cloud IDE, make sure to turn on the 'Defer to staging/production' toggle once you've done this. This will ensure that only modified code is run when you run commands in the IDE, compared against the Production environment you just set up. This will save you significant time and resources!
+<img src=".github/static/app/sales-overview.png" alt="Sales Overview dashboard showing net revenue, orders, average order value, gross margin, and a revenue-over-time line chart" width="70%">
 
-<img width="500" alt="Screenshot 2024-04-09 at 7 44 36 PM" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/9cdba3b0-6c64-4c40-8380-80c0ec619214">
+The nav bar's pill row is centered via targeted CSS in `app.py` (built against Streamlit's stable `data-testid` attributes, not its build-specific emotion-hash classnames) rather than Streamlit's default left-packed layout.
 
-> [!TIP]
-> The dbt Cloud CLI will automatically defer unmodified models to the previously built models in your staging or production environment, so you can run `dbt build`, `dbt test`, etc without worrying about running unnecessary code.
+### Repository structure
 
-#### 🗺️ Explore your DAG
+```
+jaffle-shop/
+├── models/
+│   ├── staging/        # 81 models — 1:1 with a raw source table
+│   ├── intermediate/   # 2 models  — cross-table joins not yet a final entity
+│   ├── core/            # 32 models — dim_*/fct_* with a documented grain
+│   └── marts/            # 31 models — business-facing, denormalized
+├── seeds/jaffle-data/   # one-time reference CSVs (customers, orders, products, ...)
+├── snapshots/            # SCD2 tracking (e.g. customer accounts)
+├── macros/                # generate_schema_name, limit_in_dev, relationships, cents_to_dollars
+├── data-tests/             # singular (non-generic) data tests
+├── scripts/
+│   ├── generate_stream_data.py       # always-on streaming generator (Cloud Run service)
+│   ├── generate_operations_data.py    # hourly batch generator (Cloud Run Job)
+│   ├── generate_*_domain_seeds.py      # one-time seed generators, one per business domain
+│   ├── Dockerfile / operations-job.Dockerfile / cloudbuild.yaml
+│   └── requirements.txt
+├── runner/               # Go binary: retries pipeline.sh steps, notifies Slack
+├── pipeline.sh           # deps / seed / snapshot / build / test entrypoint
+├── docker/profiles.yml   # prod BigQuery connection profile baked into the image
+├── Dockerfile            # multi-stage: builds runner, then the dbt + runner image
+├── cloudbuild.yaml       # Cloud Build: builds & pushes the jaffle-shop-fusion image
+├── .github/workflows/dev-build.yml   # dev -> ci build -> main promotion
+├── streamlit/
+│   ├── app.py             # navigation shell (st.navigation, 9 sections, 25 pages)
+│   ├── pages/<section>/   # one folder per business section
+│   ├── components/         # kpi_cards, charts, filters, data_table, ...
+│   ├── queries/              # thin pass-throughs to marts, no business logic
+│   └── utils/                  # bigquery client, config constants, formatting
+├── CONVENTIONS.md        # layering, keys, testing, and naming conventions for new domains
+└── dbt_project.yml
+```
 
-From here, you should be able to use dbt Explorer (in the `Explore` tab of the dbt Cloud nav bar) to explore your DAG! Explorer is populated with metadata from your designated Production and Staging Environments, so you can see the lineage of your project visually, and much more.
+## Local development
 
-<img width="991" alt="explorer" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/68b98e29-0e10-461b-80e5-e7665b010c07">
+### Prerequisites
 
-### 🏭 Working with a larger dataset
+- Python 3.12
+- A BigQuery project you can build into, with a user or service account that has permission to create/write datasets (this project's own instance runs on `jaffle-shop-505616`, but you don't need access to that project — any BigQuery project works for local dev)
+- _Optional_: Go 1.23+, only if you're changing `runner/`
 
-There are two ways to work with a larger dataset than the default one year of data that comes with the project:
-
-1. **Load the data from S3** which will let you access the canonical 6 year dataset the project is tested against.
-
-2. **Generate via [`jafgen`](https://github.com/dbt-labs/jaffle-shop-generator) and seed the data with dbt Core** which will allow you to generate up to 10 years of data.
-
-#### 💾 Load the data from S3
-
-To load the data from S3, consult the [dbt Documentation's Quickstart Guides](https://docs.getdbt.com/guides) for your data platform to see how to copy data from an S3 bucket to your warehouse. The S3 bucket URIs of the tables you want to copy into your `raw` schema are:
-
-| table name        | S3 URI                                                           | Direct Download Link                                                                                     | Schema                                                                                                    |
-|-------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| `raw_customers` | `s3://dbt-tutorial-public/long_term_dataset/raw_customers.csv` | [Download](https://dbt-tutorial-public.s3.us-west-2.amazonaws.com/long_term_dataset/raw_customers.csv) | `(id text, name text)` |
-| `raw_orders` | `s3://dbt-tutorial-public/long_term_dataset/raw_orders.csv` | [Download](https://dbt-tutorial-public.s3.us-west-2.amazonaws.com/long_term_dataset/raw_orders.csv) | `(id text, customer text, ordered_at datetime, store_id text, subtotal int, tax_paid int, order_total int)` |
-| `raw_order_items` | `s3://dbt-tutorial-public/long_term_dataset/raw_order_items.csv` | [Download](https://dbt-tutorial-public.s3.us-west-2.amazonaws.com/long_term_dataset/raw_order_items.csv) | `(id text, order_id text, sku text)` |
-| `raw_products` | `s3://dbt-tutorial-public/long_term_dataset/raw_products.csv` | [Download](https://dbt-tutorial-public.s3.us-west-2.amazonaws.com/long_term_dataset/raw_products.csv) | `(sku text, name text, type text, price int, description text)` |
-| `raw_supplies` | `s3://dbt-tutorial-public/long_term_dataset/raw_supplies.csv` | [Download](https://dbt-tutorial-public.s3.us-west-2.amazonaws.com/long_term_dataset/raw_supplies.csv) | `(id text, name text, cost int, perishable boolean, sku text)` |
-| `raw_stores` | `s3://dbt-tutorial-public/long_term_dataset/raw_stores.csv` | [Download](https://dbt-tutorial-public.s3.us-west-2.amazonaws.com/long_term_dataset/raw_stores.csv) | `(id text, name text, opened_at datetime, tax_rate float)` |
-
-#### 🌱 Generate via `jafgen` and seed the data with dbt Core
-
-You'll need to be working on the command line for this option. If you're more comfortable working via web apps, the above method is the path you'll need. [`jafgen`](https://github.com/dbt-labs/jaffle-shop-generator) is a simple tool for generating synthetic Jaffle Shop data that is maintained on a volunteer-basis by dbt Labs employees. This project is more interesting with a larger dataset generated and uploaded to your warehouse. 6 years is a nice amount to fully observe trends like growth, seasonality, and buyer personas that exist in the data. Uploading this amount of data requires a few extra steps, but we'll walk you through them. If you have a preferred way of loading CSVs into your warehouse or an S3 bucket, that will also work just fine, the generated data is just CSV files.
-
-> [!TIP]
-> If you'd like to explore further on the command line, but are a little intimidated by the terminal, we've included configuration for a _task runner_ called, fittingly, `task`. It's a simple way to run the commands you need to get started with dbt. You can install it by following the instructions [here](https://taskfile.dev/#/installation). We'll call out the `task` based alternative to each command below that provides an 'easy button'. It's a useful tool to have installed regardless.
-
-1. Create a `profiles.yml` file in the root of your project. This file is already `.gitignore`d so you can keep your credentials safe. If you'd prefer you can instead set up a `profiles.yml` file at the `~/.dbt/profiles.yml` path instead to be extra sure you don't accidentally commit the file.
-
-2. [Add a profile for your warehouse connection in this file](https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles#connecting-to-your-warehouse-using-the-command-line) and add this configuration to your `dbt_project.yml` file as a top-level key called `profile` e.g. `profile: my-profile-name`.
-
-> [!IMPORTANT]
-> If you do decide to use `task` there is a super-task (`task load`) that will do all of the below steps for you. Just run `task load YEARS=[integer of years to generate] DB=[name of warehouse]` e.g. `task YEARS=4 DB=bigquery` or `task YEARS=7 DB=redshift` etc to perform all the commands necessary to generate and seed the data once your `profiles.yml` file is set up.
-
-3. Create a new virtual environment in your project (I like to call mine `.venv`) and activate it, then install the project's dependencies in it. This will install the `jafgen` tool which you can use to generate the larger datasets. Then install `dbt-core` and your warehouse's adapter. We install dbt Core temporarily because by connecting directly to your warehouse, it can upload larger file sizes than the dbt Cloud server[^1]. You can do this manually or with `task`:
+### Clone and install
 
 ```bash
+git clone [this repo]
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install -r requirements.txt
-python3 -m pip install dbt-core dbt-[your warehouse adapter] # e.g. dbt-bigquery
+python3 -m pip install dbt-core dbt-bigquery
+dbt deps
 ```
 
-**OR**
+### Configure your dbt profile
 
-```bash
-task venv
-task install DB=[name of warehouse] # e.g. task install DB=bigquery
+Create `~/.dbt/profiles.yml` (or a project-local `profiles.yml`, already gitignored) with a target **named anything other than `prod`** — the target name is what the [environment isolation](#environment-isolation) macros key off of, so any other name (`dev`, your own name, `ci`, ...) automatically gets the safety rails: everything collapses into one schema, source reads are row-capped, and `relationships` tests only warn instead of failing the build.
+
+```yaml
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: your-gcp-project-id
+      dataset: jaffle_shop_dev
+      threads: 4
+      timeout_seconds: 300
+      location: US
 ```
 
-> [!NOTE]
-> Because you have an active virtual environment, this new install of `dbt` should take precedence in your [`$PATH`]($PATH`). If you're not familiar with the `PATH` environment variable, just think of this as the order in which your computer looks for commands to run. What's important is that it will look in your active virtual environment first, so when you run `dbt`, it will use the `dbt` you just installed in your virtual environment.
+### Load data
 
-5. Run `jafgen` and `seed` the data it generates.
-
-To generate 6 years of data:
+For a quick start, seed the sample data bundled in the repo:
 
 ```bash
-jafgen 6
-rm -rf seeds/jaffle-data
-mv jaffle-data seeds
 dbt seed --full-refresh --vars '{"load_source_data": true}'
 ```
 
-**OR**
+For a larger synthetic dataset (up to 10 years), use `jafgen` via the bundled `Taskfile.yml`:
 
 ```bash
-task gen YEARS=6
-task seed
+task load YEARS=6 DB=bigquery
 ```
 
-6. Remove the `jaffle-data` folder, then uninstall the temporary dbt Core installation. Again, this was to allow you to seed the large data files, you don't need it for the rest of the project which will use the dbt Cloud CLI. You can then delete your `profiles.yml` file and the configuration in your `dbt_project.yml` file. You should also delete the `jaffle-data` path from the `seeds:` config in your `dbt_project.yml`.
+This spins up a temporary venv, generates the data, seeds it, and cleans up after itself — see `Taskfile.yml` for the individual steps if you'd rather run them by hand.
+
+### Build and test
 
 ```bash
-rm -rf seeds/jaffle-data
-python3 -m pip uninstall dbt-core dbt-[your warehouse adapter] # e.g. dbt-bigquery
+dbt build   # runs models + tests
+dbt test    # tests only
 ```
 
-**OR**
+### Run the Streamlit app
 
 ```bash
-task clean
+cd streamlit
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
 ```
 
-You now have a much more interesting and expansive dataset in your `raw` schema to build with! You should now run a `dbt build` to build the project with the new data into your dev schema or trigger your `Production Build` Job in dbt Cloud to build the project in your `prod` schema.
+Add BigQuery credentials to `streamlit/.streamlit/secrets.toml` (gitignored) as a `[gcp_service_account]` table — see `streamlit/README.md` for the exact format and the Streamlit Community Cloud deployment path. Then:
 
-### 🔍 Pre-commit and SQLFluff
+```bash
+.venv/bin/streamlit run app.py
+```
 
-There's an optional tool included with the project called `pre-commit`.
+## Testing and code quality tooling
 
-[pre-commit](https://pre-commit.com/) automatically runs a suite of of processes on your code, like linters and formatters, when you commit. If it finds an issue and updates a file, you'll need to stage the changes and commit them again (the first commit will not have gone through because pre-commit found and fixed an issue). The outcome of this is that your code will be more consistent automatically, and everybody's changes will be running through the same set of processes. We recommend it for any project.
+- **[Elementary](https://www.elementary-data.com/)** persists dbt test/run results to `jaffle_shop_elementary` for the Data Platform pages — see [Testing and data quality](#testing-and-data-quality).
+- **[pre-commit](https://pre-commit.com/)** runs `ruff` (lint + format for any Python), `check-yaml`, `end-of-file-fixer`, `trailing-whitespace`, and `requirements-txt-fixer` on every commit. Installed via `requirements.txt`; opt in with `pre-commit install`, or run ad hoc with `pre-commit run --all-files`.
+- **SQLFluff** config (`.sqlfluff`) is present but not currently wired into pre-commit or CI.
 
-You can see the configuration for pre-commit in the `.pre-commit-config.yaml` file. It's installed as part of the project's `requirements.txt`, but you'll need to opt-in to using it by running `pre-commit install`. This will install _git hooks_ which run when you commit. You can also run the checks manually with `pre-commit run --all-files` to see what it does without making a commit.
+## Extending the project
 
-At present the following checks are run:
-
-- `ruff` - an incredibly fast linter and formatter for Python, in case you add any Python models
-- `check-yaml` - which validates YAML files
-- `end-of-file-fixer` - which ensures all files end with a newline
-- `trailing-whitespace` - which trims trailing whitespace from files
-
-At present, the popular SQL linter and formatter SQLFluff doesn't play nicely with the dbt Cloud CLI, so we've omitted it from this project _for now_. We've already built the backend for linting via the Cloud CLI, so this will change very soon! At present if you'd like auto-formatting and linting for SQL, check out the dbt Cloud IDE!
-
-We have kept a `.sqlfluff` config file to show what that looks like, and to future proof the repo for when the Cloud CLI support linting and formatting.
-
-[^1]: Again, I can't emphasize enough that you should not use dbt and seeds for data loading in a production project. This is just for convenience within this learning project.
+Adding a new business domain? Read `CONVENTIONS.md` first — it defines the layering rules, key/grain conventions, and testing pattern every existing domain follows, established during the Phase 1 (Foundation) build-out and extended (not forked) with each new domain since.
