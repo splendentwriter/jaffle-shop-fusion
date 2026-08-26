@@ -62,6 +62,15 @@ models:
   elementary:
     +schema: elementary
 
+data_tests:
+  jaffle_shop:
+    # Project default: a failing test should surface on the Data Platform ->
+    # Data Quality page, not fail the pipeline run. Tests that need to keep
+    # blocking (e.g. macros/relationships.sql's error-in-prod severity) set
+    # config(severity=...) directly in their own definition, which takes
+    # precedence over this project-level default.
+    +severity: warn
+
 vars:
   disable_dbt_artifacts_autoupload: true
 
