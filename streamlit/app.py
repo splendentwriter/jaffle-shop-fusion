@@ -15,39 +15,61 @@ from utils.config import APP_ICON, APP_TITLE
 st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
 
 # Center the top-position nav pills within the header toolbar. The toolbar
-# row is [empty spacer, nav pills, status/Deploy/menu actions] all packed
-# left by default with no room for justify-content alone to matter, so this
-# uses the classic flex trick: grow the spacer and the actions block by
-# equal amounts, which centers the nav pills between them while keeping the
-# Deploy/menu controls flush right. Selectors are built from stable
-# data-testid attributes plus structural pseudo-classes (:has, :empty,
-# :last-child), not Streamlit's emotion-hash classnames, which change
-# across builds.
+# row is [empty spacer, nav pills, status/Deploy/menu actions]. An earlier
+# version tried the classic flex trick (grow the spacer and the actions
+# block by equal amounts), but that only centers the pills when both sides
+# have equal *minimum* content width - the actions block (Stop/Deploy/menu)
+# has real buttons with a real min-width, while the spacer is an empty div
+# with none, so flex-grow left the spacer with only whatever space was left
+# over rather than a true 50/50 split, and the pills sat visibly left of
+# center. Anchoring the pills with absolute positioning at the container's
+# actual horizontal midpoint sidesteps that entirely: it's centered on the
+# full toolbar width regardless of what either side's content measures out
+# to, and recalculates on every resize since it's pure CSS, not a one-time
+# JS measurement. Selectors are built from stable data-testid attributes
+# plus structural pseudo-classes (:has, :empty, :last-child), not
+# Streamlit's emotion-hash classnames, which change across builds.
 st.markdown(
     """
     <style>
     [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) {
-        flex: 1 1 auto;
-        display: flex;
+        position: relative;
+        display: block;
         width: 100%;
+        min-height: 2rem;
     }
     [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) > div:empty:first-child {
-        flex: 1 1 0;
+        display: none;
     }
     [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) > *:last-child {
-        flex: 1 1 0;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        /* This block gains a "Stop" button while a script run is in
+           flight, widening it from ~90px to ~165px. Reserving that width
+           up front keeps its footprint constant regardless of run state,
+           so the nav-pill row's own responsive collapse (which measures
+           available space once, not continuously) doesn't get caught out
+           mid-run and butt up against a newly-appeared Stop button. */
+        min-width: 180px;
         display: flex;
         justify-content: flex-end;
     }
     /* The nav pill row (rc-overflow, an ant-design-family component) ships
-       its own width: 100% rule that greedily fills all space handed to it,
-       which is what makes it responsively collapse extra sections into a
-       "more" dropdown. That greediness defeats the symmetric-spacer trick
-       above, so pin it to its actual content width (!important needed to
-       beat that rule's classname-based specificity). */
+       its own width: 100% rule that greedily fills all space handed to it;
+       pin it to its actual content width (!important needed to beat that
+       rule's classname-based specificity) so it can be centered on its own
+       footprint rather than stretching edge-to-edge. max-width leaves a
+       little headroom past the reserved actions block above, as a second
+       line of defense against overlap. */
     [data-testid="stToolbar"] .rc-overflow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: fit-content !important;
-        flex: 0 1 auto !important;
+        max-width: calc(100% - 400px);
     }
     </style>
     """,
