@@ -1,0 +1,16 @@
+models:
+  - name: dim_employee
+    description: >
+      One row per employee. tenure_days runs through current_date() for
+      active/on_leave employees and stops at termination_date for
+      terminated ones.
+    columns:
+      - name: employee_id
+        data_tests:
+          - not_null
+          - unique
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'on_leave', 'terminated']

@@ -1,0 +1,27 @@
+models:
+  - name: fct_payroll_line_item
+    description: >
+      One row per (payroll_run, employee) paycheck. timesheet_regular_hours
+      and timesheet_overtime_hours are rolled up independently from that
+      employee's approved timesheets for the pay period, as a cross-check
+      against the line item's own regular_hours/overtime_hours - both are
+      null for salaried employees, who don't have timesheets.
+    columns:
+      - name: payroll_line_item_id
+        data_tests:
+          - not_null
+          - unique
+      - name: payroll_run_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_payroll_runs')
+                field: payroll_run_id
+      - name: employee_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_employees')
+                field: employee_id

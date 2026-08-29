@@ -228,3 +228,16 @@ sources:
         description: Payment processor fee schedule (percentage + fixed fee per transaction).
       - name: raw_payouts
         description: One record per weekly merchant payout batch, net of processing fees for captures in that period.
+      - name: raw_employees
+        description: One record per company employee (not tied to any customer-facing domain). termination_date is only set for terminated employees.
+      - name: raw_timesheets
+        description: >
+          One record per clocked shift for hourly employees only (salaried employees don't clock in/out).
+          A small number of rows are missing clock_out (forgot to clock out) and have no hours_worked.
+          Only status='approved' rows count toward payroll hours.
+      - name: raw_payroll_runs
+        description: One record per biweekly payroll run. The most recent run is still status='draft' and has no payroll line items yet.
+      - name: raw_payroll_line_items
+        description: >
+          One record per (payroll_run, employee) paycheck. regular_hours/overtime_hours for hourly
+          employees are rolled up from that employee's approved timesheets for the pay period.

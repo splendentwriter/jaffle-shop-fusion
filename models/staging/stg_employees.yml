@@ -1,0 +1,26 @@
+models:
+  - name: stg_employees
+    description: >
+      One row per employee. hourly_rate_cents is only set for pay_type='hourly'
+      and annual_salary_cents only for pay_type='salary'. termination_date is
+      only set for status='terminated'.
+    columns:
+      - name: employee_id
+        data_tests:
+          - not_null
+          - unique
+      - name: employment_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['full_time', 'part_time', 'contractor']
+      - name: pay_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['hourly', 'salary']
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'on_leave', 'terminated']

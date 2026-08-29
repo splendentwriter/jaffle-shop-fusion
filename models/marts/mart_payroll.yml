@@ -1,0 +1,26 @@
+models:
+  - name: mart_payroll
+    description: >
+      One row per (payroll_run, employee) paycheck, with employee name/
+      department/job title attached. has_regular_hours_mismatch flags an
+      hourly employee whose paid regular_hours doesn't match the hours
+      rolled up independently from their approved timesheets.
+    data_tests:
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: >
+              pay_type != 'hourly'
+              or (round(regular_hours, 2) = round(coalesce(timesheet_regular_hours, 0), 2)
+              and round(overtime_hours, 2) = round(coalesce(timesheet_overtime_hours, 0), 2))
+    columns:
+      - name: payroll_line_item_id
+        data_tests:
+          - not_null
+          - unique
+      - name: employee_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_employee')
+                field: employee_id

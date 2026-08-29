@@ -88,6 +88,7 @@ The warehouse spans 20+ business domains, each shipped in its own build-out phas
 | 💳 Finance | Payments, gift cards, returns, tax/fees, payout reconciliation | `mart_payments`, `mart_revenue_profitability`, `mart_refunds_returns`, `mart_reconciliation` |
 | 📣 Marketing | Campaigns, channels, attribution | `mart_campaign_performance`, `mart_attribution` |
 | ❤️ Customer Experience | Reviews, moderation, support tickets | `mart_reviews`, `mart_support` |
+| 🧑‍💼 HR & Payroll | Employees, timesheets, payroll runs | `mart_payroll` |
 | ⚙️ Data Platform | dbt + Elementary run/test observability | `mart_data_quality`, `mart_pipeline_health`, `mart_model_performance` |
 
 Every core/mart primary key carries `unique` + `not_null` tests and every foreign key a `relationships` test to its parent (see [Testing and data quality](#testing-and-data-quality)).

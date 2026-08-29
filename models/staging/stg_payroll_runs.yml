@@ -1,0 +1,15 @@
+models:
+  - name: stg_payroll_runs
+    description: >
+      One row per biweekly payroll run. The most recent run is status='draft'
+      and has no payroll line items yet.
+    columns:
+      - name: payroll_run_id
+        data_tests:
+          - not_null
+          - unique
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['draft', 'processing', 'paid']

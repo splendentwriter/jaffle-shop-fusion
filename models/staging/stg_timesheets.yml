@@ -1,0 +1,24 @@
+models:
+  - name: stg_timesheets
+    description: >
+      One row per clocked shift for hourly employees. clock_out and
+      hours_worked are null for a small number of rows where the employee
+      forgot to clock out. Only status='approved' rows count toward
+      payroll hours.
+    columns:
+      - name: timesheet_id
+        data_tests:
+          - not_null
+          - unique
+      - name: employee_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_employees')
+                field: employee_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['approved', 'submitted', 'rejected']
