@@ -46,7 +46,10 @@ final as (
 
         ---------- booleans
         employees.pay_type = 'hourly'
-            and payroll.regular_hours != coalesce(payroll.timesheet_regular_hours, 0)
+            and (
+                round(payroll.regular_hours, 2) != round(coalesce(payroll.timesheet_regular_hours, 0), 2)
+                or round(payroll.overtime_hours, 2) != round(coalesce(payroll.timesheet_overtime_hours, 0), 2)
+            )
             as has_regular_hours_mismatch
 
     from payroll

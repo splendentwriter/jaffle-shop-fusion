@@ -1,8 +1,9 @@
 """Jaffle Shop — Analytics Command Center application shell.
 
 Defines the business-operation navigation (Executive, Commerce, Customers,
-Products, Operations, Finance, Marketing, Customer Experience, Data
-Platform) and hands off to the selected page. No business logic lives
+Products, Operations, Finance, Marketing, Customer Experience, HR &
+Payroll, Data Platform) and hands off to the selected page. No business
+logic lives
 here — see CONVENTIONS.md in the repo root: dbt owns business logic,
 Streamlit only presents it.
 """
@@ -160,6 +161,8 @@ support = st.Page(
     url_path="customer-experience-support",
 )
 
+payroll = st.Page("pages/hr/payroll.py", title="Payroll", icon="🧑‍💼", url_path="hr-payroll")
+
 data_quality = st.Page(
     "pages/data_platform/data_quality.py",
     title="Data Quality",
@@ -189,6 +192,7 @@ pg = st.navigation(
         "💳 Finance": [payments, revenue_profitability, returns_refunds, reconciliation],
         "📣 Marketing": [campaigns, attribution],
         "❤️ Customer Experience": [reviews, support],
+        "🧑‍💼 HR & Payroll": [payroll],
         "⚙️ Data Platform": [data_quality, pipeline_health, model_performance],
     },
     position="top",

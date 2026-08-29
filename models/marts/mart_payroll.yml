@@ -8,10 +8,7 @@ models:
     data_tests:
       - dbt_utils.expression_is_true:
           arguments:
-            expression: >
-              pay_type != 'hourly'
-              or (round(regular_hours, 2) = round(coalesce(timesheet_regular_hours, 0), 2)
-              and round(overtime_hours, 2) = round(coalesce(timesheet_overtime_hours, 0), 2))
+            expression: "not has_regular_hours_mismatch"
     columns:
       - name: payroll_line_item_id
         data_tests:
