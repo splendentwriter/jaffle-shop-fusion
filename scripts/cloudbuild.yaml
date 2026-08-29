@@ -1,17 +1,5 @@
 steps:
   - name: "gcr.io/cloud-builders/docker"
-    id: build-generator
-    args:
-      - build
-      - -f
-      - Dockerfile
-      - -t
-      - us-central1-docker.pkg.dev/$PROJECT_ID/jaffle-shop-fusion/generator:$COMMIT_SHA
-      - -t
-      - us-central1-docker.pkg.dev/$PROJECT_ID/jaffle-shop-fusion/generator:latest
-      - .
-  - name: "gcr.io/cloud-builders/docker"
-    id: build-operations-job
     args:
       - build
       - -f
@@ -23,8 +11,6 @@ steps:
       - .
 
 images:
-  - us-central1-docker.pkg.dev/$PROJECT_ID/jaffle-shop-fusion/generator:$COMMIT_SHA
-  - us-central1-docker.pkg.dev/$PROJECT_ID/jaffle-shop-fusion/generator:latest
   - us-central1-docker.pkg.dev/$PROJECT_ID/jaffle-shop-fusion/operations-job:$COMMIT_SHA
   - us-central1-docker.pkg.dev/$PROJECT_ID/jaffle-shop-fusion/operations-job:latest
 
