@@ -12,6 +12,7 @@ logs/
 .DS_Store
 
 .user.yml
+.streamlit/
 
 .ruff_cache
 __pycache__
