@@ -15,61 +15,65 @@ from utils.config import APP_ICON, APP_TITLE
 st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide")
 
 # Center the top-position nav pills within the header toolbar. The toolbar
-# row is [empty spacer, nav pills, status/Deploy/menu actions]. An earlier
-# version tried the classic flex trick (grow the spacer and the actions
-# block by equal amounts), but that only centers the pills when both sides
-# have equal *minimum* content width - the actions block (Stop/Deploy/menu)
-# has real buttons with a real min-width, while the spacer is an empty div
-# with none, so flex-grow left the spacer with only whatever space was left
-# over rather than a true 50/50 split, and the pills sat visibly left of
-# center. Anchoring the pills with absolute positioning at the container's
-# actual horizontal midpoint sidesteps that entirely: it's centered on the
-# full toolbar width regardless of what either side's content measures out
-# to, and recalculates on every resize since it's pure CSS, not a one-time
-# JS measurement. Selectors are built from stable data-testid attributes
-# plus structural pseudo-classes (:has, :empty, :last-child), not
-# Streamlit's emotion-hash classnames, which change across builds.
+# row is [empty spacer, nav pills, status/Deploy/menu actions].
+#
+# Two earlier approaches both failed:
+#  1. The classic flex trick (grow the spacer and the actions block by
+#     equal amounts via flex-grow) only centers when both sides have equal
+#     *minimum* content width. The actions block (Stop/Deploy/menu) has
+#     real buttons with real min-width; the spacer is an empty div with
+#     none, so flex-grow left it with only whatever space was left over -
+#     visibly off-center.
+#  2. Absolutely positioning the pills at the container's true horizontal
+#     midpoint (left: 50%; transform: translateX(-50%)) fixed that, but
+#     needed a max-width cap to keep the pills from reaching under the
+#     actions block. Capping it via a *centered* max-width removes the
+#     same amount from both sides - way more than the empty left side
+#     ever needed - and on a ~500-650px window that cut deep enough to
+#     leave no room for even one pill, collapsing the entire nav into a
+#     single "N more" trigger. Reserving space asymmetrically (right-only)
+#     instead doesn't fix it either: centering *within* a box that's
+#     narrower on one side than the other just recreates the original
+#     off-center bug at a fixed offset (half the reservation), at every
+#     width, not only narrow ones.
+#
+# The actual fix: make both gutters *equal by construction* instead of
+# trying to center around an inherently asymmetric layout. The actions
+# block already gets a fixed width (below) so its footprint doesn't shift
+# between idle and running (Stop button) states; giving the spacer that
+# exact same fixed width makes the two flex-grow: 0 gutters truly
+# identical, so the middle flex-grow: 1 slot they leave for the pills is
+# symmetric around the real center - true centering, by geometry, with no
+# fighting the nav widget's own native responsive-collapse sizing (which
+# is what actually caused the ~500-650px collapse above: forcing it into
+# an artificially tiny box via absolute positioning + max-width, rather
+# than just giving it a real, correctly-sized flex slot to size itself
+# within). Selectors are built from stable data-testid attributes plus
+# structural pseudo-classes (:has, :empty, :last-child), not Streamlit's
+# emotion-hash classnames, which change across builds.
 st.markdown(
     """
     <style>
     [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) {
-        position: relative;
-        display: block;
+        display: flex;
+        align-items: center;
         width: 100%;
-        min-height: 2rem;
     }
-    [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) > div:empty:first-child {
-        display: none;
+    [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) > div:empty:first-child,
+    [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) > *:last-child {
+        /* Fixed (not flex-grow) and identical on both sides, so the
+           pills' flex-grow: 1 slot between them is exactly centered.
+           210px comfortably covers the actions block's content
+           (Stop+Deploy+menu, ~180px) with a little breathing room; the
+           empty spacer just mirrors it with nothing to show. */
+        flex: 0 0 210px;
     }
     [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) > *:last-child {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        /* This block gains a "Stop" button while a script run is in
-           flight, widening it from ~90px to ~165px. Reserving that width
-           up front keeps its footprint constant regardless of run state,
-           so the nav-pill row's own responsive collapse (which measures
-           available space once, not continuously) doesn't get caught out
-           mid-run and butt up against a newly-appeared Stop button. */
-        min-width: 180px;
         display: flex;
         justify-content: flex-end;
     }
-    /* The nav pill row (rc-overflow, an ant-design-family component) ships
-       its own width: 100% rule that greedily fills all space handed to it;
-       pin it to its actual content width (!important needed to beat that
-       rule's classname-based specificity) so it can be centered on its own
-       footprint rather than stretching edge-to-edge. max-width leaves a
-       little headroom past the reserved actions block above, as a second
-       line of defense against overlap. */
     [data-testid="stToolbar"] .rc-overflow {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: fit-content !important;
-        max-width: calc(100% - 400px);
+        flex: 1 1 auto;
     }
     </style>
     """,
