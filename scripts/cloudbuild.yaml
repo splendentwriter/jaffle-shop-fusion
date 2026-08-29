@@ -3,12 +3,12 @@ steps:
     args:
       - build
       - -f
-      - operations-job.Dockerfile
+      - scripts/operations-job.Dockerfile
       - -t
       - us-central1-docker.pkg.dev/$PROJECT_ID/jaffle-shop-fusion/operations-job:$COMMIT_SHA
       - -t
       - us-central1-docker.pkg.dev/$PROJECT_ID/jaffle-shop-fusion/operations-job:latest
-      - .
+      - scripts
 
 images:
   - us-central1-docker.pkg.dev/$PROJECT_ID/jaffle-shop-fusion/operations-job:$COMMIT_SHA
