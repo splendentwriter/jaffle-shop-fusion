@@ -183,6 +183,7 @@ support = st.Page(
     url_path="customer-experience-support",
 )
 
+employees = st.Page("pages/hr/employees.py", title="Employees", icon="👤", url_path="hr-employees")
 payroll = st.Page("pages/hr/payroll.py", title="Payroll", icon="🧑‍💼", url_path="hr-payroll")
 
 data_quality = st.Page(
@@ -214,7 +215,7 @@ pg = st.navigation(
         "💳 Finance": [payments, revenue_profitability, returns_refunds, reconciliation],
         "📣 Marketing": [campaigns, attribution],
         "❤️ Customer Experience": [reviews, support],
-        "🧑‍💼 HR & Payroll": [payroll],
+        "🧑‍💼 HR & Payroll": [employees, payroll],
         "⚙️ Data Platform": [data_quality, pipeline_health, model_performance],
     },
     position="top",

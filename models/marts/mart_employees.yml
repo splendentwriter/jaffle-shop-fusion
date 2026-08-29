@@ -1,0 +1,13 @@
+models:
+  - name: mart_employees
+    description: One row per employee, with tenure and active status attached.
+    columns:
+      - name: employee_id
+        data_tests:
+          - not_null
+          - unique
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'on_leave', 'terminated']
