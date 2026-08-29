@@ -1,6 +1,6 @@
 # Jaffle Shop Analytics Command Center (Streamlit)
 
-Replaces the earlier Evidence.dev report. A 26-page app organized around
+Replaces the earlier Evidence.dev report. A 27-page app organized around
 how an e-commerce business actually operates — Executive, Commerce,
 Customers, Products, Operations, Finance, Marketing, Customer Experience,
 HR & Payroll, and Data Platform — via `st.navigation()` with top-position,
@@ -63,7 +63,7 @@ streamlit/
 │   │                                 # Returns & Refunds, Reconciliation
 │   ├── marketing/                    # Campaign Performance, Attribution
 │   ├── customer_experience/           # Reviews, Support
-│   ├── hr/                             # Payroll
+│   ├── hr/                             # Employees, Payroll
 │   └── data_platform/                   # Data Quality, Pipeline Health,
 │                                          # Model Performance
 ├── components/          # reusable UI pieces (kpi_cards, section_header,
