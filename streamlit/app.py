@@ -65,8 +65,14 @@ st.markdown(
            pills' flex-grow: 1 slot between them is exactly centered.
            210px comfortably covers the actions block's content
            (Stop+Deploy+menu, ~180px) with a little breathing room; the
-           empty spacer just mirrors it with nothing to show. */
+           empty spacer just mirrors it with nothing to show. Streamlit
+           gives the actions block its own native margin-right: 16px
+           (clearance from the browser edge) that the empty spacer
+           doesn't have; mirroring it here keeps the two gutters'
+           *total* footprint identical too, otherwise that unmatched
+           16px shifts the centered pills 8px off true center. */
         flex: 0 0 210px;
+        margin-right: 16px;
     }
     [data-testid="stToolbar"] > div:has([data-testid="stTopNavSection"]) > *:last-child {
         display: flex;
